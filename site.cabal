@@ -1,0 +1,15 @@
+name:                site
+version:             0.1.0.0
+homepage:            http://vikraman.org
+license:             AllRightsReserved
+author:              Vikraman Choudhury
+maintainer:          vikraman.choudhury@gmail.com
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable site
+  main-is:             site.hs
+  default-language:    Haskell2010
+  build-depends:       base >=4.6 && <4.7
+                     , hakyll
