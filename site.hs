@@ -48,7 +48,7 @@ main = hakyll $ do
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*/*/*/*.markdown"
             let indexCtx =
-                    listField "posts" postCtx (return posts) `mappend`
+                    listField "posts" postCtx (return $ take 5 posts) `mappend`
                     constField "title" "Home"                `mappend`
                     defaultContext
 
