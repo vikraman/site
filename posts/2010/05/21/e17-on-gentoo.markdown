@@ -12,7 +12,9 @@ So, I just emerged enlightenment on my laptop from the official overlay maintain
 
 [http://trac.enlightenment.org/e/wiki/Gentoo](http://trac.enlightenment.org/e/wiki/Gentoo)
 
-`layman -o http://svn.enlightenment.org/svn/e/trunk/packaging/gentoo/Documentation/layman/overlays.xml -f -a efl
-emerge -av @enlightenment`
+```bash
+layman -o http://svn.enlightenment.org/svn/e/trunk/packaging/gentoo/Documentation/layman/overlays.xml -f -a efl
+emerge -av @enlightenment
+```
 
-However, while compiling dev-libs/embryo-9999, portage got stuck, which I solved by disabling the graphite loop optimizations from my CFLAGS. After logging into e17, just enable the composite extension, and drool over the cool desktop effects in enlightenment ;-)
+However, while compiling `dev-libs/embryo-9999`, portage got stuck, which I solved by disabling the graphite loop optimizations from my CFLAGS. After logging into e17, just enable the composite extension, and drool over the cool desktop effects in enlightenment ;-)

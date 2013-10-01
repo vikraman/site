@@ -166,13 +166,15 @@ ROOTPATH=/opt/oracle/product/11.2.0/dbhome/bin
 
 
 
-	
+
 * Create initscripts
 
 
 
 > /etc/init.d/ora.console
-`#!/sbin/runscript
+
+```bash
+#!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $`
@@ -193,12 +195,14 @@ ebegin "Stopping Oracle Enterprise Manager DB Console"
 /bin/su -m - $ORACLE_OWNER -c "$ORACLE_HOME/bin/emctl stop dbconsole"
 eend $?
 }
-
+```
 
 
 
 > /etc/init.d/ora.database
-`#!/sbin/runscript
+
+```bash
+#!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $`
@@ -218,12 +222,14 @@ ebegin "Stopping Oracle"
 /bin/su -m - $ORACLE_OWNER -c "$ORACLE_HOME/bin/dbshut $ORACLE_HOME"
 eend $?
 }
-
+```
 
 
 
 > /etc/init.d/ora.listener
-`#!/sbin/runscript
+
+```bash
+#!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $`
@@ -243,7 +249,7 @@ ebegin "Stopping Oracle Listeners"
 /bin/su -m - $ORACLE_OWNER -c "$ORACLE_HOME/bin/lsnrctl stop LISTENER"
 eend $?
 }
-
+```
 
 
 Everything seems to be working fine as of now, though I might have missed something while noting it down. The initscripts do require a bit of polish, and I'll blog about them once I've gotten myself around.

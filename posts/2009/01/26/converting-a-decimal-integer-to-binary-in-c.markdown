@@ -11,8 +11,8 @@ categories: programming
 This is some C code that I wrote to convert a decimal integer to its binary equivalent. Most programs written to do so convert the decimal to a string, or an array, of the consecutive remainders modulo 2, which is then printed out in reverse order to get the binary equivalent. However I wanted an integer output of the binary equivalent. So this is what I did.
 
 
-
-> #include<stdio.h>
+```c
+#include<stdio.h>
 int power(int power)
 {
  int i,p=1;
@@ -39,3 +39,4 @@ int main()
  printf("The binary equivalent of %d is %d\n",num,dectobin(num));
  return 0;
 }
+```

@@ -11,8 +11,8 @@ categories: gentoo,programming
 I compiled KDE on my gentoo install with -arts USE flag. So I needed an alternative for playing the KDE sound notifications. So I wrote a program in C to launch the appropriate player for each type of audio file, in a forked process.
 
 
-
-> #include <unistd.h>
+```c
+#include <unistd.h>
 #include <stdio.h>
 #include <string.h>
 int main(int argc, char **argv)
@@ -38,7 +38,7 @@ if (fork() == 0) {
 }
 return 0;
 }
-
+```
 
 
 References: [http://www.gentoo-wiki.info/TIP_Audio_notifications_in_KDE_3_without_aRts](http://www.gentoo-wiki.info/TIP_Audio_notifications_in_KDE_3_without_aRts)

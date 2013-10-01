@@ -10,7 +10,7 @@ categories: gentoo,programming
 
 Had some fun with gcc today! I once wrote a program that reads words from a file, creates a linked list of the words, and then sorts them alphabetically! For a large text file, the memory overhead is pretty large. So, I used this to benchmark some gcc optimization flags, using all available parameters for the -march= flag!
 
-
+```bash
 > vikraman@charon ~/scripts/gcc-benchmark $ cat cpu-type-32
 native
 i386
@@ -38,11 +38,11 @@ winchip2
 c3
 c3-2
 geode
-
+```
 
 I needed a hufe text file, so I took some issues of [phrack](http://www.phrack.com), and ended up with a text file containing 1783 words. So, the bash script was:
 
-
+```bash
 > vikraman@charon ~/scripts/gcc-benchmark $ cat benchmark.sh
 #!/bin/bash
 for cpu in `cat cpu-type-64`
@@ -58,11 +58,11 @@ do
  sleep 10
  echo "">>benchmark.out
 done
-
+```
 And the results:
 
 
-
+```bash
 > vikraman@charon ~/scripts/gcc-benchmark $ cat benchmark.out
 native
 
@@ -193,12 +193,13 @@ geode
 
 294.53user 1.43system 4:58.47elapsed 99%CPU (0avgtext+0avgdata 0maxresident)k
 0inputs+0outputs (0major+389056minor)pagefaults 0swaps
+```
 
-
-Clearly, -march=pentiumpro wins.
+Clearly, `-march=pentiumpro` wins.
 Also, a screenshot from KSysGuard, with the benchmark running!
 
-[![](http://3.bp.blogspot.com/_SkacHZPjbHk/SiqsIbL9tgI/AAAAAAAAACE/cojHuJXngKM/s400/snapshot14.png)](http://3.bp.blogspot.com/_SkacHZPjbHk/SiqsIbL9tgI/AAAAAAAAACE/cojHuJXngKM/s1600/snapshot14.png)Yet another reason why we should ditch binary based distributions for source based distributions! Gentoo rocks!
+[![](http://3.bp.blogspot.com/_SkacHZPjbHk/SiqsIbL9tgI/AAAAAAAAACE/cojHuJXngKM/s400/snapshot14.png)](http://3.bp.blogspot.com/_SkacHZPjbHk/SiqsIbL9tgI/AAAAAAAAACE/cojHuJXngKM/s1600/snapshot14.png)
+
+Yet another reason why we should ditch binary based distributions for source based distributions! Gentoo rocks!
 
 [](http://vh4x0r.files.wordpress.com/2009/06/snapshot14.png)
-

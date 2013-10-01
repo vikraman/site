@@ -24,8 +24,8 @@ I set up a new configuration for my ALPS GlidePoint touchpad :
 
 
 
-> 
-+1:34% cat /etc/X11/xorg.conf.d/20-synaptics.conf 
+```bash
++1:34% cat /etc/X11/xorg.conf.d/20-synaptics.conf
 Section "InputClass"
 Identifier "touchpad catchall"
 MatchIsTouchpad "on"
@@ -53,9 +53,7 @@ Option "CircularScrolling" "on"
 Option "CircScrollTrigger" "0"
 Option "EmulateTwoFingerMinZ" "0"
 EndSection
-
+```
 
 
 Goodbye hal, welcome udev ;-)
-
-

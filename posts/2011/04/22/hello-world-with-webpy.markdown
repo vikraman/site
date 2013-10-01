@@ -12,7 +12,7 @@ Here's some hello world code to get started with [webpy](http://webpy.org).
 
 
 
-<code>
+```python
 #!/usr/bin/env python
 
 import web
@@ -30,12 +30,14 @@ return render_html('Hello, ' + name + '!')
 
 if __name__ == "__main__":
 app.run()
-</code>
-<code>% ./webpydemo.py
+```
+
+```bash
+% ./webpydemo.py
 http://0.0.0.0:8080/
 % curl localhost:8080
 <html><body>Hello, world!</body></html>
 % curl localhost:8080/vh4x0r
 <html><body>Hello, vh4x0r!</body></html>
 </code>
-
+```
