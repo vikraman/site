@@ -12,9 +12,9 @@ Hello everyone,
 
 This is the final report for the _**[Package statistics](http://www.google-melange.com/gsoc/project/google/gsoc2011/vh4x0r/26001)**_ project.
 
-**Homepage : **[https://soc.dev.gentoo.org/gentoostats/](https://soc.dev.gentoo.org/gentoostats/)
+**Homepage** : [https://soc.dev.gentoo.org/gentoostats/](https://soc.dev.gentoo.org/gentoostats/)
 
-**Repository : **[http://git.overlays.gentoo.org/gitweb/?p=proj/gentoostats.git](http://git.overlays.gentoo.org/gitweb/?p=proj/gentoostats.git)
+**Repository** : [http://git.overlays.gentoo.org/gitweb/?p=proj/gentoostats.git](http://git.overlays.gentoo.org/gitweb/?p=proj/gentoostats.git)
 
 
 ## Summary
@@ -30,13 +30,13 @@ The gentoostats project consists mainly of three components:
 
 
 
-	
+
 * **[https://soc.dev.gentoo.org/gentoostats/](https://soc.dev.gentoo.org/gentoostats/) :** The webapp which collects data submitted by clients and renders the required stats.
 
-	
+
 * **gentoostats-send :** The script which reads portage and package data and submits them to the server.
 
-	
+
 * **gentoostats-cli :** The script which talks to the gentoostats webapp via a RESTful api, and reads and displays stats.
 
 
