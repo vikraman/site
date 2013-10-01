@@ -1,10 +1,21 @@
---------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import Data.Monoid (mappend)
+
+import Data.Char     (toLower)
+import Data.Hash.MD5 (Str (..), md5s)
+import Data.Monoid   ((<>))
 import Hakyll
 
+email :: String
+email = user <> "@" <> host
+  where user = reverse $ "yruhduohc" <> "." <> "namarkiv"
+        host = reverse "moc.liamg"
 
---------------------------------------------------------------------------------
+gravatar :: String
+gravatar = "https://www.gravatar.com/avatar/" <> hash <> ext <> size
+  where hash = md5s . Str $ map toLower email
+        ext  = ".png"
+        size = "?s=200"
+
 main :: IO ()
 main = hakyll $ do
     match "images/*" $ do
@@ -33,8 +44,8 @@ main = hakyll $ do
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*/*/*/*.markdown"
             let archiveCtx =
-                    listField "posts" postCtx (return posts) `mappend`
-                    constField "title" "Archives"            `mappend`
+                    listField "posts" postCtx (return posts) <>
+                    constField "title" "Archives"            <>
                     defaultContext
 
             makeItem ""
@@ -48,8 +59,9 @@ main = hakyll $ do
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*/*/*/*.markdown"
             let indexCtx =
-                    listField "posts" postCtx (return $ take 5 posts) `mappend`
-                    constField "title" "Home"                `mappend`
+                    listField "posts" postCtx (return $ take 5 posts) <>
+                    constField "title" "Home"                         <>
+                    constField "avatar" gravatar                      <>
                     defaultContext
 
             getResourceBody
@@ -59,9 +71,7 @@ main = hakyll $ do
 
     match "templates/*" $ compile templateCompiler
 
-
---------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
-    dateField "date" "%B %e, %Y" `mappend`
+    dateField "date" "%B %e, %Y" <>
     defaultContext
