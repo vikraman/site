@@ -15,28 +15,28 @@ Similar projects :
 
 
 	
-  * Smolt : Smolt was initially supposed to be a hardware reporting tool to track status of working or non-working hardware items. Sebastian Pipping (sping) worked on smolt to include package statistics for Gentoo, and it could generate several useful stats based on installed, masked, unmasked packages, use flags, cflags etc. Initially, I had thought about adding features to smolt as a part of my project, but as sping pointed out, the smolt codebase is not clean, and adding such features to it would be unmanageable. Besides, in the current release, the Gentoo code is broken and unmaintained.
+* Smolt : Smolt was initially supposed to be a hardware reporting tool to track status of working or non-working hardware items. Sebastian Pipping (sping) worked on smolt to include package statistics for Gentoo, and it could generate several useful stats based on installed, masked, unmasked packages, use flags, cflags etc. Initially, I had thought about adding features to smolt as a part of my project, but as sping pointed out, the smolt codebase is not clean, and adding such features to it would be unmanageable. Besides, in the current release, the Gentoo code is broken and unmaintained.
 
 	
-  * Gstats : Gstats was a project by Alec Turner (antarus) to collect package stats in 2006. It uses colubrid which is not in development at present and hence needs a complete rewrite.
+* Gstats : Gstats was a project by Alec Turner (antarus) to collect package stats in 2006. It uses colubrid which is not in development at present and hence needs a complete rewrite.
 
 
 Motivation :
 
 	
-  * Since Gentoo is about building your own distro, most new users don't have a clue what packages to install for a typical desktop, and often switch to a fully blown Gnome/KDE desktop (Happened to me a lot during my first Gentoo installs).
+* Since Gentoo is about building your own distro, most new users don't have a clue what packages to install for a typical desktop, and often switch to a fully blown Gnome/KDE desktop (Happened to me a lot during my first Gentoo installs).
 
 	
-  * Sometimes a package gets stuck on ~arch, and developers don't pay much attention to it although it is popular, so most users have to unmask to use it, which is a difficult issue for new users.
+* Sometimes a package gets stuck on ~arch, and developers don't pay much attention to it although it is popular, so most users have to unmask to use it, which is a difficult issue for new users.
 
 	
-  * Unused packages can be trimmed down from the tree if they can be found out automatically.
+* Unused packages can be trimmed down from the tree if they can be found out automatically.
 
 	
-  * Popularly installed packages from overlays an be added to the tree.
+* Popularly installed packages from overlays an be added to the tree.
 
 	
-  * Having used Debian earlier before converting to Gentoo, I was missing out on the package popularity contest idea of Debian.
+* Having used Debian earlier before converting to Gentoo, I was missing out on the package popularity contest idea of Debian.
 
 
 I was inspired by the way Smolt works, and would like to base my project on a similar design. Firstly, there's a client software that runs on the user's machine (as a cronjob, portage hook, or on demand) and sends list of installed packages, masked/unmasked status, use flags to the stats server. Each user has his own UUID which is generated at the time of installation. Also, when the server encounters a new UUID, it identifies a new user, and generates a password for him.

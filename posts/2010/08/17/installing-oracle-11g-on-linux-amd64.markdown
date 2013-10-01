@@ -13,17 +13,17 @@ This week I managed to get Oracle 11gr2 up and running on my computer. Here are 
 
 
 	
-  * Enable AIO (async I/O) in the kernel
+* Enable AIO (async I/O) in the kernel
 
 `CONFIG_AIO=y`
 
 	
-  * Install dependencies including build tools, compilers, and specifically rpm and ksh. On a gentoo system
+* Install dependencies including build tools, compilers, and specifically rpm and ksh. On a gentoo system
 
 `emerge -av dev-libs/libaio app-arch/rpm app-shells/pdksh virtual/libstdc++`
 
 	
-  * Create symlinks for libstdc++.so.6 in both lib32 and lib64 directories
+* Create symlinks for libstdc++.so.6 in both lib32 and lib64 directories
 
 `cd /usr/lib64`
 
@@ -34,7 +34,7 @@ This week I managed to get Oracle 11gr2 up and running on my computer. Here are 
 `ln -s `gcc-config -L | cut -f2 -d:`/libstdc++.so.6 libstdc++.so.6`
 
 	
-  * Create users, groups and directories
+* Create users, groups and directories
 
 `groupadd oinstall`
 
@@ -49,12 +49,12 @@ This week I managed to get Oracle 11gr2 up and running on my computer. Here are 
 `chown -R oracle:oinstall /opt/oracle /opt/oraInventory /etc/oracle`
 
 	
-  * Setup a more RedHat-ish layout (/bin/basename, /bin/awk, /bin/rpm symlinks), for a gentoo system only the following is needed
+* Setup a more RedHat-ish layout (/bin/basename, /bin/awk, /bin/rpm symlinks), for a gentoo system only the following is needed
 
 `ln -s /usr/bin/rpm /bin/rpm`
 
 	
-  * Modify kernel parameters and security limits
+* Modify kernel parameters and security limits
 
 
 
@@ -87,7 +87,7 @@ oracle		 hard	 nproc		 16384
 `sysctl -p`
 
 	
-  * Pre-installation
+* Pre-installation
 
 
 
@@ -117,14 +117,14 @@ fi`
 
 
 	
-  * Installation
+* Installation
 
 `xhost+
 ./runInstaller
 `
 
 	
-  * At linker errors
+* At linker errors
 
 
 
@@ -138,7 +138,7 @@ fi`
 
 
 	
-  * Post installation
+* Post installation
 
 
 
@@ -167,7 +167,7 @@ ROOTPATH=/opt/oracle/product/11.2.0/dbhome/bin
 
 
 	
-  * Create initscripts
+* Create initscripts
 
 
 

@@ -31,13 +31,13 @@ The gentoostats project consists mainly of three components:
 
 
 	
-  * **[https://soc.dev.gentoo.org/gentoostats/](https://soc.dev.gentoo.org/gentoostats/) :** The webapp which collects data submitted by clients and renders the required stats.
+* **[https://soc.dev.gentoo.org/gentoostats/](https://soc.dev.gentoo.org/gentoostats/) :** The webapp which collects data submitted by clients and renders the required stats.
 
 	
-  * **gentoostats-send :** The script which reads portage and package data and submits them to the server.
+* **gentoostats-send :** The script which reads portage and package data and submits them to the server.
 
 	
-  * **gentoostats-cli :** The script which talks to the gentoostats webapp via a RESTful api, and reads and displays stats.
+* **gentoostats-cli :** The script which talks to the gentoostats webapp via a RESTful api, and reads and displays stats.
 
 
 As of the "pencils down" date, all of the above components are working, and quite a lot of [stats](http://vh4x0r.wordpress.com/2011/07/14/gsoc-midterm-report/) are rendered successfully. Of course, I have dropped some features from my [original proposal](http://vh4x0r.wordpress.com/2011/04/08/ideas-for-gsoc-with-gentoo/), but also added some. Besides this, I also wrote some patches to [packages.gentoo.org](http://packages.gentoo.org), though they haven't been merged yet.

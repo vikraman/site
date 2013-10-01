@@ -15,23 +15,23 @@ The [package statistics project](http://www.google-melange.com/gsoc/project/goog
 
 
 	
-  * gentoostats-cli : A cli interface to the gentoostats webapp. You can do operations like :
+* gentoostats-cli : A cli interface to the gentoostats webapp. You can do operations like :
 
 
 
 
 	
-    * gentoostats-cli list repo
+* gentoostats-cli list repo
 
 	
-    * gentoostats-cli list package --category=sys-devel --package=gcc
+* gentoostats-cli list package --category=sys-devel --package=gcc
 
 	
-    * gentoostats-cli search --package=python --min_hosts=10
+* gentoostats-cli search --package=python --min_hosts=10
 
 
 	
-  * Better pages for the webUI, adding forms for package search etc.
+* Better pages for the webUI, adding forms for package search etc.
 
 
 I'm pretty much approaching the end of my project, and need some more ideas/feature suggestions. Some feedback would be helpful.
@@ -39,12 +39,12 @@ I'm pretty much approaching the end of my project, and need some more ideas/feat
 Some stuff I have in mind for the next few days:
 
 	
-  * Packages/Users vs Categories/Packages plots
+* Packages/Users vs Categories/Packages plots
 
 	
-  * Testing against various security risks
+* Testing against various security risks
 
 	
-  * An ebuild for the server
+* An ebuild for the server
 
 

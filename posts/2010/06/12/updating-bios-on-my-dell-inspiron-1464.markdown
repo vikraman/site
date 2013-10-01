@@ -13,26 +13,26 @@ Though Dell claims to support bios updates in Linux via their [libsmbios](http:/
 
 
 	
-  * Get bios from [dell support site](http://support.dell.com), in my case 1464A08_win.exe
+* Get bios from [dell support site](http://support.dell.com), in my case 1464A08_win.exe
 
 	
-  * Extract WPH bios image from the exe file by running it with wine or in a windows virtual machine
+* Extract WPH bios image from the exe file by running it with wine or in a windows virtual machine
 `wine 1464A08_win.exe`
 
 	
-  * Get the dell patched plash16.exe utility, the original utility from [biosman](http://www.biosman.com/bios-flash.html) doesn't work. Poke around [dell's ftp site](http://ftp.dell.com) for bios installers with DOS in the filename, and run the exe in dosbox. It will display an error but spit out the plash16.exe, requires a bit of trial and error (I used 1747A06_DOS.exe) ;-)
+* Get the dell patched plash16.exe utility, the original utility from [biosman](http://www.biosman.com/bios-flash.html) doesn't work. Poke around [dell's ftp site](http://ftp.dell.com) for bios installers with DOS in the filename, and run the exe in dosbox. It will display an error but spit out the plash16.exe, requires a bit of trial and error (I used 1747A06_DOS.exe) ;-)
 
 	
-  * Create a bootable [freedos](http://www.freedos.org) usb flash drive, using the [freedos base cd](http://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/distributions/1.0/fdbasecd.iso)
+* Create a bootable [freedos](http://www.freedos.org) usb flash drive, using the [freedos base cd](http://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/distributions/1.0/fdbasecd.iso)
 
 	
-  * Copy the BIOS.WPH and plash16.exe files to the flash drive
+* Copy the BIOS.WPH and plash16.exe files to the flash drive
 
 	
-  * Boot the flash drive in single stepping mode, making sure to skip loading HIMEM
+* Boot the flash drive in single stepping mode, making sure to skip loading HIMEM
 
 	
-  * Keeping your fingers crossed, execute
+* Keeping your fingers crossed, execute
 `plash16.exe BIOS.WPH`
 
 

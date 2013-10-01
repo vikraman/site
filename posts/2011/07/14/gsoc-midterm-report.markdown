@@ -39,59 +39,59 @@ making a stupid mistake of committing my mysql password to git (:P).
 
 
 	
-  * Submitting host stats using a client script
+* Submitting host stats using a client script
 
 	
-  * Accessing host stats at /host/≤uuid>
+* Accessing host stats at /host/≤uuid>
 
 	
-  * Arch stats: /arch
+* Arch stats: /arch
 
 	
-  * Package stats:
+* Package stats:
 
 	
-    * /package/<category>
+* /package/<category>
 
 	
-    * /package/<category>/<pkgname>
+* /package/<category>/<pkgname>
 
 	
-    * /package/<category>/<pkgname>-<version>
+* /package/<category>/<pkgname>-<version>
 (An optional ?top=N can be added to the url for the no. of top items)
 
 
 
 
 	
-  * Repository stats: /repo
+* Repository stats: /repo
 
 	
-  * Keyword stats: /keyword
+* Keyword stats: /keyword
 
 	
-  * Useflag stats:
+* Useflag stats:
 
 	
-    * /use
+* /use
 
 	
-    * /use/≤useflag>
+* /use/≤useflag>
 
 
 
 
 	
-  * Portage FEATURES stats: /feature
+* Portage FEATURES stats: /feature
 
 	
-  * Language stats: /lang
+* Language stats: /lang
 
 	
-  * Mirror stats: /mirror
+* Mirror stats: /mirror
 
 	
-  * Profile stats: /profile
+* Profile stats: /profile
 
 
 
@@ -103,19 +103,19 @@ making a stupid mistake of committing my mysql password to git (:P).
 
 
 	
-  * Package search
+* Package search
 
 	
-  * Rating of packages
+* Rating of packages
 
 	
-  * Graphs
+* Graphs
 
 	
-  * Bugzilla, tinderbox integration
+* Bugzilla, tinderbox integration
 
 	
-  * Export the stats to JSON
+* Export the stats to JSON
 
 
 
@@ -127,10 +127,10 @@ making a stupid mistake of committing my mysql password to git (:P).
 
 
 	
-  * The webUI should be prettier
+* The webUI should be prettier
 
 	
-  * The repository and useflag stats could be improved
+* The repository and useflag stats could be improved
 
 
 I think I can finish the remaining goals in another 2-3 weeks. After that, I'll consider working on some of my stretch goals.

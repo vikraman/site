@@ -13,79 +13,79 @@ As a followup to my previous post, the current code collects the following data 
 
 
 	
-  * Uname of host
+* Uname of host
 
 	
-  * Portage profile
+* Portage profile
 
 	
-  * Time stamp of portage tree (last sync time)
+* Time stamp of portage tree (last sync time)
 
 	
-  * The following portage variables :
-
-
-	
-    * ARCH
-
-	
-    * CHOST
-
-	
-    * CFLAGS
-
-	
-    * CXXFLAGS
-
-	
-    * FFLAGS
-
-	
-    * LDFLAGS
-
-	
-    * MAKEOPTS
-
-	
-    * ACCEPT_KEYWORDS
-
-	
-    * FEATURES
-
-	
-    * USE
-
-	
-    * LANG
-
-	
-    * SYNC
-
-	
-    * GENTOO_MIRRORS
+* The following portage variables :
 
 
 	
-  * The following metadata for each installed package :
+* ARCH
+
+	
+* CHOST
+
+	
+* CFLAGS
+
+	
+* CXXFLAGS
+
+	
+* FFLAGS
+
+	
+* LDFLAGS
+
+	
+* MAKEOPTS
+
+	
+* ACCEPT_KEYWORDS
+
+	
+* FEATURES
+
+	
+* USE
+
+	
+* LANG
+
+	
+* SYNC
+
+	
+* GENTOO_MIRRORS
 
 
 	
-    * Repository name
+* The following metadata for each installed package :
+
 
 	
-    * Keyword used to install package (for example, x86, ~x86 or -x86)
+* Repository name
 
 	
-    * Useflags (plus, minus, unset) for installation
+* Keyword used to install package (for example, x86, ~x86 or -x86)
 
 	
-    * Counter to indicate the relative ordering of package installs
+* Useflags (plus, minus, unset) for installation
 
 	
-    * Installed size
+* Counter to indicate the relative ordering of package installs
 
 	
-    * Build time
+* Installed size
+
+	
+* Build time
 
 
 

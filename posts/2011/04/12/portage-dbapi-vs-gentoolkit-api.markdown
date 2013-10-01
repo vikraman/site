@@ -17,14 +17,14 @@ from time import time
 startg = time ()
 from gentoolkit.helpers import get_installed_cpvs
 for cpv in sorted (get_installed_cpvs ()):
-  print cpv
+print cpv
 endg = time ()
 
 startp = time ()
 from portage.dbapi.vartree import vartree
 vt = vartree ()
 for cpv in sorted (vt.getallcpv ()):
-  print cpv
+print cpv
 endp = time ()
 
 print "Gentoolkit", endg - startg

@@ -8,6 +8,6 @@ wordpressid: 19
 categories: programming
 ---
 
-Oh!, and here's the link to sortwords.c!  
-  
+Oh!, and here's the link to sortwords.c!
+
 [http://codepad.org/nLugDQrF](http://codepad.org/nLugDQrF)

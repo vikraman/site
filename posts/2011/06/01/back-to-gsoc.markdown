@@ -15,13 +15,13 @@ Finally my semester exams have come to an end, and I'm back to coding for my GSo
 
 
 
-  * Rework the client code using equery and enalyze modules from gentoolkit
+* Rework the client code using equery and enalyze modules from gentoolkit
 
 
-  * Add more fields, using the keys in portage.settings
+* Add more fields, using the keys in portage.settings
 
 
-  * Improve the user authentication mechanism
+* Improve the user authentication mechanism
 
 
 

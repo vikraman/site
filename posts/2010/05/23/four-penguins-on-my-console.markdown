@@ -14,7 +14,7 @@ processor	: 0
 vendor_id	: GenuineIntel
 cpu family	: 6
 model		: 37
-model name	: Intel(R) Core(TM) i3 CPU       M 330  @ 2.13GHz
+model name	: Intel(R) Core(TM) i3 CPU M 330@ 2.13GHz
 stepping	: 2
 cpu MHz		: 933.000
 cache size	: 3072 KB
@@ -37,8 +37,8 @@ address sizes	: 36 bits physical, 48 bits virtual
 The processor is an [Arrandale](http://en.wikipedia.org/wiki/Arrandale_%28microprocessor%29), which has 2 cores with HT, so, I get a total of 4 cores, hence 4 [meditating penguins](http://www.zen-kernel.org) while booting ;-)
 `
 +7:09% free -m 
-             total       used       free     shared    buffers     cached
-Mem:          3755        590       3164          0         37        263
+ total used free sharedbuffers cached
+Mem:3755590 31640 37263
 `
 That's 4 GiB of DDR3 RAM @ 1066 MHz :-o
 `
@@ -50,16 +50,16 @@ Partition Table: gpt
 `
 A 500 GiB 7200 RPM hard disk !!
 `
-+7:11% sudo lsusb      
++7:11% sudo lsusb
 Bus 001 Device 008: ID 413c:8160 Dell Computer Corp. 
 Bus 001 Device 007: ID 413c:8162 Dell Computer Corp. 
 Bus 001 Device 006: ID 413c:8161 Dell Computer Corp. 
 Bus 001 Device 005: ID 0bda:0158 Realtek Semiconductor Corp. Mass Storage Device
 Bus 001 Device 004: ID 0c45:641d Microdia 
 Bus 001 Device 003: ID 0a5c:4500 Broadcom Corp. BCM2046B1 USB 2.0 Hub (part of BCM2046 Bluetooth)
-Bus 001 Device 002: ID 8087:0020  
+Bus 001 Device 002: ID 8087:0020
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
-Bus 002 Device 002: ID 8087:0020  
+Bus 002 Device 002: ID 8087:0020
 Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 +7:12% sudo lspci
 00:00.0 Host bridge: Intel Corporation Core Processor DRAM Controller (rev 12)

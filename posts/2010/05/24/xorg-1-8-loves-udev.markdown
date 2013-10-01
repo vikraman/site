@@ -14,8 +14,8 @@ I just unmasked and installed x11-base/xorg-server-1.8.1-r1 with sys-fs/udev-151
 
 > 
 New input hotplug and configuration system, including:
-   *  HAL Replacement - udev support for Linux integrated, other OS'es TBD
-   *  xorg.conf.d
+ *HAL Replacement - udev support for Linux integrated, other OS'es TBD
+ *xorg.conf.d
 
 
 
