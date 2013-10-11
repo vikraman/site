@@ -1,5 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
+import Control.Monad (liftM)
 import Data.Char     (toLower)
 import Data.Hash.MD5 (Str (..), md5s)
 import Data.List     (intersperse)
@@ -18,7 +19,8 @@ main = hakyll $ do
 
   match (fromList ["about.markdown", "contact.markdown"]) $ do
     route   $ setExtension "html"
-    compile $ pandocCompiler
+    compile $ liftM (writePandoc . readPandoc)
+      (getResourceBody >>= applyAsTemplate (constField "email" email))
       >>= loadAndApplyTemplate "templates/default.html" defaultContext
       >>= relativizeUrls
 
