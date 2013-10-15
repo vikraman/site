@@ -8,7 +8,10 @@ import Data.Monoid   (mconcat, (<>))
 import Hakyll
 
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith defaultConfiguration {
+  deployCommand = "rsync -avchzP _site vikraman@vikraman.org:"
+  } $ do
+
   match "images/*" $ do
     route   idRoute
     compile copyFileCompiler
