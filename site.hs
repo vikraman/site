@@ -1,11 +1,13 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-import Control.Monad (liftM)
-import Data.Char     (toLower)
-import Data.Hash.MD5 (Str (..), md5s)
-import Data.List     (intersperse)
-import Data.Monoid   (mconcat, (<>))
+import Control.Monad
+import Data.Char
+import Data.Hash.MD5
+import Data.List
+import Data.Monoid
 import Hakyll
+import System.FilePath.Posix
+import Text.Pandoc.Options
 
 main :: IO ()
 main = hakyllWith defaultConfiguration {
@@ -20,33 +22,58 @@ main = hakyllWith defaultConfiguration {
     route   idRoute
     compile compressCssCompiler
 
-  match (fromList ["about.markdown", "contact.markdown"]) $ do
-    route   $ setExtension "html"
-    compile $ liftM (writePandoc . readPandoc)
-      (getResourceBody >>= applyAsTemplate (constField "email" email))
-      >>= loadAndApplyTemplate "templates/default.html" defaultContext
-      >>= relativizeUrls
+  match "index.markdown" $ do
+    route $ setExtension "html"
+    compile $ do
+      posts <- loadAll allPosts
+              >>= fmap (take 0) . recentFirst
+      let indexCtx =
+            listField "posts" postCtx (return posts) <>
+            constField "avatar" gravatar             <>
+            defaultContext
+      getResourceBody
+        >>= applyAsTemplate indexCtx
+        >>= renderPandocWith pandocReaderOptions pandocWriterOptions
+        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= removeIndexHtml
+        >>= relativizeUrls
+
+  match "contact.markdown" $ do
+    route niceRoute
+    compile $ do
+      let contactCtx =
+            constField "email1" email1   <>
+            constField "email2" email2   <>
+            defaultContext
+      getResourceBody
+        >>= applyAsTemplate contactCtx
+        >>= renderPandocWith pandocReaderOptions pandocWriterOptions
+        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= removeIndexHtml
+        >>= relativizeUrls
 
   match allPosts $ do
-    route $ setExtension "html"
+    route niceRoute
     compile $ pandocCompiler
       >>= loadAndApplyTemplate "templates/post.html"    postCtx
       >>= saveSnapshot "content"
       >>= loadAndApplyTemplate "templates/default.html" postCtx
+      >>= removeIndexHtml
       >>= relativizeUrls
 
-  create ["archive.html"] $ do
+  create ["archive/index.html"] $ do
     route idRoute
     compile $ do
       posts <- loadAll allPosts >>= recentFirst
       let archiveCtx =
             listField "posts" postCtx (return posts) <>
-            constField "title" "Archives"            <>
+            constField "title" "Archive"             <>
             defaultContext
 
       makeItem ""
         >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
         >>= loadAndApplyTemplate "templates/default.html" archiveCtx
+        >>= removeIndexHtml
         >>= relativizeUrls
 
   create ["atom.xml"] $ do
@@ -57,31 +84,25 @@ main = hakyllWith defaultConfiguration {
     route idRoute
     compile $ compileFeeds >>= renderRss feedCfg feedCtx
 
-  match "index.html" $ do
-    route idRoute
-    compile $ do
-      posts <- loadAll allPosts
-               >>= fmap (take 10) . recentFirst
-      let indexCtx =
-            listField "posts" postCtx (return $ take 5 posts) <>
-            constField "title" "Home"                         <>
-            constField "avatar" gravatar                      <>
-            defaultContext
-
-      getResourceBody
-        >>= applyAsTemplate indexCtx
-        >>= loadAndApplyTemplate "templates/default.html" indexCtx
-        >>= relativizeUrls
-
   match "templates/*" $ compile templateCompiler
 
 author :: String
 author = "Vikraman Choudhury"
 
 email :: String
-email = user <> "@" <> host
-  where user = mconcat $ intersperse "." $ map (map toLower) $ words author
-        host = reverse "moc.liamg"
+email = email1
+
+email1 :: String
+email1 = user <> "@" <> host
+  where name = map toLower $ head $ words author
+        user = name
+        host = "indiana.edu"
+
+email2 :: String
+email2 = user <> "@" <> host
+  where name = map toLower $ head $ words author
+        user = name
+        host = name ++ ".org"
 
 gravatar :: String
 gravatar = "https://www.gravatar.com/avatar/" <> hash <> ext <> size
@@ -101,13 +122,37 @@ feedCtx :: Context String
 feedCtx = postCtx <> bodyField "description"
 
 feedCfg :: FeedConfiguration
-feedCfg = FeedConfiguration { feedTitle = "Vikraman's blog"
-                            , feedDescription = "Blog posts by Vikraman"
-                            , feedAuthorName = author
-                            , feedAuthorEmail = email
-                            , feedRoot = "http://vikraman.org"
-                            }
+feedCfg =
+    FeedConfiguration
+    { feedTitle       = "Vikraman Choudhury"
+    , feedDescription = "Vikraman's homepage"
+    , feedAuthorName  = author
+    , feedAuthorEmail = email
+    , feedRoot        = "https://vikraman.org"
+    }
 
 compileFeeds :: Compiler [Item String]
 compileFeeds = loadAllSnapshots allPosts "content"
                >>= fmap (take 10) . recentFirst
+
+niceRoute :: Routes
+niceRoute = customRoute createIndexRoute
+  where
+    createIndexRoute ident =
+      takeDirectory p </> takeBaseName p </> "index.html"
+      where p = toFilePath ident
+
+removeIndexHtml :: Item String -> Compiler (Item String)
+removeIndexHtml item = return $ fmap (withUrls removeIndexStr) item
+  where
+    removeIndexStr :: String -> String
+    removeIndexStr url = case splitFileName url of
+        (dir, "index.html") | isLocal dir -> dir
+        _                   -> url
+        where isLocal uri = not ("://" `isInfixOf` uri)
+
+pandocReaderOptions :: ReaderOptions
+pandocReaderOptions = def { readerExtensions = strictExtensions }
+
+pandocWriterOptions :: WriterOptions
+pandocWriterOptions = def

@@ -1,5 +1,5 @@
 ---
-title: Announce: New blog
+title: "Announce: New blog"
 date: 2013-10-15 03:42:05
 ---
 
