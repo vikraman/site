@@ -42,7 +42,6 @@ $success: $green;
 $warning: $magenta;
 $danger: $red;
 
-$gap: 128px;
 $dimensions: 16 24 32 48 64 96 128 192 256;
 
 $family-serif: 'Libre Baskerville', serif;
@@ -52,6 +51,7 @@ $family-code: $family-monospace;
 $family-fraktur: 'UnifrakturMaguntia', cursive;
 $family-cursive: 'Playball', cursive;
 $title-weight: $weight-normal;
+$section-padding: 2rem 1.5rem !default;
 
 @import "./bulma/bulma";
 
