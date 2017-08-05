@@ -6,6 +6,7 @@ import Data.Hash.MD5
 import Data.List
 import Data.Monoid
 import Hakyll
+import Hakyll.Web.Sass
 import System.FilePath.Posix
 import Text.Pandoc.Options
 
@@ -18,9 +19,9 @@ main = hakyllWith defaultConfiguration {
     route   idRoute
     compile copyFileCompiler
 
-  match "css/*" $ do
-    route   idRoute
-    compile compressCssCompiler
+  match "css/*.scss" $ do
+    route $ setExtension "css"
+    compile (fmap compressCss `fmap` sassCompiler)
 
   match "index.markdown" $ do
     route $ setExtension "html"
@@ -30,24 +31,13 @@ main = hakyllWith defaultConfiguration {
       let indexCtx =
             listField "posts" postCtx (return posts) <>
             constField "avatar" gravatar             <>
-            defaultContext
-      getResourceBody
-        >>= applyAsTemplate indexCtx
-        >>= renderPandocWith pandocReaderOptions pandocWriterOptions
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
-        >>= removeIndexHtml
-        >>= relativizeUrls
-
-  match "contact.markdown" $ do
-    route niceRoute
-    compile $ do
-      let contactCtx =
             constField "email1" email1   <>
             constField "email2" email2   <>
             defaultContext
       getResourceBody
-        >>= applyAsTemplate contactCtx
+        >>= applyAsTemplate indexCtx
         >>= renderPandocWith pandocReaderOptions pandocWriterOptions
+        >>= loadAndApplyTemplate "templates/page.html"    defaultContext
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= removeIndexHtml
         >>= relativizeUrls
@@ -72,6 +62,7 @@ main = hakyllWith defaultConfiguration {
 
       makeItem ""
         >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
+        >>= loadAndApplyTemplate "templates/page.html"    archiveCtx
         >>= loadAndApplyTemplate "templates/default.html" archiveCtx
         >>= removeIndexHtml
         >>= relativizeUrls
@@ -108,7 +99,7 @@ gravatar :: String
 gravatar = "https://www.gravatar.com/avatar/" <> hash <> ext <> size
   where hash = md5s . Str $ map toLower email
         ext  = ".png"
-        size = "?s=200"
+        size = "?s=192"
 
 allPosts :: Pattern
 allPosts = "posts/*/*/*/*.markdown"

@@ -3,36 +3,48 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vikraman Choudhury | $title$</title>
-    <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Libre+Baskerville|UnifrakturMaguntia" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="/css/solarized-light.css" />
-    <link rel="stylesheet" type="text/css" href="/css/default.css" />
-    <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Fira+Mono|Playball|UnifrakturMaguntia">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <div id="header">
-      <div id="logo">
-        <a href="/">Vikraman Choudhury</a>
-      </div>
-      <div id="navigation">
-        <a href="/">Home</a>
-        <a href="/contact">Contact</a>
-        <a href="/archive">Archive</a>
-      </div>
-    </div>
-
-    <div id="content">
-      <h1>$title$</h1>
-
+    <div class="container is-fluid">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a class="navbar-item is-size-2" href="/">
+            Vikraman Choudhury
+          </a>
+        </div>
+        <div class="navbar-menu is-size-5 is-uppercase is-active">
+          <div class="navbar-end">
+            <a class="navbar-item" href="/">
+              Home
+            </a>
+            <a class="navbar-item" href="/archive">
+              Archive
+            </a>
+          </div>
+        </div>
+      </nav>
       $body$
     </div>
-    <div id="footer">
-      Site proudly
-      <a href="https://github.com/vikraman/site">generated</a>
-      using
-      <a href="http://jaspervdj.be/hakyll">Hakyll</a>
-    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-right is-size-7">
+          <p>
+            Site
+            <a href="https://github.com/vikraman/site">built</a>
+            using
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            and
+            <a href="http://bulma.io/">Bulma</a>
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

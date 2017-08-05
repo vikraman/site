@@ -2,7 +2,11 @@
 title: Home
 ---
 
-<img src=$avatar$ style="float:right; margin:0.5em;"/>
+<figure class="image is-192x192 is-pulled-right">
+    <img src=$avatar$>
+</figure>
+
+### About
 
 Hello! I am a graduate student
 at [Indiana University Bloomington](https://indiana.edu/), advised
@@ -10,15 +14,19 @@ by [Amr Sabry](https://www.cs.indiana.edu/~sabry/). I study **higher
 type theory** and **logic**. I also work on some Haskell projects
 with [Ryan Newton](https://www.cs.indiana.edu/~rrnewton/).
 
-Sometimes I also wear a
+Sometimes I also put on a
 [gentoo](https://gentoo.org/)
 [developer](https://gentoo.org/inside-gentoo/developers/)
 hat.
 
-# Posts
+### Contact
 
-Here are some of my recent articles for your reading pleasure:
+I can be reached via [email](mailto:$email1$)
+([alternative](mailto:$email2$)), or irc
+(vikraman@[freenode](irc://irc.freenode.net)), or smail at the
+following address:
 
-$partial("templates/post-list.html")$
-
-...or you can find more in the [archive](/archive).
+    Lindley Hall, 315
+    150 S Woodlawn Ave
+    Bloomington, IN 47405
+    USA

@@ -1,8 +1,23 @@
-<div class="info">
-  Posted on $date$
-  $if(author)$
-  by $author$
-  $endif$
-</div>
-
-$body$
+<section class="hero">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title is-size-1">
+        $title$
+      </h1>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="columns is-mobile">
+      <div class="column">
+        <div class="content section box">
+          <p class="has-text-right has-text-muted">
+            posted on $date$ $if(author)$ by $author$ $endif$
+          </p>
+          $body$
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

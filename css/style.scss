@@ -1,0 +1,81 @@
+@import "./bulma/sass/utilities/initial-variables";
+
+$base03:    rgb(0, 43, 54);
+$base02:    rgb(7, 54, 66);
+$base01:    rgb(88, 110, 117);
+$base00:    rgb(101, 123, 131);
+$base0:     rgb(131, 148, 150);
+$base1:     rgb(147, 161, 161);
+$base2:     rgb(238, 232, 213);
+$base3:     rgb(253, 246, 227);
+$yellow:    rgb(181, 137, 0);
+$orange:    rgb(203, 75, 22);
+$red:       rgb(220, 50, 47);
+$magenta:   rgb(211, 54, 130);
+$violet:    rgb(108, 113, 196);
+$blue:      rgb(38, 139, 210);
+$cyan:      rgb(42, 161, 152);
+$green:     rgb(133, 153, 0);
+
+$turquoise: $cyan;
+$purple:    $violet;
+
+$white: $base3;
+$black: $base02;
+$white-ter: $base2;
+$light-invert: $base1;
+$grey-dark: $base01;
+$grey-darker: $red;
+$dark-invert: $orange;
+$dark: $base01;
+$text: $base00;
+
+$background: $white-ter;
+$body-background: $white;
+$body-background-color: $white;
+$navbar-background-color: $white;
+$footer-background-color: $white;
+
+$primary: $orange;
+$info: $blue;
+$success: $green;
+$warning: $magenta;
+$danger: $red;
+
+$gap: 128px;
+$dimensions: 16 24 32 48 64 96 128 192 256;
+
+$family-serif: 'Libre Baskerville', serif;
+$family-primary: $family-serif;
+$family-monospace: 'Fira Mono', monospace;
+$family-code: $family-monospace;
+$family-fraktur: 'UnifrakturMaguntia', cursive;
+$family-cursive: 'Playball', cursive;
+$title-weight: $weight-normal;
+
+@import "./bulma/bulma";
+
+.content.section {
+  text-align: justify;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  font-family: $family-serif;
+}
+
+.navbar-brand {
+  font-family: $family-fraktur;
+}
+
+.title {
+  font-family: $family-cursive;
+}
+
+pre {
+  @extend .box;
+  color: $black;
+  background-color: $white-ter;
+}
