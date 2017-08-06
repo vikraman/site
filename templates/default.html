@@ -12,15 +12,21 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <div class="container">
-      <section class="section">
+    <section class="section">
+      <div class="container">
         <nav class="navbar">
           <div class="navbar-brand">
-            <a class="navbar-item is-size-2" href="/">
+            <a class="navbar-item is-size-2 is-size-4-mobile" href="/">
               Vikraman Choudhury
             </a>
+            <div class="navbar-burger burger" data-target="navbarMenu"
+                 onclick="document.getElementById('navbarMenu').classList.toggle('is-active')">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
-          <div class="navbar-menu is-size-5 is-uppercase is-active">
+          <div class="navbar-menu is-size-5 is-uppercase" id="navbarMenu">
             <div class="navbar-end">
               <a class="navbar-item" href="/">
                 Home
@@ -31,22 +37,26 @@
             </div>
           </div>
         </nav>
-      </section>
-      $body$
-    </div>
-    <footer class="footer">
-      <div class="container">
-        <div class="content has-text-right is-size-7">
-          <p>
-            Site
-            <a href="https://github.com/vikraman/site">built</a>
-            using
-            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
-            and
-            <a href="http://bulma.io/">Bulma</a>
-          </p>
-        </div>
       </div>
-    </footer>
+    </section>
+    <section class="section">
+      $body$
+    </section>
+    <section class="section">
+      <footer class="footer">
+        <div class="container">
+          <div class="content has-text-right is-size-7">
+            <p>
+              Site
+              <a href="https://github.com/vikraman/site">built</a>
+              using
+              <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+              and
+              <a href="http://bulma.io/">Bulma</a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </section>
   </body>
 </html>
