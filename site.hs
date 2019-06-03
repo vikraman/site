@@ -143,7 +143,7 @@ removeIndexHtml item = return $ fmap (withUrls removeIndexStr) item
         where isLocal uri = not ("://" `isInfixOf` uri)
 
 pandocReaderOptions :: ReaderOptions
-pandocReaderOptions = def { readerExtensions = githubMarkdownExtensions }
+pandocReaderOptions = def { readerExtensions = phpMarkdownExtraExtensions }
 
 pandocWriterOptions :: WriterOptions
 pandocWriterOptions = def

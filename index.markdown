@@ -29,7 +29,7 @@ of **category theory**. I'm also interested in **mathematical logic**,
 
 #### Publications
 
-Most of my papers are listed on
+My papers are listed on
 [arXiv](https://arxiv.org/a/choudhury_v_1.html) and
 [dblp](https://dblp.org/pers/hd/c/Choudhury:Vikraman).
 
