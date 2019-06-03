@@ -63,6 +63,10 @@ My papers are listed on
   Jhala: **Deriving Law-Abiding Instances**. 2017.
     - [[arXiv]](https://arxiv.org/abs/1708.02328)
 
+- Jacques Carette, Chao-Hong Chen, Vikraman Choudhury, Amr Sabry:
+  **Fractional Types**. 2016.
+    - [[pdf]](/files/fractional.pdf)
+
 #### Theses
 
 - **Distributed Issue Tracking with Patch Theory**. Masters Thesis,
