@@ -12,7 +12,7 @@ import Text.Pandoc.Options
 
 main :: IO ()
 main = hakyllWith defaultConfiguration {
-  deployCommand = "rsync -avchzP _site vikraman@vikraman.org:"
+  deployCommand = "rsync -avchzP _site vikraman@internal.vikraman.org:"
   } $ do
 
   match "images/*" $ do
@@ -139,11 +139,11 @@ removeIndexHtml item = return $ fmap (withUrls removeIndexStr) item
     removeIndexStr :: String -> String
     removeIndexStr url = case splitFileName url of
         (dir, "index.html") | isLocal dir -> dir
-        _                   -> url
+        _                                 -> url
         where isLocal uri = not ("://" `isInfixOf` uri)
 
 pandocReaderOptions :: ReaderOptions
-pandocReaderOptions = def { readerExtensions = strictExtensions }
+pandocReaderOptions = def { readerExtensions = githubMarkdownExtensions }
 
 pandocWriterOptions :: WriterOptions
 pandocWriterOptions = def

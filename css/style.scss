@@ -22,6 +22,7 @@ $purple:    $violet;
 
 $white: $base3;
 $black: $base02;
+$white-bis: $base3;
 $white-ter: $base2;
 $light-invert: $base1;
 $grey-dark: $base01;
@@ -29,12 +30,8 @@ $grey-darker: $red;
 $dark-invert: $orange;
 $dark: $base01;
 $text: $base00;
-
-$background: $white-ter;
-$body-background: $white;
-$body-background-color: $white;
-$navbar-background-color: $white;
-$footer-background-color: $white;
+$text-strong: $orange;
+$link: $red;
 
 $primary: $orange;
 $info: $blue;
@@ -80,4 +77,13 @@ pre {
   @extend .box;
   color: $black;
   background-color: $white-ter;
+}
+
+ul li ul {
+  margin-top: 0px !important;
+  list-style: none !important;
+  text-align: right;
+  li {
+    display: inline-block;
+  }
 }
