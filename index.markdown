@@ -89,10 +89,17 @@ My papers are listed on
 #### Selected Talks
 
 - **Retrofitting Purity with Comonads & Capabilities**. Logic and
-  Semantics Seminar, CL, Cambridge.
+  Semantics Seminar, CL, Cambridge. May 2019.
+    - [[slides]](/files/comonads-capabilities.pdf)
+
+- **Beth Semantics**. Proof Theory and Constructive Mathematics
+  Seminar, IU. Dec 2018.
+
+- **Automorphisms of 𝕊¹**. PL Wonks, IU. Oct 2018.
 
 - **Homotopy theoretic aspects of Reversible Computing**. PL Wonks,
-  IU.
+  IU. Sep 2017.
+    - [[slides]](/files/homotopy-reversible.pdf)
 
   </div>
 </div>
