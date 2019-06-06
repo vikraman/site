@@ -59,8 +59,8 @@ My papers are listed on
 
 #### Drafts
 
-- Ryan G. Scott, Vikraman Choudhury, Ryan Newton, Niki Vazou, Ranjit
-  Jhala: **Deriving Law-Abiding Instances**. 2017.
+- Ryan G. Scott, Vikraman Choudhury, Ryan R. Newton, Niki Vazou,
+  Ranjit Jhala: **Deriving Law-Abiding Instances**. 2017.
     - [[arXiv]](https://arxiv.org/abs/1708.02328)
 
 - Jacques Carette, Chao-Hong Chen, Vikraman Choudhury, Amr Sabry:
@@ -69,7 +69,7 @@ My papers are listed on
 
 #### Theses
 
-- **Distributed Issue Tracking with Patch Theory**. Masters Thesis,
+- **Distributed Issue Tracking using Patch Theory**. Masters Thesis,
   IIT Kanpur, 2015.
     - [[src]](https://hub.darcs.net/vikraman/thesis/)
 
