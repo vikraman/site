@@ -23,6 +23,10 @@ main = hakyllWith defaultConfiguration {
     route   idRoute
     compile copyFileCompiler
 
+  match "js/**" $ do
+    route   idRoute
+    compile copyFileCompiler
+
   match "css/*.scss" $ do
     route $ setExtension "css"
     compile (fmap compressCss `fmap` sassCompiler)

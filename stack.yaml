@@ -3,5 +3,5 @@ extra-package-dbs: []
 packages:
 - .
 extra-deps:
-- hakyll-sass-0.2.3
+- hakyll-sass-0.2.4
 resolver: lts-9.0
