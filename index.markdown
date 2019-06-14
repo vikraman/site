@@ -43,7 +43,7 @@ My papers are listed on
 - Niki Vazou, Anish Tondwalkar, Vikraman Choudhury, Ryan G. Scott,
   Ryan R. Newton, Philip Wadler, Ranjit Jhala: **Refinement
   reflection: complete verification with SMT**. POPL 2018.
-    - [[doi]](https://dlnext.acm.org/doi/abs/10.1145/3158141)
+    - [[doi]](https://doi.org/10.1145/3158141)
     - [[arXiv]](https://arxiv.org/abs/1711.03842)
     - [[src]](https://github.com/ucsd-progsys/liquidhaskell)
 
