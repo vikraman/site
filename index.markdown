@@ -59,6 +59,10 @@ My papers are listed on
 
 #### Drafts
 
+- Vikraman Choudhury, Neel Krishnaswami: **Recovering Purity with
+  Comonads and Capabilities**. 2019.
+    - [[arXiv]](https://arxiv.org/abs/1907.07283)
+
 - Ryan G. Scott, Vikraman Choudhury, Ryan R. Newton, Niki Vazou,
   Ranjit Jhala: **Deriving Law-Abiding Instances**. 2017.
     - [[arXiv]](https://arxiv.org/abs/1708.02328)
@@ -73,6 +77,9 @@ My papers are listed on
   IIT Kanpur, 2015.
     - [[src]](https://hub.darcs.net/vikraman/thesis/)
 
+  </div>
+  <div class="column">
+
 #### Notes
 
 - [Reversible Programming Languages](/files/reversible-languages.pdf)
@@ -82,9 +89,6 @@ My papers are listed on
 - [Deterministic Parallelism: a case study](/files/detpar.pdf)
 
 - [Group Testing](https://www.cse.iitk.ac.in/users/amitks/report.pdf)
-
-  </div>
-  <div class="column">
 
 #### Selected Talks
 
