@@ -20,24 +20,22 @@ $green:     rgb(133, 153, 0);
 $turquoise: $cyan;
 $purple:    $violet;
 
-$white: $base3;
-$black: $base02;
-$white-bis: $base3;
-$white-ter: $base2;
-$light-invert: $base1;
-$grey-dark: $base01;
-$grey-darker: $red;
-$dark-invert: $orange;
-$dark: $base01;
-$text: $base00;
-$text-strong: $orange;
-$link: $red;
+$black:     $base03;
+$black-bis: $base02;
+$black-ter: $base01;
 
-$primary: $orange;
-$info: $blue;
-$success: $green;
-$warning: $magenta;
-$danger: $red;
+$grey-darker:  $orange;
+$grey-dark:    $base01;
+$grey:         $base00;
+$grey-light:   $base0;
+$grey-lighter: $yellow;
+
+$white-ter: $base1;
+$white-bis: $base2;
+$white:     $base3;
+
+$link: $red;
+$footer-background-color: $white;
 
 $size-8: 0.5rem !default;
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 $size-8 !default;
@@ -76,7 +74,7 @@ $section-padding: 2rem 1.5rem !default;
 pre {
   @extend .box;
   color: $black;
-  background-color: $white-ter;
+  background-color: $white-bis;
 }
 
 ul li ul {

@@ -143,7 +143,9 @@ I can be reached via [email](mailto:$email1$)
 (vikraman@[freenode](irc://irc.freenode.net)), or smail at the
 following address:
 
-    Luddy Hall, 3025Q
-    700 N. Woodlawn Avenue
-    Bloomington, IN 47408
-    USA
+~~~
+Luddy Hall, 3025Q
+700 N. Woodlawn Avenue
+Bloomington, IN 47408
+USA
+~~~
