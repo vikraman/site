@@ -3,5 +3,8 @@ extra-package-dbs: []
 packages:
 - .
 extra-deps:
+- lrucache-1.2.0.1
+- hakyll-4.12.5.2
 - hakyll-sass-0.2.4
-resolver: lts-9.0
+resolver: lts-13.29
+system-ghc: true
