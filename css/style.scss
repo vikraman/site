@@ -24,31 +24,26 @@ $black:     $base03;
 $black-bis: $base02;
 $black-ter: $base01;
 
-$grey-darker:  $orange;
+$grey-darker:  $base02;
 $grey-dark:    $base01;
 $grey:         $base00;
 $grey-light:   $base0;
-$grey-lighter: $yellow;
+$grey-lighter: $base1;
 
-$white-ter: $base1;
-$white-bis: $base2;
-$white:     $base3;
-
-$link: $red;
+$link-hover: $red;
+$strong-color: $orange;
 $footer-background-color: $white;
 
 $size-8: 0.5rem !default;
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 $size-8 !default;
 $dimensions: 16 24 32 48 64 96 128 192 256;
 
-$family-serif: 'Libre Baskerville', serif;
+$family-serif: 'Merriweather', serif;
 $family-primary: $family-serif;
-$family-monospace: 'Fira Mono', monospace;
+$family-monospace: 'Roboto Mono', monospace;
 $family-code: $family-monospace;
 $family-fraktur: 'UnifrakturMaguntia', cursive;
-$family-cursive: 'Playball', cursive;
 $title-weight: $weight-normal;
-$section-padding: 2rem 1.5rem !default;
 
 @import "./bulma/bulma";
 
@@ -60,21 +55,16 @@ $section-padding: 2rem 1.5rem !default;
   -ms-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
-  font-family: $family-serif;
 }
 
 .navbar-brand {
   font-family: $family-fraktur;
 }
 
-.title {
-  font-family: $family-cursive;
-}
-
 pre {
   @extend .box;
   color: $black;
-  background-color: $white-bis;
+  background-color: $white-ter;
 }
 
 ul li ul {
@@ -83,6 +73,8 @@ ul li ul {
   text-align: right;
   li {
     display: inline-block;
-    padding-left: 0.5em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    background-color: $white-ter;
   }
 }
