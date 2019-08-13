@@ -92,6 +92,10 @@ My papers are listed on
 
 #### Selected Talks
 
+- **The finite-multiset construction in HoTT**. HoTT 2019,
+  CMU. Aug 2019.
+    - [[slides]](/files/hott19.pdf)
+
 - **Retrofitting Purity with Comonads & Capabilities**. Logic and
   Semantics Seminar, CL, Cambridge. May 2019.
     - [[slides]](/files/comonads-capabilities.pdf)
@@ -111,6 +115,7 @@ My papers are listed on
 ## Teaching
 
 - I-590: Technical Foundations of Cybersecurity
+- C-343: Data Structures
 - C-241 & H-241: Discrete Structures for Computer Science
 - C-211: Intro to Computer Science
 
