@@ -14,9 +14,11 @@ title: Home
 
 I am a doctoral candidate at [Indiana University
 Bloomington](https://indiana.edu/), advised by [Amr
-Sabry](https://www.cs.indiana.edu/~sabry/). I'm currently a visitor at
-the [Computer Laboratory, University of
-Cambridge](https://www.cl.cam.ac.uk/).
+Sabry](https://www.cs.indiana.edu/~sabry/). I'm currently a visiting
+researcher at the [Computer Laboratory, University of
+Cambridge](https://www.cl.cam.ac.uk/), working with [Marcelo
+Fiore](https://www.cl.cam.ac.uk/~mpf23/) and [Neel
+Krishnaswami](https://www.cl.cam.ac.uk/~nk480/).
 
 ## Research
 
@@ -59,17 +61,22 @@ My papers are listed on
 
 #### Drafts
 
+- Chao-Hong Chen, Vikraman Choudhury, Jacques Carette, Amr Sabry:
+  **Fractional Types: Expressive and Safe Space Management for Ancilla
+  Bits**. 2019.
+  - [[pdf]](/files/fracGC.pdf)
+
 - Vikraman Choudhury, Neel Krishnaswami: **Recovering Purity with
   Comonads and Capabilities**. 2019.
-    - [[arXiv]](https://arxiv.org/abs/1907.07283)
+  - [[arXiv]](https://arxiv.org/abs/1907.07283)
 
 - Ryan G. Scott, Vikraman Choudhury, Ryan R. Newton, Niki Vazou,
   Ranjit Jhala: **Deriving Law-Abiding Instances**. 2017.
-    - [[arXiv]](https://arxiv.org/abs/1708.02328)
+  - [[arXiv]](https://arxiv.org/abs/1708.02328)
 
 - Jacques Carette, Chao-Hong Chen, Vikraman Choudhury, Amr Sabry:
   **Fractional Types**. 2016.
-    - [[pdf]](/files/fractional.pdf)
+  - [[pdf]](/files/fractional.pdf)
 
 #### Theses
 
@@ -92,21 +99,32 @@ My papers are listed on
 
 #### Selected Talks
 
-- **The finite-multiset construction in HoTT**. HoTT 2019,
-  CMU. Aug 2019.
+- **Recovering Purity with Comonads & Capabilities**.
+  Midwest PL Summit 2019, Purdue University.
+  Sep 2019.
+    - [[slides]](/files/mwpls19.pdf)
+
+- **The finite-multiset construction in HoTT**.
+  HoTT 2019, CMU.
+  Aug 2019.
     - [[slides]](/files/hott19.pdf)
 
-- **Retrofitting Purity with Comonads & Capabilities**. Logic and
-  Semantics Seminar, CL, Cambridge. May 2019.
+- **Retrofitting Purity with Comonads & Capabilities**.
+  Logic and Semantics Seminar, CL, Cambridge.
+  May 2019.
     - [[slides]](/files/comonads-capabilities.pdf)
 
-- **Beth Semantics**. Proof Theory and Constructive Mathematics
-  Seminar, IU. Dec 2018.
+- **Beth Semantics**.
+  Proof Theory and Constructive Mathematics Seminar, IU.
+  Dec 2018.
 
-- **Automorphisms of 𝕊¹**. PL Wonks, IU. Oct 2018.
+- **Automorphisms of 𝕊¹**.
+  PL Wonks, IU.
+  Oct 2018.
 
-- **Homotopy theoretic aspects of Reversible Computing**. PL Wonks,
-  IU. Sep 2017.
+- **Homotopy theoretic aspects of Reversible Computing**.
+  PL Wonks, IU.
+  Sep 2017.
     - [[slides]](/files/homotopy-reversible.pdf)
 
   </div>
