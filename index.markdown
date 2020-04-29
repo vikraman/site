@@ -85,9 +85,6 @@ My papers are listed on
   IIT Kanpur, 2015.
     - [[src]](https://hub.darcs.net/vikraman/thesis/)
 
-  </div>
-  <div class="column">
-
 #### Notes
 
 - [Reversible Programming Languages](/files/reversible-languages.pdf)
@@ -97,6 +94,9 @@ My papers are listed on
 - [Deterministic Parallelism: a case study](/files/detpar.pdf)
 
 - [Group Testing](https://www.cse.iitk.ac.in/users/amitks/report.pdf)
+
+  </div>
+  <div class="column">
 
 #### Selected Talks
 
@@ -133,6 +133,18 @@ My papers are listed on
 
 ## Teaching
 
+At Cambridge, I supervise
+
+- Discrete Maths
+- Semantics of Programming Languages
+- Denotational Semantics
+- Logic and Proof
+
+At IU, I've taught
+
+- B-561: Advanced Database Concepts
+- B-401: Fundamentals of Computing Theory
+- B-505: Applied Algorithms
 - I-590: Technical Foundations of Cybersecurity
 - C-343: Data Structures
 - C-241 & H-241: Discrete Structures for Computer Science
