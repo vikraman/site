@@ -35,6 +35,12 @@ My papers are listed on
 [arXiv](https://arxiv.org/a/choudhury_v_1.html) and
 [dblp](https://dblp.org/pers/hd/c/Choudhury:Vikraman).
 
+- Chao-Hong Chen, Vikraman Choudhury, Jacques Carette, Amr Sabry:
+  **Fractional Types: Expressive and Safe Space Management for Ancilla
+  Bits**. To appear in RC 2020.
+  - [[arXiv]](https://arxiv.org/abs/2002.07020)
+  - [[src]](https://github.com/DreamLinuxer/FracAncilla)
+
 - Jacques Carette, Chao-Hong Chen, Vikraman Choudhury, Amr Sabry:
   **From Reversible Programs to Univalent Universes and Back**. MFPS
   XIII, ENTCS 336, 2018.
@@ -60,11 +66,6 @@ My papers are listed on
   <div class="column">
 
 #### Drafts
-
-- Chao-Hong Chen, Vikraman Choudhury, Jacques Carette, Amr Sabry:
-  **Fractional Types: Expressive and Safe Space Management for Ancilla
-  Bits**. 2019.
-  - [[pdf]](/files/fracGC.pdf)
 
 - Vikraman Choudhury, Neel Krishnaswami: **Recovering Purity with
   Comonads and Capabilities**. 2019.
