@@ -35,6 +35,10 @@ My papers are listed on
 [arXiv](https://arxiv.org/a/choudhury_v_1.html) and
 [dblp](https://dblp.org/pers/hd/c/Choudhury:Vikraman).
 
+- Vikraman Choudhury, Neel Krishnaswami: **Recovering Purity with
+  Comonads and Capabilities**. To appear in ICFP 2020.
+  - [[arXiv]](https://arxiv.org/abs/1907.07283)
+
 - Chao-Hong Chen, Vikraman Choudhury, Jacques Carette, Amr Sabry:
   **Fractional Types: Expressive and Safe Space Management for Ancilla
   Bits**. To appear in RC 2020.
@@ -62,14 +66,7 @@ My papers are listed on
     - [[arXiv]](https://arxiv.org/abs/1708.02318)
     - [[src]](https://github.com/iu-parfunc/adaptive-data)
 
-  </div>
-  <div class="column">
-
 #### Drafts
-
-- Vikraman Choudhury, Neel Krishnaswami: **Recovering Purity with
-  Comonads and Capabilities**. 2019.
-  - [[arXiv]](https://arxiv.org/abs/1907.07283)
 
 - Ryan G. Scott, Vikraman Choudhury, Ryan R. Newton, Niki Vazou,
   Ranjit Jhala: **Deriving Law-Abiding Instances**. 2017.
@@ -78,22 +75,6 @@ My papers are listed on
 - Jacques Carette, Chao-Hong Chen, Vikraman Choudhury, Amr Sabry:
   **Fractional Types**. 2016.
   - [[pdf]](/files/fractional.pdf)
-
-#### Theses
-
-- **Distributed Issue Tracking using Patch Theory**. Masters Thesis,
-  IIT Kanpur, 2015.
-    - [[src]](https://hub.darcs.net/vikraman/thesis/)
-
-#### Notes
-
-- [Reversible Programming Languages](/files/reversible-languages.pdf)
-
-- [Duality for Heyting algebras](/files/heyting-duality.pdf)
-
-- [Deterministic Parallelism: a case study](/files/detpar.pdf)
-
-- [Group Testing](https://www.cse.iitk.ac.in/users/amitks/report.pdf)
 
   </div>
   <div class="column">
@@ -127,6 +108,22 @@ My papers are listed on
   PL Wonks, IU.
   Sep 2017.
     - [[slides]](/files/homotopy-reversible.pdf)
+
+#### Theses
+
+- **Distributed Issue Tracking using Patch Theory**. Masters Thesis,
+  IIT Kanpur, 2015.
+    - [[src]](https://hub.darcs.net/vikraman/thesis/)
+
+#### Notes
+
+- [Reversible Programming Languages](/files/reversible-languages.pdf)
+
+- [Duality for Heyting algebras](/files/heyting-duality.pdf)
+
+- [Deterministic Parallelism: a case study](/files/detpar.pdf)
+
+- [Group Testing](https://www.cse.iitk.ac.in/users/amitks/report.pdf)
 
   </div>
 </div>
