@@ -19,8 +19,10 @@ cabal.sandbox.config
 *.eventlog
 .liquid/
 .stack-work/
+stack.yaml.lock
 cabal.project.local
 .HTF/
 .ghc.environment.*
 .sass-cache/
 node_modules/
+images/

@@ -36,12 +36,14 @@ My papers are listed on
 [dblp](https://dblp.org/pers/hd/c/Choudhury:Vikraman).
 
 - Vikraman Choudhury, Neel Krishnaswami: **Recovering Purity with
-  Comonads and Capabilities**. To appear in ICFP 2020.
+  Comonads and Capabilities**. ICFP 2020.
+  - [[doi]](https://dl.acm.org/doi/abs/10.1145/3408993)
   - [[arXiv]](https://arxiv.org/abs/1907.07283)
 
 - Chao-Hong Chen, Vikraman Choudhury, Jacques Carette, Amr Sabry:
   **Fractional Types: Expressive and Safe Space Management for Ancilla
-  Bits**. To appear in RC 2020.
+  Bits**. RC 2020, LNCS volume 12227.
+  - [[doi]](https://doi.org/10.1007/978-3-030-52482-1_10)
   - [[arXiv]](https://arxiv.org/abs/2002.07020)
   - [[src]](https://github.com/DreamLinuxer/FracAncilla)
 
@@ -177,8 +179,9 @@ I can be reached via [email](mailto:$email1$)
 following address:
 
 ~~~
-Luddy Hall, 3025Q
-700 N. Woodlawn Avenue
-Bloomington, IN 47408
-USA
+FS26, Computer Laboratory
+William Gates Building
+15 JJ Thomson Avenue
+Cambridge CB3 0FD
+UK
 ~~~

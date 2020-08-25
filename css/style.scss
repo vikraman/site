@@ -32,7 +32,6 @@ $grey-lighter: $base1;
 
 $link-hover: $red;
 $strong-color: $orange;
-$footer-background-color: $white;
 
 $size-8: 0.5rem !default;
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 $size-8 !default;
@@ -44,6 +43,9 @@ $family-monospace: 'Roboto Mono', monospace;
 $family-code: $family-monospace;
 $family-fraktur: 'UnifrakturMaguntia', cursive;
 $title-weight: $weight-normal;
+
+$footer-background-color: transparent;
+$navbar-background-color: transparent;
 
 @import "./bulma/bulma";
 
@@ -65,6 +67,13 @@ pre {
   @extend .box;
   color: $black;
   background-color: $white-ter;
+}
+
+body {
+  background: url('/images/8.jpg') $white-ter;
+  background-size: contain;
+  background-repeat: round;
+  background-blend-mode: soft-light;
 }
 
 ul li ul {
