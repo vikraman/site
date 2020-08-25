@@ -63,6 +63,10 @@ $navbar-background-color: transparent;
   font-family: $family-fraktur;
 }
 
+.content figure.avatar {
+  margin-top: 2em;
+}
+
 pre {
   @extend .box;
   color: $black;

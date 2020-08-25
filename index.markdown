@@ -2,11 +2,11 @@
 title: Home
 ---
 
-<figure class="image is-192x192 is-pulled-right is-hidden-mobile">
+<figure class="image is-192x192 is-pulled-right is-hidden-mobile avatar">
   <img src=$avatar$>
 </figure>
 
-<figure class="image is-64x64 is-pulled-right is-hidden-desktop">
+<figure class="image is-64x64 is-pulled-right is-hidden-desktop avatar">
   <img src=$avatar$>
 </figure>
 
