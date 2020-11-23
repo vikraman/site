@@ -83,6 +83,15 @@ My papers are listed on
 
 #### Selected Talks
 
+- **Free Commutative Monoids in HoTT**.
+  Logic and Semantics Seminar, CL, Cambridge.
+  Nov 2020.
+
+- **Recovering Purity with Comonads & Capabilities**.
+  ICFP, Aug 2020.
+   - [[slides]](/files/mwpls19.pdf)
+   - [[video]](https://www.youtube.com/watch?v=fakSKvP9yaM&t=4381s)
+
 - **Recovering Purity with Comonads & Capabilities**.
   Midwest PL Summit 2019, Purdue University.
   Sep 2019.
@@ -138,6 +147,7 @@ At Cambridge, I supervise
 - Semantics of Programming Languages
 - Denotational Semantics
 - Logic and Proof
+- Types
 
 At IU, I've taught
 
@@ -179,7 +189,7 @@ I can be reached via [email](mailto:$email1$)
 following address:
 
 ~~~
-FS26, Computer Laboratory
+FE23, Computer Laboratory
 William Gates Building
 15 JJ Thomson Avenue
 Cambridge CB3 0FD
