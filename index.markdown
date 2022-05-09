@@ -35,6 +35,12 @@ My papers are listed on
 [arXiv](https://arxiv.org/a/choudhury_v_1.html) and
 [dblp](https://dblp.org/pers/hd/c/Choudhury:Vikraman).
 
+- Vikraman Choudhury, Jacek Karwowski, Amr Sabry: **Symmetries in Reversible Programming: From Symmetric Rig Groupoids
+  to Reversible Programming Languages**. POPL 2022.
+  - [[doi]](https://dl.acm.org/doi/10.1145/3498667)
+  - [[arXiv]](https://arxiv.org/abs/2110.05404)
+  - [[src]](https://github.com/vikraman/popl22-symmetries-artifact)
+
 - Vikraman Choudhury, Neel Krishnaswami: **Recovering Purity with
   Comonads and Capabilities**. ICFP 2020.
   - [[doi]](https://dl.acm.org/doi/abs/10.1145/3408993)
@@ -69,6 +75,9 @@ My papers are listed on
     - [[src]](https://github.com/iu-parfunc/adaptive-data)
 
 #### Drafts
+
+- Vikraman Choudhury, Marcelo Fiore: **Free Commutative Monoids in Homotopy Type Theory**. 2022.
+  - [[latest]](/files/cmon22.pdf) [[arXiv]](https://arxiv.org/abs/2110.05412)
 
 - Ryan G. Scott, Vikraman Choudhury, Ryan R. Newton, Niki Vazou,
   Ranjit Jhala: **Deriving Law-Abiding Instances**. 2017.
