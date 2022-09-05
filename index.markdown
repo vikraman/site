@@ -12,19 +12,15 @@ title: Home
 
 ## About
 
-I am a doctoral candidate at [Indiana University
-Bloomington](https://indiana.edu/), advised by [Amr
-Sabry](https://www.cs.indiana.edu/~sabry/). I'm currently a visiting
-researcher at the [Computer Laboratory, University of
-Cambridge](https://www.cl.cam.ac.uk/), working with [Marcelo
-Fiore](https://www.cl.cam.ac.uk/~mpf23/) and [Neel
-Krishnaswami](https://www.cl.cam.ac.uk/~nk480/).
+I am a Research Associate in the [FATA](https://www.gla.ac.uk/schools/computing/research/researchsections/fata-section/)
+section at [University of Glasgow](https://www.gla.ac.uk/). Previously, I was at the [Computer Laboratory, University of
+Cambridge](https://www.cl.cam.ac.uk/), and before that, I was a PhD student at [Indiana University
+Bloomington](https://indiana.edu/).
 
 ## Research
 
-I study **type theories and programming languages**, through the lens
-of **category theory**. I'm also interested in **mathematical logic**,
-**constructive mathematics**, and **formalization**.
+I study the mathematical foundations of computation, through an algebraic lens. My research spans programming languages,
+type theory, category theory, logic, semantics, constructive mathematics, and formalisation.
 
 <div class="columns" markdown="1">
   <div class="column">
@@ -35,8 +31,11 @@ My papers are listed on
 [arXiv](https://arxiv.org/a/choudhury_v_1.html) and
 [dblp](https://dblp.org/pers/hd/c/Choudhury:Vikraman).
 
+- Vikraman Choudhury, Borislav Agapiev, Amr Sabry: **Scheme Pearl: Quantum Continuations**. To appear in Scheme 2022.
+  - [[pdf]](/files/qcont22.pdf)
+
 - Vikraman Choudhury, Marcelo Fiore: **Free Commutative Monoids in Homotopy Type Theory**. To appear in MFPS 2022.
-  - [[latest]](/files/cmon22.pdf) [[arXiv]](https://arxiv.org/abs/2110.05412)
+  - [[pdf]](/files/cmon22.pdf) [[arXiv]](https://arxiv.org/abs/2110.05412)
 
 - Vikraman Choudhury, Jacek Karwowski, Amr Sabry: **Symmetries in Reversible Programming: From Symmetric Rig Groupoids
   to Reversible Programming Languages**. POPL 2022.
@@ -92,6 +91,14 @@ My papers are listed on
 
 #### Selected Talks
 
+- **Symmetries in Reversible Programming**.
+  Logic and Semantics Seminar, CL, Cambridge.
+  May 2022.
+
+- **Weighted Sets and Modalities**.
+  SYCO 8, Tallinn, Estonia.
+  Dec 2021.
+
 - **Free Commutative Monoids in HoTT**.
   Logic and Semantics Seminar, CL, Cambridge.
   Nov 2020.
@@ -130,6 +137,9 @@ My papers are listed on
     - [[slides]](/files/homotopy-reversible.pdf)
 
 #### Theses
+
+- **Mathematical Models of Resource-Conscious Computation**. PhD Thesis,
+  Indiana University, 2022.
 
 - **Distributed Issue Tracking using Patch Theory**. Masters Thesis,
   IIT Kanpur, 2015.
@@ -198,9 +208,9 @@ I can be reached via [email](mailto:$email1$)
 following address:
 
 ~~~
-FE23, Computer Laboratory
-William Gates Building
-15 JJ Thomson Avenue
-Cambridge CB3 0FD
+307, Sir Alwyn Williams Building
+University of Glasgow
+Glasgow G12 8RZ
+Scotland
 UK
 ~~~

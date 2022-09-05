@@ -94,14 +94,14 @@ email = email1
 email1 :: String
 email1 = user <> "@" <> host
   where name = map toLower $ head $ words author
-        user = name
-        host = "indiana.edu"
+        user = "me"
+        host = name ++ ".org"
 
 email2 :: String
 email2 = user <> "@" <> host
-  where name = map toLower $ head $ words author
+  where name = (map toLower $ head $ words author) ++ "." ++ (map toLower $ head . tail $ words author)
         user = name
-        host = name ++ ".org"
+        host = "glasgow.ac.uk"
 
 gravatar :: String
 gravatar = "https://www.gravatar.com/avatar/" <> hash <> ext <> size
