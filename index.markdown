@@ -10,17 +10,44 @@ title: Home
   <img src=$avatar$>
 </figure>
 
+## Updates
+
+You might be interested in my recent work on Continuations and Coexponentials. Here is
+a [draft](/files/popl24-coexp.pdf), and slides from
+[HOPE](/files/hope23-talk.pdf) and [LFCS](/files/lfcs23-coexp.pdf),
+and links to repositories:
+[coexp](https://github.com/vikraman/coexp) and
+[agda-coexp](https://github.com/vikraman/agda-coexp).
+
 ## About
 
-I am a Research Associate in the [FATA](https://www.gla.ac.uk/schools/computing/research/researchsections/fata-section/)
-section at [University of Glasgow](https://www.gla.ac.uk/). Previously, I was at the [Computer Laboratory, University of
-Cambridge](https://www.cl.cam.ac.uk/), and before that, I was a PhD student at [Indiana University
-Bloomington](https://indiana.edu/).
+I am a Research Associate to the Head of School
+[Prof. Simon Gay](https://www.dcs.gla.ac.uk/~simon/), at the
+[School of Computing Science](https://www.gla.ac.uk/schools/computing/),
+[University of Glasgow](https://www.gla.ac.uk/),
+and affiliated with the
+[FATA](https://www.gla.ac.uk/schools/computing/research/researchsections/fata-section/) section.
+
+In the Fall, I will be a Marie Skłodowska-Curie Fellow at the
+[Department of Computer Science and Engineering](https://disi.unibo.it/en),
+[University of Bologna](https://www.unibo.it/en/),
+working with [Prof. Ivan Lanese](http://www.cs.unibo.it/~lanese/).
+
+Previously, I was a Visiting Research Fellow at the
+[Computer Laboratory](https://www.cl.cam.ac.uk/),
+[University of Cambridge](https://www.cam.ac.uk/), on a Paul Purdom Fellowship,
+working with [Prof. Marcelo Fiore](https://www.cl.cam.ac.uk/~mpf23/),
+and [Prof. Neel Krishnaswami](https://www.cl.cam.ac.uk/~nk480/).
+Even before that, I was a PhD student with [Prof. Amr Sabry](https://www.cs.indiana.edu/~sabry/) at the
+[Luddy School](https://luddy.indiana.edu/), [Indiana University Bloomington](https://indiana.edu/).
+
+I also work with [Hannah Earley](https://ha.nnah.io/) on [vaire.co](https://vaire.co/).
 
 ## Research
 
-I study the mathematical foundations of computation, through an algebraic lens. My research spans programming languages,
-type theory, category theory, logic, semantics, constructive mathematics, and formalisation.
+I study mathematical foundations of computation, through an algebraic lens.
+My research spans programming languages, type theory, category theory,
+logic, semantics, constructive mathematics, and formalisation.
 
 <div class="columns" markdown="1">
   <div class="column">
@@ -78,6 +105,9 @@ My papers are listed on
 
 #### Drafts
 
+- **The Duality of Abstraction**. 2023.
+  - [[pdf]](/files/popl24-coexp.pdf)
+
 - Ryan G. Scott, Vikraman Choudhury, Ryan R. Newton, Niki Vazou,
   Ranjit Jhala: **Deriving Law-Abiding Instances**. 2017.
   - [[arXiv]](https://arxiv.org/abs/1708.02328)
@@ -91,17 +121,25 @@ My papers are listed on
 
 #### Selected Talks
 
+- **Continuations and Coexponentials**.
+  LFCS Seminar, Edinburgh.
+  May 2023.
+    - [[slides]](/files/lfcs23-coexp.pdf)
+
+- **Free Commutative Monoids in HoTT**.
+  MFPS 2022, Cornell.
+  Jul 2022.
+    - [[slides]](/files/mfps22-cmon-slides.pdf)
+
 - **Symmetries in Reversible Programming**.
   Logic and Semantics Seminar, CL, Cambridge.
   May 2022.
+    - [[slides]](/files/cl-logsem-slides.pdf)
 
 - **Weighted Sets and Modalities**.
   SYCO 8, Tallinn, Estonia.
   Dec 2021.
-
-- **Free Commutative Monoids in HoTT**.
-  Logic and Semantics Seminar, CL, Cambridge.
-  Nov 2020.
+    - [[slides]](/files/syco8-weighted-sets.pdf)
 
 - **Recovering Purity with Comonads & Capabilities**.
   ICFP, Aug 2020.
@@ -123,14 +161,6 @@ My papers are listed on
   May 2019.
     - [[slides]](/files/comonads-capabilities.pdf)
 
-- **Beth Semantics**.
-  Proof Theory and Constructive Mathematics Seminar, IU.
-  Dec 2018.
-
-- **Automorphisms of 𝕊¹**.
-  PL Wonks, IU.
-  Oct 2018.
-
 - **Homotopy theoretic aspects of Reversible Computing**.
   PL Wonks, IU.
   Sep 2017.
@@ -140,6 +170,7 @@ My papers are listed on
 
 - **Mathematical Models of Resource-Conscious Computation**. PhD Thesis,
   Indiana University, 2022.
+    - [[proquest]](https://www.proquest.com/docview/2794514727)
 
 - **Distributed Issue Tracking using Patch Theory**. Masters Thesis,
   IIT Kanpur, 2015.
