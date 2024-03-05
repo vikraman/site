@@ -24,7 +24,8 @@ and links to repositories:
 I am a Marie Skłodowska-Curie Fellow at the
 [Department of Computer Science and Engineering](https://disi.unibo.it/en),
 [Alma Mater Studiorum - Università di Bologna](https://www.unibo.it/en/),
-working with [Prof. Ivan Lanese](http://www.cs.unibo.it/~lanese/).
+and also affiliated with the [INRIA OLAS Team](https://team.inria.fr/olas/).
+I work with [Prof. Ivan Lanese](http://www.cs.unibo.it/~lanese/).
 
 Previously, I was a Research Associate to the Head of School
 [Prof. Simon Gay](https://www.dcs.gla.ac.uk/~simon/), at the
