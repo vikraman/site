@@ -59,6 +59,14 @@ main = hakyllWith defaultConfiguration {
       >>= removeIndexHtml
       >>= relativizeUrls
 
+  match allProjects $ do
+    route niceRoute
+    compile $ pandocCompiler
+      >>= loadAndApplyTemplate "templates/page.html"    defaultContext
+      >>= loadAndApplyTemplate "templates/default.html" defaultContext
+      >>= removeIndexHtml
+      >>= relativizeUrls
+
   create ["archive/index.html"] $ do
     route idRoute
     compile $ do
@@ -111,6 +119,9 @@ gravatar = "https://www.gravatar.com/avatar/" <> hash <> ext <> size
 
 allPosts :: Pattern
 allPosts = "posts/*/*/*/*.markdown"
+
+allProjects :: Pattern
+allProjects = "projects/*.markdown"
 
 postCtx :: Context String
 postCtx =
