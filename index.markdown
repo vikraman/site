@@ -21,19 +21,18 @@ and links to repositories:
 
 ## About
 
-I am a Research Associate to the Head of School
+I am a Marie Skłodowska-Curie Fellow at the
+[Department of Computer Science and Engineering](https://disi.unibo.it/en),
+[Alma Mater Studiorum - Università di Bologna](https://www.unibo.it/en/),
+working with [Prof. Ivan Lanese](http://www.cs.unibo.it/~lanese/).
+
+Previously, I was a Research Associate to the Head of School
 [Prof. Simon Gay](https://www.dcs.gla.ac.uk/~simon/), at the
 [School of Computing Science](https://www.gla.ac.uk/schools/computing/),
 [University of Glasgow](https://www.gla.ac.uk/),
 and affiliated with the
 [FATA](https://www.gla.ac.uk/schools/computing/research/researchsections/fata-section/) section.
-
-In the Fall, I will be a Marie Skłodowska-Curie Fellow at the
-[Department of Computer Science and Engineering](https://disi.unibo.it/en),
-[University of Bologna](https://www.unibo.it/en/),
-working with [Prof. Ivan Lanese](http://www.cs.unibo.it/~lanese/).
-
-Previously, I was a Visiting Research Fellow at the
+Before that, I was a Visiting Research Fellow at the
 [Computer Laboratory](https://www.cl.cam.ac.uk/),
 [University of Cambridge](https://www.cam.ac.uk/), on a Paul Purdom Fellowship,
 working with [Prof. Marcelo Fiore](https://www.cl.cam.ac.uk/~mpf23/),
@@ -239,9 +238,8 @@ I can be reached via [email](mailto:$email1$)
 following address:
 
 ~~~
-307, Sir Alwyn Williams Building
-University of Glasgow
-Glasgow G12 8RZ
-Scotland
-UK
+Dipartimento di Informatica - Scienza e Ingegneria
+Mura Anteo Zamboni, 7
+40126 Bologna BO
+Italy
 ~~~
