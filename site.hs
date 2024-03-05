@@ -101,7 +101,7 @@ email2 :: String
 email2 = user <> "@" <> host
   where name = (map toLower $ head $ words author) ++ "." ++ (map toLower $ head . tail $ words author)
         user = name
-        host = "glasgow.ac.uk"
+        host = "unibo.it"
 
 gravatar :: String
 gravatar = "https://www.gravatar.com/avatar/" <> hash <> ext <> size
