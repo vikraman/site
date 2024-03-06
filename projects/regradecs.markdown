@@ -11,19 +11,18 @@ title: ReGrade-CS
 - Duration: 1 December 2023 - 30 November 2025
 - EU contribution: € 172 750,08
 
-## People
+### People
 
-- [Vikraman Choudhury](https://vikraman.org/)
-- [Ivan Lanese](http://www.cs.unibo.it/~lanese/)
-- [Davide Sangiorgi](http://www.cs.unibo.it/~sangiorg/)
-- [Glynn Winskel](https://www.cl.cam.ac.uk/~gw104/)
-- [Marcelo Fiore](https://www.cl.cam.ac.uk/~mpf23/)
-- [German Vidal](http://www.cs.unibo.it/~vidal/)
-- [Erlang Solutions](https://www.erlang-solutions.com/)
+- [Ivan Lanese, Università di Bologna](http://www.cs.unibo.it/~lanese/)
+- [Davide Sangiorgi, Università di Bologna](http://www.cs.unibo.it/~sangiorg/)
+- [Glynn Winskel, Huawei-Edinburgh Joint Lab & University of Cambridge](https://www.cl.cam.ac.uk/~gw104/)
+- [Marcelo Fiore, University of Cambridge](https://www.cl.cam.ac.uk/~mpf23/)
+- [German Vidal, Universitat Politècnica de València](https://gvidal.webs.upv.es/)
+- [Francesco Cesarini, Erlang Solutions](https://www.erlang-solutions.com/)
 
-## Project Description
+### Project Description
 
-### Causal-consistent reversible debugging of partially observable concurrent systems
+#### Causal-consistent reversible debugging of partially observable concurrent systems
 
 Funded by the Marie Skłodowska-Curie Actions programme, the ReGraDe-CS project aims to address the challenge of
 reversible grey debugging in concurrent systems, where only part of the source code is accessible. The reversible
