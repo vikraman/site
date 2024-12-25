@@ -10,14 +10,11 @@ title: Home
   <img src=$avatar$>
 </figure>
 
-## Updates
+## News
 
-You might be interested in my recent work on Continuations and Coexponentials. Here is
-a [draft](/files/popl24-coexp.pdf), and slides from
-[HOPE](/files/hope23-talk.pdf) and [LFCS](/files/lfcs23-coexp.pdf),
-and links to repositories:
-[coexp](https://github.com/vikraman/coexp) and
-[agda-coexp](https://github.com/vikraman/agda-coexp).
+- I will be at [POPL 2025](https://popl25.sigplan.org/) presenting a few talks, hope to see you there!
+- I received some funding from [EuroProofNet WG6](https://europroofnet.github.io/wg6) to continue research on duality.
+- I am on the PC for [TYPES 2025](https://msp.cis.strath.ac.uk/types2025/).
 
 ## About
 
@@ -25,7 +22,7 @@ I am a Marie Skłodowska-Curie Fellow at the
 [Department of Computer Science and Engineering](https://disi.unibo.it/en),
 [Alma Mater Studiorum - Università di Bologna](https://www.unibo.it/en/),
 and also affiliated with the [INRIA OLAS Team](https://team.inria.fr/olas/).
-I work with [Prof. Ivan Lanese](http://www.cs.unibo.it/~lanese/).
+The project page is at [ReGraDe-CS](/projects/regradecs/).
 
 Previously, I was a Research Associate to the Head of School
 [Prof. Simon Gay](https://www.dcs.gla.ac.uk/~simon/), at the
@@ -40,8 +37,6 @@ working with [Prof. Marcelo Fiore](https://www.cl.cam.ac.uk/~mpf23/),
 and [Prof. Neel Krishnaswami](https://www.cl.cam.ac.uk/~nk480/).
 Even before that, I was a PhD student with [Prof. Amr Sabry](https://www.cs.indiana.edu/~sabry/) at the
 [Luddy School](https://luddy.indiana.edu/), [Indiana University Bloomington](https://indiana.edu/).
-
-I also work with [Hannah Earley](https://ha.nnah.io/) on [vaire.co](https://vaire.co/).
 
 ## Research
 
@@ -58,55 +53,82 @@ My papers are listed on
 [arXiv](https://arxiv.org/a/choudhury_v_1.html) and
 [dblp](https://dblp.org/pers/hd/c/Choudhury:Vikraman).
 
-- Vikraman Choudhury, Borislav Agapiev, Amr Sabry: **Scheme Pearl: Quantum Continuations**. To appear in Scheme 2022.
+- Vikraman Choudhury, Simon Gay:
+  **The Duality of λ-Abstraction**.
+  To appear in POPL 2025.
+  - [[pdf]](/files/popl25-coexp-submission.pdf)
+  - [[src]](https://github.com/vikraman/popl25-duality-artifact)
+
+- Cass Alexandru, Vikraman Choudhury, Jurriaan Rot, Niels van der Weide:
+  **Intrinsically Correct Sorting in Cubical Agda**.
+  To appear in CPP 2025.
+  - [[pdf]](/files/cpp25-bialg.pdf)
+  - [[arxiv]](https://arxiv.org/abs/2412.08362)
+
+- Ivan Lanese, Ugo Dal Lago, Vikraman Choudhury:
+  **Towards Quantum Muliparty Session Types**.
+  SEFM 2024.
+  - [[doi]](https://doi.org/10.1007/978-3-031-77382-2_22)
+  - [[arxiv]](https://arxiv.org/abs/2409.11133)
+
+- Vikraman Choudhury, Borislav Agapiev, Amr Sabry:
+  **Scheme Pearl: Quantum Continuations**.
+  Scheme Workshop 2022.
   - [[pdf]](/files/qcont22.pdf)
+  - [[arxiv]](https://arxiv.org/abs/2409.11106)
 
-- Vikraman Choudhury, Marcelo Fiore: **Free Commutative Monoids in Homotopy Type Theory**. To appear in MFPS 2022.
-  - [[pdf]](/files/cmon22.pdf) [[arXiv]](https://arxiv.org/abs/2110.05412)
+- Vikraman Choudhury, Marcelo Fiore:
+  **Free Commutative Monoids in Homotopy Type Theory**.
+  MFPS 2022.
+  - [[pdf]](/files/cmon22.pdf)
+  - [[arXiv]](https://arxiv.org/abs/2110.05412)
 
-- Vikraman Choudhury, Jacek Karwowski, Amr Sabry: **Symmetries in Reversible Programming: From Symmetric Rig Groupoids
-  to Reversible Programming Languages**. POPL 2022.
+- Vikraman Choudhury, Jacek Karwowski, Amr Sabry:
+  **Symmetries in Reversible Programming: From Symmetric Rig Groupoids to Reversible Programming Languages**.
+  POPL 2022.
   - [[doi]](https://dl.acm.org/doi/10.1145/3498667)
   - [[arXiv]](https://arxiv.org/abs/2110.05404)
   - [[src]](https://github.com/vikraman/popl22-symmetries-artifact)
 
-- Vikraman Choudhury, Neel Krishnaswami: **Recovering Purity with
-  Comonads and Capabilities**. ICFP 2020.
+- Vikraman Choudhury, Neel Krishnaswami:
+  **Recovering Purity with Comonads and Capabilities**.
+  ICFP 2020.
   - [[doi]](https://dl.acm.org/doi/abs/10.1145/3408993)
   - [[arXiv]](https://arxiv.org/abs/1907.07283)
 
 - Chao-Hong Chen, Vikraman Choudhury, Jacques Carette, Amr Sabry:
-  **Fractional Types: Expressive and Safe Space Management for Ancilla
-  Bits**. RC 2020, LNCS volume 12227.
+  **Fractional Types: Expressive and Safe Space Management for Ancilla Bits**.
+  RC 2020, LNCS volume 12227.
   - [[doi]](https://doi.org/10.1007/978-3-030-52482-1_10)
   - [[arXiv]](https://arxiv.org/abs/2002.07020)
   - [[src]](https://github.com/DreamLinuxer/FracAncilla)
 
 - Jacques Carette, Chao-Hong Chen, Vikraman Choudhury, Amr Sabry:
-  **From Reversible Programs to Univalent Universes and Back**. MFPS
-  XIII, ENTCS 336, 2018.
-    - [[doi]](https://doi.org/10.1016/j.entcs.2018.03.013)
-    - [[arXiv]](https://arxiv.org/abs/1708.02710)
-    - [[src]](https://github.com/vikraman/2DTypes/tree/master/Pi2)
+  **From Reversible Programs to Univalent Universes and Back**.
+  MFPS XIII, ENTCS 336, 2018.
+  - [[doi]](https://doi.org/10.1016/j.entcs.2018.03.013)
+  - [[arXiv]](https://arxiv.org/abs/1708.02710)
+  - [[src]](https://github.com/vikraman/2DTypes/tree/master/Pi2)
 
-- Niki Vazou, Anish Tondwalkar, Vikraman Choudhury, Ryan G. Scott,
-  Ryan R. Newton, Philip Wadler, Ranjit Jhala: **Refinement
-  reflection: complete verification with SMT**. POPL 2018.
-    - [[doi]](https://doi.org/10.1145/3158141)
-    - [[arXiv]](https://arxiv.org/abs/1711.03842)
-    - [[src]](https://github.com/ucsd-progsys/liquidhaskell)
+- Niki Vazou, Anish Tondwalkar, Vikraman Choudhury, Ryan G. Scott, Ryan R. Newton, Philip Wadler, Ranjit Jhala:
+  **Refinement Reflection: Complete Verification with SMT**.
+  POPL 2018.
+  - [[doi]](https://doi.org/10.1145/3158141)
+  - [[arXiv]](https://arxiv.org/abs/1711.03842)
+  - [[src]](https://github.com/ucsd-progsys/liquidhaskell)
 
-- Chao-Hong Chen, Vikraman Choudhury, Ryan R. Newton: **Adaptive
-  lock-free data structures in Haskell: a general method for
-  concurrent implementation swapping**. Haskell 2017.
-    - [[doi]](https://doi.org/10.1145/3122955.3122973)
-    - [[arXiv]](https://arxiv.org/abs/1708.02318)
-    - [[src]](https://github.com/iu-parfunc/adaptive-data)
+- Chao-Hong Chen, Vikraman Choudhury, Ryan R. Newton:
+  **Adaptive lock-free data structures in Haskell: a general method for concurrent implementation swapping**.
+  Haskell 2017.
+  - [[doi]](https://doi.org/10.1145/3122955.3122973)
+  - [[arXiv]](https://arxiv.org/abs/1708.02318)
+  - [[src]](https://github.com/iu-parfunc/adaptive-data)
 
 #### Drafts
 
-- **The Duality of Abstraction**. 2023.
-  - [[pdf]](/files/popl24-coexp.pdf)
+- Wind Wong, Vikraman Choudhury, Simon Gay:
+  **Symmetries in Sorting**. 2024.
+  - [[pdf]](/files/cpp25-sort.pdf)
 
 - Ryan G. Scott, Vikraman Choudhury, Ryan R. Newton, Niki Vazou,
   Ranjit Jhala: **Deriving Law-Abiding Instances**. 2017.
