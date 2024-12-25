@@ -67,6 +67,16 @@ My papers are listed on
 
 - Ivan Lanese, Ugo Dal Lago, Vikraman Choudhury:
   **Towards Quantum Muliparty Session Types**.
+  PlanQC Workshop 2025.
+  - [[pdf]](/files/planqc25-qmpst.pdf)
+
+- Vikraman Choudhury, Neel Krishnaswami, Ariadne Si Suo:
+  **Semantic Analysis of Normalisation for Directional Logic Programming**.
+  WITS Workshop 2025.
+  - [[pdf]](/files/wits25-norm.pdf)
+
+- Ivan Lanese, Ugo Dal Lago, Vikraman Choudhury:
+  **Towards Quantum Muliparty Session Types**.
   SEFM 2024.
   - [[doi]](https://doi.org/10.1007/978-3-031-77382-2_22)
   - [[arxiv]](https://arxiv.org/abs/2409.11133)
