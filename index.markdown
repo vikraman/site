@@ -55,15 +55,15 @@ My papers are listed on
 
 - Vikraman Choudhury, Simon Gay:
   **The Duality of λ-Abstraction**.
-  To appear in POPL 2025.
-  - [[pdf]](/files/popl25-coexp-submission.pdf)
+  POPL 2025.
+  - [[doi]](https://doi.org/10.1145/3704848)
   - [[src]](https://github.com/vikraman/popl25-duality-artifact)
 
 - Cass Alexandru, Vikraman Choudhury, Jurriaan Rot, Niels van der Weide:
   **Intrinsically Correct Sorting in Cubical Agda**.
-  To appear in CPP 2025.
-  - [[pdf]](/files/cpp25-bialg.pdf)
-  - [[arxiv]](https://arxiv.org/abs/2412.08362)
+  CPP 2025.
+  - [[doi]](https://doi.org/10.1145/3703595.3705873)
+  - [[arXiv]](https://arxiv.org/abs/2412.08362)
 
 - Ivan Lanese, Ugo Dal Lago, Vikraman Choudhury:
   **Towards Quantum Muliparty Session Types**.
@@ -79,13 +79,13 @@ My papers are listed on
   **Towards Quantum Muliparty Session Types**.
   SEFM 2024.
   - [[doi]](https://doi.org/10.1007/978-3-031-77382-2_22)
-  - [[arxiv]](https://arxiv.org/abs/2409.11133)
+  - [[arXiv]](https://arxiv.org/abs/2409.11133)
 
 - Vikraman Choudhury, Borislav Agapiev, Amr Sabry:
   **Scheme Pearl: Quantum Continuations**.
   Scheme Workshop 2022.
   - [[pdf]](/files/qcont22.pdf)
-  - [[arxiv]](https://arxiv.org/abs/2409.11106)
+  - [[arXiv]](https://arxiv.org/abs/2409.11106)
 
 - Vikraman Choudhury, Marcelo Fiore:
   **Free Commutative Monoids in Homotopy Type Theory**.
