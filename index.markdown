@@ -21,7 +21,7 @@ title: Home
 I am a Marie Skłodowska-Curie Fellow at the
 [Department of Computer Science and Engineering](https://disi.unibo.it/en),
 [Alma Mater Studiorum - Università di Bologna](https://www.unibo.it/en/),
-and also affiliated with the [INRIA OLAS Team](https://team.inria.fr/olas/).
+and also affiliated with the [INRIA OLAS Team](https://www.inria.fr/olas).
 The project page is at [ReGraDe-CS](/projects/regradecs/).
 
 Previously, I was a Research Associate to the Head of School
