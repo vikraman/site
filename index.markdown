@@ -12,9 +12,11 @@ title: Home
 
 ## News
 
-- I will be at [POPL 2025](https://popl25.sigplan.org/) presenting a few talks, hope to see you there!
-- I received some funding from [EuroProofNet WG6](https://europroofnet.github.io/wg6) to continue research on duality.
-- I am on the PC for [TYPES 2025](https://msp.cis.strath.ac.uk/types2025/).
+- I am visiting [Aix-Marseille Université](https://www.univ-amu.fr/en) and will
+  be at the [CIRM 3518 Conference](https://conferences.cirm-math.fr/3518.html).
+- I gave a talk at [PSSL 110](https://www.ioc.ee/~amar/pssl110/programme.html).
+- I will soon be joining [Strathclyde MSP](https://msp.cis.strath.ac.uk/)
+  as a Chancellor's Fellow in Mathematically Structured Programming.
 
 ## About
 
