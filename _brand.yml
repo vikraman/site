@@ -1,0 +1,11 @@
+typography:
+  fonts:
+    - family: Gentium Book Plus
+      source: google
+    - family: Space Mono
+      source: google
+  base: Gentium Book Plus
+  headings: Gentium Book Plus
+  monospace: Space Mono
+  link:
+    decoration: underline dotted

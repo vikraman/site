@@ -3,19 +3,41 @@ project:
 
 website:
   title: "Vikraman's site"
+  site-url: https://vikraman.github.io/site
+  description: "Vikraman's site"
+  # nav bar
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+  # search bar
+  search:
+    location: navbar
+    type: overlay
+    keyboard-shortcut: ["?", "H"]
+  # navigation
+  reader-mode: true
+  page-navigation: true
+  back-to-top-navigation: true
+  # footer
+  page-footer:
+    right: "Built using [Quarto](quarto.org)"
 
 format:
   html:
+    # styling
     theme:
-      - cosmo
-      - brand
+      light: [flatly, brand]
+      dark: [darkly, brand]
     css: styles.scss
+    respect-user-color-scheme: true
+    # layout
     toc: true
-
-
-
+    anchor-sections: true
+    smooth-scroll: true
+    # math
+    html-math-method: mathjax
+    # external links
+    link-external-newwindow: true
+    link-external-filter: '^(?:http:|https:)\/\/vikraman\.github.io\/site'
