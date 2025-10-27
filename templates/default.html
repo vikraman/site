@@ -1,72 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
     <title>Vikraman Choudhury | $title$</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Roboto+Mono|UnifrakturMaguntia">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script>
-     var Hyphenopoly = {
-       require: {
-         "en-us": "Supercalifragilisticexpialidocious"
-       },
-       setup: {
-         selectors: {
-           ".container": {}
-         }
-       }
-     };
-    </script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Merriweather|Roboto+Mono|UnifrakturMaguntia"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
     <script src="/js/node_modules/hyphenopoly/min/Hyphenopoly_Loader.js"></script>
+    <script>
+      Hyphenopoly.config({
+        require: {
+          "en-us": "Supercalifragilisticexpialidocious",
+        },
+        setup: {
+          selectors: {
+            ".content": {},
+          },
+        },
+      });
+    </script>
   </head>
   <body>
-    <section class="section">
-      <div class="container">
-        <nav class="navbar">
-          <div class="navbar-brand">
-            <a class="navbar-item is-size-2 is-size-4-mobile" href="/">
-              Vikraman Choudhury
-            </a>
-            <div class="navbar-burger burger" data-target="navbarMenu"
-                 onclick="document.getElementById('navbarMenu').classList.toggle('is-active')">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-          <div class="navbar-menu is-size-5 is-size-7-mobile is-uppercase" id="navbarMenu">
-            <div class="navbar-end">
-              <a class="navbar-item" href="/">
-                Home
-              </a>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </section>
-    <section class="section is-size-8-mobile">
-      $body$
-    </section>
-    <section class="section">
-      <footer class="footer">
-        <div class="container">
-          <div class="content has-text-right is-size-7 is-size-8-mobile">
-            <p>
-              Site
-              <a href="https://github.com/vikraman/site">built</a>
-              using
-              <a href="http://jaspervdj.be/hakyll">Hakyll</a>
-              and
-              <a href="http://bulma.io/">Bulma</a>
-            </p>
-          </div>
-        </div>
-      </footer>
-    </section>
+    <header>
+      <nav>
+        <ul>
+          <li><strong>Vikraman Choudhury</strong></li>
+        </ul>
+        <ul>
+          <li><a href="/">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>$body$</main>
+    <footer>
+      <span class="footer-right">
+        <small>
+          Site
+          <a href="https://github.com/vikraman/site">built</a>
+          using
+          <a href="https://jaspervdj.be/hakyll">Hakyll</a>
+          and
+          <a href="https://picocss.com/">Pico</a>
+        </small>
+      </span>
+    </footer>
   </body>
 </html>

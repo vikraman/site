@@ -1,93 +1,67 @@
-@import "./bulma/sass/utilities/initial-variables";
+@use "pico" with (
+    $theme-color: "purple",
+    $enable-semantic-container: true,
+    $enable-viewport: true,
+    $enable-responsive-spacings: true,
+    $enable-classes: false
+);
 
-$base03:    rgb(0, 43, 54);
-$base02:    rgb(7, 54, 66);
-$base01:    rgb(88, 110, 117);
-$base00:    rgb(101, 123, 131);
-$base0:     rgb(131, 148, 150);
-$base1:     rgb(147, 161, 161);
-$base2:     rgb(238, 232, 213);
-$base3:     rgb(253, 246, 227);
-$yellow:    rgb(181, 137, 0);
-$orange:    rgb(203, 75, 22);
-$red:       rgb(220, 50, 47);
-$magenta:   rgb(211, 54, 130);
-$violet:    rgb(108, 113, 196);
-$blue:      rgb(38, 139, 210);
-$cyan:      rgb(42, 161, 152);
-$green:     rgb(133, 153, 0);
-
-$turquoise: $cyan;
-$purple:    $violet;
-
-$black:     $base03;
-$black-bis: $base02;
-$black-ter: $base01;
-
-$grey-darker:  $base02;
-$grey-dark:    $base01;
-$grey:         $base00;
-$grey-light:   $base0;
-$grey-lighter: $base1;
-
-$link-hover: $red;
-$strong-color: $orange;
-
-$size-8: 0.5rem !default;
-$sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 $size-8 !default;
-$dimensions: 16 24 32 48 64 96 128 192 256;
-
-$family-serif: 'Merriweather', serif;
-$family-primary: $family-serif;
-$family-monospace: 'Roboto Mono', monospace;
-$family-code: $family-monospace;
-$family-fraktur: 'UnifrakturMaguntia', cursive;
-$title-weight: $weight-normal;
-
-$footer-background-color: transparent;
-$navbar-background-color: transparent;
-
-@import "./bulma/bulma";
-
-.content {
-  text-align: justify;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
+section.info {
+    text-align: end;
+    margin: 2em 0;
 }
 
-.navbar-brand {
-  font-family: $family-fraktur;
+span.footer-right {
+    display: flex;
+    justify-content: end;
 }
 
-.content figure.avatar {
-  margin-top: 2em;
+details:hover > summary {
+    background-color: var(--pico-primary-focus);
+    color: var(--pico-contrast-color);
 }
 
-pre {
-  @extend .box;
-  color: $black;
-  background-color: $white-ter;
+details > summary {
+    width: fit-content;
+    padding: 0.5rem;
+    border: 1px solid var(--pico-primary);
+    border-radius: 0.5rem;
+}
+
+details[open] > summary {
+    font-weight: bold;
+    background-color: var(--pico-primary-focus);
+}
+
+main {
+    container-type: inline-size;
+}
+
+@container (inline-size >= 30em) {
+    @supports (text-wrap: pretty) and (hyphenate-limit-chars: 10) {
+        .content {
+            text-align: justify;
+            text-wrap: pretty;
+            hyphenate-limit-chars: 10;
+            hyphens: auto;
+        }
+    }
 }
 
 body {
-  background: url('/images/8.jpg') $white-ter;
-  background-size: contain;
-  background-repeat: round;
-  background-blend-mode: soft-light;
+    background: url("/images/8.jpg") hsl(0, 0%, 95%);
+    background-size: contain;
+    background-repeat: round;
+    background-blend-mode: soft-light;
 }
 
 ul li ul {
-  margin-top: 0px !important;
-  list-style: none !important;
-  text-align: right;
-  li {
-    display: inline-block;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
-    background-color: $white-ter;
-  }
+    margin-top: 0px !important;
+    list-style: none !important;
+    text-align: right;
+    li {
+        display: inline-block;
+        padding: 0 0.22rem;
+        background-color: var(--pico-contrast-color);
+    }
 }

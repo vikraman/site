@@ -1,19 +1,3 @@
----
-title: Home
----
-
-<figure class="image is-192x192 is-pulled-right is-hidden-mobile avatar">
-  <img src=$avatar$>
-</figure>
-
-<!--
-<figure class="image is-64x64 is-pulled-right is-hidden-desktop avatar">
-  <img src=$avatar$>
-</figure>
- -->
-
-## About
-
 I am a Marie Skłodowska-Curie Fellow at the
 [Department of Computer Science and Engineering](https://disi.unibo.it/en),
 [Alma Mater Studiorum - Università di Bologna](https://www.unibo.it/en/),
@@ -34,54 +18,6 @@ and [Prof. Neel Krishnaswami](https://www.cl.cam.ac.uk/~nk480/).
 Even before that, I was a PhD student with [Prof. Amr Sabry](https://www.cs.indiana.edu/~sabry/) at the
 [Luddy School](https://luddy.indiana.edu/), [Indiana University Bloomington](https://indiana.edu/).
 
-## Research
-
-I study mathematical foundations of computation, through an algebraic lens.
-My research spans programming languages, type theory, category theory,
-logic, semantics, constructive mathematics, and formalisation.
-
-#### Theses
-
-- **Mathematical Models of Resource-Conscious Computation**. PhD Thesis,
-  Indiana University, 2022.
-    - [[proquest]](https://www.proquest.com/docview/2794514727)
-
-- **Distributed Issue Tracking using Patch Theory**. Masters Thesis,
-  IIT Kanpur, 2015.
-    - [[src]](https://hub.darcs.net/vikraman/thesis/)
-
-#### Notes
-
-- [Reversible Programming Languages](/files/reversible-languages.pdf)
-
-- [Duality for Heyting algebras](/files/heyting-duality.pdf)
-
-- [Deterministic Parallelism: a case study](/files/detpar.pdf)
-
-- [Group Testing](https://www.cse.iitk.ac.in/users/amitks/report.pdf)
-
-## Teaching
-
-At Cambridge, I supervise
-
-- Discrete Maths
-- Semantics of Programming Languages
-- Denotational Semantics
-- Logic and Proof
-- Types
-
-At IU, I've taught
-
-- B-561: Advanced Database Concepts
-- B-401: Fundamentals of Computing Theory
-- B-505: Applied Algorithms
-- I-590: Technical Foundations of Cybersecurity
-- C-343: Data Structures
-- C-241 & H-241: Discrete Structures for Computer Science
-- C-211: Intro to Computer Science
-
-## Misc
-
 - I'm part of [PL Wonks at IU](https://wonks.github.io/), and I helped
   run the [Type Theory Reading
   Group](https://wonks.github.io/type-theory-reading-group/).
@@ -101,17 +37,3 @@ At IU, I've taught
 - I'm involved with [Navya](http://navya.github.io/),
   [HackCave](https://hackcave.org/) and the [IITK-NYC
   Office](https://nyc.iitk.ac.in/).
-
-## Contact
-
-I can be reached via [email](mailto:$email1$)
-([alternative](mailto:$email2$)), or irc
-(vikraman@[freenode](irc://irc.freenode.net)), or smail at the
-following address:
-
-~~~
-Dipartimento di Informatica - Scienza e Ingegneria
-Mura Anteo Zamboni, 7
-40126 Bologna BO
-Italy
-~~~
