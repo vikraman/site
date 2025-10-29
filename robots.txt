@@ -1,1 +1,1 @@
-Sitemap: https://vikraman.github.io/site/sitemap.xml
+Sitemap: https://site.vikraman.org/sitemap.xml
