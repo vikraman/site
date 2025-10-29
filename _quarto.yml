@@ -10,7 +10,7 @@ execute:
 
 website:
   title: "Vikraman's site"
-  site-url: https://vikraman.github.io/site
+  site-url: https://site.vikraman.org
   description: "Vikraman's site"
   # nav bar
   navbar:
@@ -46,4 +46,4 @@ format:
     html-math-method: mathjax
     # external links
     link-external-newwindow: true
-    link-external-filter: '^(?:http:|https:)\/\/vikraman\.github.io\/site'
+    link-external-filter: '^(?:http:|https:)\/\/site\.vikraman\.org\/'
