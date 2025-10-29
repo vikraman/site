@@ -1,11 +1,12 @@
 typography:
   fonts:
-    - family: Gentium Book Plus
-      source: google
-    - family: Space Mono
-      source: google
-  base: Gentium Book Plus
-  headings: Gentium Book Plus
-  monospace: Space Mono
-  link:
-    decoration: underline dotted
+    - source: google
+      family: Montserrat
+      weight: [400, 700]
+    - source: google
+      family: Space Mono
+      weight: 400
+    - source: google
+      family: Gentium Book Plus
+      weight: [400, 700]
+      style: [normal, italic]

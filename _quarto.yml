@@ -22,15 +22,14 @@ website:
   back-to-top-navigation: true
   # footer
   page-footer:
-    right: "Built using [Quarto](quarto.org)"
+    right: "Built using [Quarto](https://quarto.org)"
 
 format:
   html:
     # styling
     theme:
-      light: [flatly, brand]
-      dark: [darkly, brand]
-    css: styles.scss
+      light: theme/theme-light.scss
+      dark: theme/theme-dark.scss
     respect-user-color-scheme: true
     # layout
     toc: true
