@@ -1,7 +1,13 @@
 ---
-title: "Vikraman's site"
+title: "Hi!"
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+### [**Vikraman Choudhury**]{.smallcaps}
+| pronunciation: [/vˈɪkɹəmən t͡ʃˈɔːdhɹi/](https://ipa-reader.com/?text=v%CB%88%C9%AAk%C9%B9%C9%99m%C9%99n%20t%CD%A1%CA%83%CB%88%C9%94%CB%90dh%C9%B9i&voice=Brian)
+| email: [vikraman.choudhury@unibo.it](mailto:vikraman.choudhury@unibo.it)
+| personal email: [me@vikraman.org](mailto:me@vikraman.org)
+| pronouns: he/them
+| [Dipartimento di Informatica - Scienza e Ingegneria](https://disi.unibo.it/en)
+| Mura Anteo Zamboni 7
+| 40126 Bologna BO
+| Italy
