@@ -1,7 +1,7 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
+    "objectID": "about/index.html",
+    "href": "about/index.html",
     "title": "About",
     "section": "",
     "text": "About this site\n\n\n\n Back to top"
@@ -9,8 +9,8 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Vikraman’s site",
+    "title": "Hi!",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n\n\n Back to top"
+    "text": "Vikraman Choudhury\npronunciation: /vˈɪkɹəmən t͡ʃˈɔːdhɹi/\nemail: vikraman.choudhury@unibo.it\npersonal email: me@vikraman.org\npronouns: he/them\nDipartimento di Informatica - Scienza e Ingegneria\nMura Anteo Zamboni 7\n40126 Bologna BO\nItaly\n\n\n\n\n Back to top"
   }
 ]
