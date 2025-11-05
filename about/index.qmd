@@ -1,5 +1,17 @@
 ---
-title: "About"
+title: Vikraman Choudhury
+image: photo.jpeg
+about:
+    template: solana
+    links:
+        - icon: github
+          text: GitHub
+          href: https://github.com/vikraman
 ---
 
-About this site
+I am a Marie Skłodowska-Curie Fellow at the Department of Computer Science and Engineering,
+Alma Mater Studiorum - Università di Bologna, and also affiliated with the INRIA OLAS Team.
+
+I study mathematical foundations of computation, through an algebraic lens.
+My research spans programming languages, type theory, category theory,
+logic, semantics, constructive mathematics, and formalisation.
