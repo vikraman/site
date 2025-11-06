@@ -17,7 +17,9 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about/index.qmd
+      - href: about/index.qmd
+        text: About
+      - notes/index.qmd
   # search bar
   search:
     location: navbar

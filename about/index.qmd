@@ -4,9 +4,18 @@ image: photo.jpeg
 about:
     template: solana
     links:
-        - icon: github
-          text: GitHub
+        - text: "{{< ai orcid >}} ORCiD"
+          href: https://orcid.org/0000-0003-2030-8056
+        - text: "{{< ai arxiv >}} arXiv"
+          href: https://arxiv.org/a/choudhury_v_1
+        - text: "{{< ai google-scholar >}} Google Scholar"
+          href: https://scholar.google.com/citations?user=25q0yK8AAAAJ&hl=en
+        - text: "{{< ai dblp >}} DBLP"
+          href: https://dblp.org/pid/205/2352.html
+        - text: "{{< fa brands github >}} GitHub"
           href: https://github.com/vikraman
+        - text: "{{< ai mathoverflow >}} MathOverflow"
+          href: https://mathoverflow.net/users/99623/vikraman
 ---
 
 I am a Marie Skłodowska-Curie Fellow at the Department of Computer Science and Engineering,

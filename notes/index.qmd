@@ -1,0 +1,10 @@
+---
+title: "Notes"
+listing:
+  contents: "*.qmd"
+  sort:
+    - "date desc"
+    - "title"
+  type: table
+  categories: true
+---
