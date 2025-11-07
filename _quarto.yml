@@ -15,10 +15,11 @@ website:
   # nav bar
   navbar:
     left:
-      - href: index.qmd
-        text: Home
       - href: about/index.qmd
         text: About
+      - now/index.qmd
+      - papers/index.qmd
+      - talks/index.qmd
       - notes/index.qmd
   # search bar
   search:
