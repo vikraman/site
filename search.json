@@ -7,6 +7,20 @@
     "text": "No matching items\n Back to top"
   },
   {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "Vikraman Choudhury",
+    "section": "",
+    "text": "I am a Marie Skłodowska-Curie Fellow at the Department of Computer Science and Engineering, Alma Mater Studiorum - Università di Bologna, and also affiliated with the INRIA OLAS Team.\nI study mathematical foundations of computation, through an algebraic lens. My research spans programming languages, type theory, category theory, logic, semantics, constructive mathematics, and formalisation.\n\n\n Back to top"
+  },
+  {
+    "objectID": "now/index.html",
+    "href": "now/index.html",
+    "title": "Now",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Hi!",
@@ -14,10 +28,17 @@
     "text": "Vikraman Choudhury\npronunciation: /vˈɪkɹəmən t͡ʃˈɔːdhɹi/\nemail: vikraman.choudhury@unibo.it\npersonal email: me@vikraman.org\npronouns: he/them\nDipartimento di Informatica - Scienza e Ingegneria\nMura Anteo Zamboni 7\n40126 Bologna BO\nItaly\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "Vikraman Choudhury",
+    "objectID": "papers/index.html",
+    "href": "papers/index.html",
+    "title": "Papers",
     "section": "",
-    "text": "I am a Marie Skłodowska-Curie Fellow at the Department of Computer Science and Engineering, Alma Mater Studiorum - Università di Bologna, and also affiliated with the INRIA OLAS Team.\nI study mathematical foundations of computation, through an algebraic lens. My research spans programming languages, type theory, category theory, logic, semantics, constructive mathematics, and formalisation.\n\n\n Back to top"
+    "text": "Back to top"
+  },
+  {
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Back to top"
   }
 ]
