@@ -1,0 +1,33 @@
+---
+title: Sandbox
+subtitle: A sandbox for test notes
+date: 11-09-2025
+author:
+  - name: Vikraman Choudhury
+    orcid: 0000-0003-2030-8056
+    email: me@vikraman.org
+    affiliations:
+      - Università di Bologna
+---
+
+# Introduction
+
+This is a sandbox document to test typesetting and layout. This website and notes are built using Quarto[^1].
+
+[^1]: [Quarto](https://www.quarto.org) has a website and a [Github repository](https://www.github.com/quarto-dev/quarto-cli).
+
+# Math
+
+::: {.hidden}
+$$
+\newcommand{\blank}{{-}}
+\newcommand{\ladj}{\dashv}
+\newcommand{\dual}{^{\perp}}
+\newcommand{\parr}{
+  \require{html}
+  \mathop{\style{display: inline-block; transform: rotate(180deg)}{\&}}
+}
+$$
+:::
+
+This is a math character $\alpha$, and this is some inline math $(\blank) \otimes A \ladj A\dual \parr (\blank)$.

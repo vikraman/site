@@ -1,0 +1,9 @@
+title: "Untitled"
+date-modified: last-modified
+format:
+  html:
+    embed-resources: true
+    grid:
+      margin-width: 400px
+reference-location: margin
+citation-location: margin

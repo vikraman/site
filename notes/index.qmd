@@ -1,5 +1,6 @@
 ---
 title: "Notes"
+title-block-style: default
 listing:
   contents: "*.qmd"
   sort:

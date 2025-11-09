@@ -43,6 +43,7 @@ format:
       dark: theme/theme-dark.scss
     respect-user-color-scheme: true
     # layout
+    title-block-banner: true
     toc: true
     anchor-sections: true
     smooth-scroll: true
