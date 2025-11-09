@@ -1,29 +1,22 @@
 [
   {
-    "objectID": "notes/index.html",
-    "href": "notes/index.html",
-    "title": "Notes",
+    "objectID": "notes/sandbox.html",
+    "href": "notes/sandbox.html",
+    "title": "Sandbox",
     "section": "",
-    "text": "No matching items\n Back to top"
+    "text": "Introduction\nThis is a sandbox document to test typesetting and layout. This website and notes are built using Quarto1.\n1 Quarto has a website and a Github repository.\n\nMath\n\n\\[\n\\newcommand{\\blank}{{-}}\n\\newcommand{\\ladj}{\\dashv}\n\\newcommand{\\dual}{^{\\perp}}\n\\newcommand{\\parr}{\n  \\require{html}\n  \\mathop{\\style{display: inline-block; transform: rotate(180deg)}{\\&}}\n}\n\\]\n\nThis is a math character \\(\\alpha\\), and this is some inline math \\((\\blank) \\otimes A \\ladj A\\dual \\parr (\\blank)\\).\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "Vikraman Choudhury",
-    "section": "",
-    "text": "I am a Marie Skłodowska-Curie Fellow at the Department of Computer Science and Engineering, Alma Mater Studiorum - Università di Bologna, and also affiliated with the INRIA OLAS Team.\nI study mathematical foundations of computation, through an algebraic lens. My research spans programming languages, type theory, category theory, logic, semantics, constructive mathematics, and formalisation.\n\n\n Back to top"
-  },
-  {
-    "objectID": "now/index.html",
-    "href": "now/index.html",
-    "title": "Now",
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Talks",
     "section": "",
     "text": "Back to top"
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
+    "objectID": "papers/index.html",
+    "href": "papers/index.html",
+    "title": "Papers",
     "section": "",
     "text": "Back to top"
   },
@@ -35,17 +28,31 @@
     "text": "Vikraman Choudhury\npronunciation: /vˈɪkɹəmən t͡ʃˈɔːdhɹi/\nemail: vikraman.choudhury@unibo.it\npersonal email: me@vikraman.org\npronouns: he/them\nDipartimento di Informatica - Scienza e Ingegneria\nMura Anteo Zamboni 7\n40126 Bologna BO\nItaly\n\n\n\n\n\n\nNote\n\n\n\nThis website is under construction, go here for the old website.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "papers/index.html",
-    "href": "papers/index.html",
-    "title": "Papers",
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
     "section": "",
     "text": "Back to top"
   },
   {
-    "objectID": "talks/index.html",
-    "href": "talks/index.html",
-    "title": "Talks",
+    "objectID": "now/index.html",
+    "href": "now/index.html",
+    "title": "Now",
     "section": "",
     "text": "Back to top"
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "Vikraman Choudhury",
+    "section": "",
+    "text": "I am a Marie Skłodowska-Curie Fellow at the Department of Computer Science and Engineering, Alma Mater Studiorum - Università di Bologna, and also affiliated with the INRIA OLAS Team.\nI study mathematical foundations of computation, through an algebraic lens. My research spans programming languages, type theory, category theory, logic, semantics, constructive mathematics, and formalisation.\n\n\n Back to top"
+  },
+  {
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "Notes",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nNov 9, 2025\n\n\nSandbox\n\n\nVikraman Choudhury\n\n\n\n\n\n\nNo matching items\n Back to top"
   }
 ]

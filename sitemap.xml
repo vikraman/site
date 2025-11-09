@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://site.vikraman.org/notes/index.html</loc>
-    <lastmod>2025-11-08T23:30:59.741Z</lastmod>
-  </url>
-  <url>
-    <loc>https://site.vikraman.org/about/index.html</loc>
-    <lastmod>2025-11-08T23:30:59.740Z</lastmod>
+    <loc>https://site.vikraman.org/notes/sandbox.html</loc>
+    <lastmod>2025-11-09T23:47:54.309Z</lastmod>
   </url>
   <url>
     <loc>https://site.vikraman.org/index.html</loc>
-    <lastmod>2025-11-08T23:30:59.741Z</lastmod>
+    <lastmod>2025-11-09T23:47:54.309Z</lastmod>
+  </url>
+  <url>
+    <loc>https://site.vikraman.org/about/index.html</loc>
+    <lastmod>2025-11-09T23:47:54.307Z</lastmod>
+  </url>
+  <url>
+    <loc>https://site.vikraman.org/notes/index.html</loc>
+    <lastmod>2025-11-09T23:47:54.309Z</lastmod>
   </url>
 </urlset>
