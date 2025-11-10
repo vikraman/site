@@ -31,3 +31,27 @@ $$
 :::
 
 This is a math character $\alpha$, and this is some inline math $(\blank) \otimes A \ladj A\dual \parr (\blank)$.
+
+This is a prooftree in display math mode[^2].
+$$
+\require{bussproofs}
+\begin{prooftree}
+  \AxiomC{ $\Gamma, A \vdash B$ }
+  \RightLabel{ $\to$I }
+  \UnaryInfC{ $\Gamma \vdash A \to B$ }
+  \AxiomC{ $\Gamma \vdash A$ }
+  \RightLabel{ $\to$E }
+  \BinaryInfC{ $\Gamma \vdash B$ }
+\end{prooftree}
+$$
+
+::: {.column-margin}
+[^2]: This is another prooftree but in the margin.
+$$
+\begin{prooftree}
+  \AxiomC{ $P$ }
+  \AxiomC{ $P \to Q$ }
+  \BinaryInfC { $Q$ }
+\end{prooftree}
+$$
+:::
