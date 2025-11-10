@@ -4237,7 +4237,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">November 9, 2025</p>
+        <p class="date-modified">November 10, 2025</p>
       </div>
     </div>
       
@@ -4269,7 +4269,7 @@ window.Quarto = {
 <h1>Introduction</h1>
 <p>This is a sandbox document to test typesetting and layout. This website and notes are built using Quarto<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup> <a href="https://www.quarto.org">Quarto</a> has a website and a <a href="https://www.github.com/quarto-dev/quarto-cli">Github repository</a>.</p></div></div></section>
-<section id="math" class="level1">
+<section id="math" class="level1 page-columns page-full">
 <h1>Math</h1>
 <div class="hidden">
 <p><span class="math display">\[
@@ -4283,6 +4283,26 @@ window.Quarto = {
 \]</span></p>
 </div>
 <p>This is a math character <span class="math inline">\(\alpha\)</span>, and this is some inline math <span class="math inline">\((\blank) \otimes A \ladj A\dual \parr (\blank)\)</span>.</p>
+<p>This is a prooftree in display math mode<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. <span class="math display">\[
+\require{bussproofs}
+\begin{prooftree}
+  \AxiomC{ $\Gamma, A \vdash B$ }
+  \RightLabel{ $\to$I }
+  \UnaryInfC{ $\Gamma \vdash A \to B$ }
+  \AxiomC{ $\Gamma \vdash A$ }
+  \RightLabel{ $\to$E }
+  \BinaryInfC{ $\Gamma \vdash B$ }
+\end{prooftree}
+\]</span></p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup> This is another prooftree but in the margin. <span class="math display">\[
+\begin{prooftree}
+  \AxiomC{ $P$ }
+  \AxiomC{ $P \to Q$ }
+  \BinaryInfC { $Q$ }
+\end{prooftree}
+\]</span></p></div><div class>
+
+</div></div>
 
 
 </section>

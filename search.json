@@ -4,7 +4,7 @@
     "href": "notes/sandbox.html",
     "title": "Sandbox",
     "section": "",
-    "text": "Introduction\nThis is a sandbox document to test typesetting and layout. This website and notes are built using Quarto1.\n1 Quarto has a website and a Github repository.\n\nMath\n\n\\[\n\\newcommand{\\blank}{{-}}\n\\newcommand{\\ladj}{\\dashv}\n\\newcommand{\\dual}{^{\\perp}}\n\\newcommand{\\parr}{\n  \\require{html}\n  \\mathop{\\style{display: inline-block; transform: rotate(180deg)}{\\&}}\n}\n\\]\n\nThis is a math character \\(\\alpha\\), and this is some inline math \\((\\blank) \\otimes A \\ladj A\\dual \\parr (\\blank)\\).\n\n\n\n\n\n Back to top"
+    "text": "Introduction\nThis is a sandbox document to test typesetting and layout. This website and notes are built using Quarto1.\n1 Quarto has a website and a Github repository.\n\nMath\n\n\\[\n\\newcommand{\\blank}{{-}}\n\\newcommand{\\ladj}{\\dashv}\n\\newcommand{\\dual}{^{\\perp}}\n\\newcommand{\\parr}{\n  \\require{html}\n  \\mathop{\\style{display: inline-block; transform: rotate(180deg)}{\\&}}\n}\n\\]\n\nThis is a math character \\(\\alpha\\), and this is some inline math \\((\\blank) \\otimes A \\ladj A\\dual \\parr (\\blank)\\).\nThis is a prooftree in display math mode2. \\[\n\\require{bussproofs}\n\\begin{prooftree}\n  \\AxiomC{ $\\Gamma, A \\vdash B$ }\n  \\RightLabel{ $\\to$I }\n  \\UnaryInfC{ $\\Gamma \\vdash A \\to B$ }\n  \\AxiomC{ $\\Gamma \\vdash A$ }\n  \\RightLabel{ $\\to$E }\n  \\BinaryInfC{ $\\Gamma \\vdash B$ }\n\\end{prooftree}\n\\]\n2 This is another prooftree but in the margin. \\[\n\\begin{prooftree}\n  \\AxiomC{ $P$ }\n  \\AxiomC{ $P \\to Q$ }\n  \\BinaryInfC { $Q$ }\n\\end{prooftree}\n\\]\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "talks/index.html",
