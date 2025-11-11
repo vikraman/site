@@ -48,7 +48,9 @@ format:
     anchor-sections: true
     smooth-scroll: true
     # math
-    html-math-method: mathjax
+    html-math-method:
+      method: mathjax
+      url: https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js
     # external links
     link-external-newwindow: true
     link-external-filter: '^(?:http:|https:)\/\/site\.vikraman\.org\/'
