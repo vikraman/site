@@ -8,6 +8,10 @@ author:
     email: me@vikraman.org
     affiliations:
       - Università di Bologna
+filters:
+  - imagify
+imagify:
+  header-includes: \usepackage{quiver}
 ---
 
 # Introduction
@@ -55,3 +59,49 @@ $$
 \end{prooftree}
 $$
 :::
+
+# Diagrams
+
+This renders diagrams in markdown @fig-diagrams.
+
+::: {#fig-diagrams}
+::: imagify
+
+This is some imagified LaTeX math.
+
+$$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
+
+A TikZ picture @fig-tikz.
+
+::: {#fig-tikz}
+\begin{tikzpicture}
+\draw (-2,0) -- (2,0);
+\filldraw [gray] (0,0) circle (2pt);
+\draw (-2,-2) .. controls (0,0) .. (2,-2);
+\draw (-2,2) .. controls (-1,0) and (1,0) .. (2,2);
+\end{tikzpicture}
+:::
+
+A commutative diagram @fig-tikzcd.
+
+::: {#fig-tikzcd}
+$$\begin{tikzcd}
+	A && B \\
+	\\
+	C && D
+	\arrow["f", from=1-1, to=1-3]
+	\arrow["h"', from=1-1, to=3-1]
+	\arrow["i", from=1-3, to=3-3]
+	\arrow["g"', from=3-1, to=3-3]
+\end{tikzcd}$$
+:::
+
+:::
+:::
+
+This is a quiver iframe.
+
+```{=html}
+<!-- https://q.uiver.app/#q=WzAsNCxbMCwwLCJBIl0sWzIsMCwiQiJdLFswLDIsIkMiXSxbMiwyLCJEIl0sWzAsMSwiZiJdLFswLDIsImgiLDJdLFsyLDMsImciLDJdLFsxLDMsImkiXV0= -->
+<iframe data-external=1 class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMCwwLCJBIl0sWzIsMCwiQiJdLFswLDIsIkMiXSxbMiwyLCJEIl0sWzAsMSwiZiJdLFswLDIsImgiLDJdLFsyLDMsImciLDJdLFsxLDMsImkiXV0=&embed" width="200" height="200" style="border-radius: 8px; border: none;"></iframe>
+```
