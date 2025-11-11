@@ -386,6 +386,7 @@ window.Quarto = {
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#math" id="toc-math" class="nav-link" data-scroll-target="#math">Math</a></li>
+  <li><a href="#diagrams" id="toc-diagrams" class="nav-link" data-scroll-target="#diagrams">Diagrams</a></li>
   </ul>
 </nav>
     </div>
@@ -435,6 +436,65 @@ window.Quarto = {
 \]</span></p></div><div class="">
 
 </div></div>
+</section>
+<section id="diagrams" class="level1">
+<h1>Diagrams</h1>
+<p>This renders diagrams in markdown <a href="#fig-diagrams" class="quarto-xref">Figure&nbsp;1</a>.</p>
+<div id="fig-diagrams" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diagrams-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="imagify">
+<p>This is some imagified LaTeX math.</p>
+<p><em>&lt;LaTeX content not imagified&gt;</em> \binom{n}{k} = \frac{n!}{k!(n-k)!} <em>&lt;end of LaTeX content&gt;</em></p>
+<p>A TikZ picture <a href="#fig-tikz" class="quarto-xref">Figure&nbsp;1 (a)</a>.</p>
+<div id="fig-tikz" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-tikz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<em>&lt;LaTeX content not imagified&gt;</em>
+
+\begin{tikzpicture}
+\draw (-2,0) -- (2,0);
+\filldraw [gray] (0,0) circle (2pt);
+\draw (-2,-2) .. controls (0,0) .. (2,-2);
+\draw (-2,2) .. controls (-1,0) and (1,0) .. (2,2);
+\end{tikzpicture}
+
+<em>&lt;end of LaTeX content&gt;</em>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-tikz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a)
+</figcaption>
+</figure>
+</div>
+<p>A commutative diagram <a href="#fig-tikzcd" class="quarto-xref">Figure&nbsp;1 (b)</a>.</p>
+<div id="fig-tikzcd" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-tikzcd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><em>&lt;LaTeX content not imagified&gt;</em> \begin{tikzcd}
+    A &amp;&amp; B \\
+    \\
+    C &amp;&amp; D
+    \arrow["f", from=1-1, to=1-3]
+    \arrow["h"', from=1-1, to=3-1]
+    \arrow["i", from=1-3, to=3-3]
+    \arrow["g"', from=3-1, to=3-3]
+\end{tikzcd} <em>&lt;end of LaTeX content&gt;</em></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-tikzcd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-diagrams-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
+</figure>
+</div>
+<p>This is a quiver iframe.</p>
+<!-- https://q.uiver.app/#q=WzAsNCxbMCwwLCJBIl0sWzIsMCwiQiJdLFswLDIsIkMiXSxbMiwyLCJEIl0sWzAsMSwiZiJdLFswLDIsImgiLDJdLFsyLDMsImciLDJdLFsxLDMsImkiXV0= -->
+<iframe data-external="1" class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMCwwLCJBIl0sWzIsMCwiQiJdLFswLDIsIkMiXSxbMiwyLCJEIl0sWzAsMSwiZiJdLFswLDIsImgiLDJdLFsyLDMsImciLDJdLFsxLDMsImkiXV0=&amp;embed" width="200" height="200" style="border-radius: 8px; border: none;"></iframe>
 
 
 </section>
