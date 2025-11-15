@@ -32,7 +32,21 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "Back to top"
+    "text": "My research has been funded by the following grants and awards.\n\nReversible Gray Debugging of Concurrent Systems (ReGraDe-CS)\nothers\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "projects/regradecs/index.html",
+    "href": "projects/regradecs/index.html",
+    "title": "Reversible Gray Debugging of Concurrent Systems",
+    "section": "",
+    "text": "ReGraDe-CS is a Marie Skłodowska-Curie Actions (MSCA) funded fellowship."
+  },
+  {
+    "objectID": "projects/regradecs/index.html#causal-consistent-reversible-debugging-of-partially-observable-concurrent-systems",
+    "href": "projects/regradecs/index.html#causal-consistent-reversible-debugging-of-partially-observable-concurrent-systems",
+    "title": "Reversible Gray Debugging of Concurrent Systems",
+    "section": "Causal-consistent reversible debugging of partially observable concurrent systems",
+    "text": "Causal-consistent reversible debugging of partially observable concurrent systems\nFunded by the Marie Skłodowska-Curie Actions programme, the ReGraDe-CS project aims to address the challenge of reversible grey debugging in concurrent systems, where only part of the source code is accessible. The reversible causal-consistent debugging and replay (RCCDR) approach allows a faulty execution in the production environment to be logged and replayed in a reversible debugger. This enables researchers to explore the logged execution backwards and forwards, tracing the issue back to its cause. However, RCCDR requires full access to the source code of the target programme. To overcome this limitation, the project will seek to adapt RCCDR for use with partially accessible systems. The concept will be investigated both abstractly and concretely. Project outcomes could expand RCCDR applicability, benefiting small- and medium-sized IT enterprises and software developers."
   },
   {
     "objectID": "now/index.html",

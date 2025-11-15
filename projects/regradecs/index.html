@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Talks – Vikraman’s site</title>
+<title>Reversible Gray Debugging of Concurrent Systems – Vikraman’s site</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,28 +23,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7fd42de8a988761bcd16534fb43462c9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-7e197fbbe73674e881781fca326df3ad.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7fd42de8a988761bcd16534fb43462c9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-92cec51518e72545a3193e049297b031.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-4433777713a0d53b8509e468346d9937.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-92cec51518e72545a3193e049297b031.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7fd42de8a988761bcd16534fb43462c9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-7e197fbbe73674e881781fca326df3ad.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7fd42de8a988761bcd16534fb43462c9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-92cec51518e72545a3193e049297b031.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-4433777713a0d53b8509e468346d9937.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-92cec51518e72545a3193e049297b031.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -253,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Vikraman’s site</span>
     </a>
   </div>
@@ -264,27 +264,27 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about/index.html"> 
+    <a class="nav-link" href="../../about/index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../now/index.html"> 
+    <a class="nav-link" href="../../now/index.html"> 
 <span class="menu-text">Now</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../papers/index.html"> 
+    <a class="nav-link" href="../../papers/index.html"> 
 <span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../talks/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../talks/index.html"> 
 <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../notes/index.html"> 
+    <a class="nav-link" href="../../notes/index.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/index.html"> 
+    <a class="nav-link" href="../../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -304,7 +304,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Talks</h1>
+      <h1 class="title">Reversible Gray Debugging of Concurrent Systems</h1>
                       </div>
   </div>
     
@@ -320,8 +320,19 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#people" id="toc-people" class="nav-link active" data-scroll-target="#people">People</a></li>
+  <li><a href="#description" id="toc-description" class="nav-link" data-scroll-target="#description">Description</a>
+  <ul class="collapse">
+  <li><a href="#causal-consistent-reversible-debugging-of-partially-observable-concurrent-systems" id="toc-causal-consistent-reversible-debugging-of-partially-observable-concurrent-systems" class="nav-link" data-scroll-target="#causal-consistent-reversible-debugging-of-partially-observable-concurrent-systems">Causal-consistent reversible debugging of partially observable concurrent systems</a></li>
+  </ul></li>
+  <li><a href="#news" id="toc-news" class="nav-link" data-scroll-target="#news">News</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -331,8 +342,37 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<p><strong>ReGraDe-CS</strong> is a Marie Skłodowska-Curie Actions (MSCA) funded fellowship.</p>
+<ul>
+<li>Grant agreement ID: 101106046</li>
+<li>DOI: <a href="https://doi.org/10.3030/101106046">10.3030/101106046</a></li>
+<li>Duration: 1 December 2023 - 30 November 2025</li>
+<li>EU contribution: € 172 750,08</li>
+</ul>
+<section id="people" class="level1">
+<h1>People</h1>
+<ul>
+<li><a href="http://www.cs.unibo.it/~lanese/">Ivan Lanese, Università di Bologna</a></li>
+<li><a href="http://www.cs.unibo.it/~sangiorg/">Davide Sangiorgi, Università di Bologna</a></li>
+<li><a href="https://www.cl.cam.ac.uk/~gw104/">Glynn Winskel, Huawei-Edinburgh Joint Lab &amp; University of Cambridge</a></li>
+<li><a href="https://www.cl.cam.ac.uk/~mpf23/">Marcelo Fiore, University of Cambridge</a></li>
+<li><a href="https://gvidal.webs.upv.es/">German Vidal, Universitat Politècnica de València</a></li>
+<li><a href="https://www.erlang-solutions.com/">Francesco Cesarini, Erlang Solutions</a></li>
+</ul>
+</section>
+<section id="description" class="level1">
+<h1>Description</h1>
+<section id="causal-consistent-reversible-debugging-of-partially-observable-concurrent-systems" class="level2">
+<h2 class="anchored" data-anchor-id="causal-consistent-reversible-debugging-of-partially-observable-concurrent-systems">Causal-consistent reversible debugging of partially observable concurrent systems</h2>
+<p>Funded by the Marie Skłodowska-Curie Actions programme, the ReGraDe-CS project aims to address the challenge of reversible grey debugging in concurrent systems, where only part of the source code is accessible. The reversible causal-consistent debugging and replay (RCCDR) approach allows a faulty execution in the production environment to be logged and replayed in a reversible debugger. This enables researchers to explore the logged execution backwards and forwards, tracing the issue back to its cause. However, RCCDR requires full access to the source code of the target programme. To overcome this limitation, the project will seek to adapt RCCDR for use with partially accessible systems. The concept will be investigated both abstractly and concretely. Project outcomes could expand RCCDR applicability, benefiting small- and medium-sized IT enterprises and software developers.</p>
+</section>
+</section>
+<section id="news" class="level1">
+<h1>News</h1>
+<p>Soon.</p>
 
 
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -771,5 +811,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
