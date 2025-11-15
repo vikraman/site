@@ -1,3 +1,8 @@
 ---
 title: Projects
 ---
+
+My research has been funded by the following grants and awards.
+
+- [Reversible Gray Debugging of Concurrent Systems (ReGraDe-CS)](regradecs/index.qmd)
+- others
