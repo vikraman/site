@@ -43,6 +43,10 @@ format:
       dark: theme/theme-dark.scss
     respect-user-color-scheme: true
     # layout
+    page-layout: full
+    grid:
+      body-width: 750px
+      margin-width: 450px
     title-block-banner: true
     toc: true
     anchor-sections: true
