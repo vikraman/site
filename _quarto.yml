@@ -12,6 +12,7 @@ website:
   title: "Vikraman's site"
   site-url: https://site.vikraman.org
   description: "Vikraman's personal website"
+  favicon: favicon.svg
   # nav bar
   navbar:
     left:
