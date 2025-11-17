@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="8" fill="#ede8d0" />
+  <text x="50%" y="55%" text-anchor="middle"
+    font-family="Brush Script MT, Lucida Handwriting, cursive" font-size="42"
+    fill="#b22222" style="dominant-baseline:middle;">
+    VC
+  </text>
+</svg>
