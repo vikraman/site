@@ -10,12 +10,12 @@ $light: $off-white;
 $dark: $gray;
 
 // body
-$body-bg: lighten($cream, 20%);
+$body-bg: lighten($cream, 10%);
 $body-color: $oxblood;
 
 // links
 $link-color: darken($body-color, 10%);
-$link-hover-bg-color: darken($body-bg, 10%);
+$link-hover-bg-color: darken($body-bg, 20%);
 
 // navbar
 $navbar-bg: $primary;
