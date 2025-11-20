@@ -1,0 +1,32 @@
+---
+title: 'Scheme Pearl: Quantum Continuations'
+authors:
+- name: Vikraman Choudhury
+  orcid: 0000-0003-2030-8056
+  affiliation: University of Glasgow, UK
+- name: Borislav Agapiev
+- name: Amr Sabry
+  orcid: 0000-0002-1025-7331
+  affiliation: Indiana University, USA
+date: 2022-09-16
+doi: 10.48550/arXiv.2409.11106
+venue:
+  name: Scheme 2022
+  description: Scheme and Functional Programming Workshop
+categories:
+- workshop
+citation:
+  doi: 10.48550/arXiv.2409.11106
+  type: paper-conference
+  container-title: Scheme and Functional Programming Workshop
+  url: https://doi.org/10.48550/arXiv.2409.11106
+  issued: '2024'
+links:
+  arxiv: '2409.11106'
+abstract: |
+  We advance the thesis that the simulation of quantum circuits is fundamentally
+  about the efficient management of a large (potentially exponential) number of
+  delimited continuations. The family of Scheme languages, with its efficient
+  implementations of first-class continuations and with its imperative constructs,
+  provides an elegant host for modeling and simulating quantum circuits.
+---

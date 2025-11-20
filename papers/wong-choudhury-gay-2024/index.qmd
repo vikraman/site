@@ -1,0 +1,37 @@
+---
+title: On Commutativity, Total Orders, and Sorting
+authors:
+- name: Wind Wong
+  orcid: 0009-0005-8306-7968
+- name: Vikraman Choudhury
+  orcid: 0000-0003-2030-8056
+  affiliation: Università di Bologna, Bologna, Italy
+- name: Simon J Gay
+  orcid: 0000-0003-3033-9091
+  affiliation: University of Glasgow, Glasgow, United Kingdom
+date: 2024-04
+venue:
+  name: HoTT/UF 2024
+  description: Workshop on Homotopy Type Theory / Univalent Foundations
+categories:
+- workshop
+citation:
+  type: paper-conference
+  container-title: Workshop on Homotopy Type Theory / Univalent Foundations (HoTT/UF 2024)
+  issued: '2024'
+links:
+  hal: 'hal-04838253'
+abstract: |
+  In this talk, we study free monoids, free commutative monoids, and their
+  connections with sorting and well-orders. Univalent type theory provides a
+  rigorous framework for implementing these ideas, in the construction of free
+  algebras using higher inductive types and quotients, and reasoning up to
+  equivalence using categorical universal properties. The main contributions are a
+  new framework for universal algebra (free algebras and their universal
+  properties), various constructions of free monoids and free commutative monoids
+  (with proofs of their universal properties), applications to proving
+  combinatorial properties of these constructions, and finally an axiomatic
+  understanding of sorting. Our results have been formalized in Cubical Agda, and
+  the formalization is available at:
+  https://github.com/pufferffish/agda-symmetries/.
+---

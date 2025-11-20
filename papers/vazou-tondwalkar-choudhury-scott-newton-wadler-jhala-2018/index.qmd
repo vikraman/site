@@ -1,0 +1,62 @@
+---
+title: Refinement reflection
+subtitle: complete verification with SMT
+authors:
+- name: Niki Vazou
+  orcid: 0000-0003-0732-5476
+  affiliation: University of Maryland, USA
+- name: Anish Tondwalkar
+  affiliation: University of California at San Diego, USA
+- name: Vikraman Choudhury
+  orcid: 0000-0003-2030-8056
+  affiliation: Indiana University, USA
+- name: Ryan G. Scott
+  orcid: 0000-0002-8479-8974
+  affiliation: Indiana University, USA
+- name: Ryan R. Newton
+  orcid: 0000-0003-0995-1294
+  affiliation: Indiana University, USA
+- name: Philip Wadler
+  orcid: 0000-0001-7619-6378
+  affiliation: University of Edinburgh, UK / Input Output HK, UK
+- name: Ranjit Jhala
+  orcid: 0000-0002-1802-9421
+  affiliation: University of California at San Diego, USA
+date: 2017-12-27
+doi: 10.1145/3158141
+venue:
+  name: POPL 2018
+  description: 45th ACM SIGPLAN Symposium on Principles of Programming Languages
+proceedings:
+  name: PACMPL
+  description: Proceedings of the ACM on Programming Languages
+categories:
+- conference
+citation:
+  doi: 10.1145/3158141
+  type: paper-conference
+  container-title: Proceedings of the ACM on Programming Languages
+  url: https://doi.org/10.1145/3158141
+  issued: '2017'
+links:
+  arxiv: '1711.03842'
+abstract: |
+  We introduce Refinement Reflection, a new framework for building SMT-based
+  deductive verifiers. The key idea is to reflect the code implementing a
+  user-defined function into the function’s (output) refinement type. As a
+  consequence, at uses of the function, the function definition is instantiated in
+  the SMT logic in a precise fashion that permits decidable verification.
+  Reflection allows the user to write equational proofs of programs just by
+  writing other programs using pattern-matching and recursion to perform
+  case-splitting and induction. Thus, via the propositions-as-types principle, we
+  show that reflection permits the specification of arbitrary functional
+  correctness properties. Finally, we introduce a proof-search algorithm called
+  Proof by Logical Evaluation that uses techniques from model checking and
+  abstract interpretation, to completely automate equational reasoning. We have
+  implemented reflection in Liquid Haskell and used it to verify that the widely
+  used instances of the Monoid, Applicative, Functor, and Monad typeclasses
+  actually satisfy key algebraic laws required to make the clients safe, and have
+  used reflection to build the first library that actually verifies assumptions
+  about associativity and ordering that are crucial for safe deterministic
+  parallelism.
+---

@@ -1,0 +1,41 @@
+---
+title: Semantic Analysis of Normalisation for Directional Logic Programming
+authors:
+- name: Vikraman Choudhury
+  orcid: 0000-0003-2030-8056
+  affiliation: Università di Bologna, Bologna, Italy
+- name: Neel Krishnaswami
+  orcid: 0000-0003-2838-5865
+  affiliation: University of Cambridge, UK
+- name: Ariadne Si Suo
+date: 2025-01
+venue:
+  name: WITS 2025
+  description: Fourth Workshop on the Implementation of Type Systems
+categories:
+- workshop
+- bidirectional typechecking
+- categorical semantics
+- classical linear logic
+- directional logic programming
+keywords:
+- bidirectional typechecking
+- categorical semantics
+- classical linear logic
+- directional logic programming
+citation:
+  type: paper-conference
+  container-title: Fourth Workshop on the Implementation of Type Systems
+  issued: '2025'
+links:
+  hal: 'hal-04838273'
+abstract: |
+  This work is about using directional logic programming to give foundations to
+  mode-correct bidirectional type systems [2, \S 6.2]. Reddy[5] uses a term
+  language for classical linear logic, adapted from Abramsky's Linear Chemical
+  Abstract Machine (LCHAM) [1], to give a typed calculus for directional logic
+  programs. We give a categorical semantics to Reddy's calculus, using
+  polycategories. We give normalisation results for this calculus, which shows how
+  to evaluate logic queries to normal forms, that gives output substitutions
+  indicating whether queries fail or succeed.
+---

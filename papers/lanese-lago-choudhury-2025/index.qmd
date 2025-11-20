@@ -1,0 +1,56 @@
+---
+title: Towards Quantum Multiparty Session Types
+authors:
+- name: Ivan Lanese
+  orcid: 0000-0003-2527-9995
+- name: Ugo Dal Lago
+  orcid: 0000-0001-9200-070X
+- name: Vikraman Choudhury
+  orcid: 0000-0003-2030-8056
+  affiliation: Università di Bologna, Bologna, Italy
+date: 2024-11-26
+doi: 10.1007/978-3-031-77382-2_22
+venue:
+  name: SEFM 2024
+  description: 22nd International Conference on Software Engineering and Formal Methods
+proceedings:
+  name: LNCS
+  description: Lecture Notes in Computer Science
+categories:
+- conference
+- Linear Types
+- Multiparty Session Types
+- Quantum Computing
+- Quantum Processes
+- Quantum Protocols
+keywords:
+- Linear Types
+- Multiparty Session Types
+- Quantum Computing
+- Quantum Processes
+- Quantum Protocols
+citation:
+  doi: 10.1007/978-3-031-77382-2_22
+  type: paper-conference
+  container-title: Software Engineering and Formal Methods
+  url: https://doi.org/10.1007/978-3-031-77382-2_22
+  issued: '2024'
+links:
+  arxiv: '2409.11133'
+abstract: |
+  Multiparty Session Types (MPSTs) offer a structured way of specifying
+  communication protocols and guarantee relevant communication properties, such as
+  deadlock-freedom. In this paper, we extend a minimal MPST system with quantum
+  data and operations, enabling the specification of quantum protocols. Quantum
+  MPSTs (QMPSTs) provide a formal notation to describe quantum protocols, both at
+  the abstract level of global types, describing which communications can take
+  place in the system and their dependencies, and at the concrete level of local
+  types and quantum processes, describing the expected behavior of each
+  participant in the protocol. Type-checking relates these two levels formally,
+  ensuring that processes behave as prescribed by the global type. Beyond usual
+  communication properties, QMPSTs also allow us to prove that qubits are owned by
+  a single process at any time, capturing the quantum no-cloning and no-deleting
+  theorems. We use our approach to verify four quantum protocols from the
+  literature, respectively Teleportation, Secret Sharing, Bit-Commitment, and Key
+  Distribution.
+---

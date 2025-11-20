@@ -1,0 +1,45 @@
+---
+title: Intrinsically Correct Sorting in Cubical Agda
+authors:
+- name: Cass Alexandru
+  orcid: 0009-0008-5210-2873
+  affiliation: RPTU Kaiserslautern-Landau, Kaiserslautern, Germany
+- name: Vikraman Choudhury
+  orcid: 0000-0003-2030-8056
+  affiliation: Università di Bologna, Bologna, Italy
+- name: Jurriaan Rot
+  orcid: 0000-0002-1404-6232
+  affiliation: Radboud University Nijmegen, Nijmegen, Netherlands
+- name: Niels van der Weide
+  orcid: 0000-0003-1146-4161
+  affiliation: Radboud University Nijmegen, Nijmegen, Netherlands
+date: 2025-01-10
+doi: 10.1145/3703595.3705873
+venue:
+  name: CPP 2025
+  description: Certified Programs and Proofs
+proceedings:
+  description: Proceedings of the 14th ACM SIGPLAN International Conference on Certified Programs and Proofs
+categories:
+- conference
+citation:
+  doi: 10.1145/3703595.3705873
+  type: paper-conference
+  container-title: Certified Programs and Proofs
+  url: https://doi.org/10.1145/3703595.3705873
+  issued: '2025'
+links:
+  arxiv: '2412.08362'
+  hal: 'hal-04838255'
+abstract: |
+  The paper "Sorting with Bialgebras and Distributive Laws" by Hinze et al. uses
+  the framework of bialgebraic semantics to define sorting algorithms. From
+  distributive laws between functors they construct pairs of sorting algorithms
+  using both folds and unfolds. Pairs of sorting algorithms arising this way
+  include insertion/selection sort and quick/tree sort. We extend this work to
+  define intrinsically correct variants in cubical Agda. Our key idea is to index
+  our data types by multisets, which concisely captures that a sorting algorithm
+  terminates with an ordered permutation of its input list. By lifting bialgebraic
+  semantics to the indexed setting, we obtain the correctness of sorting
+  algorithms purely from the distributive law.
+---

@@ -1,0 +1,52 @@
+---
+title: Recovering purity with comonads and capabilities
+authors:
+- name: Vikraman Choudhury
+  orcid: 0000-0003-2030-8056
+  affiliation: Indiana University, USA / University of Cambridge, UK
+- name: Neel Krishnaswami
+  orcid: 0000-0003-2838-5865
+  affiliation: University of Cambridge, UK
+date: 2020-08-02
+doi: 10.1145/3408993
+venue:
+  name: ICFP 2020
+  description: 25th ACM SIGPLAN International Conference on Functional Programming
+proceedings:
+  name: PACMPL
+  description: Proceedings of the ACM on Programming Languages
+categories:
+- conference
+citation:
+  doi: 10.1145/3408993
+  type: paper-conference
+  container-title: Proceedings of the ACM on Programming Languages
+  url: https://doi.org/10.1145/3408993
+  issued: '2020'
+links:
+  arxiv: '1907.07283'
+abstract: |
+  In this paper, we take a pervasively effectful (in the style of ML) typed lambda
+  calculus, and show how to extend it to permit capturing pure expressions with
+  types. Our key observation is that, just as the pure simply-typed lambda
+  calculus can be extended to support effects with a monadic type discipline, an
+  impure typed lambda calculus can be extended to support purity with a comonadic
+  type discipline.
+
+  We establish the correctness of our type system via a simple denotational model,
+  which we call the capability space model. Our model formalises the intuition
+  common to systems programmers that the ability to perform effects should be
+  controlled via access to a permission or capability, and that a program is
+  capability-safe if it performs no effects that it does not have a runtime
+  capability for. We then identify the axiomatic categorical structure that the
+  capability space model validates, and use these axioms to give a categorical
+  semantics for our comonadic type system. We then give an equational theory
+  (substitution and the call-by-value β and η laws) for the imperative lambda
+  calculus, and show its soundness relative to this semantics.
+
+  Finally, we give a translation of the pure simply-typed lambda calculus into our
+  comonadic imperative calculus, and show that any two terms which are βη-equal in
+  the STLC are equal in the equational theory of the comonadic calculus,
+  establishing that pure programs can be mapped in an equation-preserving way into
+  our imperative calculus.
+---

@@ -1,0 +1,46 @@
+---
+title: Free Commutative Monoids in Homotopy Type Theory
+authors:
+- name: Vikraman Choudhury
+  orcid: 0000-0003-2030-8056
+  affiliation: Indiana University, USA / University of Cambridge, UK
+- name: Marcelo Fiore
+  orcid: 0000-0001-8558-3492
+  affiliation: University of Cambridge, UK
+date: 2023-02-22
+doi: 10.46298/entics.10492
+venue:
+  name: MFPS 2022
+  description: 38th International Conference on Mathematical Foundations of Programming Semantics
+proceedings:
+  name: ENTICS
+  description: Electronic Notes in Theoretical Informatics and Computer Science
+categories:
+- conference
+citation:
+  doi: 10.46298/entics.10492
+  type: paper-conference
+  container-title: Electronic Notes in Theoretical Informatics and Computer Science
+  url: https://doi.org/10.46298/entics.10492
+  issued: '2023'
+links:
+  arxiv: '2110.05412'
+abstract: |
+  We develop a constructive theory of finite multisets in Homotopy Type Theory,
+  defining them as free commutative monoids. After recalling basic structural
+  properties of the free commutative-monoid construction, we formalise and
+  establish the categorical universal property of two, necessarily equivalent,
+  algebraic presentations of free commutative monoids using 1-HITs. These
+  presentations correspond to two different equational theories invariably
+  including commutation axioms. In this setting, we prove important structural
+  combinatorial properties of finite multisets. These properties are established
+  in full generality without assuming decidable equality on the carrier set. As an
+  application, we present a constructive formalisation of the relational model of
+  classical linear logic and its differential structure. This leads to
+  constructively establishing that free commutative monoids are conical refinement
+  monoids. Thereon we obtain a characterisation of the equality type of finite
+  multisets and a new presentation of the free commutative-monoid construction as
+  a set-quotient of the list construction. These developments crucially rely on
+  the commutation relation of creation/annihilation operators associated with the
+  free commutative-monoid construction seen as a combinatorial Fock space.
+---

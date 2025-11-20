@@ -1,0 +1,21 @@
+---
+title: Fractional Types
+authors:
+- name: Jacques Carette
+  orcid: 0000-0001-8993-9804
+- name: Chao-Hong Chen
+  orcid: 0000-0002-9314-8105
+  affiliation: Indiana University, USA
+- name: Vikraman Choudhury
+  orcid: 0000-0003-2030-8056
+  affiliation: Indiana University, USA
+- name: Amr Sabry
+  orcid: 0000-0002-1025-7331
+  affiliation: Indiana University, USA
+date: 2016-12
+categories:
+- preprint
+citation:
+  type: article
+  issued: '2016'
+---

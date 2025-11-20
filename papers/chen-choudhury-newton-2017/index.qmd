@@ -1,0 +1,31 @@
+---
+title: Adaptive lock-free data structures in Haskell
+subtitle: a general method for concurrent implementation swapping
+authors:
+- name: Chao-Hong Chen
+  orcid: 0000-0002-9314-8105
+  affiliation: Indiana University, USA
+- name: Vikraman Choudhury
+  orcid: 0000-0003-2030-8056
+  affiliation: Indiana University, USA
+- name: Ryan R. Newton
+  orcid: 0000-0003-0995-1294
+  affiliation: Indiana University, USA
+date: 2017-09-07
+doi: 10.1145/3122955.3122973
+venue:
+  name: Haskell 2017
+  description: 10th ACM SIGPLAN International Symposium on Haskell
+proceedings:
+  description: Proceedings of the 10th ACM SIGPLAN International Symposium on Haskell
+categories:
+- conference
+citation:
+  doi: 10.1145/3122955.3122973
+  type: paper-conference
+  container-title: Proceedings of the 10th ACM SIGPLAN International Symposium on Haskell, Oxford, United Kingdom, September 7-8, 2017
+  url: https://doi.org/10.1145/3122955.3122973
+  issued: '2017'
+links:
+  arxiv: '1708.02318'
+---

@@ -1,0 +1,42 @@
+---
+title: From Reversible Programs to Univalent Universes and Back
+authors:
+- name: Jacques Carette
+  orcid: 0000-0001-8993-9804
+- name: Chao-Hong Chen
+  orcid: 0000-0002-9314-8105
+  affiliation: Indiana University, USA
+- name: Vikraman Choudhury
+  orcid: 0000-0003-2030-8056
+  affiliation: Indiana University, USA
+- name: Amr Sabry
+  orcid: 0000-0002-1025-7331
+  affiliation: Indiana University, USA
+date: 2018-04-16
+doi: 10.1016/j.entcs.2018.03.013
+venue:
+  name: MFPS 2018
+  description: 33rd Conference on the Mathematical Foundations of Programming Semantics
+proceedings:
+  name: ENTCS
+  description: Electronic Notes in Theoretical Computer Science
+categories:
+- conference
+citation:
+  doi: 10.1016/j.entcs.2018.03.013
+  type: paper-conference
+  container-title: Electronic Notes in Theoretical Computer Science
+  url: https://doi.org/10.1016/j.entcs.2018.03.013
+  issued: '2018'
+links:
+  arxiv: '1708.02710'
+abstract: |
+  We establish a close connection between a reversible programming language based
+  on type isomorphisms and a formally presented univalent universe. The
+  correspondence relates combinators witnessing type isomorphisms in the
+  programming language to paths in the univalent universe; and combinator
+  optimizations in the programming language to 2-paths in the univalent universe.
+  The result suggests a simple computational interpretation of paths and of
+  univalence in terms of familiar programming constructs whenever the universe in
+  question is computable.
+---

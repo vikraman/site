@@ -1,0 +1,78 @@
+```{=html}
+<ul class="papers list">
+  <% for (const item of items) { %>
+  <li <%= metadataAttrs(item) %>>
+    <!-- title -->
+    <div class="listing-name">
+      <a href="<%- item.path %>" class="listing-name">
+        <%= item.title %><%= item.subtitle ? ': ' + item.subtitle : '' %>
+      </a>
+    </div>
+    <!-- authors -->
+    <div class="listing-authors">
+      <% item.authors.forEach(author => { %>
+      <span class="listing-author">
+        <%= author.name %><% if (item.authors.indexOf(author) < item.authors.length - 1) { %>, <% } %>
+      </span>
+      <% }) %>
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      <% if (item.venue) { %>
+      <% if (item.venue.description) { %>
+      <span class="listing-venue-description">
+        <%= item.venue.description %>
+      </span>
+      <% } %>
+      <% if (item.venue.name) { %>
+      <span class="listing-venue-name">
+        (<%= item.venue.name %>)
+      </span>
+      <% } %>
+      <% } %>
+    </div>
+    <!-- proceedings -->
+    <div class="listing-proceedings">
+      <% if (item.proceedings) { %>
+      <% if (item.proceedings.description) { %>
+      <span class="listing-proceedings-description">
+        <%= item.proceedings.description %>
+      </span>
+      <% } %>
+      <% if (item.proceedings.name) { %>
+      <span class="listing-proceedings-name">
+        (<%= item.proceedings.name %>)
+      </span>
+      <% } %>
+      <% } %>
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      <% if (item.citation.doi) { %>
+      <li class="listing-link">
+        <a href="https://doi.org/<%= item.doi %>" class="listing-link-doi">
+          <span><i class="ai ai-doi ai-fw"></i>&nbsp;DOI</span>
+        </a>
+      </li>
+      <% } %>
+      <% if (item.links) { %>
+      <% if (item.links.arxiv) { %>
+      <li class="listing-link">
+        <a href="https://arxiv.org/abs/<%= item.links.arxiv %>" class="listing-link-arxiv">
+          <span><i class="ai ai-arxiv ai-fw"></i>&nbsp;arXiv</span>
+        </a>
+      </li>
+      <% } %>
+      <% if (item.links.hal) { %>
+      <li class="listing-link">
+        <a href="<%= item.links.hal %>" class="listing-link-hal">
+          <span><i class="ai ai-hal ai-fw"></i>&nbsp;HAL</span>
+        </a>
+      </li>
+      <% } %>
+      <% } %>
+    </ul>
+  </li>
+  <% } %>
+</ul>
+```

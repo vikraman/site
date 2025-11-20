@@ -1,0 +1,34 @@
+---
+title: Fractional Types
+subtitle: Expressive and Safe Space Management for Ancilla Bits
+authors:
+- name: Chao-Hong Chen
+  orcid: 0000-0002-9314-8105
+  affiliation: Indiana University, USA
+- name: Vikraman Choudhury
+  orcid: 0000-0003-2030-8056
+  affiliation: Indiana University, USA / University of Cambridge, UK
+- name: Jacques Carette
+  orcid: 0000-0001-8993-9804
+- name: Amr Sabry
+  orcid: 0000-0002-1025-7331
+  affiliation: Indiana University, USA
+date: 2020-07-09
+doi: 10.1007/978-3-030-52482-1_10
+venue:
+  name: RC 2020
+  description: 12th International Conference on Reversible Computation
+proceedings:
+  name: LNCS
+  description: Lecture Notes in Computer Science
+categories:
+- conference
+citation:
+  doi: 10.1007/978-3-030-52482-1_10
+  type: paper-conference
+  container-title: Reversible Computation - 12th International Conference, RC 2020, Oslo, Norway, July 9-10, 2020, Proceedings
+  url: https://doi.org/10.1007/978-3-030-52482-1_10
+  issued: '2020'
+links:
+  arxiv: '2002.07020'
+---

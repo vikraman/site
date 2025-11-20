@@ -1,0 +1,67 @@
+---
+title: The Duality of λ-Abstraction
+authors:
+- name: Vikraman Choudhury
+  orcid: 0000-0003-2030-8056
+  affiliation: Università di Bologna, Bologna, Italy
+- name: Simon J. Gay
+  orcid: 0000-0003-3033-9091
+  affiliation: University of Glasgow, Glasgow, United Kingdom
+date: 2025-01-07
+doi: 10.1145/3704848
+venue:
+  name: POPL 2025
+  description: 52nd ACM SIGPLAN Symposium on Principles of Programming Languages
+proceedings:
+  name: PACMPL
+  description: Proceedings of the ACM on Programming Languages
+categories:
+- conference
+- category theory
+- classical logic
+- continuations
+- control effects
+- control operators
+- curry-howard
+- denotational semantics
+- duality
+- equational theory
+- lambda-calculus
+keywords:
+- category theory
+- classical logic
+- continuations
+- control effects
+- control operators
+- curry-howard
+- denotational semantics
+- duality
+- equational theory
+- lambda-calculus
+citation:
+  doi: 10.1145/3704848
+  type: paper-conference
+  container-title: Proceedings of the ACM on Programming Languages, Volume 9, Number POPL
+  url: https://doi.org/10.1145/3704848
+  issued: '2025'
+links:
+  hal: 'hal-04838618'
+abstract: |
+  In this paper, we develop and study the following perspective -- just as
+  higher-order functions give exponentials, higher-order continuations give
+  coexponentials. From this, we design a language that combines exponentials and
+  coexponentials, producing a duality of lambda abstraction.
+
+  We formalise this language by giving an extension of a call-by-value
+  simply-typed lambda-calculus with covalues, coabstraction, and coapplication. We
+  develop the semantics of this language using the axiomatic structure of
+  continuations, which we use to produce an equational theory, that gives a
+  complete axiomatisation of control effects. We give a computational
+  interpretation to this language using speculative execution and backtracking,
+  and use this to derive the classical control operators and computational
+  interpretation of classical logic, and encode common patterns of control flow
+  using continuations. By dualising functional completeness, we further develop
+  duals of first-order arrow languages using coexponentials. Finally, we discuss
+  the implementation of this duality as control operators in programming, and
+  develop some applications.
+---

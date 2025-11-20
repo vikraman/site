@@ -1,3 +1,49 @@
 ---
 title: Papers
+title-block-style: default
+listing:
+  - id: conferences
+    contents: "**/*.qmd"
+    sort:
+    - "date desc"
+    - "title"
+    template: ../html/papers.ejs
+    categories: true
+    include:
+      categories: "{conference}"
+  - id: workshops
+    contents: "**/*.qmd"
+    sort:
+    - "date desc"
+    - "title"
+    template: ../html/papers.ejs
+    categories: true
+    include:
+      categories: "{workshop}"
+  - id: preprints
+    contents: "**/*.qmd"
+    sort:
+    - "date desc"
+    - "title"
+    template: ../html/papers.ejs
+    categories: true
+    include:
+      categories: "{preprint}"
 ---
+
+This is here to load fontawesome {{< fa envelope >}} and academicons {{< ai orcid >}}.
+
+## Conferences
+
+::: {#conferences}
+:::
+
+## Workshops
+
+::: {#workshops}
+:::
+
+## Preprints
+
+::: {#preprints}
+:::
