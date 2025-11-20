@@ -1,5 +1,26 @@
 [
   {
+    "listing": "/papers/index.html",
+    "items": [
+      "/papers/alexandru-choudhury-rot-vanderweide-2025/index.html",
+      "/papers/choudhury-gay-2025/index.html",
+      "/papers/lanese-lago-choudhury-2025/index.html",
+      "/papers/choudhury-fiore-2023/index.html",
+      "/papers/choudhury-karwowski-sabry-2022/index.html",
+      "/papers/choudhury-krishnaswami-2020/index.html",
+      "/papers/chen-choudhury-carette-sabry-2020/index.html",
+      "/papers/carette-chen-choudhury-sabry-2018/index.html",
+      "/papers/vazou-tondwalkar-choudhury-scott-newton-wadler-jhala-2018/index.html",
+      "/papers/chen-choudhury-newton-2017/index.html",
+      "/papers/choudhury-krishnaswami-suo-2025/index.html",
+      "/papers/lanese-lago-choudhury-2025a/index.html",
+      "/papers/wong-choudhury-gay-2024/index.html",
+      "/papers/choudhury-gay-2023/index.html",
+      "/papers/choudhury-sabry-agapiev-2022/index.html",
+      "/papers/carette-chen-choudhury-sabry-2016/index.html"
+    ]
+  },
+  {
     "listing": "/notes/index.html",
     "items": [
       "/notes/sandbox.html"

@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -43,9 +45,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7fd42de8a988761bcd16534fb43462c9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-99832b1f2d063da2048e2f0d2163bc91.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-384baaf0647415d0eb245f715b0344df.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-99832b1f2d063da2048e2f0d2163bc91.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3bd522dc9ddf90c88181e8895d1f051d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-8a05fd139333126d52c126ade8f84c2b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3bd522dc9ddf90c88181e8895d1f051d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,8 +77,122 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-conferences .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-language','listing-title','listing-authors','listing-date','listing-doi','listing-venue','listing-proceedings','listing-categories','listing-citation','listing-links','listing-abstract','listing-path','listing-outputHref','listing-date-modified','listing-author','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-subtitle','listing-keywords',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-language","listing-title","listing-authors","listing-date","listing-doi","listing-venue","listing-proceedings","listing-categories","listing-citation","listing-links","listing-abstract","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-subtitle","listing-keywords"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-conferences'] = new List('listing-conferences', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-workshops .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-language','listing-title','listing-authors','listing-date','listing-venue','listing-categories','listing-citation','listing-path','listing-outputHref','listing-date-modified','listing-author','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-keywords','listing-links','listing-abstract','listing-doi',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-language","listing-title","listing-authors","listing-date","listing-venue","listing-categories","listing-citation","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-keywords","listing-links","listing-abstract","listing-doi"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-workshops'] = new List('listing-workshops', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-preprints .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-language','listing-title','listing-authors','listing-date','listing-categories','listing-citation','listing-path','listing-outputHref','listing-date-modified','listing-author','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-language","listing-title","listing-authors","listing-date","listing-categories","listing-citation","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-preprints'] = new List('listing-preprints', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -304,13 +424,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
+    <div class="quarto-title column-page-left">
       <h1 class="title">Papers</h1>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -321,19 +441,1145 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#conferences" id="toc-conferences" class="nav-link active" data-scroll-target="#conferences">Conferences</a></li>
+  <li><a href="#workshops" id="toc-workshops" class="nav-link" data-scroll-target="#workshops">Workshops</a></li>
+  <li><a href="#preprints" id="toc-preprints" class="nav-link" data-scroll-target="#preprints">Preprints</a></li>
+  </ul>
+</nav>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(16)</span></div><div class="category" data-category="YmlkaXJlY3Rpb25hbCUyMHR5cGVjaGVja2luZw==">bidirectional typechecking <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2F0ZWdvcmljYWwlMjBzZW1hbnRpY3M=">categorical semantics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2F0ZWdvcnklMjB0aGVvcnk=">category theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2xhc3NpY2FsJTIwbGluZWFyJTIwbG9naWM=">classical linear logic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2xhc3NpY2FsJTIwbG9naWM=">classical logic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29uZmVyZW5jZQ==">conference <span class="quarto-category-count">(10)</span></div><div class="category" data-category="Y29udGludWF0aW9ucw==">continuations <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29udHJvbCUyMGVmZmVjdHM=">control effects <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29udHJvbCUyMG9wZXJhdG9ycw==">control operators <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y3VycnktaG93YXJk">curry-howard <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGVub3RhdGlvbmFsJTIwc2VtYW50aWNz">denotational semantics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGlyZWN0aW9uYWwlMjBsb2dpYyUyMHByb2dyYW1taW5n">directional logic programming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZHVhbGl0eQ==">duality <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZXF1YXRpb25hbCUyMHRoZW9yeQ==">equational theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z3JvdXBvaWRz">groupoids <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z3JvdXBz">groups <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aG9tb3RvcHklMjB0eXBlJTIwdGhlb3J5">homotopy type theory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGFtYmRhLWNhbGN1bHVz">lambda-calculus <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGluZWFyJTIwVHlwZXM=">Linear Types <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TXVsdGlwYXJ0eSUyMFNlc3Npb24lMjBUeXBlcw==">Multiparty Session Types <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cGVybXV0YXRpb25z">permutations <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJlcHJpbnQ=">preprint <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UXVhbnR1bSUyMENvbXB1dGluZw==">Quantum Computing <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UXVhbnR1bSUyMFByb2Nlc3Nlcw==">Quantum Processes <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UXVhbnR1bSUyMFByb3RvY29scw==">Quantum Protocols <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cmV2ZXJzaWJsZSUyMGNvbXB1dGluZw==">reversible computing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmV2ZXJzaWJsZSUyMHByb2dyYW1taW5nJTIwbGFuZ3VhZ2Vz">reversible programming languages <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmV3cml0aW5n">rewriting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dHlwZSUyMGlzb21vcnBoaXNtcw==">type isomorphisms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dW5pdmFsZW50JTIwZm91bmRhdGlvbnM=">univalent foundations <span class="quarto-category-count">(1)</span></div><div class="category" data-category="d29ya3Nob3A=">workshop <span class="quarto-category-count">(5)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
 
 
+<p>This is here to load fontawesome <i class="fa-solid fa-envelope" aria-label="envelope"></i> and academicons <i class="ai  ai-orcid" aria-label="orcid"></i>.</p>
+<section id="conferences" class="level2">
+<h2 class="anchored" data-anchor-id="conferences">Conferences</h2>
+<div id="listing-conferences" class="quarto-listing quarto-listing-container-custom">
+<ul class="papers list">
+  
+  <li data-index="0" data-categories="Y29uZmVyZW5jZQ==" data-listing-date-sort="1736467200000" data-listing-file-modified-sort="1763681556800" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+    <!-- title -->
+    <div class="listing-name">
+      <a href="../papers/alexandru-choudhury-rot-vanderweide-2025/index.html" class="listing-name">
+        Intrinsically Correct Sorting in Cubical Agda
+      </a>
+    </div>
+    <!-- authors -->
+    <div class="listing-authors">
+      
+      <span class="listing-author">
+        Cass Alexandru, 
+      </span>
+      
+      <span class="listing-author">
+        Vikraman Choudhury, 
+      </span>
+      
+      <span class="listing-author">
+        Jurriaan Rot, 
+      </span>
+      
+      <span class="listing-author">
+        Niels van der Weide
+      </span>
+      
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      
+      <span class="listing-venue-description">
+        Certified Programs and Proofs
+      </span>
+      
+      
+      <span class="listing-venue-name">
+        (CPP 2025)
+      </span>
+      
+      
+    </div>
+    <!-- proceedings -->
+    <div class="listing-proceedings">
+      
+      
+      <span class="listing-proceedings-description">
+        Proceedings of the 14th ACM SIGPLAN International Conference on Certified Programs and Proofs
+      </span>
+      
+      
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://doi.org/10.1145/3703595.3705873" class="listing-link-doi">
+          <span><i class="ai ai-doi ai-fw"></i>&nbsp;DOI</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="listing-link">
+        <a href="https://arxiv.org/abs/2412.08362" class="listing-link-arxiv">
+          <span><i class="ai ai-arxiv ai-fw"></i>&nbsp;arXiv</span>
+        </a>
+      </li>
+      
+      
+      <li class="listing-link">
+        <a href="hal-04838255" class="listing-link-hal">
+          <span><i class="ai ai-hal ai-fw"></i>&nbsp;HAL</span>
+        </a>
+      </li>
+      
+      
+    </ul>
+  </li>
+  
+  <li data-index="1" data-categories="Y29uZmVyZW5jZSUyQ2NhdGVnb3J5JTIwdGhlb3J5JTJDY2xhc3NpY2FsJTIwbG9naWMlMkNjb250aW51YXRpb25zJTJDY29udHJvbCUyMGVmZmVjdHMlMkNjb250cm9sJTIwb3BlcmF0b3JzJTJDY3VycnktaG93YXJkJTJDZGVub3RhdGlvbmFsJTIwc2VtYW50aWNzJTJDZHVhbGl0eSUyQ2VxdWF0aW9uYWwlMjB0aGVvcnklMkNsYW1iZGEtY2FsY3VsdXM=" data-listing-date-sort="1736208000000" data-listing-file-modified-sort="1763681556801" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+    <!-- title -->
+    <div class="listing-name">
+      <a href="../papers/choudhury-gay-2025/index.html" class="listing-name">
+        The Duality of λ-Abstraction
+      </a>
+    </div>
+    <!-- authors -->
+    <div class="listing-authors">
+      
+      <span class="listing-author">
+        Vikraman Choudhury, 
+      </span>
+      
+      <span class="listing-author">
+        Simon J. Gay
+      </span>
+      
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      
+      <span class="listing-venue-description">
+        52nd ACM SIGPLAN Symposium on Principles of Programming Languages
+      </span>
+      
+      
+      <span class="listing-venue-name">
+        (POPL 2025)
+      </span>
+      
+      
+    </div>
+    <!-- proceedings -->
+    <div class="listing-proceedings">
+      
+      
+      <span class="listing-proceedings-description">
+        Proceedings of the ACM on Programming Languages
+      </span>
+      
+      
+      <span class="listing-proceedings-name">
+        (PACMPL)
+      </span>
+      
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://doi.org/10.1145/3704848" class="listing-link-doi">
+          <span><i class="ai ai-doi ai-fw"></i>&nbsp;DOI</span>
+        </a>
+      </li>
+      
+      
+      
+      
+      <li class="listing-link">
+        <a href="hal-04838618" class="listing-link-hal">
+          <span><i class="ai ai-hal ai-fw"></i>&nbsp;HAL</span>
+        </a>
+      </li>
+      
+      
+    </ul>
+  </li>
+  
+  <li data-index="2" data-categories="Y29uZmVyZW5jZSUyQ0xpbmVhciUyMFR5cGVzJTJDTXVsdGlwYXJ0eSUyMFNlc3Npb24lMjBUeXBlcyUyQ1F1YW50dW0lMjBDb21wdXRpbmclMkNRdWFudHVtJTIwUHJvY2Vzc2VzJTJDUXVhbnR1bSUyMFByb3RvY29scw==" data-listing-date-sort="1732579200000" data-listing-file-modified-sort="1763681556801" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+    <!-- title -->
+    <div class="listing-name">
+      <a href="../papers/lanese-lago-choudhury-2025/index.html" class="listing-name">
+        Towards Quantum Multiparty Session Types
+      </a>
+    </div>
+    <!-- authors -->
+    <div class="listing-authors">
+      
+      <span class="listing-author">
+        Ivan Lanese, 
+      </span>
+      
+      <span class="listing-author">
+        Ugo Dal Lago, 
+      </span>
+      
+      <span class="listing-author">
+        Vikraman Choudhury
+      </span>
+      
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      
+      <span class="listing-venue-description">
+        22nd International Conference on Software Engineering and Formal Methods
+      </span>
+      
+      
+      <span class="listing-venue-name">
+        (SEFM 2024)
+      </span>
+      
+      
+    </div>
+    <!-- proceedings -->
+    <div class="listing-proceedings">
+      
+      
+      <span class="listing-proceedings-description">
+        Lecture Notes in Computer Science
+      </span>
+      
+      
+      <span class="listing-proceedings-name">
+        (LNCS)
+      </span>
+      
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://doi.org/10.1007/978-3-031-77382-2_22" class="listing-link-doi">
+          <span><i class="ai ai-doi ai-fw"></i>&nbsp;DOI</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="listing-link">
+        <a href="https://arxiv.org/abs/2409.11133" class="listing-link-arxiv">
+          <span><i class="ai ai-arxiv ai-fw"></i>&nbsp;arXiv</span>
+        </a>
+      </li>
+      
+      
+      
+    </ul>
+  </li>
+  
+  <li data-index="3" data-categories="Y29uZmVyZW5jZQ==" data-listing-date-sort="1677024000000" data-listing-file-modified-sort="1763681556801" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+    <!-- title -->
+    <div class="listing-name">
+      <a href="../papers/choudhury-fiore-2023/index.html" class="listing-name">
+        Free Commutative Monoids in Homotopy Type Theory
+      </a>
+    </div>
+    <!-- authors -->
+    <div class="listing-authors">
+      
+      <span class="listing-author">
+        Vikraman Choudhury, 
+      </span>
+      
+      <span class="listing-author">
+        Marcelo Fiore
+      </span>
+      
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      
+      <span class="listing-venue-description">
+        38th International Conference on Mathematical Foundations of Programming Semantics
+      </span>
+      
+      
+      <span class="listing-venue-name">
+        (MFPS 2022)
+      </span>
+      
+      
+    </div>
+    <!-- proceedings -->
+    <div class="listing-proceedings">
+      
+      
+      <span class="listing-proceedings-description">
+        Electronic Notes in Theoretical Informatics and Computer Science
+      </span>
+      
+      
+      <span class="listing-proceedings-name">
+        (ENTICS)
+      </span>
+      
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://doi.org/10.46298/entics.10492" class="listing-link-doi">
+          <span><i class="ai ai-doi ai-fw"></i>&nbsp;DOI</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="listing-link">
+        <a href="https://arxiv.org/abs/2110.05412" class="listing-link-arxiv">
+          <span><i class="ai ai-arxiv ai-fw"></i>&nbsp;arXiv</span>
+        </a>
+      </li>
+      
+      
+      
+    </ul>
+  </li>
+  
+  <li data-index="4" data-categories="Y29uZmVyZW5jZSUyQ2dyb3Vwb2lkcyUyQ2dyb3VwcyUyQ2hvbW90b3B5JTIwdHlwZSUyMHRoZW9yeSUyQ3Blcm11dGF0aW9ucyUyQ3JldmVyc2libGUlMjBjb21wdXRpbmclMkNyZXZlcnNpYmxlJTIwcHJvZ3JhbW1pbmclMjBsYW5ndWFnZXMlMkNyZXdyaXRpbmclMkN0eXBlJTIwaXNvbW9ycGhpc21zJTJDdW5pdmFsZW50JTIwZm91bmRhdGlvbnM=" data-listing-date-sort="1641945600000" data-listing-file-modified-sort="1763681556801" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+    <!-- title -->
+    <div class="listing-name">
+      <a href="../papers/choudhury-karwowski-sabry-2022/index.html" class="listing-name">
+        Symmetries in reversible programming: from symmetric rig groupoids to reversible programming languages
+      </a>
+    </div>
+    <!-- authors -->
+    <div class="listing-authors">
+      
+      <span class="listing-author">
+        Vikraman Choudhury, 
+      </span>
+      
+      <span class="listing-author">
+        Jacek Karwowski, 
+      </span>
+      
+      <span class="listing-author">
+        Amr Sabry
+      </span>
+      
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      
+      <span class="listing-venue-description">
+        49th ACM SIGPLAN Symposium on Principles of Programming Languages
+      </span>
+      
+      
+      <span class="listing-venue-name">
+        (POPL 2022)
+      </span>
+      
+      
+    </div>
+    <!-- proceedings -->
+    <div class="listing-proceedings">
+      
+      
+      <span class="listing-proceedings-description">
+        Proceedings of the ACM on Programming Languages
+      </span>
+      
+      
+      <span class="listing-proceedings-name">
+        (PACMPL)
+      </span>
+      
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://doi.org/10.1145/3498667" class="listing-link-doi">
+          <span><i class="ai ai-doi ai-fw"></i>&nbsp;DOI</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="listing-link">
+        <a href="https://arxiv.org/abs/2110.05404" class="listing-link-arxiv">
+          <span><i class="ai ai-arxiv ai-fw"></i>&nbsp;arXiv</span>
+        </a>
+      </li>
+      
+      
+      
+    </ul>
+  </li>
+  
+  <li data-index="5" data-categories="Y29uZmVyZW5jZQ==" data-listing-date-sort="1596326400000" data-listing-file-modified-sort="1763681556801" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+    <!-- title -->
+    <div class="listing-name">
+      <a href="../papers/choudhury-krishnaswami-2020/index.html" class="listing-name">
+        Recovering purity with comonads and capabilities
+      </a>
+    </div>
+    <!-- authors -->
+    <div class="listing-authors">
+      
+      <span class="listing-author">
+        Vikraman Choudhury, 
+      </span>
+      
+      <span class="listing-author">
+        Neel Krishnaswami
+      </span>
+      
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      
+      <span class="listing-venue-description">
+        25th ACM SIGPLAN International Conference on Functional Programming
+      </span>
+      
+      
+      <span class="listing-venue-name">
+        (ICFP 2020)
+      </span>
+      
+      
+    </div>
+    <!-- proceedings -->
+    <div class="listing-proceedings">
+      
+      
+      <span class="listing-proceedings-description">
+        Proceedings of the ACM on Programming Languages
+      </span>
+      
+      
+      <span class="listing-proceedings-name">
+        (PACMPL)
+      </span>
+      
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://doi.org/10.1145/3408993" class="listing-link-doi">
+          <span><i class="ai ai-doi ai-fw"></i>&nbsp;DOI</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="listing-link">
+        <a href="https://arxiv.org/abs/1907.07283" class="listing-link-arxiv">
+          <span><i class="ai ai-arxiv ai-fw"></i>&nbsp;arXiv</span>
+        </a>
+      </li>
+      
+      
+      
+    </ul>
+  </li>
+  
+  <li data-index="6" data-categories="Y29uZmVyZW5jZQ==" data-listing-date-sort="1594252800000" data-listing-file-modified-sort="1763681556800" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+    <!-- title -->
+    <div class="listing-name">
+      <a href="../papers/chen-choudhury-carette-sabry-2020/index.html" class="listing-name">
+        Fractional Types: Expressive and Safe Space Management for Ancilla Bits
+      </a>
+    </div>
+    <!-- authors -->
+    <div class="listing-authors">
+      
+      <span class="listing-author">
+        Chao-Hong Chen, 
+      </span>
+      
+      <span class="listing-author">
+        Vikraman Choudhury, 
+      </span>
+      
+      <span class="listing-author">
+        Jacques Carette, 
+      </span>
+      
+      <span class="listing-author">
+        Amr Sabry
+      </span>
+      
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      
+      <span class="listing-venue-description">
+        12th International Conference on Reversible Computation
+      </span>
+      
+      
+      <span class="listing-venue-name">
+        (RC 2020)
+      </span>
+      
+      
+    </div>
+    <!-- proceedings -->
+    <div class="listing-proceedings">
+      
+      
+      <span class="listing-proceedings-description">
+        Lecture Notes in Computer Science
+      </span>
+      
+      
+      <span class="listing-proceedings-name">
+        (LNCS)
+      </span>
+      
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://doi.org/10.1007/978-3-030-52482-1_10" class="listing-link-doi">
+          <span><i class="ai ai-doi ai-fw"></i>&nbsp;DOI</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="listing-link">
+        <a href="https://arxiv.org/abs/2002.07020" class="listing-link-arxiv">
+          <span><i class="ai ai-arxiv ai-fw"></i>&nbsp;arXiv</span>
+        </a>
+      </li>
+      
+      
+      
+    </ul>
+  </li>
+  
+  <li data-index="7" data-categories="Y29uZmVyZW5jZQ==" data-listing-date-sort="1523836800000" data-listing-file-modified-sort="1763681556800" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+    <!-- title -->
+    <div class="listing-name">
+      <a href="../papers/carette-chen-choudhury-sabry-2018/index.html" class="listing-name">
+        From Reversible Programs to Univalent Universes and Back
+      </a>
+    </div>
+    <!-- authors -->
+    <div class="listing-authors">
+      
+      <span class="listing-author">
+        Jacques Carette, 
+      </span>
+      
+      <span class="listing-author">
+        Chao-Hong Chen, 
+      </span>
+      
+      <span class="listing-author">
+        Vikraman Choudhury, 
+      </span>
+      
+      <span class="listing-author">
+        Amr Sabry
+      </span>
+      
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      
+      <span class="listing-venue-description">
+        33rd Conference on the Mathematical Foundations of Programming Semantics
+      </span>
+      
+      
+      <span class="listing-venue-name">
+        (MFPS 2018)
+      </span>
+      
+      
+    </div>
+    <!-- proceedings -->
+    <div class="listing-proceedings">
+      
+      
+      <span class="listing-proceedings-description">
+        Electronic Notes in Theoretical Computer Science
+      </span>
+      
+      
+      <span class="listing-proceedings-name">
+        (ENTCS)
+      </span>
+      
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://doi.org/10.1016/j.entcs.2018.03.013" class="listing-link-doi">
+          <span><i class="ai ai-doi ai-fw"></i>&nbsp;DOI</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="listing-link">
+        <a href="https://arxiv.org/abs/1708.02710" class="listing-link-arxiv">
+          <span><i class="ai ai-arxiv ai-fw"></i>&nbsp;arXiv</span>
+        </a>
+      </li>
+      
+      
+      
+    </ul>
+  </li>
+  
+  <li data-index="8" data-categories="Y29uZmVyZW5jZQ==" data-listing-date-sort="1514332800000" data-listing-file-modified-sort="1763681556801" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+    <!-- title -->
+    <div class="listing-name">
+      <a href="../papers/vazou-tondwalkar-choudhury-scott-newton-wadler-jhala-2018/index.html" class="listing-name">
+        Refinement reflection: complete verification with SMT
+      </a>
+    </div>
+    <!-- authors -->
+    <div class="listing-authors">
+      
+      <span class="listing-author">
+        Niki Vazou, 
+      </span>
+      
+      <span class="listing-author">
+        Anish Tondwalkar, 
+      </span>
+      
+      <span class="listing-author">
+        Vikraman Choudhury, 
+      </span>
+      
+      <span class="listing-author">
+        Ryan G. Scott, 
+      </span>
+      
+      <span class="listing-author">
+        Ryan R. Newton, 
+      </span>
+      
+      <span class="listing-author">
+        Philip Wadler, 
+      </span>
+      
+      <span class="listing-author">
+        Ranjit Jhala
+      </span>
+      
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      
+      <span class="listing-venue-description">
+        45th ACM SIGPLAN Symposium on Principles of Programming Languages
+      </span>
+      
+      
+      <span class="listing-venue-name">
+        (POPL 2018)
+      </span>
+      
+      
+    </div>
+    <!-- proceedings -->
+    <div class="listing-proceedings">
+      
+      
+      <span class="listing-proceedings-description">
+        Proceedings of the ACM on Programming Languages
+      </span>
+      
+      
+      <span class="listing-proceedings-name">
+        (PACMPL)
+      </span>
+      
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://doi.org/10.1145/3158141" class="listing-link-doi">
+          <span><i class="ai ai-doi ai-fw"></i>&nbsp;DOI</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="listing-link">
+        <a href="https://arxiv.org/abs/1711.03842" class="listing-link-arxiv">
+          <span><i class="ai ai-arxiv ai-fw"></i>&nbsp;arXiv</span>
+        </a>
+      </li>
+      
+      
+      
+    </ul>
+  </li>
+  
+  <li data-index="9" data-categories="Y29uZmVyZW5jZQ==" data-listing-date-sort="1504742400000" data-listing-file-modified-sort="1763681556801" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+    <!-- title -->
+    <div class="listing-name">
+      <a href="../papers/chen-choudhury-newton-2017/index.html" class="listing-name">
+        Adaptive lock-free data structures in Haskell: a general method for concurrent implementation swapping
+      </a>
+    </div>
+    <!-- authors -->
+    <div class="listing-authors">
+      
+      <span class="listing-author">
+        Chao-Hong Chen, 
+      </span>
+      
+      <span class="listing-author">
+        Vikraman Choudhury, 
+      </span>
+      
+      <span class="listing-author">
+        Ryan R. Newton
+      </span>
+      
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      
+      <span class="listing-venue-description">
+        10th ACM SIGPLAN International Symposium on Haskell
+      </span>
+      
+      
+      <span class="listing-venue-name">
+        (Haskell 2017)
+      </span>
+      
+      
+    </div>
+    <!-- proceedings -->
+    <div class="listing-proceedings">
+      
+      
+      <span class="listing-proceedings-description">
+        Proceedings of the 10th ACM SIGPLAN International Symposium on Haskell
+      </span>
+      
+      
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://doi.org/10.1145/3122955.3122973" class="listing-link-doi">
+          <span><i class="ai ai-doi ai-fw"></i>&nbsp;DOI</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="listing-link">
+        <a href="https://arxiv.org/abs/1708.02318" class="listing-link-arxiv">
+          <span><i class="ai ai-arxiv ai-fw"></i>&nbsp;arXiv</span>
+        </a>
+      </li>
+      
+      
+      
+    </ul>
+  </li>
+  
+</ul>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</section>
+<section id="workshops" class="level2">
+<h2 class="anchored" data-anchor-id="workshops">Workshops</h2>
+<div id="listing-workshops" class="quarto-listing quarto-listing-container-custom">
+<ul class="papers list">
+  
+  <li data-index="0" data-categories="d29ya3Nob3AlMkNiaWRpcmVjdGlvbmFsJTIwdHlwZWNoZWNraW5nJTJDY2F0ZWdvcmljYWwlMjBzZW1hbnRpY3MlMkNjbGFzc2ljYWwlMjBsaW5lYXIlMjBsb2dpYyUyQ2RpcmVjdGlvbmFsJTIwbG9naWMlMjBwcm9ncmFtbWluZw==" data-listing-date-sort="1735689600000" data-listing-file-modified-sort="1763681556801" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+    <!-- title -->
+    <div class="listing-name">
+      <a href="../papers/choudhury-krishnaswami-suo-2025/index.html" class="listing-name">
+        Semantic Analysis of Normalisation for Directional Logic Programming
+      </a>
+    </div>
+    <!-- authors -->
+    <div class="listing-authors">
+      
+      <span class="listing-author">
+        Vikraman Choudhury, 
+      </span>
+      
+      <span class="listing-author">
+        Neel Krishnaswami, 
+      </span>
+      
+      <span class="listing-author">
+        Ariadne Si Suo
+      </span>
+      
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      
+      <span class="listing-venue-description">
+        Fourth Workshop on the Implementation of Type Systems
+      </span>
+      
+      
+      <span class="listing-venue-name">
+        (WITS 2025)
+      </span>
+      
+      
+    </div>
+    <!-- proceedings -->
+    <div class="listing-proceedings">
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      
+      
+      
+      <li class="listing-link">
+        <a href="hal-04838273" class="listing-link-hal">
+          <span><i class="ai ai-hal ai-fw"></i>&nbsp;HAL</span>
+        </a>
+      </li>
+      
+      
+    </ul>
+  </li>
+  
+  <li data-index="1" data-categories="d29ya3Nob3AlMkNMaW5lYXIlMjBUeXBlcyUyQ011bHRpcGFydHklMjBTZXNzaW9uJTIwVHlwZXMlMkNRdWFudHVtJTIwQ29tcHV0aW5nJTJDUXVhbnR1bSUyMFByb2Nlc3NlcyUyQ1F1YW50dW0lMjBQcm90b2NvbHM=" data-listing-date-sort="1735689600000" data-listing-file-modified-sort="1763681556801" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+    <!-- title -->
+    <div class="listing-name">
+      <a href="../papers/lanese-lago-choudhury-2025a/index.html" class="listing-name">
+        Towards Quantum Multiparty Session Types
+      </a>
+    </div>
+    <!-- authors -->
+    <div class="listing-authors">
+      
+      <span class="listing-author">
+        Ivan Lanese, 
+      </span>
+      
+      <span class="listing-author">
+        Ugo Dal Lago, 
+      </span>
+      
+      <span class="listing-author">
+        Vikraman Choudhury
+      </span>
+      
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      
+      <span class="listing-venue-description">
+        Fifth International Workshop on Programming Languages for Quantum Computing
+      </span>
+      
+      
+      <span class="listing-venue-name">
+        (PLanQC 2025)
+      </span>
+      
+      
+    </div>
+    <!-- proceedings -->
+    <div class="listing-proceedings">
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      
+      
+      
+      <li class="listing-link">
+        <a href="hal-04838281" class="listing-link-hal">
+          <span><i class="ai ai-hal ai-fw"></i>&nbsp;HAL</span>
+        </a>
+      </li>
+      
+      
+    </ul>
+  </li>
+  
+  <li data-index="2" data-categories="d29ya3Nob3A=" data-listing-date-sort="1711929600000" data-listing-file-modified-sort="1763681556801" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+    <!-- title -->
+    <div class="listing-name">
+      <a href="../papers/wong-choudhury-gay-2024/index.html" class="listing-name">
+        On Commutativity, Total Orders, and Sorting
+      </a>
+    </div>
+    <!-- authors -->
+    <div class="listing-authors">
+      
+      <span class="listing-author">
+        Wind Wong, 
+      </span>
+      
+      <span class="listing-author">
+        Vikraman Choudhury, 
+      </span>
+      
+      <span class="listing-author">
+        Simon J Gay
+      </span>
+      
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      
+      <span class="listing-venue-description">
+        Workshop on Homotopy Type Theory / Univalent Foundations
+      </span>
+      
+      
+      <span class="listing-venue-name">
+        (HoTT/UF 2024)
+      </span>
+      
+      
+    </div>
+    <!-- proceedings -->
+    <div class="listing-proceedings">
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      
+      
+      
+      <li class="listing-link">
+        <a href="hal-04838253" class="listing-link-hal">
+          <span><i class="ai ai-hal ai-fw"></i>&nbsp;HAL</span>
+        </a>
+      </li>
+      
+      
+    </ul>
+  </li>
+  
+  <li data-index="3" data-categories="d29ya3Nob3A=" data-listing-date-sort="1698710400000" data-listing-file-modified-sort="1763681556801" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+    <!-- title -->
+    <div class="listing-name">
+      <a href="../papers/choudhury-gay-2023/index.html" class="listing-name">
+        Classical Processes in Modern Dress
+      </a>
+    </div>
+    <!-- authors -->
+    <div class="listing-authors">
+      
+      <span class="listing-author">
+        Vikraman Choudhury, 
+      </span>
+      
+      <span class="listing-author">
+        Simon J. Gay
+      </span>
+      
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      
+      <span class="listing-venue-description">
+        30 Years of Session Types
+      </span>
+      
+      
+      <span class="listing-venue-name">
+        (ST30)
+      </span>
+      
+      
+    </div>
+    <!-- proceedings -->
+    <div class="listing-proceedings">
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      
+    </ul>
+  </li>
+  
+  <li data-index="4" data-categories="d29ya3Nob3A=" data-listing-date-sort="1663286400000" data-listing-file-modified-sort="1763681556801" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+    <!-- title -->
+    <div class="listing-name">
+      <a href="../papers/choudhury-sabry-agapiev-2022/index.html" class="listing-name">
+        Scheme Pearl: Quantum Continuations
+      </a>
+    </div>
+    <!-- authors -->
+    <div class="listing-authors">
+      
+      <span class="listing-author">
+        Vikraman Choudhury, 
+      </span>
+      
+      <span class="listing-author">
+        Borislav Agapiev, 
+      </span>
+      
+      <span class="listing-author">
+        Amr Sabry
+      </span>
+      
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      
+      <span class="listing-venue-description">
+        Scheme and Functional Programming Workshop
+      </span>
+      
+      
+      <span class="listing-venue-name">
+        (Scheme 2022)
+      </span>
+      
+      
+    </div>
+    <!-- proceedings -->
+    <div class="listing-proceedings">
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://doi.org/10.48550/arXiv.2409.11106" class="listing-link-doi">
+          <span><i class="ai ai-doi ai-fw"></i>&nbsp;DOI</span>
+        </a>
+      </li>
+      
+      
+      
+      <li class="listing-link">
+        <a href="https://arxiv.org/abs/2409.11106" class="listing-link-arxiv">
+          <span><i class="ai ai-arxiv ai-fw"></i>&nbsp;arXiv</span>
+        </a>
+      </li>
+      
+      
+      
+    </ul>
+  </li>
+  
+</ul>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</section>
+<section id="preprints" class="level2">
+<h2 class="anchored" data-anchor-id="preprints">Preprints</h2>
+<div id="listing-preprints" class="quarto-listing quarto-listing-container-custom">
+<ul class="papers list">
+  
+  <li data-index="0" data-categories="cHJlcHJpbnQ=" data-listing-date-sort="1480550400000" data-listing-file-modified-sort="1763681556800" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+    <!-- title -->
+    <div class="listing-name">
+      <a href="../papers/carette-chen-choudhury-sabry-2016/index.html" class="listing-name">
+        Fractional Types
+      </a>
+    </div>
+    <!-- authors -->
+    <div class="listing-authors">
+      
+      <span class="listing-author">
+        Jacques Carette, 
+      </span>
+      
+      <span class="listing-author">
+        Chao-Hong Chen, 
+      </span>
+      
+      <span class="listing-author">
+        Vikraman Choudhury, 
+      </span>
+      
+      <span class="listing-author">
+        Amr Sabry
+      </span>
+      
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+    </div>
+    <!-- proceedings -->
+    <div class="listing-proceedings">
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      
+    </ul>
+  </li>
+  
+</ul>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 
 
+
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
