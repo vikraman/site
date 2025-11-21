@@ -1,3 +1,5 @@
 ---
 title: Now
 ---
+
+See what I'm up to on [beeminder](https://www.beeminder.com/vikraman).
