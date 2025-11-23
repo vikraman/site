@@ -1,3 +1,12 @@
 ---
 title: Talks
+listing:
+  - id: talks
+    contents:
+    - talks.yml
+    sort:
+    - "date desc"
+    template: ../html/talks.ejs
 ---
+
+This is here to load fontawesome {{< fa envelope >}} and academicons {{< ai orcid >}}.

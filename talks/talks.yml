@@ -1,0 +1,303 @@
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2017a
+  date: 2017-09
+  keyword: "talks:seminar"
+  title: Homotopy theoretic aspects of reversible computing
+  type: manuscript
+  url: "https://wonks.github.io/choudhury/fall2017/2017/09/01/choudhury.html"
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2019b
+  date: 2019-09
+  keyword: "talks:workshop"
+  title: Recovering purity with comonads and capabilities
+  type: manuscript
+  url: "https://purpl.cs.purdue.edu/kickoff.html#popup-Choudhury"
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2019c
+  date: 2019-08
+  keyword: "talks:conference"
+  title: The finite-multiset construction in HoTT
+  type: manuscript
+  url: "https://hott.github.io/HoTT-2019//programme/#choudhury"
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2019d
+  date: 2019-05
+  keyword: "talks:seminar"
+  title: Retrofitting purity with comonads and capabilities
+  type: manuscript
+  url: "http://talks.cam.ac.uk/talk/index/125278"
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2020a
+  date: 2020-12
+  keyword: "talks:invited"
+  venue: Department of Computer Science, University of Oxford
+  title: A constructive model of differential linear logic
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2020b
+  date: 2020-11
+  keyword: "talks:invited"
+  title: Algebraic approaches to computation & programming
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2020c
+  date: 2020-11
+  keyword: "talks:seminar"
+  venue: Logic and Semantics Seminar, Computer Laboratory, University of
+    Cambridge
+  title: Free commutative monoids in homotopy type theory
+  type: manuscript
+  url: "http://talks.cam.ac.uk/talk/index/152593"
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2020d
+  date: 2020-08
+  keyword: "talks:conference"
+  title: Recovering purity with comonads and capabilities
+  type: manuscript
+  url: "https://icfp20.sigplan.org/details/icfp-2020-papers/24/Recovering-Purity-with-Comonads-and-Capabilities"
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2021d
+  date: 2021-02
+  keyword: "talks:invited"
+  venue: Department of Computer Science and Engineering, Chalmers and
+    Gothenburg University
+  title: Recovering purity with comonads and capabilities
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2021e
+  date: 2021-04
+  keyword: "talks:invited"
+  venue: School of Computing Science, University of Glasgow
+  title: Algebraic approaches to computation & programming
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2021f
+  date: 2021-12
+  keyword: "talks:seminar"
+  venue: PLUG Seminar, School of Computing Science, University of Glasgow
+  title: Symmetries in reversible programming
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2021g
+  date: 2021-12
+  keyword: "talks:workshop"
+  venue: SYCO 8, Tallinn University of Technology
+  title: Weighted sets and modalities
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2022a
+  date: 2022-06
+  keyword: "talks:workshop"
+  venue: Meeting on Graded Types, University of Kent
+  title: Weighted sets and modalities
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2022b
+  date: 2022-05
+  keyword: "talks:seminar"
+  venue: Logic and Semantics Seminar, Computer Laboratory, University of
+    Cambridge
+  title: Symmetries in reversible programming
+  type: manuscript
+  url: "https://talks.cam.ac.uk/talk/index/174857"
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2022c
+  date: 2022-01
+  keyword: "talks:conference"
+  venue: 49th ACM SIGPLAN Symposium on Principles of Programming
+    Languages (POPL 2022)
+  title: Symmmetries in reversible programming
+  type: manuscript
+  url: "https://popl22.sigplan.org/details/POPL-2022-popl-research-papers/6/Symmetries-in-Reversible-Programming-From-Symmetric-Rig-Groupoids-to-Reversible-Prog"
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2022d
+  date: 2022-07
+  keyword: "talks:conference"
+  venue: 38th International Conference on Mathematical Foundations of
+    Programming Semantics (MFPS 2022)
+  title: Free commutative monoids in homotopy type theory
+  type: manuscript
+  url: "https://www.cs.cornell.edu/mfps-2022/"
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2022e
+  date: 2022-10
+  keyword: "talks:invited"
+  venue: Programming Languages and Systems Seminar, University of Kent
+  title: Symmetries in reversible programming
+  type: manuscript
+  url: "https://www.kent.ac.uk/events/event/57255/tba-vikraman-choudhury-university-of-glasgow"
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2022f
+  date: 2022-12
+  keyword: "talks:invited"
+  venue: Computer Science Theory Seminar, Tallinn University of
+    Technology
+  title: Symmetries in reversible programming
+  type: manuscript
+  url: "https://niccoloveltri.github.io/tsem22/choudhury0812.html"
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2023a
+  date: 2023-05
+  keyword: "talks:invited"
+  venue: MSP Seminar, University of Strathclyde; PLUG Seminar, University
+    of Glasgow; LFCS Seminar, University of Edinburgh
+  title: Continuations and coexponentials
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2023b
+  date: 2023-09
+  keyword: "talks:workshop"
+  venue: Higher-Order Programming with Effects, ICFP 2023
+  title: Continuations and coexponentials
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2023c
+  date: 2023-10
+  keyword: "talks:invited"
+  venue: Huawei-Edinburgh Coffee House Tech Talk
+  title: The duality of abstraction
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2023d
+  date: 2023-10
+  keyword: "talks:workshop"
+  venue: 30 Years of Session Types, SPLASH 2023
+  title: Classical Processes in modern dress
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2023e
+  date: 2023-11
+  keyword: "talks:seminar"
+  venue: Scottish Programming Languages Seminar
+  title: An abstract look at commutativity
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2023f
+  date: 2023-11
+  keyword: "talks:seminar"
+  venue: DIAPASoN Seminar, Università di Bologna
+  title: The duality of abstraction
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2024a
+  date: 2024-01
+  keyword: "talks:invited"
+  venue: Quantum@BO, Università di Bologna
+  title: Quantum continuations
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2024b
+  date: 2024-04
+  keyword: "talks:invited"
+  venue: PPS Seminar, IRIF, Universitè Paris Cité
+  title: The duality of abstraction
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2024c
+  date: 2024-09
+  keyword: "talks:seminar"
+  venue: SANDWICH Seminar, Computer Laboratory, University of Cambridge
+  title: Some cool facts about dualities
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2024d
+  date: 2024-12
+  keyword: "talks:seminar"
+  venue: OLAS Seminar, Università di Bologna
+  title: The duality of $\lambda$-abstraction
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2025a
+  date: 2025-01
+  keyword: "talks:conference"
+  venue: 52nd ACM SIGPLAN Symposium on Principles of Programming
+    Languages (POPL 2025)
+  title: The duality of $\lambda$-abstraction
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2025b
+  date: 2025-01
+  keyword: "talks:conference"
+  venue: Fifth International Workshop on Programming Languages for
+    Quantum Computing (PLANQ 2025) at POPL 2025
+  title: Towards quantum multiparty session types
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2025c
+  date: 2025-05
+  keyword: "talks:seminar"
+  venue: Logic, Semantics, and Categories (LSC) Seminar, Aix-Marseille
+    Université
+  title: The duality of $\lambda$-abstraction
+  type: manuscript
+- author:
+    - family: Choudhury
+      given: Vikraman
+  id: Choudhury2025d
+  date: 2025-06
+  keyword: "talks:seminar"
+  venue: CHoCoLa Seminar, ENS Lyon
+  title: The duality of $\lambda$-abstraction
+  type: manuscript
