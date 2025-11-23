@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -43,9 +45,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7fd42de8a988761bcd16534fb43462c9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-babc92ad52e5ba169d1bb149a9f1eecb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-ad58629007ee5c1c9ee54b68d68170ab.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-babc92ad52e5ba169d1bb149a9f1eecb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1f7883b44a5a5e4f78a427f53aa553c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-0899ad6fa6b55fee89fffc0515a2d72d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1f7883b44a5a5e4f78a427f53aa553c7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,8 +77,67 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-talks .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-author','listing-id','listing-date','listing-keyword','listing-title','listing-type','listing-url','listing-venue',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-author","listing-id","listing-date","listing-keyword","listing-title","listing-type","listing-url","listing-venue"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-talks'] = new List('listing-talks', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -332,10 +397,810 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<p>This is here to load fontawesome <i class="fa-solid fa-envelope" aria-label="envelope"></i> and academicons <i class="ai  ai-orcid" aria-label="orcid"></i>.</p>
 
 
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-custom" id="listing-talks">
+<ul class="talks list">
+  
+  <li data-index="0" data-listing-date-sort="1748736000000">
+    <!-- title -->
+    <div class="listing-name">
+      The duality of $\lambda$-abstraction
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      CHoCoLa Seminar, ENS Lyon
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Jun 1, 2025
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="1" data-listing-date-sort="1746057600000">
+    <!-- title -->
+    <div class="listing-name">
+      The duality of $\lambda$-abstraction
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      Logic, Semantics, and Categories (LSC) Seminar, Aix-Marseille Université
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      May 1, 2025
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="2" data-listing-date-sort="1735689600000">
+    <!-- title -->
+    <div class="listing-name">
+      The duality of $\lambda$-abstraction
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      52nd ACM SIGPLAN Symposium on Principles of Programming Languages (POPL 2025)
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Jan 1, 2025
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="3" data-listing-date-sort="1735689600000">
+    <!-- title -->
+    <div class="listing-name">
+      Towards quantum multiparty session types
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      Fifth International Workshop on Programming Languages for Quantum Computing (PLANQ 2025) at POPL 2025
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Jan 1, 2025
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="4" data-listing-date-sort="1733011200000">
+    <!-- title -->
+    <div class="listing-name">
+      The duality of $\lambda$-abstraction
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      OLAS Seminar, Università di Bologna
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Dec 1, 2024
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="5" data-listing-date-sort="1725148800000">
+    <!-- title -->
+    <div class="listing-name">
+      Some cool facts about dualities
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      SANDWICH Seminar, Computer Laboratory, University of Cambridge
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Sep 1, 2024
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="6" data-listing-date-sort="1711929600000">
+    <!-- title -->
+    <div class="listing-name">
+      The duality of abstraction
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      PPS Seminar, IRIF, Universitè Paris Cité
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Apr 1, 2024
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="7" data-listing-date-sort="1704067200000">
+    <!-- title -->
+    <div class="listing-name">
+      Quantum continuations
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      Quantum@BO, Università di Bologna
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Jan 1, 2024
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="8" data-listing-date-sort="1698796800000">
+    <!-- title -->
+    <div class="listing-name">
+      An abstract look at commutativity
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      Scottish Programming Languages Seminar
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Nov 1, 2023
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="9" data-listing-date-sort="1698796800000">
+    <!-- title -->
+    <div class="listing-name">
+      The duality of abstraction
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      DIAPASoN Seminar, Università di Bologna
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Nov 1, 2023
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="10" data-listing-date-sort="1696118400000">
+    <!-- title -->
+    <div class="listing-name">
+      The duality of abstraction
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      Huawei-Edinburgh Coffee House Tech Talk
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Oct 1, 2023
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="11" data-listing-date-sort="1696118400000">
+    <!-- title -->
+    <div class="listing-name">
+      Classical Processes in modern dress
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      30 Years of Session Types, SPLASH 2023
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Oct 1, 2023
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="12" data-listing-date-sort="1693526400000">
+    <!-- title -->
+    <div class="listing-name">
+      Continuations and coexponentials
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      Higher-Order Programming with Effects, ICFP 2023
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Sep 1, 2023
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="13" data-listing-date-sort="1682899200000">
+    <!-- title -->
+    <div class="listing-name">
+      Continuations and coexponentials
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      MSP Seminar, University of Strathclyde; PLUG Seminar, University of Glasgow; LFCS Seminar, University of Edinburgh
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      May 1, 2023
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="14" data-listing-date-sort="1669852800000">
+    <!-- title -->
+    <div class="listing-name">
+      Symmetries in reversible programming
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      Computer Science Theory Seminar, Tallinn University of Technology
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Dec 1, 2022
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://niccoloveltri.github.io/tsem22/choudhury0812.html" class="listing-link-url">
+          <span><i class="fa fa-link fa-fw"></i>&nbsp;URL</span>
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+  
+  <li data-index="15" data-listing-date-sort="1664582400000">
+    <!-- title -->
+    <div class="listing-name">
+      Symmetries in reversible programming
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      Programming Languages and Systems Seminar, University of Kent
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Oct 1, 2022
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://www.kent.ac.uk/events/event/57255/tba-vikraman-choudhury-university-of-glasgow" class="listing-link-url">
+          <span><i class="fa fa-link fa-fw"></i>&nbsp;URL</span>
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+  
+  <li data-index="16" data-listing-date-sort="1656633600000">
+    <!-- title -->
+    <div class="listing-name">
+      Free commutative monoids in homotopy type theory
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      38th International Conference on Mathematical Foundations of Programming Semantics (MFPS 2022)
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Jul 1, 2022
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://www.cs.cornell.edu/mfps-2022/" class="listing-link-url">
+          <span><i class="fa fa-link fa-fw"></i>&nbsp;URL</span>
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+  
+  <li data-index="17" data-listing-date-sort="1654041600000">
+    <!-- title -->
+    <div class="listing-name">
+      Weighted sets and modalities
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      Meeting on Graded Types, University of Kent
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Jun 1, 2022
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="18" data-listing-date-sort="1651363200000">
+    <!-- title -->
+    <div class="listing-name">
+      Symmetries in reversible programming
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      Logic and Semantics Seminar, Computer Laboratory, University of Cambridge
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      May 1, 2022
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://talks.cam.ac.uk/talk/index/174857" class="listing-link-url">
+          <span><i class="fa fa-link fa-fw"></i>&nbsp;URL</span>
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+  
+  <li data-index="19" data-listing-date-sort="1640995200000">
+    <!-- title -->
+    <div class="listing-name">
+      Symmmetries in reversible programming
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      49th ACM SIGPLAN Symposium on Principles of Programming Languages (POPL 2022)
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Jan 1, 2022
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://popl22.sigplan.org/details/POPL-2022-popl-research-papers/6/Symmetries-in-Reversible-Programming-From-Symmetric-Rig-Groupoids-to-Reversible-Prog" class="listing-link-url">
+          <span><i class="fa fa-link fa-fw"></i>&nbsp;URL</span>
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+  
+  <li data-index="20" data-listing-date-sort="1638316800000">
+    <!-- title -->
+    <div class="listing-name">
+      Symmetries in reversible programming
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      PLUG Seminar, School of Computing Science, University of Glasgow
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Dec 1, 2021
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="21" data-listing-date-sort="1638316800000">
+    <!-- title -->
+    <div class="listing-name">
+      Weighted sets and modalities
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      SYCO 8, Tallinn University of Technology
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Dec 1, 2021
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="22" data-listing-date-sort="1617235200000">
+    <!-- title -->
+    <div class="listing-name">
+      Algebraic approaches to computation &amp; programming
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      School of Computing Science, University of Glasgow
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Apr 1, 2021
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="23" data-listing-date-sort="1612137600000">
+    <!-- title -->
+    <div class="listing-name">
+      Recovering purity with comonads and capabilities
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      Department of Computer Science and Engineering, Chalmers and Gothenburg University
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Feb 1, 2021
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="24" data-listing-date-sort="1606780800000">
+    <!-- title -->
+    <div class="listing-name">
+      A constructive model of differential linear logic
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      Department of Computer Science, University of Oxford
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Dec 1, 2020
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="25" data-listing-date-sort="1604188800000">
+    <!-- title -->
+    <div class="listing-name">
+      Algebraic approaches to computation &amp; programming
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Nov 1, 2020
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+    </ul>
+  </li>
+  
+  <li data-index="26" data-listing-date-sort="1604188800000">
+    <!-- title -->
+    <div class="listing-name">
+      Free commutative monoids in homotopy type theory
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+      Logic and Semantics Seminar, Computer Laboratory, University of Cambridge
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Nov 1, 2020
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="http://talks.cam.ac.uk/talk/index/152593" class="listing-link-url">
+          <span><i class="fa fa-link fa-fw"></i>&nbsp;URL</span>
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+  
+  <li data-index="27" data-listing-date-sort="1596240000000">
+    <!-- title -->
+    <div class="listing-name">
+      Recovering purity with comonads and capabilities
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Aug 1, 2020
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://icfp20.sigplan.org/details/icfp-2020-papers/24/Recovering-Purity-with-Comonads-and-Capabilities" class="listing-link-url">
+          <span><i class="fa fa-link fa-fw"></i>&nbsp;URL</span>
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+  
+  <li data-index="28" data-listing-date-sort="1567296000000">
+    <!-- title -->
+    <div class="listing-name">
+      Recovering purity with comonads and capabilities
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Sep 1, 2019
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://purpl.cs.purdue.edu/kickoff.html#popup-Choudhury" class="listing-link-url">
+          <span><i class="fa fa-link fa-fw"></i>&nbsp;URL</span>
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+  
+  <li data-index="29" data-listing-date-sort="1564617600000">
+    <!-- title -->
+    <div class="listing-name">
+      The finite-multiset construction in HoTT
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Aug 1, 2019
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://hott.github.io/HoTT-2019//programme/#choudhury" class="listing-link-url">
+          <span><i class="fa fa-link fa-fw"></i>&nbsp;URL</span>
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+  
+  <li data-index="30" data-listing-date-sort="1556668800000">
+    <!-- title -->
+    <div class="listing-name">
+      Retrofitting purity with comonads and capabilities
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      May 1, 2019
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="http://talks.cam.ac.uk/talk/index/125278" class="listing-link-url">
+          <span><i class="fa fa-link fa-fw"></i>&nbsp;URL</span>
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+  
+  <li data-index="31" data-listing-date-sort="1504224000000">
+    <!-- title -->
+    <div class="listing-name">
+      Homotopy theoretic aspects of reversible computing
+    </div>
+    <!-- venue -->
+    <div class="listing-venue">
+      
+    </div>
+    <!-- date-->
+    <div class="listing-date">
+      
+      Sep 1, 2017
+      
+    </div>
+    <!-- links -->
+    <ul class="listing-links">
+      
+      <li class="listing-link">
+        <a href="https://wonks.github.io/choudhury/fall2017/2017/09/01/choudhury.html" class="listing-link-url">
+          <span><i class="fa fa-link fa-fw"></i>&nbsp;URL</span>
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+  
+</ul>
+<div class="listing-no-matching d-none">No matching items</div>
+<nav id="talks-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

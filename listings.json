@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/talks/index.html",
+    "items": []
+  },
+  {
     "listing": "/papers/index.html",
     "items": [
       "/papers/alexandru-choudhury-rot-vanderweide-2025/index.html",
