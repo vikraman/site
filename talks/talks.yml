@@ -260,7 +260,7 @@
   date: 2024-12
   keyword: "talks:seminar"
   venue: OLAS Seminar, Università di Bologna
-  title: The duality of $\lambda$-abstraction
+  title: The duality of λ-abstraction
   type: manuscript
 - author:
     - family: Choudhury
@@ -270,7 +270,7 @@
   keyword: "talks:conference"
   venue: 52nd ACM SIGPLAN Symposium on Principles of Programming
     Languages (POPL 2025)
-  title: The duality of $\lambda$-abstraction
+  title: The duality of λ-abstraction
   type: manuscript
 - author:
     - family: Choudhury
@@ -290,7 +290,7 @@
   keyword: "talks:seminar"
   venue: Logic, Semantics, and Categories (LSC) Seminar, Aix-Marseille
     Université
-  title: The duality of $\lambda$-abstraction
+  title: The duality of λ-abstraction
   type: manuscript
 - author:
     - family: Choudhury
@@ -299,5 +299,5 @@
   date: 2025-06
   keyword: "talks:seminar"
   venue: CHoCoLa Seminar, ENS Lyon
-  title: The duality of $\lambda$-abstraction
+  title: The duality of λ-abstraction
   type: manuscript
