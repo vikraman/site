@@ -1,8 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="8" fill="#ede8d0" />
+  <style>
+    rect { fill: #fdfbd4;}
+    text { fill: #b22222; }
+    @media (prefers-color-scheme: dark) {
+      rect { fill: #ede8d0; }
+      text { fill: #4a0404; }
+    }
+  </style>
+  <rect width="64" height="64" rx="8" />
   <text x="50%" y="55%" text-anchor="middle"
-    font-family="Brush Script MT, Lucida Handwriting, cursive" font-size="42"
-    fill="#b22222" style="dominant-baseline:middle;">
+    font-family="Brush Script MT, Lucida Handwriting, cursive"
+    font-size="42" style="dominant-baseline:middle;">
     VC
   </text>
 </svg>
