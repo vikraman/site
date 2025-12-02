@@ -49,3 +49,15 @@ ul.talks.list {
 #quarto-margin-sidebar {
     z-index: 0 !important;
 }
+
+.navbar {
+    font-family: $navbar-font-family;
+}
+
+#TOC {
+    font-family: $toc-font-family;
+}
+
+.nav-footer {
+    font-family: $footer-font-family;
+}

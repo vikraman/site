@@ -1,7 +1,12 @@
 // fonts
-$font-family-sans-serif: "Montserrat", sans-serif;
+$font-family-sans-serif: "Merriweather", sans-serif;
 $font-family-monospace: "Space Mono", monospace;
 $font-family-serif: "Gentium Book Plus", serif;
+
+// font assignments
+$navbar-font-family: $font-family-sans-serif;
+$toc-font-family: $font-family-sans-serif;
+$footer-font-family: $font-family-sans-serif;
 
 // links
 $link-decoration: underline dotted;
