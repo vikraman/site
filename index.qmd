@@ -13,6 +13,6 @@ title: "Hi!"
 | Italy
 
 ::: {.callout-note}
-This website is under construction,
-[go here for the old website](https://web.archive.org/web/20250917211539/https://vikraman.org/).
+This website is under construction, and some things maybe missing or incomplete.
+You may go [here for the old website](https://vikraman.org/).
 :::
