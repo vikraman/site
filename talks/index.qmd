@@ -10,4 +10,6 @@ listing:
     template: ../html/talks.ejs
 ---
 
-This is here to load fontawesome {{< fa envelope >}} and academicons {{< ai orcid >}}.
+::: {.hidden}
+load academicons {{< ai doi >}}
+:::
