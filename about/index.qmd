@@ -1,6 +1,6 @@
 ---
 title: Vikraman Choudhury
-image: photo.jpeg
+image: photo.webp
 about:
     template: solana
     links:
