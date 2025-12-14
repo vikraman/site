@@ -10,7 +10,7 @@ execute:
 
 website:
   title: "Vikraman's site"
-  site-url: https://site.vikraman.org
+  site-url: https://vikraman.org
   description: "Vikraman's personal website"
   favicon: favicon.svg
   # nav bar
@@ -59,4 +59,4 @@ format:
       url: https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js
     # external links
     link-external-newwindow: true
-    link-external-filter: '^(?:http:|https:)\/\/site\.vikraman\.org\/'
+    link-external-filter: '^(?:http:|https:)\/\/vikraman\.org\/'
