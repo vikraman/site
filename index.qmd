@@ -4,13 +4,17 @@ title: "Hi!"
 
 ### [**Vikraman Choudhury**]{.smallcaps}
 | pronunciation: [/vˈɪkɹəmən t͡ʃˈɔːdhɹi/](https://ipa-reader.com/?text=v%CB%88%C9%AAk%C9%B9%C9%99m%C9%99n%20t%CD%A1%CA%83%CB%88%C9%94%CB%90dh%C9%B9i&voice=Brian)
-| email: [vikraman.choudhury@unibo.it](mailto:vikraman.choudhury@unibo.it)
+| email: [vikraman.choudhury@strath.ac.uk](mailto:vikraman.choudhury@strath.ac.uk)
 | personal email: [me@vikraman.org](mailto:me@vikraman.org)
 | pronouns: he/them
-| [Dipartimento di Informatica - Scienza e Ingegneria](https://disi.unibo.it/en)
-| Mura Anteo Zamboni 7
-| 40126 Bologna BO
-| Italy
+| office: [LT1311c, Livingstone Tower](https://www.strath.ac.uk/maps/livingstonetower/)
+| [Mathematically Structured Programming Group](https://msp.cis.strath.ac.uk/)
+| [Department of Computer and Information Sciences](https://www.cis.strath.ac.uk/)
+| [University of Strathclyde](https://www.strath.ac.uk/)
+| 26 Richmond Street
+| Glasgow G1 1XH
+| Scotland
+| United Kingdom
 
 ::: {.callout-note}
 This website is being rewritten, and some things maybe missing or incomplete.

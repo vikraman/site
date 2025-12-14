@@ -4,5 +4,8 @@ title: Projects
 
 My research has been funded by the following grants and awards.
 
-- [Reversible Gray Debugging of Concurrent Systems (ReGraDe-CS)](regradecs/index.qmd)
-- others
+- Modern algebraic perspectives on the lambda calculus and its extensions
+- Marie Skłodowska-Curie Individual Fellowship
+  - [Reversible Gray Debugging of Concurrent Systems (ReGraDe-CS)](regradecs/index.qmd)
+- Paul Purdom Fellowship
+- ... and others

@@ -18,9 +18,9 @@ about:
           href: https://mathoverflow.net/users/99623/vikraman
 ---
 
-I am a Marie Skłodowska-Curie Fellow at the Department of Computer Science and Engineering,
-Alma Mater Studiorum - Università di Bologna, and also affiliated with the INRIA OLAS Team.
+I am a Chancellor's Fellow (Lecturer) in Mathematically Structured Programming
+at the University of Strathclyde, Glasgow, UK.
 
 I study mathematical foundations of computation, through an algebraic lens.
-My research spans programming languages, type theory, category theory,
-logic, semantics, constructive mathematics, and formalisation.
+My research spans category theory, type theory, programming language theory,
+logic, semantics, concurrency, constructive mathematics, and formalisation.
