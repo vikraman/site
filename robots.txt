@@ -1,1 +1,1 @@
-Sitemap: https://site.vikraman.org/sitemap.xml
+Sitemap: https://vikraman.org/sitemap.xml

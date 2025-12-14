@@ -485,7 +485,7 @@ Haskell, Oxford, United Kingdom, September 7-8, 2017</em>. <a href="https://doi.
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("^(?:http:|https:)\/\/site\.vikraman\.org\/");
+        var filterRegex = new RegExp("^(?:http:|https:)\/\/vikraman\.org\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
