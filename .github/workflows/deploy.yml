@@ -3,7 +3,7 @@ on:
     branches:
       - main
 
-name: Render and Publish
+name: Render and Deploy
 
 jobs:
   build-deploy:
@@ -25,9 +25,23 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Render and publish to GitHub Pages
+      - name: Render site
+        uses: quarto-dev/quarto-actions/render@v2
+
+      - name: Publish to GitHub Pages
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy to web server
+        uses: burnett01/rsync-deployments@v8
+        with:
+          switches: -avzr --delete
+          path: _site/
+          remote_path: ${{ secrets.REMOTE_PATH }}
+          remote_host: ${{ secrets.REMOTE_HOST }}
+          remote_port: ${{ secrets.REMOTE_PORT }}
+          remote_user: ${{ secrets.REMOTE_USER }}
+          remote_key: ${{ secrets.REMOTE_KEY }}
