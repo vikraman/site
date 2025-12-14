@@ -8,6 +8,7 @@ name: Render and Deploy
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    environment: deploy
     permissions:
       contents: write
       pages: write
