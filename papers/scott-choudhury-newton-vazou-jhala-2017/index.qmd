@@ -1,0 +1,44 @@
+---
+title: Deriving Law-Abiding Instances
+authors:
+- name: Ryan Scott
+  orcid: 0000-0002-8479-8974
+  affiliation: Indiana University, USA
+- name: Vikraman Choudhury
+  orcid: 0000-0003-2030-8056
+  affiliation: University of Bologna, Bologna, Italy
+- name: Ryan Newton
+  orcid: 0000-0003-0995-1294
+  affiliation: Indiana University, USA
+- name: Niki Vazou
+  orcid: 0000-0003-0732-5476
+  affiliation: University of Maryland, USA
+- name: Ranjit Jhala
+  orcid: 0000-0002-1802-9421
+  affiliation: University of California at San Diego, USA
+date: '2017'
+doi: 10.48550/arXiv.1708.02328
+categories:
+- preprint
+citation:
+  doi: 10.48550/arXiv.1708.02328
+  type: article
+  url: https://doi.org/10.48550/arXiv.1708.02328
+  issued: '2017'
+links:
+  arxiv: '1708.02328'
+abstract: |
+  Liquid Haskell's refinement-reflection feature augments the Haskell language
+  with theorem proving capabilities, allowing programmers to retrofit their
+  existing code with proofs. But many of these proofs require routine, boilerplate
+  code that is tedious to write. Moreover, many such proofs do not scale well, as
+  the size of proof terms can grow superlinearly with the size of the datatypes
+  involved in the proofs. We present a technique for programming with refinement
+  reflection which solves this problem by leveraging datatype-generic programming.
+  Our observation is that we can take any algebraic datatype, generate an
+  equivalent representation type, and have Liquid Haskell automatically construct
+  (and prove) an isomorphism between the original type and the representation
+  type. This reduces many proofs down to easy theorems over simple algebraic
+  "building block" types, allowing programmers to write generic proofs cheaply and
+  cheerfully.
+---

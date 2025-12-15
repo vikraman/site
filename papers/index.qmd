@@ -20,6 +20,15 @@ listing:
     categories: true
     include:
       categories: "{workshop}"
+  - id: theses
+    contents: "**/*.qmd"
+    sort:
+    - "date desc"
+    - "title"
+    template: ../html/papers.ejs
+    categories: true
+    include:
+      categories: "{thesis}"
   - id: preprints
     contents: "**/*.qmd"
     sort:
@@ -43,6 +52,11 @@ load academicons {{< ai doi >}}
 ## Workshops
 
 ::: {#workshops}
+:::
+
+## Theses
+
+::: {#theses}
 :::
 
 ## Preprints

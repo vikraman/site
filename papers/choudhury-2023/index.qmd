@@ -1,0 +1,46 @@
+---
+title: Mathematical Models of Resource-Conscious Computation
+authors:
+- name: Vikraman Choudhury
+  orcid: 0000-0003-2030-8056
+  affiliation: Indiana University, USA
+date: 2023-03-01
+venue:
+  description: Indiana University
+categories:
+- thesis
+citation:
+  type: thesis
+  container-title: Indiana University
+  issued: 2023
+abstract: |
+  This thesis studies various logics and programming languages for
+  resource-conscious computation, in particular, their syntax, categorical and
+  denotational semantics, and presents a collection of results. Firstly, we study
+  the construction of free commutative monoids in univalent type theory, and their
+  structural combinatorial properties. We give a formal construction of the
+  relational model of classical linear logic, and use free commutative monoids to
+  construct the comonadic exponential modality. Relating this to the combinatorial
+  Fock space construction and associated creation/annihilation operators, we
+  exhibit the differential structure of this relation model. From this, we derive
+  a commutation relation characterising the path space of free commutative
+  monoids. Secondly, we groupoidify and study free symmetric monoidal groupoids
+  and free symmetric rig groupoids. These are used to build a family of high-level
+  programming languages for reversible computing, giving them an equational theory
+  stemming from the categorical coherence conditions. We then give a denotational
+  semantics to this family of languages, using deloopings of symmetric groups, and
+  obtain a fully-complete denotational semantics using the groupoid of finite sets
+  and bijections, with its additive and multiplicative monoidal structure. This
+  establishes a Curry-Howard-Lambek correspondence for reversible computing with
+  finite number of bits. We show some applications of this semantics to perform
+  normalisation-by-evaluation, verification, and synthesis of reversible boolean
+  circuits, motivated by examples from quantum computing. Thirdly, we study
+  capability-safe programming, using an effectful simply-typed lambda calculus. We
+  give a denotational semantics to this language by building a capability-space
+  model, which formalises the notion of capability-safety. We identify its
+  axiomatic categorical structure and use this to justify the equational theory of
+  the language. Using this semantics, we construct a comonadic modality expressing
+  capability denial, and use it to extend the syntax of our language. We show that
+  this modality allows one to recover pure computation in an otherwise impure
+  language.
+---
