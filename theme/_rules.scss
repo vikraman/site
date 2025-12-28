@@ -1,11 +1,13 @@
 @import "base";
 
+/* main colors */
 main {
     a:hover {
         background-color: $link-hover-bg-color;
     }
 }
 
+/* publication listings */
 ul.papers.list,
 ul.talks.list {
     li {
@@ -46,10 +48,12 @@ ul.talks.list {
     }
 }
 
+/* fix for sidebar z-index */
 #quarto-margin-sidebar {
     z-index: 0 !important;
 }
 
+/* font assignments */
 .navbar {
     font-family: $navbar-font-family;
 }
@@ -60,4 +64,24 @@ ul.talks.list {
 
 .nav-footer {
     font-family: $footer-font-family;
+}
+
+/* justified text */
+main {
+    container-type: inline-size;
+}
+
+@container (inline-size >=20em) {
+    @supports (text-wrap: pretty) and (hyphenate-limit-chars: 10) {
+        blockquote,
+        p {
+            text-align: justify;
+            text-wrap: pretty;
+            hyphens: auto;
+            hyphenate-limit-chars: 10 3 4;
+            hyphenate-limit-lines: 2;
+            hyphenate-limit-last: always;
+            hyphenate-limit-zone: 8%;
+        }
+    }
 }
