@@ -77,11 +77,20 @@ main {
         p {
             text-align: justify;
             text-wrap: pretty;
+
             hyphens: auto;
             hyphenate-limit-chars: 10 3 4;
             hyphenate-limit-lines: 2;
             hyphenate-limit-last: always;
             hyphenate-limit-zone: 8%;
+
+            -webkit-hyphens: auto;
+            -webkit-hyphenate-limit-before: 3;
+            -webkit-hyphenate-limit-after: 4;
+            -webkit-hyphenate-limit-chars: 10 3 4;
+            -webkit-hyphenate-limit-lines: 2;
+            -webkit-hyphenate-limit-last: always;
+            -webkit-hyphenate-limit-zone: 8%;
         }
     }
 }
