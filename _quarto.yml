@@ -34,7 +34,7 @@ website:
   back-to-top-navigation: true
   # footer
   page-footer:
-    right: "Built using [Quarto](https://quarto.org)"
+    right: "[Site](https://github.com/vikraman/site) built using [Quarto](https://quarto.org)"
 
 format:
   html:
