@@ -11,7 +11,7 @@ SOURCES := $(shell find . -type f \
 
 .PHONY: all build clean cont preview info
 
-all: $(BUILD_STAMP)
+all: build
 
 # Ensure build dir exists
 $(BUILD_DIR):
