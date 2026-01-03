@@ -2,4 +2,4 @@
 title: Now
 ---
 
-See what I'm up to on [beeminder](https://www.beeminder.com/vikraman).
+See what I'm up to on [Beeminder](https://www.beeminder.com/vikraman).
