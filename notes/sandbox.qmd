@@ -60,6 +60,22 @@ $$
 $$
 :::
 
+# Theorems
+
+This is a theorem with proof.
+
+::: {#thm-yoneda}
+**(Yoneda lemma).**
+For a locally small category $\mathcal{C}$, a functor $F : \mathcal{C} \to \mathbf{Set}$, and an object $A \in \mathcal{C}$, there is a natural isomorphism
+$$
+\mathrm{Nat}(\mathrm{Hom}_{\mathcal{C}}(-, A), F) \cong F(A).
+$$
+:::
+
+::: {.proof}
+Obvious.
+:::
+
 # Diagrams
 
 This renders diagrams in markdown @fig-diagrams.
