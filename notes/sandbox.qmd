@@ -62,7 +62,7 @@ $$
 
 # Theorems
 
-This is a theorem with proof.
+This is a theorem with proof, labeled and cross-referenced @thm-yoneda.
 
 ::: {#thm-yoneda}
 **(Yoneda lemma).**
