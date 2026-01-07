@@ -6,7 +6,7 @@ authors:
   affiliation: Indiana University, USA
 - name: Vikraman Choudhury
   orcid: 0000-0003-2030-8056
-  affiliation: University of Bologna, Bologna, Italy
+  affiliation: Indiana University, USA
 - name: Ryan Newton
   orcid: 0000-0003-0995-1294
   affiliation: Indiana University, USA
