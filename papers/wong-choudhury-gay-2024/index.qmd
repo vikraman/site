@@ -3,12 +3,13 @@ title: On Commutativity, Total Orders, and Sorting
 authors:
 - name: Wind Wong
   orcid: 0009-0005-8306-7968
+  affiliation: University of Glasgow, Glasgow, UK
 - name: Vikraman Choudhury
   orcid: 0000-0003-2030-8056
   affiliation: Università di Bologna, Bologna, Italy
 - name: Simon J Gay
   orcid: 0000-0003-3033-9091
-  affiliation: University of Glasgow, Glasgow, United Kingdom
+  affiliation: University of Glasgow, Glasgow, UK
 date: 2024-04
 venue:
   name: HoTT/UF 2024

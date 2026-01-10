@@ -3,10 +3,10 @@ title: Classical Processes in Modern Dress
 authors:
 - name: Vikraman Choudhury
   orcid: 0000-0003-2030-8056
-  affiliation: University of Glasgow, Glasgow, United Kingdom
+  affiliation: University of Glasgow, Glasgow, UK
 - name: Simon J. Gay
   orcid: 0000-0003-3033-9091
-  affiliation: University of Glasgow, Glasgow, United Kingdom
+  affiliation: University of Glasgow, Glasgow, UK
 date: 2023-10-31
 venue:
   name: ST30

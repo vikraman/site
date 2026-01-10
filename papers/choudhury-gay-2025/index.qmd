@@ -6,7 +6,7 @@ authors:
   affiliation: Università di Bologna, Bologna, Italy
 - name: Simon J. Gay
   orcid: 0000-0003-3033-9091
-  affiliation: University of Glasgow, Glasgow, United Kingdom
+  affiliation: University of Glasgow, Glasgow, UK
 date: 2025-01-07
 doi: 10.1145/3704848
 venue:
