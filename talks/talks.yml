@@ -101,7 +101,7 @@
   url: "https://niccoloveltri.github.io/tsem22/choudhury0812.html"
 - date: 2023-05
   keyword: "talks:invited"
-  venue: MSP Seminar, University of Strathclyde; PLUG Seminar, University
+  venue: MSP 101 Seminar, University of Strathclyde; PLUG Seminar, University
     of Glasgow; LFCS Seminar, University of Edinburgh
   title: Continuations and coexponentials
   type: manuscript
@@ -175,6 +175,6 @@
   type: manuscript
 - date: 2025-11
   keyword: "talks:seminar"
-  venue: MSP 101, University of Strathclyde
+  venue: MSP 101 Seminar, University of Strathclyde
   title: Semantic analysis of Polarization
   type: manuscript
