@@ -1,21 +1,27 @@
 - date: 2017-09
   keyword: "talks:seminar"
   title: Homotopy theoretic aspects of reversible computing
+  venue: PL Wonks Seminar, Indiana University Bloomington
   type: manuscript
   url: "https://wonks.github.io/choudhury/fall2017/2017/09/01/choudhury.html"
 - date: 2019-09
   keyword: "talks:workshop"
   title: Recovering purity with comonads and capabilities
+  venue: PL Wonks Seminar, Indiana University Bloomington
   type: manuscript
   url: "https://purpl.cs.purdue.edu/kickoff.html#popup-Choudhury"
 - date: 2019-08
   keyword: "talks:conference"
   title: The finite-multiset construction in HoTT
+  venue: International Conference on Homotopy Type Theory (HoTT 2019), Carnegie
+    Mellon University
   type: manuscript
   url: "https://hott.github.io/HoTT-2019//programme/#choudhury"
 - date: 2019-05
   keyword: "talks:seminar"
   title: Retrofitting purity with comonads and capabilities
+  venue: Logic and Semantics Seminar, Computer Laboratory, University of
+    Cambridge
   type: manuscript
   url: "http://talks.cam.ac.uk/talk/index/125278"
 - date: 2020-12
