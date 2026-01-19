@@ -31,6 +31,7 @@
   type: manuscript
 - date: 2020-11
   keyword: "talks:invited"
+  venue: Department of Informatics, King's College London
   title: Algebraic approaches to computation & programming
   type: manuscript
 - date: 2020-11
@@ -43,6 +44,8 @@
 - date: 2020-08
   keyword: "talks:conference"
   title: Recovering purity with comonads and capabilities
+  venue: 25th ACM SIGPLAN International Conference on Functional
+    Programming (ICFP 2020)
   type: manuscript
   url: "https://icfp20.sigplan.org/details/icfp-2020-papers/24/Recovering-Purity-with-Comonads-and-Capabilities"
 - date: 2021-02
