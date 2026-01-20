@@ -10,6 +10,7 @@ authors:
   affiliation: Indiana University, USA / University of Cambridge, UK
 - name: Jacques Carette
   orcid: 0000-0001-8993-9804
+  affiliation: McMaster University, Canada
 - name: Amr Sabry
   orcid: 0000-0002-1025-7331
   affiliation: Indiana University, USA

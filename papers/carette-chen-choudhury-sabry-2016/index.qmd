@@ -3,6 +3,7 @@ title: Fractional Types
 authors:
 - name: Jacques Carette
   orcid: 0000-0001-8993-9804
+  affiliation: McMaster University, Canada
 - name: Chao-Hong Chen
   orcid: 0000-0002-9314-8105
   affiliation: Indiana University, USA

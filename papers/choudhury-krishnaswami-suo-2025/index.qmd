@@ -8,6 +8,7 @@ authors:
   orcid: 0000-0003-2838-5865
   affiliation: University of Cambridge, UK
 - name: Ariadne Si Suo
+  affiliation: University of Cambridge, UK
 date: 2025-01
 venue:
   name: WITS 2025
