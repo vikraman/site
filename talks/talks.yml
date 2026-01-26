@@ -119,6 +119,7 @@
   venue: Higher-Order Programming with Effects, ICFP 2023
   title: Continuations and coexponentials
   type: manuscript
+  url: https://icfp23.sigplan.org/details/hope-2023/9/Continuations-and-Coexponentials
 - date: 2023-10
   keyword: "talks:invited"
   venue: Huawei-Edinburgh Coffee House Tech Talk
@@ -129,6 +130,7 @@
   venue: 30 Years of Session Types, SPLASH 2023
   title: Classical Processes in modern dress
   type: manuscript
+  url: https://2023.splashcon.org/details/st-anniversary-30-papers/9/Classical-Processes-in-modern-dress
 - date: 2023-11
   keyword: "talks:seminar"
   venue: Scottish Programming Languages Seminar
