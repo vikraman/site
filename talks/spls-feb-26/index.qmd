@@ -10,7 +10,7 @@ author:
     orcid: 0000-0003-2030-8056
     email: vikraman.choudhury@strath.ac.uk
     affiliations:
-      - University of Strathclyde MSP, Glasgow, UK
+      - MSP, University of Strathclyde, Glasgow, UK
 format:
   revealjs:
     theme: dracula
