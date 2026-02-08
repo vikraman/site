@@ -1,7 +1,7 @@
 ---
 title: |
-  | Mathematically Structured
-  | 🐞 Debugging 🐞
+  | Semantics of
+  | Reversible Concurrency
 subtitle: |
   | SPLS @ St Andrews
 date: Feb 11, 2026
@@ -15,3 +15,22 @@ format:
   revealjs:
     theme: dracula
 ---
+
+## What does a debugger do?
+
+- Reversible debuggers record the trace of a program's execution
+- In debugging mode, the user can step forward and backward through the trace
+- The user can inspect the state of the program at any point in the trace, and look at the events that led to a particular state
+- What if the program is concurrent?
+- In a concurrent program, the trace is not linear, but a partial order of events
+- To step backwards, the debugger needs to know which events are causally related, and which are independent
+
+## Event Structures
+
+## Reversibility in Event Structures
+
+## Rollback
+
+## Replay
+
+## Reversible CCS
