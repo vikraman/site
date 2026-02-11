@@ -5,6 +5,7 @@ title: |
 subtitle: |
   | SPLS @ St Andrews
 date: Feb 11, 2026
+date-format: medium
 author:
   - name: Vikraman Choudhury
     orcid: 0000-0003-2030-8056
@@ -14,10 +15,10 @@ author:
 format:
   revealjs:
     theme: solarized
-    incremental: false
+    incremental: true
     slide-number: true
     smaller: true
-    progress: false
+    progress: true
 filters:
   - imagify
 imagify:
@@ -27,53 +28,147 @@ imagify:
     \usetikzlibrary{automata, positioning}
 ---
 
+## Introduction
+
 ::: {.hidden}
-$$$
+$$
+\require{mathtools}
 \newcommand{\downset}[1]{\mathop{\downarrow}#1}
 \newcommand{\upset}[1]{\mathop{\uparrow}#1}
-\newcommand{\confl}[0]{\mathrel{\#}}
-$$$
+\newcommand{\confl}[0]{\mathrel{\mathsf{\#}}}
+\newcommand{\minconfl}[0]{\mathrel{\mathsf{\#}_{m}}}
+\newcommand{\conc}[0]{\mathrel{\bowtie}}
+\newcommand{\shuf}[0]{\mathrel{\mathbin{\shuffle}}}
+\newcommand{\Conf}[0]{\mathcal{C}}
+\newcommand{\enables}[0]{\mathrel{\vdash}}
+\newcommand{\ind}[0]{\mathrel{\mathsf{\iota}}}
+\newcommand{\rollback}[2]{\rho_{#1}(#2)}
+\newcommand{\minrepl}[1]{\mathsf{\varphi}(#1)}
+\newcommand{\maxrepl}[1]{\mathsf{\Phi}(#1)}
+\newcommand{\lts}[1]{\overset{#1}{\longrightarrow}}
+\newcommand{\alog}[1]{\mathop{\ell\mathcal{og}}(#1)}
+\newcommand{\Comp}[0]{\mathbb{C}}
+$$
 :::
+
+- Programs run forwards.
+- Sometimes we may want to run them backwards:
+  - Reversible functions preserve information
+  - Reversible Boolean circuits in quantum computers
+  - Encoders and decoders are partially invertible
+  - Reversible debugging
+  - Reversible process calculi
+- Models:
+  - Rig groupoids
+  - Inverse categories
 
 ## What does a debugger do?
 
 - Reversible debuggers record the trace of a program's execution
 - In debugging mode, the user can step forward and backward through the trace
 - The user can inspect the state of the program at any point in the trace, and look at the events that led to a particular state
-- What if the program is concurrent?
-- In a concurrent program, the trace is not linear, but a partial order of events
-- To step backwards, the debugger needs to know which events are causally related, and which are independent
-
-## Example: 1
 
 ::: {.imagify}
-\begin{tikzpicture} [draw=cyan!70!black,
-    node distance = 10em,
-    on grid,
-    auto,
-    every loop/.style={stealth-}]
-
-% State c0
-\node (c0) [state,
-    initial,
-    accepting,
-    initial text = {}] {$c_0$};
-
-% State c1
-\node (c1) [state,
-    right = of c0] {$c_1$};
-
-% State c2
-\node (c2) [state,
-    right = of c1] {$c_2$};
-
-% Arrows
-\path [-stealth, thick]
-    (c0) edge[bend left] node {$e_1$}   (c1)
-    (c1) edge[bend left] node {$e_2$}   (c2)
-    (c1) edge[bend left] node {$e_1'$}  (c0)
-    (c2) edge[bend left] node {$e_2'$}  (c1);
+\begin{tikzpicture} [draw=gray, node distance = 10em, on grid, auto, every loop/.style={stealth-}]
+% States
+\node (q0) [state, draw=blue!70!black, initial, initial text = {}] {$q_0$};
+\node (q1) [state, draw=blue!70!black, right = of q0] {$q_1$};
+\node (q2) [state, draw=blue!70!black, right = of q1] {$q_2$};
+% Transitions
+\path [-stealth, thick, cyan!70!black]
+    (q0) edge[bend left] node {$a$} (q1)
+    (q1) edge[bend left] node {$b$} (q2);
+\path [-stealth, thick, dotted, magenta!70!black]
+    (q1) edge[bend left] node {$\overline{a}$} (q0)
+    (q2) edge[bend left] node {$\overline{b}$} (q1);
 \end{tikzpicture}
+:::
+
+## Debugging concurrent programs
+
+- What if the program is concurrent?
+- In a concurrent program, traces are not linear, they are "asynchronous"
+- To step backwards, the debugger needs to know which events are causally related, and which are independent
+
+::: {layout-ncol=2}
+
+::: {.imagify}
+\begin{tikzpicture} [draw=gray, node distance = 5em, on grid, auto, every loop/.style={stealth-}]
+% States
+\node (q0) [state, draw=blue!70!black, initial, initial text = {}] {$q_0$};
+\node (q1) [state, draw=blue!70!black, above right = of q0] {$q_1$};
+\node (q2) [state, draw=blue!70!black, below right = of q0] {$q_2$};
+\node (q3) [state, draw=blue!70!black, right = of q1] {$q_3$};
+\node (q4) [state, draw=blue!70!black, right = of q2] {$q_4$};
+% Transitions
+\path [-stealth, thick, cyan!70!black]
+    (q0) edge node {$a$} (q1)
+    (q0) edge node {$b$} (q2)
+    (q1) edge node {$c$} (q3)
+    (q2) edge node {$d$} (q4);
+\path [-stealth, thick, dotted, magenta!70!black]
+    (q1) edge[bend left] node {$\overline{a}$} (q0)
+    (q2) edge[bend left] node {$\overline{b}$} (q0)
+    (q3) edge[bend left] node {$\overline{c}$} (q1)
+    (q4) edge[bend left] node {$\overline{d}$} (q2);
+\end{tikzpicture}
+:::
+
+::: {.imagify}
+\begin{tikzpicture} [draw=gray, node distance = 5em, on grid, auto, every loop/.style={stealth-}]
+% States
+\node (q0) [state, draw=blue!70!black, initial, initial text = {}] {$q_0$};
+\node (q1) [state, draw=blue!70!black, right = of q0] {$q_1$};
+\node (q2) [state, draw=blue!70!black, above right = of q1] {$q_2$};
+\node (q3) [state, draw=blue!70!black, below right = of q1] {$q_3$};
+\node (q4) [state, draw=blue!70!black, above right = of q3] {$q_4$};
+% Transitions
+\path [-stealth, thick, cyan!70!black]
+    (q0) edge node {$a$} (q1)
+    (q1) edge node {$b$} (q2)
+    (q1) edge node {$c$} (q3)
+    (q2) edge node {$c$} (q4)
+    (q3) edge node {$b$} (q4);
+\end{tikzpicture}
+:::
+
+:::
+
+## Concurrent programs
+
+::: {.imagify}
+\begin{tikzpicture} [draw=gray, node distance =5em, on grid, auto, every loop/.style={stealth-}]
+% States
+\node (q0) [state, draw=blue!70!black, initial, initial text = {}] {$q_0$};
+\node (q1) [state, draw=blue!70!black, right = of q0] {$q_1$};
+\node (q2) [state, draw=blue!70!black, above right = of q1] {$q_2$};
+\node (q3) [state, draw=blue!70!black, below right = of q1] {$q_3$};
+\node (q4) [state, draw=blue!70!black, above right = of q3] {$q_4$};
+\node (q5) [state, draw=blue!70!black, above right = of q2] {$q_5$};
+\node (q6) [state, draw=blue!70!black, below right = of q5] {$q_6$};
+\node (q7) [state, draw=blue!70!black, below right = of q3] {$q_7$};
+\node (q8) [state, draw=blue!70!black, above right = of q7] {$q_8$};
+\node (q9) [state, draw=blue!70!black, above right = of q8] {$q_9$};
+% Transitions
+\path [-stealth, thick, cyan!70!black]
+    (q0) edge node {$a$} (q1)
+    (q1) edge node {$b$} (q2)
+    (q1) edge node {$c$} (q3)
+    (q2) edge node {$c$} (q4)
+    (q3) edge node {$b$} (q4)
+    (q2) edge node {$d$} (q5)
+    (q5) edge node {$c$} (q6)
+    (q4) edge node {$d$} (q6)
+    (q4) edge node {$e$} (q8)
+    (q3) edge node {$e$} (q7)
+    (q7) edge node {$b$} (q8)
+    (q8) edge node {$d$} (q9)
+    (q6) edge node {$e$} (q9);
+\end{tikzpicture}
+:::
+
+::: {.footer}
+Puzzle: shuffle product $\shuf : L(A) \times L(A) \to P(L(A))$, what is its universal property?
 :::
 
 ## Event Structures
@@ -86,14 +181,122 @@ An event structure is a:
   - irreflexive and symmetric, and satisfies
   - axiom of hereditary conflict: if $e \confl e'$ and $e' \leq e''$, then $e \confl e''$.
 
-::: footer
+Two events are concurrent if they are not causally related and not in conflict:
+$$
+e_1 \conc e_2 \iff \neg(e_1 \leq e_2 \lor e_2 \leq e_1 \lor e_1 \confl e_2)
+$$
+
+::: {.footer}
 This is a prime event structure with binary conflict.
 :::
 
-## Reversibility in Event Structures
+## Configurations
+
+A configuration of $(E, \leq, \confl)$ is a subset $C \subseteq E$ that is:
+
+- downward-closed: if $e \in C$ and $e' \leq e$, then $e' \in C$, and
+- conflict-free: if $e, e' \in C$, then $\neg(e \confl e')$.
+
+The set of all configurations is denoted $\Conf(E)$, and is ordered by inclusion.
+
+We say $C \enables e$, or $C$ enables $e$, if $e \notin C$ and $C \cup \{e\} \in \Conf(E)$.
+
+$$
+E = \{a, b, c\}, \quad {\leq} = \{(a, c), (b, c), (a, a), (b, b), (c, c)\}, \quad {\confl} = \{(b, c), (c, b)\}
+$$
+
+::: {.imagify}
+\begin{tikzpicture} [draw=gray, node distance = 5em, on grid, auto, every loop/.style={stealth-}]
+% Events
+\node (z) [state, draw=blue!70!black, initial, initial text = {}] {$\emptyset$};
+\node (a) [state, draw=blue!70!black, right = of z] {$\{a\}$};
+\node (ab) [state, draw=blue!70!black, above right = of a] {$\{a, b\}$};
+\node (ac) [state, draw=blue!70!black, below right = of a] {$\{a, c\}$};
+% Transitions
+\path [-stealth, thick, cyan!70!black]
+    (z) edge node {$a$} (a)
+    (a) edge node {$b$} (ab)
+    (a) edge node {$c$} (ac);
+\end{tikzpicture}
+:::
+
+## Transitions between configurations
+
+The initial configuration is $\emptyset$.
+
+If $C \enables e$, we do a forward transition $C \lts{e} C \cup \{e\}$.
+
+Two transitions are independent, $(C \lts{e_1} C_1) \ind (C \lts{e_2} C_2)$, if $e_1 \conc e_2$.
+
+## Paths and computations
+
+A path between $C$ and $C'$ is a sequence of transitions $C = C_0 \lts{e_1} C_1 \lts{e_2} \cdots \lts{e_n} C_n = C'$, including the empty path $C \lts{\varepsilon} C$.
+
+Two paths are equivalent if one can be obtained from the other by swapping adjacent independent transitions. Formally, ...
+
+Configurations and paths is the free category generated by the event structure.
+
+Configurations and paths modulo equivalence, or asynchronous paths, is a category.
+
+## Labelled transition systems with Independence
+
+We add backward transitions for every forward transition, labelled with the inverse event $\overline{e}$.
+
+- Loop property
+- Square property
 
 ## Rollback
 
+Given a configuration $C$ and an event $e \in C$, the rollback $\rollback{C}{e}$ is:
+
+- a maximal configuration $C' \subseteq C$ such that $C' \enables e$, and
+- $\rollback{C}{e} = C \mathrel{\setminus} \downset{e}$,
+- hence maximum.
+
+Rollback satisfies the following properties:
+
+- Redoability: event $e$ can be executed in $\rollback{C}{e}$,
+- Causal safety: $\rollback{C}{e}$ contains no consequences of events that were rolled back,
+- Correctness: $C$ can be reached from $\rollback{C}{e}$, and
+- Minimality: there is no $C'$ satisfying the above properties such that the path from $C'$ to $C$ is shorter than the path from $\rollback{C}{e}$ to $C$.
+
 ## Replay
 
+To replay a computation starting at a configuration, we pick a causally-consistent log.
+
+$e_1$ is in minimal conflict with $e_2$, denoted $e_1 \minconfl e_2$, if:
+
+- $e_1 \confl e_2$, and
+- for all $e_1' \leq e_1$ and $e_2' \leq e_2$, if $e_1' \confl e_2'$, then $e_1' = e_1$ and $e_2' = e_2$.
+
+A log of a configuration $C$ is $\alog{C} = \{e \in C \mid \exists e' \not\in C, e \minconfl e'\}$.
+
+## Replay (contd.)
+
+A computation $\sigma$ is compatible with a log $l$ if:
+
+- for all $e \in l$, $e \in \sigma$,
+- for all $e \in \sigma$, $e' \in l$, $\neg(e \confl e')$, and
+- for all $e \in \sigma$, $e' \in E$, if $e \confl e'$ then $e \in l$.
+
+The set of computations compatible with a log $l$ is $\Comp(l)$.
+
+$\Comp(l)$ has a:
+
+- minimum element $\minrepl{l} = \bigcup_{e \in l} \downset{e}$, and
+- maximum element $\maxrepl{l} = \minrepl{l} \cup \{e \in E \mid \forall e_1, e_2,\, e_1 \minconfl e_2 \land e_1 \leq e \implies e_1 \in l\}$.
+
+Properties: ...
+
 ## Reversible CCS
+
+## Epilogue
+
+- What has been achieved?
+  - An abstract understanding of reversible concurrency,
+  - with a notion of rollback and replay.
+- Questions:
+  - Is this an axiomatisation?
+  - Is there a more categorical account?
+  - Apply this to other models of concurrency?
+  - Apply this to other concurrent languages?
