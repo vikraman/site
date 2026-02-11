@@ -68,6 +68,8 @@ $$
 - In debugging mode, the user can step forward and backward through the trace
 - The user can inspect the state of the program at any point in the trace, and look at the events that led to a particular state
 
+. . .
+
 ::: {.imagify}
 \begin{tikzpicture} [draw=gray, node distance = 10em, on grid, auto, every loop/.style={stealth-}]
 % States
@@ -89,6 +91,8 @@ $$
 - What if the program is concurrent?
 - In a concurrent program, traces are not linear, they are "asynchronous"
 - To step backwards, the debugger needs to know which events are causally related, and which are independent
+
+. . .
 
 ::: {layout-ncol=2}
 
@@ -181,6 +185,8 @@ An event structure is a:
   - irreflexive and symmetric, and satisfies
   - axiom of hereditary conflict: if $e \confl e'$ and $e' \leq e''$, then $e \confl e''$.
 
+. . .
+
 Two events are concurrent if they are not causally related and not in conflict:
 $$
 e_1 \conc e_2 \iff \neg(e_1 \leq e_2 \lor e_2 \leq e_1 \lor e_1 \confl e_2)
@@ -197,7 +203,11 @@ A configuration of $(E, \leq, \confl)$ is a subset $C \subseteq E$ that is:
 - downward-closed: if $e \in C$ and $e' \leq e$, then $e' \in C$, and
 - conflict-free: if $e, e' \in C$, then $\neg(e \confl e')$.
 
+. . .
+
 The set of all configurations is denoted $\Conf(E)$, and is ordered by inclusion.
+
+. . .
 
 We say $C \enables e$, or $C$ enables $e$, if $e \notin C$ and $C \cup \{e\} \in \Conf(E)$.
 
@@ -253,6 +263,8 @@ Given a configuration $C$ and an event $e \in C$, the rollback $\rollback{C}{e}$
 - $\rollback{C}{e} = C \mathrel{\setminus} \downset{e}$,
 - hence maximum.
 
+. . .
+
 Rollback satisfies the following properties:
 
 - Redoability: event $e$ can be executed in $\rollback{C}{e}$,
@@ -269,6 +281,8 @@ $e_1$ is in minimal conflict with $e_2$, denoted $e_1 \minconfl e_2$, if:
 - $e_1 \confl e_2$, and
 - for all $e_1' \leq e_1$ and $e_2' \leq e_2$, if $e_1' \confl e_2'$, then $e_1' = e_1$ and $e_2' = e_2$.
 
+. . .
+
 A log of a configuration $C$ is $\alog{C} = \{e \in C \mid \exists e' \not\in C, e \minconfl e'\}$.
 
 ## Replay (contd.)
@@ -279,12 +293,16 @@ A computation $\sigma$ is compatible with a log $l$ if:
 - for all $e \in \sigma$, $e' \in l$, $\neg(e \confl e')$, and
 - for all $e \in \sigma$, $e' \in E$, if $e \confl e'$ then $e \in l$.
 
+. . .
+
 The set of computations compatible with a log $l$ is $\Comp(l)$.
 
 $\Comp(l)$ has a:
 
 - minimum element $\minrepl{l} = \bigcup_{e \in l} \downset{e}$, and
 - maximum element $\maxrepl{l} = \minrepl{l} \cup \{e \in E \mid \forall e_1, e_2,\, e_1 \minconfl e_2 \land e_1 \leq e \implies e_1 \in l\}$.
+
+. . .
 
 Properties: ...
 
