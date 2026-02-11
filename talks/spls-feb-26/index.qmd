@@ -42,7 +42,7 @@ $$
 \newcommand{\shuf}[0]{\mathrel{\mathsf{shuffle}}}
 \newcommand{\Conf}[0]{\mathsf{Conf}}
 \newcommand{\enables}[0]{\mathrel{\vdash}}
-\newcommand{\ind}[0]{\mathrel{\mathsf{\iota}}}
+\newcommand{\ind}[0]{\conc}
 \newcommand{\rollback}[2]{\rho_{#1}(#2)}
 \newcommand{\minrepl}[1]{\mathsf{\varphi}(#1)}
 \newcommand{\maxrepl}[1]{\mathsf{\Phi}(#1)}
@@ -338,7 +338,8 @@ Configurations and paths form the free category $F(E)$ on the labelled graph gen
 The independence relation on transitions generates a relation on paths:
 
 - $p \approx p$,
-- if $e_1 \ind e_2 $, then $p ++ e_1 . e_2 ++ q \approx q ++ e_2 . e_1 ++ q$.
+
+- if $e_1 \conc e_2$, then $p \cdot e_1 \cdot e_2 \cdot q \approx q \cdot e_2 \cdot e_1 \cdot p$.
 
 Configurations and paths form the quotient category of $F(E)$ by this equivalence relation.
 
