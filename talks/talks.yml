@@ -189,3 +189,8 @@
   venue: MSP 101 Seminar, University of Strathclyde
   title: Semantic analysis of Polarization
   type: manuscript
+- date: 2026-02-11
+  keyword: "talks:seminar"
+  venue: SPLS, University of St Andrews
+  title: Semantics of Reversible Concurrency
+  type: manuscript
