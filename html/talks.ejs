@@ -27,6 +27,13 @@
         </a>
       </li>
       <% } %>
+      <% if (item.slides) { %>
+      <li class="listing-link">
+        <a href="<%= item.slides %>" class="listing-link-slides">
+          <span><i class="fa fa-file fa-fw"></i>&nbsp;Slides</span>
+        </a>
+      </li>
+      <% } %>
     </ul>
   </li>
   <% } %>
