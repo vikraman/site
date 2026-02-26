@@ -1,0 +1,82 @@
+---
+title: Inceptions
+date: Mar 02, 2026
+date-format: medium
+author:
+  - name: Vikraman Choudhury
+    orcid: 0000-0003-2030-8056
+    email: vikraman.choudhury@strath.ac.uk
+    affiliations:
+      - MSP, University of Strathclyde, Glasgow, UK
+format:
+  revealjs:
+    theme: solarized
+    incremental: true
+    slide-number: true
+    smaller: true
+    progress: true
+    html-math-method:
+      method: mathjax
+      url: https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js
+filters:
+  - imagify
+imagify:
+  embed: true
+  header-includes: |
+    \usepackage{tikz,quiver}
+    \usetikzlibrary{positioning}
+---
+
+## Introduction
+
+::: {.hidden}
+\require{mathtools}
+\require{bussproofs}
+\require{textcomp}
+\newcommand{\blank}{{\tiny-}}
+\newcommand{\mult}{\mathrel{\bullet}}
+:::
+
+Hello, world.
+
+## Monoids
+
+As an algebraic structure:
+$$
+\begin{align*}
+  e					&: A \\
+  \blank\mult\blank &: A^2 \to A \\
+  \forall x			&,\: e \mult x = x \\
+  \forall x			&,\: x \mult e = x \\
+  \forall x, y, z	&,\: (x \mult y) \mult z = x \mult (y \mult z)
+\end{align*}
+$$
+
+As a Lawvere theory:
+
+::: imagify
+
+```{=latex}
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJBXjAiXSxbMiwwLCJBIl0sWzQsMCwiQV4yIl0sWzAsMV0sWzIsMV1d
+\begin{tikzcd}
+	{A^0} && A && {A^2}
+	\arrow[from=1-1, to=1-3]
+	\arrow[from=1-5, to=1-3]
+\end{tikzcd}
+```
+
+:::
+
+As a deductive system:
+$$
+\begin{prooftree}
+	\AxiomC{}
+	\UnaryInfC{$\vdash e$}
+\end{prooftree}
+\qquad\qquad
+\begin{prooftree}
+	\AxiomC{$\vdash t_1$}
+	\AxiomC{$\vdash t_2$}
+	\BinaryInfC{$\vdash t_1 \mult t_2$}
+\end{prooftree}
+$$
