@@ -11,7 +11,7 @@ author:
 format:
   revealjs:
     theme: solarized
-    incremental: true
+    incremental: false
     slide-number: true
     smaller: true
     progress: true
@@ -23,60 +23,755 @@ filters:
 imagify:
   embed: true
   header-includes: |
+    \usepackage{amsmath,amssymb,mathtools}
     \usepackage{tikz,quiver}
+    \usepackage{xcolor}
     \usetikzlibrary{positioning}
+    \newcommand{\id}{\operatorname{id}}
+    \newcommand{\ob}{\operatorname{ob}}
+    \newcommand{\op}{\operatorname{op}}
+    \newcommand{\Set}{\mathbf{Set}}
+    \newcommand{\mult}{\mathbin{\ast}}
+    \newcommand{\lk}{\mathrm{lk}}
+    \newcommand{\upd}{\mathrm{upd}}
 ---
 
-## Introduction
+## Overview
 
 ::: {.hidden}
 \require{mathtools}
 \require{bussproofs}
 \require{textcomp}
-\newcommand{\blank}{{\tiny-}}
-\newcommand{\mult}{\mathrel{\bullet}}
+\newcommand{\blank}{\text{-}}
+\newcommand{\doubleblank}{\text{=}}
+\newcommand{\mult}{\mathbin{\ast}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\Law}{\mathbf{Law}}
+\newcommand{\Mnd}{\mathbf{Mnd}}
+\newcommand{\Mod}{\mathrm{Mod}}
+\newcommand{\lk}{\mathrm{lk}}
+\newcommand{\upd}{\mathrm{upd}}
+\newcommand{\app}{\mathrm{app}}
+\newcommand{\lam}{\mathrm{lam}}
+\newcommand{\ob}{\operatorname{ob}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\act}{\mathbin{\triangleright}}
+\newcommand{\sub}{\operatorname{\mathsf{sub}}}
+\newcommand{\var}{\operatorname{\mathsf{var}}}
+\newcommand{\inc}{\operatorname{\mathsf{inc}}}
+\newcommand{\rec}{\operatorname{\mathsf{rec}}}
+\newcommand{\letin}[3]{\textsf{let }#1=#2\textsf{ in }#3}
 :::
 
-Hello, world.
+- Algebraic Theories
+  - Examples
+  - First-order, Mono-sorted and Multi-sorted
+  - Second-order, Mono-sorted and Multi-sorted
+  - Higher-order?
+- Second-order Algebraic Theories: Substitution
+- Higher-order Algebraic Theories: Continuations
+- Substitution as an Effect
+- Generalising Substitution algebras to Inception algebras
+- Epilogue
 
-## Monoids
 
-As an algebraic structure:
-$$
-\begin{align*}
-  e					&: A \\
-  \blank\mult\blank &: A^2 \to A \\
-  \forall x			&,\: e \mult x = x \\
-  \forall x			&,\: x \mult e = x \\
-  \forall x, y, z	&,\: (x \mult y) \mult z = x \mult (y \mult z)
-\end{align*}
-$$
 
-As a Lawvere theory:
+## Groups are Monoids with Inverses
 
-::: imagify
+A group is a set $G$ with:
+
+- a unit element $e : G$;
+- and a binary operation $\blank\mult\blank : G \times G \to G$,
+
+such that
+
+- $\forall x : G,\, e \mult x = x$ and $x \mult e = x$;
+- $\forall x, y, z : G,\, (x \mult y) \mult z = x \mult (y \mult z)$; and
+- $\forall x : G,\, \exists y : G,\, x \mult y = e$ and $y \mult x = e$.
+
+
+
+## Groups with Explicit Inverses
+
+A group is a set $G$ with:
+
+- a unit element $e : G$;
+- a binary operation $\blank\mult\blank : G \times G \to G$;
+- and a unary operation ${(\blank)}^{-1} : G \to G$;
+
+such that:
+
+- $\forall x : G,\, e \mult x = x$ and $x \mult e = x$;
+- $\forall x, y, z : G,\, (x \mult y) \mult z = x \mult (y \mult z)$; and
+- $\forall x : G,\, x \mult x^{-1} = e$ and $x^{-1} \mult x = e$.
+
+This is an equivalent presentation of groups, but as an "algebraic theory".
+
+
+
+## Lattices are Posets with Joins and Meets
+
+A lattice is a poset $(L, \leq)$ such that:
+
+- $\forall x, y : L,\, \exists \ell : L,\, \forall z : L,\, z \leq \ell \iff z \leq x$ and $z \leq y$; and
+- $\forall x, y : L,\, \exists u : L,\, \forall z : L,\,  u \leq z \iff x \leq z$ and $y \leq z$.
+
+Lower bounds and upper bounds are unique, so we can write $x \wedge y$ and $x \vee y$ for the meet and join of $x$ and $y$.
+
+
+
+## Lattices with Explicit Joins and Meets
+
+A lattice is a set $L$ with:
+
+- a binary operation $\blank\wedge\blank : L \times L \to L$;
+- a binary operation $\blank\vee\blank : L \times L \to L$;
+
+such that
+
+- $\forall x, y, z : L,\, (x \wedge y) \wedge z = x \wedge (y \wedge z)$;
+- $\forall x, y, z : L,\, (x \vee y) \vee z = x \vee (y \vee z)$; and
+
+- $\forall x, y : L,\, x \wedge y = y \wedge x$;
+- $\forall x, y : L,\, x \vee y = y \vee x$; and
+
+- $\forall x, y : L,\, x \wedge x = x$; and
+- $\forall x, y : L,\, x \vee x = x$.
+
+These presentations are equivalent because $a \leq b \iff a \wedge b = a$ and $a \vee b = b$.
+
+
+
+## Torsion Groups
+
+A torsion group is a group $G$ such that every element has finite order:
+
+- $\forall x : G,\, \exists n \geq 1,\, x^n = e$.
+
+. . .
+
+Can we present this as an algebraic theory?
+
+- We would need to express "$\exists n \geq 1$" equationally
+- But this is an **infinite disjunction**: $x = e$ or $x^2 = e$ or $x^3 = e$ or $\ldots$
+- Algebraic theories only allow **universally quantified equations**
+
+
+
+## Torsion Groups with Explicit Order
+
+Add an **order function** $\mathrm{ord} : G \to \mathbb{N}$ tracking the order of each element:
+
+- $\forall x : G,\, \mathrm{ord}(x) \geq 1$,
+- $\forall x : G,\, x^{\mathrm{ord}(x)} = e$.
+
+. . .
+
+This is a **universal theory** but **not algebraic**:
+
+- In an algebraic theory, every operation has the form $G^n \to G$ — the codomain is the carrier
+- But $\mathrm{ord} : G \to \mathbb{N}$ maps into $\mathbb{N}$, not into $G$
+- The set $\mathbb{N}$ is external and fixed, not part of the algebra
+
+. . .
+
+Not every "naturally occurring" class of structures is algebraic!
+
+## Natural Deduction
+
+Every structure that admits a presentation as a algebraic theory can be presented as a collection of typing rules.
+
+For example, monoids can be written in two different ways:
+
+- as an algebraic structure:
+
+::: {.imagify}
 
 ```{=latex}
-% https://q.uiver.app/#q=WzAsMyxbMCwwLCJBXjAiXSxbMiwwLCJBIl0sWzQsMCwiQV4yIl0sWzAsMV0sWzIsMV1d
-\begin{tikzcd}
-	{A^0} && A && {A^2}
-	\arrow[from=1-1, to=1-3]
-	\arrow[from=1-5, to=1-3]
+\begin{tikzcd}[ampersand replacement=\&, column sep={12mm,between origins}, row sep={12mm,between origins}]
+    {A^0} \&\& A \&\& {A^2}
+    \arrow["{e}", from=1-1, to=1-3]
+    \arrow["{\mult}"', from=1-5, to=1-3]
+\end{tikzcd}
+\\
+\begin{tikzcd}[ampersand replacement=\&, column sep={12mm,between origins}, row sep={12mm,between origins}]
+    {A\times A\times A} \&\& {A\times A} \\
+    \\
+    {A\times A} \&\& A
+    \arrow["{\ast\times{\id}}"', from=1-1, to=3-1]
+    \arrow["{{\id}\times\ast}", from=1-1, to=1-3]
+    \arrow["\ast", from=1-3, to=3-3]
+    \arrow["\ast"', from=3-1, to=3-3]
+\end{tikzcd}
+\begin{tikzcd}[ampersand replacement=\&, column sep={12mm,between origins}, row sep={12mm,between origins}]
+    {A\times A^0} \&\& {A\times A} \&\& {A^0\times A} \\
+    \\
+    \&\& A
+    \arrow["{\id\times e}", from=1-1, to=1-3]
+    \arrow["\cong"', from=1-1, to=3-3]
+    \arrow["\ast"{description}, from=1-3, to=3-3]
+    \arrow["\cong", from=1-5, to=3-3]
+    \arrow["e\times\id"', from=1-5, to=1-3]
 \end{tikzcd}
 ```
 
 :::
 
-As a deductive system:
+- and as natural deduction judgements:
 $$
-\begin{prooftree}
-	\AxiomC{}
-	\UnaryInfC{$\vdash e$}
-\end{prooftree}
+  {\vdash e}
+  \qquad\qquad
+  {x_1, x_2 \vdash x_1 \mult x_2}
+$$
+
+## Monoid Actions
+
+A (left) monoid action of a monoid $M$ on a set $A$ is:
+
+- a two-sorted algebraic operation $\blank\act\doubleblank : M \times A \to A$;
+
+such that
+
+- $\forall a : A,\, e \act a = a$; and
+- $\forall m_1, m_2 : M,\, \forall a : A,\, (m_1 \mult m_2) \act a = m_1 \act (m_2 \act a)$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Equational Theories for Monads
+
+Given a monad $T$, we want to write an algebraic theory whose free monad algebras coincide with the algebras of $T$.
+
+For finitary $T$, this is always possible:
+
+::: {.nonincremental}
+**Theorem** (Lawvere 1963, Linton 1966):
+$$\Law \simeq \Mnd_f(\Set)$$
+
+- $\Law$: Lawvere theories and morphisms
+- $\Mnd_f(\Set)$: finitary monads on $\Set$
+:::
+
+
+
+For instance, **exception** monad for a finite set $E$ of errors given by
+
+$$T(X)=E+X$$
+
+can be given as an algebraic theory with operations
+
+- $\operatorname{throw}_e:A^0\rightarrow A$
+
+for each error $e:E$, and no equations between them.
+
+
+
+But what about infinitary monads?
+
+
+
+
+
+
+
+
+
+## Global State
+
+Recall that the ordinary **state** monad for a set of states $S$ is given by the adjunction
+
+::: {.imagify}
+
+{=latex}
+\begin{tikzcd}
+    {\Set} && {\Set}
+    \arrow[""{name=0, anchor=center, inner sep=0}, "{S\times(-)}", curve={height=-12pt}, from=1-1, to=1-3]
+    \arrow[""{name=1, anchor=center, inner sep=0}, "{(-)^S}", curve={height=-12pt}, from=1-3, to=1-1]
+    \arrow["\dashv"{anchor=center, rotate=-90}, draw=none, from=0, to=1]
+\end{tikzcd}
+```
+
+:::
+
+$$S\times(-)\dashv (-)^S$$
+
+$$T(X)=(S\times X)^S$$
+
+
+
+
+##
+
+The **global state** monad for countable values $V$ and finite locations $L$ is given by selecting $S=V^L$ in the state monad:
+
+$$T(X) = (V^L\times X)^{V^L}$$
+
+This is not a finitary monad.
+
+
+
+##
+
+However, we can still describe this monad with a countable theory with operations:
+
+- **Lookup**: $\lk_l : X^V \to X$ -- read value at location $l:L$ and branch on result; and
+- **Update**: $\upd_{l,v} : X \to X$ -- write $v:V$ to location $l:L$ and continue the computation,
+
+satisfying seven equations:
+
+::: {.imagify}
+
+```{=latex}
+\begin{tikzcd}[ampersand replacement=\&, column sep=15mm, row sep=12mm]
+    X^{V \times V} \arrow[r, "\lk_l^V"] \arrow[d, "\Delta_V^*"'] \& X^V \arrow[d, "\lk_l"] \\
+    X^V \arrow[r, "\lk_l"'] \& X
+\end{tikzcd}
 \qquad\qquad
-\begin{prooftree}
-	\AxiomC{$\vdash t_1$}
-	\AxiomC{$\vdash t_2$}
-	\BinaryInfC{$\vdash t_1 \mult t_2$}
-\end{prooftree}
+\begin{tikzcd}[ampersand replacement=\&, column sep=15mm, row sep=12mm]
+    X \arrow[r, "\upd_{l{,}v}"] \arrow[rd, "\upd_{l{,}w}"'] \& X \arrow[d, "\upd_{l{,}w}"] \\
+    \& X
+\end{tikzcd}
+\qquad\qquad
+\begin{tikzcd}[ampersand replacement=\&, column sep=15mm, row sep=12mm]
+    X^V \arrow[r, "\lk_l"] \arrow[d, "\mathrm{ev}_v"'] \& X \arrow[d, "\upd_{l{,}v}"] \\
+    X \arrow[r, "\upd_{l{,}v}"'] \& X
+\end{tikzcd}
+\qquad\qquad
+\begin{tikzcd}[ampersand replacement=\&, column sep=15mm, row sep=12mm]
+    X \arrow[r, "{\langle\upd_{l{,}v}\rangle_v}"] \arrow[rd, "\mathrm{id}"'] \& X^V \arrow[d, "\lk_l"] \\
+    \& X
+\end{tikzcd}
+```
+:::
+
+::: {.imagify}
+
+```{=latex}
+\begin{tikzcd}[ampersand replacement=\&, column sep=15mm, row sep=12mm]
+    X^{V \times V} \arrow[r, "{(\lk_{l'})^V}"] \arrow[d, "{(\lk_l)^V \circ \sigma}"'] \& X^V \arrow[d, "\lk_l"] \\
+    X^V \arrow[r, "\lk_{l'}"'] \& X
+\end{tikzcd}
+\qquad\qquad
+\begin{tikzcd}[ampersand replacement=\&, column sep=15mm, row sep=12mm]
+    X \arrow[r, "\upd_{l{,}v}"] \arrow[d, "\upd_{l'{,}w}"'] \& X \arrow[d, "\upd_{l'{,}w}"] \\
+    X \arrow[r, "\upd_{l{,}v}"'] \& X
+\end{tikzcd}
+\qquad\qquad
+\begin{tikzcd}[ampersand replacement=\&, column sep=15mm, row sep=12mm]
+    X^V \arrow[r, "\lk_l"] \arrow[d, "{\upd_{l'{,}w}^V}"'] \& X \arrow[d, "\upd_{l'{,}w}"] \\
+    X^V \arrow[r, "\lk_l"'] \& X
+\end{tikzcd}
+```
+
+:::
+
+##
+
+For example, for $L=1$ and $V=2$, where the latter three diagrams are trivial, the other four equations read as:
+
 $$
+\begin{align*}
+\text{(LL)} \quad & \lk(\lk(a,b),\, \lk(c,d)) = \lk(a,\, d) \\
+\text{(UU)} \quad & \upd_v(\upd_w(x)) = \upd_w(x) \\
+\text{(UL)} \quad & \upd_v(\lk(x_0, x_1)) = \upd_v(x_v) \\
+\text{(LU)} \quad & \lk(\upd_0(x),\, \upd_1(x)) = x
+\end{align*}
+$$
+
+
+
+
+
+
+
+## Continuations
+
+The **continuation** monad for a set of responses $R$ is given by the adjunction
+
+::: {.imagify}
+
+```{=latex}
+\begin{tikzcd}
+    {\textbf{Set}^{\op}} && {\textbf{Set}}
+    \arrow[""{name=0, anchor=center, inner sep=0}, "{R^{(-)}}", curve={height=-12pt}, from=1-1, to=1-3]
+    \arrow[""{name=1, anchor=center, inner sep=0}, "{R^{(-)}}", curve={height=-12pt}, from=1-3, to=1-1]
+    \arrow["\dashv"{anchor=center, rotate=-90}, draw=none, from=0, to=1]
+\end{tikzcd}
+```
+
+:::
+
+$$T(X)=R^{R^X}$$
+
+This is also not a finitary monad.
+
+Some common operations:
+
+- $\mathcal{C}_A:A^{0^0}\rightarrow A$
+- $\mathcal{A}_A:0\rightarrow A$
+
+satisfying
+
+- $\mathcal{C}_A(\lambda k.kx)=x$;
+- $\mathcal{A}_0(x)=x$;
+- and:
+
+::: {.imagify}
+
+```{=latex}
+\begin{tikzcd}[ampersand replacement=\&, column sep={12mm,between origins}, row sep={12mm,between origins}]
+    {A^{0^0}} \&\& A \\
+    \\
+    {B^{0^0}} \&\& B
+    \arrow["{\mathcal{C}_A}", from=1-1, to=1-3]
+    \arrow["{f^{0^0}}", from=1-1, to=3-1]
+    \arrow["f", from=1-3, to=3-3]
+    \arrow["{\mathcal{C}_B}", from=3-1, to=3-3]
+\end{tikzcd}
+\qquad\qquad
+\begin{tikzcd}[ampersand replacement=\&, column sep={12mm,between origins}, row sep={12mm,between origins}]
+    0 \&\& A \\
+    \\
+    \&\& B
+    \arrow["{\mathcal{A}_A}", from=1-1, to=1-3]
+    \arrow["{\mathcal{A}_B}", from=1-1, to=3-3]
+    \arrow["f", from=1-3, to=3-3]
+\end{tikzcd}
+```
+
+:::
+
+
+##
+
+Other operations:
+
+- $\mathcal{C}_A:A^{0^A}\rightarrow A$
+- $\mathcal{A}_A:0\rightarrow A$
+
+- $\operatorname{callCC}:A^{B^A}\rightarrow A$ (third-order)
+- $\operatorname{abort}:0\rightarrow A$
+
+- $\operatorname{call/CC}:(\lnot A)^A\rightarrow A$
+- $\operatorname{abort}:A\times\lnot A\rightarrow A$
+
+- $\operatorname{colam}:(\lnot A)^B\rightarrow A+B$
+- $\operatorname{coapp}:(A+B)\times\lnot A\rightarrow B$
+
+
+
+
+
+
+
+
+
+
+## Substitution Algebras
+
+Given a category $\mathcal{C}$ with finite products and an exponentiable object $V\in\ob\mathcal{C}$, a *substitution algebra* on $X\in\ob\mathcal{C}$ is the data of:
+
+- a morphism $\operatorname{var}:V\rightarrow X$; and
+- a morphism $\operatorname{sub}:X^V\times X\rightarrow X$;
+
+such that the following axioms hold:
+
+- Weakening:
+
+::: {.imagify}
+
+```{=latex}
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJYXjFcXHRpbWVzIFgiXSxbMiwwLCJYXFx0aW1lcyBYIl0sWzIsMiwiWCJdLFswLDIsIlheVlxcdGltZXMgWCJdLFszLDIsIlxcb3BlcmF0b3JuYW1le3N1Yn0iLDJdLFswLDEsIlxcY29uZyJdLFsxLDIsIlxccGlfMSJdLFswLDMsIlheeyFWfVxcdGltZXNcXGlkX1giLDJdXQ==
+\begin{tikzcd}[ampersand replacement=\&, column sep={12mm,between origins}, row sep={12mm,between origins}]
+    {X^1\times X} \&\& {X\times X} \\
+    \\
+    {X^V\times X} \&\& X
+    \arrow["\cong", from=1-1, to=1-3]
+    \arrow["{X^{!V}\times\id_X}"', from=1-1, to=3-1]
+    \arrow["{\pi_1}", from=1-3, to=3-3]
+    \arrow["{\operatorname{sub}}"', from=3-1, to=3-3]
+\end{tikzcd}
+```
+:::
+
+
+
+##
+
+- Substitution:
+
+::: {.imagify}
+
+```{=latex}
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCIxXFx0aW1lcyBYIl0sWzIsMiwiWCJdLFswLDIsIlheVlxcdGltZXMgWCJdLFsyLDEsIlxcb3BlcmF0b3JuYW1le3N1Yn0iLDJdLFswLDEsIlxcY29uZyJdLFswLDIsIlxcb3BlcmF0b3JuYW1le3Zhcn1eXFxmbGF0XFx0aW1lczEiLDJdXQ==
+\begin{tikzcd}[ampersand replacement=\&, column sep={12mm,between origins}, row sep={12mm,between origins}]
+    {1\times X} \&\& \\
+    \\
+    {X^V\times X} \&\& X
+    \arrow["{\operatorname{var}^\flat\times\id_X}"', from=1-1, to=3-1]
+    \arrow["\cong", from=1-1, to=3-3]
+    \arrow["{\operatorname{sub}}"', from=3-1, to=3-3]
+\end{tikzcd}
+```
+
+:::
+
+
+
+##
+
+- Extensionality:
+
+::: {.imagify}
+
+```{=latex}
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJYXlZcXHRpbWVzIFYiXSxbMiwyLCJYIl0sWzAsMiwiWF5WXFx0aW1lcyBYIl0sWzIsMSwiXFxvcGVyYXRvcm5hbWV7c3VifSIsMl0sWzAsMSwiXFxvcGVyYXRvcm5hbWV7ZXZ9Il0sWzAsMiwiXFxpZF97WF5WfVxcdGltZXNcXG9wZXJhdG9ybmFtZXtzdWJ9XlZcXHRpbWVzXFxpZF9YIiwyXSxbMCwxLCJcXG9wZXJhdG9ybmFtZXtzdWJ9IiwyXSxbMiwxLCJcXG9wZXJhdG9ybmFtZXtzdWJ9Il1d
+\begin{tikzcd}[ampersand replacement=\&, column sep={12mm,between origins}, row sep={12mm,between origins}]
+    {X^V\times V} \&\& \\
+    \\
+    {X^V\times X} \&\& X
+    \arrow["{\id_{X^V}\times\operatorname{var}}"', from=1-1, to=3-1]
+    \arrow["{\operatorname{ev}}", from=1-1, to=3-3]
+    \arrow["{\operatorname{sub}}"', from=3-1, to=3-3]
+\end{tikzcd}
+```
+:::
+
+
+
+##
+
+- Associativity:
+
+::: {.imagify}
+```{=latex}
+% https://q.uiver.app/#q=WzAsNSxbMCw0LCJYXlZcXHRpbWVzIFgiXSxbMiw0LCJYIl0sWzIsMiwiWF5WXFx0aW1lcyBYIl0sWzAsMiwiKFheVlxcdGltZXMgWCleVlxcdGltZXMgWCJdLFsxLDAsIihYXlZcXHRpbWVzIFgpXlZcXHRpbWVzKFheVlxcdGltZXMgWCkiXSxbMyw0LCJcXHZhcnRoZXRhIl0sWzQsMiwiXFxvcGVyYXRvcm5hbWV7c3VifV5WXFx0aW1lc1xcb3BlcmF0b3JuYW1le3N1Yn0iXSxbMywwLCJcXG9wZXJhdG9ybmFtZXtzdWJ9XlZcXHRpbWVzXFxpZF9YIiwyXSxbMCwxLCJcXG9wZXJhdG9ybmFtZXtzdWJ9IiwyXSxbMiwxLCJcXG9wZXJhdG9ybmFtZXtzdWJ9Il1d
+\begin{tikzcd}[ampersand replacement=\&, column sep=12mm, row sep={12mm,between origins}]
+    \& {(X^V\times X)^V\times(X^V\times X)} \& \\
+    \\
+    {(X^V\times X)^V\times X} \&\& {X^V\times X} \\
+    \\
+    {X^V\times X} \&\& X
+    \arrow["{\operatorname{sub}^V\times\operatorname{sub}}", from=1-2, to=3-3]
+    \arrow["\varphi", from=3-1, to=1-2]
+    \arrow["{\operatorname{sub}^V\times\id_X}"', from=3-1, to=5-1]
+    \arrow["{\operatorname{sub}}", from=3-3, to=5-3]
+    \arrow["{\operatorname{sub}}"', from=5-1, to=5-3]
+\end{tikzcd}
+```
+:::
+
+where $\varphi$ is the composition:
+
+$$(\textcolor{blue}{X}^{\textcolor{red}{V}}\times\textcolor{cyan}{X})^{\textcolor{orange}{V}}\times\textcolor{lime}{X}\xrightarrow{\id\times\Delta_\textcolor{lime}{X}}(\textcolor{blue}{X}^{\textcolor{red}{V}}\times\textcolor{blue}{X})^{\textcolor{orange}{V}}\times\textcolor{lime}{X}\times\textcolor{lime}{X}\xrightarrow{\id\times\pi_1^\flat\times\id}(\textcolor{blue}{X}^{\textcolor{red}{V}}\times\textcolor{cyan}{X})^{\textcolor{orange}{V}}\times\textcolor{lime}{X}^{\textcolor{red}{V}}\times\textcolor{lime}{X}\xrightarrow{\cong}(\textcolor{blue}{X}^{\textcolor{orange}{V}}\times\textcolor{lime}{X})^{\textcolor{red}{V}}\times(\textcolor{cyan}{X}^{\textcolor{orange}{V}}\times\textcolor{lime}{X})$$
+
+<!-- $$(X^V\times X)^V\times X\xrightarrow{\id_{(X^V\times X)^V}\times\Delta_X}(X^V\times X)^V\times X\times X\xrightarrow{\id_{(X^V\times X)^V}\times\pi_1^\flat\times\id_X}(X^V\times X)^V\times X^V\times X\xrightarrow{\cong}(X^V)^V\times X^V\times X^V\times X\xrightarrow{\cong}(X^V\times X)^V\times(X^V\times X)$$ -->
+
+
+
+
+##
+
+Typing rules:
+
+\begin{prooftree}
+  \AxiomC{$\Gamma\vdash_v V:\mathbb{V}$}
+  \RightLabel{(\textup{var})}
+  \UnaryInfC{$\Gamma\vdash_c\var_\tau(V):\tau$}
+\end{prooftree}
+
+\begin{prooftree}
+  \AxiomC{$\Gamma,a:\mathbb{V}\vdash_c M:\tau$}
+  \AxiomC{$\Gamma\vdash_c N:\tau$}
+  \RightLabel{(\textup{sub})}
+  \BinaryInfC{$\Gamma\vdash_c\sub(a.M,N):\tau$}
+\end{prooftree}
+
+
+
+##
+
+Equations:
+
+$$\sub(a.M[],N[])=M\quad(\textup{weakening})$$
+
+$$\sub(a.\var_\tau(a),N)=N\quad(\textup{substitution})$$
+
+$$\sub(a.M[a]\var(b))=M[b]\quad(\textup{extensionality})$$
+
+$$\sub(a.\sub(b.L[a,b],M[a]),N[])=\sub(b.\sub(a.L[a,b],N[]),\sub(a.M[a],N[]))\quad(\textup{associativity})$$
+
+Algebraicity equations:
+
+- $\letin{x}{\var(a)}{P[x]=\var(a)}$;
+
+- $\letin{x}{\sub(a,M[a],N[])}{P[x]=sub(a.\letin{x}{M[a]}{P[x]},\letin{x}{N[]}{P[x]})}$.
+
+
+
+
+
+
+
+
+
+
+
+## Inception algebras
+
+Given a category $\mathcal{C}$ with finite products and an exponentiable object $V\in\ob\mathcal{C}$, an *inception algebra* on $X\in\ob\mathcal{C}$ is the data of:
+
+- a morphism $\textcolor{red}{\rec}:V\textcolor{red}{\times P}\rightarrow X$; and
+- a morphism $\textcolor{red}{\inc}:X^V\times X^\textcolor{red}{P}\rightarrow X$;
+
+such that the following axioms hold:
+
+- Weakening:
+
+::: {.imagify}
+
+```{=latex}
+\begin{tikzcd}[ampersand replacement=\&, column sep={12mm,between origins}, row sep={12mm,between origins}]
+    {X^1\times X^{\textcolor{red}{P}}} \&\& {X\times X^{\textcolor{red}{P}}} \\
+    \\
+    {X^V\times X^{\textcolor{red}{P}}} \&\& X
+    \arrow["\cong", from=1-1, to=1-3]
+    \arrow["{X^{!V}\times\id_{X^{\textcolor{red}{P}}}}"', from=1-1, to=3-1]
+    \arrow["{\pi_1}", from=1-3, to=3-3]
+    \arrow["{\textcolor{red}{\inc}}"', from=3-1, to=3-3]
+\end{tikzcd}
+```
+:::
+
+
+
+##
+
+- Substitution:
+
+::: {.imagify}
+```{=latex}
+\begin{tikzcd}[ampersand replacement=\&, column sep={12mm,between origins}, row sep={12mm,between origins}]
+    {\textcolor{red}{P}\times X^{\textcolor{red}{P}}} \&\& \\
+    \\
+    {X^V\times X^{\textcolor{red}{P}}} \&\& X
+    \arrow["{\textcolor{red}{\rec}^\flat\times\id_{X^{\textcolor{red}{P}}}}"', from=1-1, to=3-1]
+    \arrow["{\textcolor{red}{ev}}", from=1-1, to=3-3]
+    \arrow["{\textcolor{red}{\inc}}"', from=3-1, to=3-3]
+\end{tikzcd}
+```
+:::
+
+
+
+##
+
+- Extensionality:
+
+::: {.imagify}
+```{=latex}
+\begin{tikzcd}[ampersand replacement=\&, column sep={12mm,between origins}, row sep={12mm,between origins}]
+    {X^V\times V} \&\& \\
+    \\
+    {X^V\times X^{\textcolor{red}{P}}} \&\& X
+    \arrow["{\id_{X^V}\times\textcolor{red}{\rec^\flat}}"', from=1-1, to=3-1]
+    \arrow["{\operatorname{ev}}", from=1-1, to=3-3]
+    \arrow["{\textcolor{red}{\inc}}"', from=3-1, to=3-3]
+\end{tikzcd}
+```
+:::
+
+
+
+##
+
+- Associativity:
+
+::: {.imagify}
+```{=latex}
+\begin{tikzcd}[ampersand replacement=\&, column sep=12mm, row sep={12mm,between origins}]
+    \& {(X^V\times X^{\textcolor{red}{P}})^V\times(X^V\times X^{\textcolor{red}{P}})^{\textcolor{red}{P}}} \& \\
+    \\
+    {(X^V\times X^{\textcolor{red}{P}})^V\times X^{\textcolor{red}{P}}} \&\& {X^V\times X^{\textcolor{red}{P}}} \\
+    \\
+    {X^V\times X^{\textcolor{red}{P}}} \&\& X
+    \arrow["{\textcolor{red}{\inc}^V\times\textcolor{red}{\inc^P}}", from=1-2, to=3-3]
+    \arrow["\vartheta", from=3-1, to=1-2]
+    \arrow["{\textcolor{red}{\inc}^V\times\id_{X^{\textcolor{red}{P}}}}"', from=3-1, to=5-1]
+    \arrow["{\textcolor{red}{\inc}}", from=3-3, to=5-3]
+    \arrow["{\textcolor{red}{\inc}}"', from=5-1, to=5-3]
+\end{tikzcd}
+```
+:::
+
+
+where $\vartheta$ is the composition:
+
+$$(X_1^{V_1}\times X_2^{P_1})^{V_2}\times X_3^{P_2}\xrightarrow{\id\times\Delta_{X_3^{P^2}}}(X_1^{V_1}\times X_2^{P_1})^{V_1}\times X_3^{P_2}\times X_3^{P_2}\xrightarrow{\id\times\pi_1^\flat\times\pi_1^\flat}{(X_1^{V_1}\times X_2^{P_1})^{V_2}\times X_1^{P_2\times V_1}\times X_3^{P_2\times P_1}}\xrightarrow{\cong}(X_1^{V_2}\times X_3^{P_2})^{V_1}\times(X_2^{V_2}\times X_3^{P_2})^{P_1}$$
+
+
+
+
+
+##
+
+Typing rules:
+
+\begin{prooftree}
+  \AxiomC{$\Gamma\vdash_v V:\mathbb{V}$}
+  \AxiomC{$\Gamma\vdash_v P:\mathbb{P}$}
+  \RightLabel{(\textup{rec})}
+  \BinaryInfC{$\Gamma\vdash_c\rec_\tau(V,P):\tau$}
+\end{prooftree}
+
+\begin{prooftree}
+  \AxiomC{$\Gamma,a:\mathbb{V}\vdash_c M:\tau$}
+  \AxiomC{$\Gamma,x:\mathbb{P}\vdash_c N:\tau$}
+  \RightLabel{(\textup{inc})}
+  \BinaryInfC{$\Gamma\vdash_c\inc(a.M,x.N):\tau$}
+\end{prooftree}
+
+
+##
+
+Equations:
+
+$$\inc(a.M[],x.N[])=M\quad(\textup{weakening})$$
+
+$$\inc(a.\rec_\tau(a,P[]),x.N[x])=N[P]\quad(\textup{substitution})$$
+
+$$\inc(a.M[a],x.\rec(k,x))=M[k]\quad(\textup{extensionality})$$
+
+$$\inc(a.\inc(b.P[a,b],x.K[a,x]),y.L[y])=\inc(b.\inc(a.P[a,b],y.L[y]),x.\inc(a.K[a,x],y.L[y]))\quad(\textup{associativity})$$
+
+Algebraicity equations:
+
+- $\letin{z}{\rec(a,x)}{P[z]}=\rec(a,x)$;
+
+- $\letin{z}{\inc(a,M[a],x.N[x])}{P[z]}=\inc(a.\letin{z}{M[a]}{P[z]}),x.\letin{z}{N[x]}{P[z]}$.
+
+# Epilogue
+## Thank you!
+
+**References**:
+
+- F. W. Lawvere, *Functorial Semantics of Algebraic Theories*, 1963
+- F. E. J. Linton, *Some Aspects of Equational Categories*, 1966
+- J. Power, *Countable Lawvere Theories*, 1999
+- G. Plotkin and J. Power, *Algebraic Operations and Generic Effects*, 2003
+- M. Hyland and J. Power, *The Category-Theoretic Understanding of Universal Algebra*, 2007
+- M. Fiore and O. Mahmoud, *Second-Order Algebraic Theories*, 2010
