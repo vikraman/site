@@ -188,6 +188,7 @@
   keyword: "talks:seminar"
   venue: MSP 101 Seminar, University of Strathclyde
   title: Semantic analysis of Polarization
+  url: "https://msp.cis.strath.ac.uk/msp101.html#453"
   type: manuscript
 - date: 2026-02-11
   keyword: "talks:seminar"
@@ -196,3 +197,10 @@
   type: manuscript
   url: "https://spli.scot/spls/meetings/2026/february/"
   slides: "/talks/spls-feb-26"
+- date: 2026-03-02
+  keyword: "talks:seminar"
+  venue: MSP 101 Seminar, University of Strathclyde
+  title: Inceptions
+  type: manuscript
+  url: "https://msp.cis.strath.ac.uk/msp101.html#464"
+  slides: "/talks/msp101-mar-26"
