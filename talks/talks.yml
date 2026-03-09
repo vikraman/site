@@ -167,23 +167,27 @@
     Languages (POPL 2025)
   title: The duality of λ-abstraction
   type: manuscript
+  url: "https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/12/The-Duality-of-Abstraction"
 - date: 2025-01
   keyword: "talks:conference"
   venue: Fifth International Workshop on Programming Languages for
     Quantum Computing (PLanQC 2025) at POPL 2025
   title: Towards quantum multiparty session types
   type: manuscript
+  url: "https://popl25.sigplan.org/details/planqc-2025-papers/5/Towards-Quantum-Multiparty-Session-Types"
 - date: 2025-05
   keyword: "talks:seminar"
   venue: Logic, Semantics, and Categories (LSC) Seminar, Aix-Marseille
     Université
   title: The duality of λ-abstraction
   type: manuscript
+  url: "https://lsc.lis-lab.fr/lsc-seminar/"
 - date: 2025-06
   keyword: "talks:seminar"
   venue: CHoCoLa Seminar, ENS Lyon
   title: The duality of λ-abstraction
   type: manuscript
+  url: "https://chocola.ens-lyon.fr/events/meeting-2025-06-26/"
 - date: 2025-11
   keyword: "talks:seminar"
   venue: MSP 101 Seminar, University of Strathclyde
