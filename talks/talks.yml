@@ -151,11 +151,13 @@
   venue: PPS Seminar, IRIF, Universitè Paris Cité
   title: The duality of abstraction
   type: manuscript
+  url: "https://www.irif.fr/en/seminaires/pps/index"
 - date: 2024-09
   keyword: "talks:seminar"
   venue: SANDWICH Seminar, Computer Laboratory, University of Cambridge
   title: Some cool facts about dualities
   type: manuscript
+  url: "https://talks.cam.ac.uk/talk/index/221779"
 - date: 2024-12
   keyword: "talks:seminar"
   venue: OLAS Seminar, Università di Bologna
