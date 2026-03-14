@@ -23,6 +23,7 @@ website:
       - talks/index.qmd
       - notes/index.qmd
       - projects/index.qmd
+      - misc/index.qmd
   # search bar
   search:
     location: navbar
