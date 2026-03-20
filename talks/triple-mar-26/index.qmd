@@ -30,3 +30,8 @@ imagify:
 ---
 
 ## Outline
+
+- Introduction to Path Types
+- Composition and Filling
+- Lists
+- Symmetric Lists
