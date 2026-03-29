@@ -210,3 +210,10 @@
   type: manuscript
   url: "https://msp.cis.strath.ac.uk/msp101.html#464"
   slides: "/talks/msp101-mar-26"
+- date: 2026-03-29
+  keyword: "talks:invited"
+  venue: TRIPLE, TypeSig, University of Edinurgh
+  title: Programming with Cubes
+  type: manuscript
+  url: "https://typesig.pl/triple2026/"
+  slides: "https://desyncthethird.github.io/cubes/"
