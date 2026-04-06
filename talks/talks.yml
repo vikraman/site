@@ -121,23 +121,25 @@
   venue: Higher-Order Programming with Effects, ICFP 2023
   title: Continuations and coexponentials
   type: manuscript
-  url: https://icfp23.sigplan.org/details/hope-2023/9/Continuations-and-Coexponentials
+  url: "https://icfp23.sigplan.org/details/hope-2023/9/Continuations-and-Coexponentials"
 - date: 2023-10
   keyword: "talks:invited"
   venue: Huawei-Edinburgh Coffee House Tech Talk
   title: The duality of abstraction
   type: manuscript
+  url: "https://blogs.ed.ac.uk/he-lab/?p=881"
 - date: 2023-10
   keyword: "talks:workshop"
   venue: 30 Years of Session Types, SPLASH 2023
   title: Classical Processes in modern dress
   type: manuscript
-  url: https://2023.splashcon.org/details/st-anniversary-30-papers/9/Classical-Processes-in-modern-dress
+  url: "https://2023.splashcon.org/details/st-anniversary-30-papers/9/Classical-Processes-in-modern-dress"
 - date: 2023-11
   keyword: "talks:seminar"
   venue: Scottish Programming Languages Seminar
   title: An abstract look at commutativity
   type: manuscript
+  url: "https://spli.scot/spls/meetings/2023/november/"
 - date: 2023-12
   keyword: "talks:seminar"
   venue: DIAPASoN Seminar, Università di Bologna
