@@ -24,3 +24,13 @@ at the University of Strathclyde, Glasgow, UK.
 I study mathematical foundations of computation, through an algebraic lens.
 My research spans category theory, type theory, programming language theory,
 logic, semantics, concurrency, constructive mathematics, and formalisation.
+
+### History
+
+|              |                           |                                 |
+|--------------|---------------------------|---------------------------------|
+| 2025 -- ???  | University of Strathclyde | Chancellor's Fellow             |
+| 2023 -- 2025 | Universitá di Bologna     | Marie Skłodowska-Curie Fellow   |
+| 2021 -- 2023 | University of Glasgow     | Head of School's RA             |
+| 2019 -- 2022 | University of Cambridge   | PhD student, Paul Purdom Fellow |
+| 2015 -- 2022 | Indiana University        | MS/PhD student                  |
