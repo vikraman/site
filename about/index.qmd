@@ -32,5 +32,5 @@ logic, semantics, concurrency, constructive mathematics, and formalisation.
 | 2025 -- ???  | University of Strathclyde | Chancellor's Fellow             |
 | 2023 -- 2025 | Universitá di Bologna     | Marie Skłodowska-Curie Fellow   |
 | 2021 -- 2023 | University of Glasgow     | Head of School's RA             |
-| 2019 -- 2022 | University of Cambridge   | PhD student, Paul Purdom Fellow |
+| 2019 -- 2021 | University of Cambridge   | PhD student, Paul Purdom Fellow |
 | 2015 -- 2022 | Indiana University        | MS/PhD student                  |
