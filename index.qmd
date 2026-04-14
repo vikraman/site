@@ -17,6 +17,6 @@ title: "Hi!"
 | United Kingdom
 
 ::: {.callout-note}
-This website is being rewritten, and some things maybe missing or incomplete.
+This website is being rewritten, and some things may be missing or incomplete.
 You may go [here for an old snapshot of the website](https://web.archive.org/web/20250917211539/https://vikraman.org/).
 :::

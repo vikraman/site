@@ -87,7 +87,7 @@
   keyword: "talks:conference"
   venue: 49th ACM SIGPLAN Symposium on Principles of Programming
     Languages (POPL 2022)
-  title: Symmmetries in reversible programming
+  title: Symmetries in reversible programming
   type: manuscript
   url: "https://popl22.sigplan.org/details/POPL-2022-popl-research-papers/6/Symmetries-in-Reversible-Programming-From-Symmetric-Rig-Groupoids-to-Reversible-Prog"
 - date: 2022-07
