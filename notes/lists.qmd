@@ -1,0 +1,25 @@
+---
+title: List objects
+subtitle: List objects and symmetric list objects
+date: 22-04-2026
+author:
+  - name: Vikraman Choudhury
+filters:
+  - imagify
+imagify:
+  header-includes: \usepackage{quiver}
+---
+
+::: {.hidden}
+$$
+\newcommand{\blank}{{-}}
+\newcommand{\cat}[1]{\mathcal{#1}}
+$$
+:::
+
+
+Let $\cat{C}(1, \otimes)$ be a monoidal category, and $A$ be an object of $\cat{C}$.
+
+A list algebra on $A$ is an object $L$ with a pair of maps $(1 \xrightarrow{n} L \xleftarrow{c} A \otimes L)$.
+
+A list object on $A$ is a list algebra $(1 \xrightarrow{nil} L(A) \xleftarrow{cons} A \otimes L(A))$, such that for any parameterised list algebra $(P \xrightarrow{n} L \xleftarrow{c} A \otimes L)$, there is a unique map $it(n, c) : L(A) \otimes P \to L$ such that:
