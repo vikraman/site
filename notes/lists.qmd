@@ -1,25 +1,47 @@
 ---
 title: List objects
 subtitle: List objects and symmetric list objects
-date: 22-04-2026
+date: 04-22-2026
 author:
   - name: Vikraman Choudhury
 filters:
   - imagify
 imagify:
-  header-includes: \usepackage{quiver}
+  header-includes: |
+    \usepackage{quiver}
+    \newcommand{\iter}[2]{\mathrm{it}(#1, #2)}
 ---
 
 ::: {.hidden}
 $$
 \newcommand{\blank}{{-}}
 \newcommand{\cat}[1]{\mathcal{#1}}
+\newcommand{\iter}[2]{\mathrm{it}(#1, #2)}
 $$
 :::
-
 
 Let $\cat{C}(1, \otimes)$ be a monoidal category, and $A$ be an object of $\cat{C}$.
 
 A list algebra on $A$ is an object $L$ with a pair of maps $(1 \xrightarrow{n} L \xleftarrow{c} A \otimes L)$.
 
-A list object on $A$ is a list algebra $(1 \xrightarrow{nil} L(A) \xleftarrow{cons} A \otimes L(A))$, such that for any parameterised list algebra $(P \xrightarrow{n} L \xleftarrow{c} A \otimes L)$, there is a unique map $it(n, c) : L(A) \otimes P \to L$ such that:
+A list object on $A$ is a list algebra $(1 \xrightarrow{nil} L(A) \xleftarrow{cons} A \otimes L(A))$, such that for any parameterised list algebra $(P \xrightarrow{n} L \xleftarrow{c} A \otimes L)$, there is a unique map $\iter{n}{c} : L(A) \otimes P \to L$ such that:
+
+::: imagify
+
+::: {#fig-list-object}
+$$\begin{tikzcd}[ampersand replacement=\&,cramped]
+	{1 \otimes P} \&\& {L(A) \otimes P} \&\& {A \otimes L(A) \otimes P} \\
+	\\
+	P \&\& L \&\& {A \otimes L}
+	\arrow["{nil \otimes P}", from=1-1, to=1-3]
+	\arrow["\cong"', from=1-1, to=3-1]
+	\arrow["{\iter{n}{c}}"', dashed, from=1-3, to=3-3]
+	\arrow["{cons \otimes P}"', from=1-5, to=1-3]
+	\arrow["{A \otimes \iter{n}{c}}", from=1-5, to=3-5]
+	\arrow["n"', from=3-1, to=3-3]
+	\arrow["c", from=3-5, to=3-3]
+\end{tikzcd}
+$$
+:::
+
+:::
