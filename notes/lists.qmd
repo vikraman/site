@@ -20,7 +20,7 @@ $$
 $$
 :::
 
-Let $\cat{C}(1, \otimes)$ be a monoidal category, and $A$ be an object of $\cat{C}$.
+Let $\cat{C}(1, \otimes)$ be a strict monoidal category, and $A$ be an object of $\cat{C}$.
 
 A list algebra on $A$ is an object $L$ with a pair of maps $(1 \xrightarrow{n} L \xleftarrow{c} A \otimes L)$.
 
@@ -40,6 +40,26 @@ $$\begin{tikzcd}[ampersand replacement=\&,cramped]
 	\arrow["{A \otimes \iter{n}{c}}", from=1-5, to=3-5]
 	\arrow["n"', from=3-1, to=3-3]
 	\arrow["c", from=3-5, to=3-3]
+\end{tikzcd}
+$$
+:::
+
+:::
+
+A symmetric list object on $A$ is a list object $(1 \xrightarrow{nil} L(A) \xleftarrow{cons} A \otimes L(A))$ satisfying:
+
+::: imagify
+
+::: {#fig-symmetric-list-object}
+$$\begin{tikzcd}[ampersand replacement=\&,cramped]
+	\& {A \otimes A \otimes L(A)} \& \\
+	{A \otimes A \otimes L(A)} \&\& {A \otimes L(A)} \\
+	{A \otimes L(A)} \&\& {L(A)}
+	\arrow["{\beta \otimes L(A)}"', from=1-2, to=2-1]
+	\arrow["{cons \otimes L(A)}", from=1-2, to=2-3]
+	\arrow["{cons \otimes L(A)}"', from=2-1, to=3-1]
+	\arrow["cons", from=2-3, to=3-3]
+	\arrow["cons"', from=3-1, to=3-3]
 \end{tikzcd}
 $$
 :::
