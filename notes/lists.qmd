@@ -9,14 +9,19 @@ filters:
 imagify:
   header-includes: |
     \usepackage{quiver}
-    \newcommand{\iter}[2]{\mathrm{it}(#1, #2)}
+    \newcommand{\nil}{\mathsf{nil}}
+    \newcommand{\cons}{\mathsf{cons}}
+    \newcommand{\iter}[2]{\mathsf{it}(#1, #2)}
 ---
 
 ::: {.hidden}
 $$
 \newcommand{\blank}{{-}}
 \newcommand{\cat}[1]{\mathcal{#1}}
-\newcommand{\iter}[2]{\mathrm{it}(#1, #2)}
+\newcommand{\nil}{\mathsf{nil}}
+\newcommand{\cons}{\mathsf{cons}}
+\newcommand{\iter}[2]{\mathsf{it}(#1, #2)}
+\newcommand{\id}{\mathsf{id}}
 $$
 :::
 
@@ -24,19 +29,20 @@ Let $\cat{C}(1, \otimes)$ be a strict monoidal category, and $A$ be an object of
 
 A list algebra on $A$ is an object $L$ with a pair of maps $(1 \xrightarrow{n} L \xleftarrow{c} A \otimes L)$.
 
-A list object on $A$ is a list algebra $(1 \xrightarrow{nil} L(A) \xleftarrow{cons} A \otimes L(A))$, such that for any parameterised list algebra $(P \xrightarrow{n} L \xleftarrow{c} A \otimes L)$, there is a unique map $\iter{n}{c} : L(A) \otimes P \to L$ such that:
+A list object on $A$ is a list algebra $(1 \xrightarrow{\nil} L(A) \xleftarrow{\cons} A \otimes L(A))$, such that:
 
-::: imagify
+- for any parameterised list algebra $(P \xrightarrow{n} L \xleftarrow{c} A \otimes L)$, there is a unique map $\iter{n}{c} : L(A) \otimes P \to L$ satisfying:
 
-::: {#fig-list-object}
-$$\begin{tikzcd}[ampersand replacement=\&,cramped]
+::: {.imagify}
+$$% https://q.uiver.app/#q=WzAsNixbMCwwLCIxIFxcb3RpbWVzIFAiXSxbMiwwLCJMKEEpIFxcb3RpbWVzIFAiXSxbMCwyLCJQIl0sWzIsMiwiTCJdLFs0LDAsIkEgXFxvdGltZXMgTChBKSBcXG90aW1lcyBQIl0sWzQsMiwiQSBcXG90aW1lcyBMIl0sWzAsMSwiXFxuaWwgXFxvdGltZXMgUCJdLFsyLDMsIm4iLDJdLFs0LDEsIlxcY29ucyBcXG90aW1lcyBQIiwyXSxbNCw1LCJBIFxcb3RpbWVzIFxcaXRlcntufXtjfSJdLFs1LDMsImMiXSxbMSwzLCJcXGl0ZXJ7bn17Y30iLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwyLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\begin{tikzcd}[ampersand replacement=\&,cramped]
 	{1 \otimes P} \&\& {L(A) \otimes P} \&\& {A \otimes L(A) \otimes P} \\
 	\\
 	P \&\& L \&\& {A \otimes L}
-	\arrow["{nil \otimes P}", from=1-1, to=1-3]
-	\arrow["\cong"', from=1-1, to=3-1]
+	\arrow["{\nil \otimes P}", from=1-1, to=1-3]
+	\arrow[equals, from=1-1, to=3-1]
 	\arrow["{\iter{n}{c}}"', dashed, from=1-3, to=3-3]
-	\arrow["{cons \otimes P}"', from=1-5, to=1-3]
+	\arrow["{\cons \otimes P}"', from=1-5, to=1-3]
 	\arrow["{A \otimes \iter{n}{c}}", from=1-5, to=3-5]
 	\arrow["n"', from=3-1, to=3-3]
 	\arrow["c", from=3-5, to=3-3]
@@ -44,32 +50,63 @@ $$\begin{tikzcd}[ampersand replacement=\&,cramped]
 $$
 :::
 
-:::
+A monoid object $M$ in $\cat{C}$ is a pair of maps $(1 \xrightarrow{\epsilon} M \xleftarrow{\mu} M \otimes M)$ satisfying:
 
-::: {#thm-free-monoid}
-The list object construction gives $L \dashv U : \mathsf{Mon}(\cat{C}) \to \cat{C}$.
-:::
-
-A symmetric list object on $A$ is a list object $(1 \xrightarrow{nil} L(A) \xleftarrow{cons} A \otimes L(A))$ satisfying:
-
-::: imagify
-
-::: {#fig-symmetric-list-object}
-$$\begin{tikzcd}[ampersand replacement=\&,cramped]
-	\& {A \otimes A \otimes L(A)} \& \\
-	{A \otimes A \otimes L(A)} \&\& {A \otimes L(A)} \\
-	{A \otimes L(A)} \&\& {L(A)}
-	\arrow["{\beta \otimes L(A)}"', from=1-2, to=2-1]
-	\arrow["{cons \otimes L(A)}", from=1-2, to=2-3]
-	\arrow["{cons \otimes L(A)}"', from=2-1, to=3-1]
-	\arrow["cons", from=2-3, to=3-3]
-	\arrow["cons"', from=3-1, to=3-3]
+::: {.imagify}
+$$% https://q.uiver.app/#q=WzAsNCxbMCwwLCIxIFxcb3RpbWVzIE0iXSxbMSwwLCJNIFxcb3RpbWVzIE0iXSxbMSwxLCJNIl0sWzIsMCwiTSBcXG90aW1lcyAxIl0sWzAsMSwiXFxlcHNpbG9uIFxcb3RpbWVzIE0iXSxbMSwyLCJcXG11Il0sWzMsMSwiTSBcXG90aW1lcyBcXGVwc2lsb24iLDJdLFswLDIsIiIsMix7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMywiIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}[ampersand replacement=\&,cramped]
+	{1 \otimes M} \& {M \otimes M} \& {M \otimes 1} \\
+	\& M
+	\arrow["{\epsilon \otimes M}", from=1-1, to=1-2]
+	\arrow[equals, from=1-1, to=2-2]
+	\arrow["\mu", from=1-2, to=2-2]
+	\arrow["{M \otimes \epsilon}"', from=1-3, to=1-2]
+	\arrow[equals, from=2-2, to=1-3]
+\end{tikzcd}
+\qquad
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJNIFxcb3RpbWVzIE0gXFxvdGltZXMgTSJdLFsxLDAsIk0gXFxvdGltZXMgTSJdLFswLDEsIk0gXFxvdGltZXMgTSJdLFsxLDEsIk0iXSxbMCwxLCJNIFxcb3RpbWVzIFxcbXUiXSxbMCwyLCJcXG11IFxcb3RpbWVzIE0iLDJdLFsyLDMsIlxcbXUiLDJdLFsxLDMsIlxcbXUiXV0=
+\begin{tikzcd}[ampersand replacement=\&,cramped]
+	{M \otimes M \otimes M} \& {M \otimes M} \\
+	{M \otimes M} \& M
+	\arrow["{M \otimes \mu}", from=1-1, to=1-2]
+	\arrow["{\mu \otimes M}"', from=1-1, to=2-1]
+	\arrow["\mu", from=1-2, to=2-2]
+	\arrow["\mu"', from=2-1, to=2-2]
 \end{tikzcd}
 $$
 :::
 
+::: {#lem-list-objects-are-monoids}
+$(1 \xrightarrow{\nil} L(A) \xleftarrow{\iter{\id}{\cons}} L(A))$ is a monoid structure on $L(A)$.
 :::
 
-::: {#thm-free-commutative-monoid}
+::: {#thm-list-objects-are-free-monoids}
+The list object construction gives $L \dashv U : \mathsf{Mon}(\cat{C}) \to \cat{C}$.
+:::
+
+Now, we switch to $\cat{C}$ being symmetric strict monoidal, with symmetry $\beta$.
+
+A symmetric list object on $A$ is a list object $(1 \xrightarrow{\nil} L(A) \xleftarrow{\cons} A \otimes L(A))$ satisfying:
+
+::: {.imagify}
+$$% https://q.uiver.app/#q=WzAsNSxbMSwwLCJBIFxcb3RpbWVzIEEgXFxvdGltZXMgTChBKSJdLFswLDEsIkEgXFxvdGltZXMgQSBcXG90aW1lcyBMKEEpIl0sWzAsMiwiQSBcXG90aW1lcyBMKEEpIl0sWzIsMiwiTChBKSJdLFsyLDEsIkEgXFxvdGltZXMgTChBKSJdLFswLDEsIlxcYmV0YSBcXG90aW1lcyBMKEEpIiwyXSxbMSwyLCJBIFxcb3RpbWVzIFxcY29ucyIsMl0sWzIsMywiXFxjb25zIiwyXSxbMCw0LCJBIFxcb3RpbWVzIFxcY29ucyJdLFs0LDMsIlxcY29ucyJdXQ==
+\begin{tikzcd}[ampersand replacement=\&,cramped]
+	\& {A \otimes A \otimes L(A)} \& \\
+	{A \otimes A \otimes L(A)} \&\& {A \otimes L(A)} \\
+	{A \otimes L(A)} \&\& {L(A)}
+	\arrow["{\beta \otimes L(A)}"', from=1-2, to=2-1]
+	\arrow["{A \otimes \cons}", from=1-2, to=2-3]
+	\arrow["{A \otimes \cons}"', from=2-1, to=3-1]
+	\arrow["\cons", from=2-3, to=3-3]
+	\arrow["\cons"', from=3-1, to=3-3]
+\end{tikzcd}
+$$
+:::
+
+::: {#lem-symmetric-list-objects-are-commutative-monoids}
+$(1 \xrightarrow{\nil} L(A) \xleftarrow{\iter{\id}{\cons}} L(A))$ is a commutative monoid structure on $L(A)$.
+:::
+
+::: {#thm-symmetric-list-objects-are-free-commutative-monoids}
 The symmetric list object construction gives $L \dashv U : \mathsf{CMon}(\cat{C}) \to \cat{C}$.
 :::
