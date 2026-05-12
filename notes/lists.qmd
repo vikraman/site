@@ -107,6 +107,13 @@ $$
 $(1 \xrightarrow{\nil} L(A) \xleftarrow{\iter{\id}{\cons}} L(A))$ is a commutative monoid structure on $L(A)$.
 :::
 
+::: {#lem-list-objects-are-symmetric-list-objects}
+If $L(A)$ is a list object on $A$, the following are equivalent:
+
+- $L(A)$ is a symmetric list object on $A$.
+- $(L(A), \nil, \iter{\id}{\cons})$ is a commutative monoid.
+:::
+
 ::: {#thm-symmetric-list-objects-are-free-commutative-monoids}
 The symmetric list object construction gives $L \dashv U : \mathsf{CMon}(\cat{C}) \to \cat{C}$.
 :::
