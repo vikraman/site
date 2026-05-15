@@ -1,0 +1,11 @@
+---
+title: Normalization of sums
+date: 05-15-2026
+author:
+  - name: Vikraman Choudhury
+filters:
+  - imagify
+imagify:
+  header-includes: |
+    \usepackage{quiver}
+---
