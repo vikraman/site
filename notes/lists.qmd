@@ -31,7 +31,7 @@ A list algebra on $A$ is an object $L$ with a pair of maps $(1 \xrightarrow{n} L
 
 A list object on $A$ is a list algebra $(1 \xrightarrow{\nil} L(A) \xleftarrow{\cons} A \otimes L(A))$, such that:
 
-- for any parameterised list algebra $(P \xrightarrow{n} L \xleftarrow{c} A \otimes L)$, there is a unique map $\iter{n}{c} : L(A) \otimes P \to L$ satisfying:
+- for any $P$-parameterised list algebra $(P \xrightarrow{n} L \xleftarrow{c} A \otimes L)$, there is a unique map $\iter{n}{c} : L(A) \otimes P \to L$ satisfying:
 
 ::: {.imagify}
 $$% https://q.uiver.app/#q=WzAsNixbMCwwLCIxIFxcb3RpbWVzIFAiXSxbMiwwLCJMKEEpIFxcb3RpbWVzIFAiXSxbMCwyLCJQIl0sWzIsMiwiTCJdLFs0LDAsIkEgXFxvdGltZXMgTChBKSBcXG90aW1lcyBQIl0sWzQsMiwiQSBcXG90aW1lcyBMIl0sWzAsMSwiXFxuaWwgXFxvdGltZXMgUCJdLFsyLDMsIm4iLDJdLFs0LDEsIlxcY29ucyBcXG90aW1lcyBQIiwyXSxbNCw1LCJBIFxcb3RpbWVzIFxcaXRlcntufXtjfSJdLFs1LDMsImMiXSxbMSwzLCJcXGl0ZXJ7bn17Y30iLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwyLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
