@@ -9,3 +9,19 @@ imagify:
   header-includes: |
     \usepackage{quiver}
 ---
+
+::: {.hidden}
+$$
+\newcommand{abs}[1]{\left|#1\right|}
+\newcommand{\covers}{\mathrel{\triangleleft}}
+$$
+:::
+
+::: {#def-posite}
+A posite $(P, \leq, \covers)$ is a poset $(P, \leq)$ with a binary relation ${\covers} \subseteq P \times 2^{\abs{P}}$ such that:
+
+- if $u \covers V$ and $v \in V$, then $v \leq u$;
+
+- if $u \covers V$ and $u' \leq u$, then there exists $V'$ such that $u' \covers V'$, and for all $v' \in V'$, there exists $v \in V$ such that $v' \leq v$.
+
+:::
