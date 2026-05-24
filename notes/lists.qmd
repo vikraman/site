@@ -117,3 +117,10 @@ If $L(A)$ is a list object on $A$, the following are equivalent:
 ::: {#thm-symmetric-list-objects-are-free-commutative-monoids}
 The symmetric list object construction gives $L \dashv U : \mathsf{CMon}(\cat{C}) \to \cat{C}$.
 :::
+
+::: {#lem-symmetric-list-objects-equivalent-to-sequential-colimit-construction}
+If $\cat{C}$ is symmetric monoidal closed and has the relevant colimits, the following are equivalent:
+
+- $L(A)$ is a symmetric list object on $A$.
+- $L(A)$ is the sequential colimit of the symmetric powers of $A$.
+:::
