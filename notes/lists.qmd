@@ -112,6 +112,7 @@ If $L(A)$ is a list object on $A$, the following are equivalent:
 
 - $L(A)$ is a symmetric list object on $A$.
 - $(L(A), \nil, \iter{\id}{\cons})$ is a commutative monoid.
+- $(L(A), \nil, \iter{\id}{\cons}, \eta_A)$ is the free commutative monoid on $A$.
 :::
 
 ::: {#thm-symmetric-list-objects-are-free-commutative-monoids}
