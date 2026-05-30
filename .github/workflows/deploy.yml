@@ -41,7 +41,7 @@ jobs:
         uses: zauguin/install-texlive@v4
         with:
           packages: scheme-full
-          texlive_version: 2026
+          texlive_version: 2025
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
