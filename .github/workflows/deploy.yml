@@ -40,7 +40,8 @@ jobs:
       - name: Setup TeX Live
         uses: zauguin/install-texlive@v4
         with:
-          packages: scheme-full
+          package_file: tl_packages
+          texlive_version: 2026
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
