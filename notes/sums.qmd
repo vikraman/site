@@ -24,4 +24,13 @@ A posite $(P, \leq, \covers)$ is a poset $(P, \leq)$ with a binary relation ${\c
 
 - if $u \covers V$ and $u' \leq u$, then there exists $V'$ such that $u' \covers V'$, and for all $v' \in V'$, there exists $v \in V$ such that $v' \leq v$.
 
+
+Given posites $P$ and $Q$, a morphism of posites $f : P \to Q$ is a monotone function such that:
+
+- given any $u \in Q$, for some $v \in P$, we have $u \leq f(v)$;
+
+- if $w \leq f(v)$, $f(v) \in Q$, then for some $x \leq u$, $v \in P$, we have $w \leq f(x)$;
+
+- if $u \covers V$, then $f(u) \covers \{f(v) : v \in V\}$.
+
 :::
