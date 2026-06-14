@@ -13,3 +13,8 @@ listing:
 ::: {.hidden}
 load fontawesome {{< fa link >}}
 :::
+
+::: {.callout-note}
+The slides for many of the talks are missing, but I am trying to find and link them.
+If you need slides for a talk, please [email me](mailto:me@vikraman.org).
+:::
