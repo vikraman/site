@@ -1,0 +1,33 @@
+---
+title: Degeneracy theorems
+date: 06-20-2026
+author:
+  - name: Vikraman Choudhury
+filters:
+  - imagify
+imagify:
+  header-includes: |
+    \usepackage{quiver}
+---
+
+::: {.hidden}
+$$
+\newcommand{\blank}{{-}}
+\newcommand{\cat}[1]{\mathcal{#1}}
+\newcommand{\comp}{\mathbin{\circ}}
+\newcommand{\pair}[2]{\mathop{\langle #1, #2 \rangle}}
+$$
+:::
+
+Some interesting degeneracy theorems that I always forget the precise statements of.
+
+::: {#lem-ccc-initial-object}
+If $\cat{C}$ is a cartesian closed category with an initial object, then any two maps $f, g : A \to 0$ are equal.
+Dually, if $\cat{C}$ is a cocartesian coclosed category with a terminal object, then any two maps $f, g : 1 \to A$ are equal.
+:::
+
+::: {.proof}
+$A \times 0 \cong 0$, since $A \times (\blank)$ preserves colimits.
+Hence, $0 \times 0 \cong 0$, and so $\pi_1, \pi_2 : 0 \times 0 \to 0$ are equal.
+If $f, g : A \to 0$, then $f = \pi_1 \comp \pair{f}{g} = \pi_2 \comp \pair{f}{g} = g$.
+:::
