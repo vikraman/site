@@ -31,3 +31,12 @@ $A \times 0 \cong 0$, since $A \times (\blank)$ preserves colimits.
 Hence, $0 \times 0 \cong 0$, and so $\pi_1, \pi_2 : 0 \times 0 \to 0$ are equal.
 If $f, g : A \to 0$, then $f = \pi_1 \comp \pair{f}{g} = \pi_2 \comp \pair{f}{g} = g$.
 :::
+
+::: {#lem-ccc-cococ-degeneracy}
+If $\cat{C}$ is a cartesian closed category and a cocartesian coclosed category, then $\cat{C}$ is a poset.
+:::
+
+::: {.proof}
+Suppose $f, g : A \to B$ are two maps in $\cat{C}$.
+Then $f, g : 1 \to B^A$, and so by @lem-ccc-initial-object, $f = g$.
+:::
