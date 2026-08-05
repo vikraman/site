@@ -1,0 +1,566 @@
+---
+title: System L
+date: 07-21-2026
+author:
+  - name: Vikraman Choudhury
+filters:
+  - imagify
+imagify:
+  header-includes: |
+    \usepackage{quiver}
+---
+
+::: {.hidden}
+$$
+\require{mathtools}
+\require{bussproofs}
+\newcommand{\Unit}{\mathbf{1}}
+\newcommand{\Cut}[3]{\langle\, #1 \,\Vert_{{}_{#3}}\, #2 \,\rangle}
+\newcommand{\judgeMem}[3]{#1 \ni #2 : #3}
+\newcommand{\judgeCmd}[3]{#1 : (#2 \vdash #3)}
+\newcommand{\judgeVal}[4]{#1 \vdash_v #2 : #3 \mid #4}
+\newcommand{\judgeTm}[4]{#1 \vdash_t #2 : #3 \mid #4}
+\newcommand{\judgeCtx}[4]{#1 \mid #2 : #3 \vdash_e #4}
+\newcommand{\judgeWk}[2]{#1 \sqsupseteq #2}
+\newcommand{\judgeSub}[4]{(#1 \vdash #2 : #3) \vdash #4}
+\newcommand{\judgeCoSub}[4]{#1 \vdash (#4 \vdash #2 : #3)}
+\newcommand{\Subst}[2]{\langle #1, #2 \rangle}
+\newcommand{\eqVal}[5]{#1 \vdash_v #2 \approx #3 : #4 \mid #5}
+\newcommand{\eqTm}[5]{#1 \vdash_t #2 \approx #3 : #4 \mid #5}
+\newcommand{\eqCtx}[5]{#1 \mid #2 \approx #3 : #4 \vdash_e #5}
+\newcommand{\eqCmd}[4]{#1 \approx #2 : (#3 \vdash #4)}
+\newcommand{\SN}{\mathsf{SN}}
+\newcommand{\Red}[2]{\mathrm{Red}_{#1}(#2)}
+\newcommand{\CoRed}[2]{\mathrm{CoRed}_{#1}(#2)}
+\newcommand{\RedSub}[1]{\mathrm{RedSub}(#1)}
+\newcommand{\CoRedSub}[1]{\mathrm{CoRedSub}(#1)}
+$$
+:::
+
+This is a fine-grained presentation of call-by-value System L.
+
+::: {#def-system-l-types}
+**(Types).**
+$$
+A, B \Coloneqq \bot \mid \Unit \mid A \times B \mid A \to B \mid A + B
+$$
+$$
+\neg A \coloneqq A \to \bot
+$$
+:::
+
+::: {#def-system-l-contexts}
+**(Contexts).**
+$$
+\Gamma, \Delta \Coloneqq \cdot \mid \Gamma, x{:}A
+$$
+$$
+\begin{prooftree}
+  \AxiomC{}
+  \RightLabel{z}
+  \UnaryInfC{$\judgeMem{\Gamma, x{:}A}{x}{A}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeMem{\Gamma}{x}{A}$}
+  \RightLabel{s}
+  \UnaryInfC{$\judgeMem{\Gamma, y{:}B}{x}{A}$}
+\end{prooftree}
+$$
+:::
+
+::: {#def-system-l-judgements}
+**(Judgements).**
+$$
+\text{commands} \quad \judgeCmd{\tau}{\Gamma}{\Delta}
+\qquad
+\text{values} \quad \judgeVal{\Gamma}{V}{A}{\Delta}
+\qquad
+\text{terms} \quad \judgeTm{\Gamma}{M}{A}{\Delta}
+\qquad
+\text{coterms} \quad \judgeCtx{\Gamma}{C}{A}{\Delta}
+$$
+:::
+
+::: {#def-system-l-cmd}
+**(Commands).**
+$$
+\tau \Coloneqq \Cut{M}{C}{A}
+$$
+$$
+\begin{prooftree}
+  \AxiomC{$\judgeTm{\Gamma}{M}{A}{\Delta}$}
+  \AxiomC{$\judgeCtx{\Gamma}{C}{A}{\Delta}$}
+  \RightLabel{cut}
+  \BinaryInfC{$\judgeCmd{\Cut{M}{C}{A}}{\Gamma}{\Delta}$}
+\end{prooftree}
+$$
+:::
+
+::: {#def-system-l-val}
+**(Values).**
+$$
+V, W \Coloneqq x \mid \lambda x.\, M \mid \langle\rangle \mid (V, W) \mid \mathsf{inl}(V) \mid \mathsf{inr}(W)
+$$
+$$
+\begin{prooftree}
+  \AxiomC{$\judgeMem{\Gamma}{x}{A}$}
+  \RightLabel{var}
+  \UnaryInfC{$\judgeVal{\Gamma}{x}{A}{\Delta}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeTm{\Gamma, x{:}A}{M}{B}{\Delta}$}
+  \RightLabel{lam}
+  \UnaryInfC{$\judgeVal{\Gamma}{\lambda x.\, M}{A \to B}{\Delta}$}
+\end{prooftree}
+$$
+$$
+\begin{prooftree}
+  \AxiomC{}
+  \RightLabel{unit}
+  \UnaryInfC{$\judgeVal{\Gamma}{\langle\rangle}{\Unit}{\Delta}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeVal{\Gamma}{V}{A}{\Delta}$}
+  \AxiomC{$\judgeVal{\Gamma}{W}{B}{\Delta}$}
+  \RightLabel{pair}
+  \BinaryInfC{$\judgeVal{\Gamma}{(V, W)}{A \times B}{\Delta}$}
+\end{prooftree}
+$$
+$$
+\begin{prooftree}
+  \AxiomC{$\judgeVal{\Gamma}{V}{A}{\Delta}$}
+  \RightLabel{inl}
+  \UnaryInfC{$\judgeVal{\Gamma}{\mathsf{inl}(V)}{A + B}{\Delta}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeVal{\Gamma}{W}{B}{\Delta}$}
+  \RightLabel{inr}
+  \UnaryInfC{$\judgeVal{\Gamma}{\mathsf{inr}(W)}{A + B}{\Delta}$}
+\end{prooftree}
+$$
+:::
+
+::: {#def-system-l-tm}
+**(Terms).**
+$$
+M, N \Coloneqq \mathsf{ret}(V) \mid \mu\alpha.\, \tau
+$$
+$$
+\begin{prooftree}
+  \AxiomC{$\judgeVal{\Gamma}{V}{A}{\Delta}$}
+  \RightLabel{ret}
+  \UnaryInfC{$\judgeTm{\Gamma}{\mathsf{ret}(V)}{A}{\Delta}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeCmd{\tau}{\Gamma}{\Delta, \alpha{:}A}$}
+  \RightLabel{$\mu$}
+  \UnaryInfC{$\judgeTm{\Gamma}{\mu\alpha.\, \tau}{A}{\Delta}$}
+\end{prooftree}
+$$
+:::
+
+::: {#def-system-l-ctx}
+**(Coterms).**
+$$
+C \Coloneqq \alpha \mid V \cdot C \mid \mathsf{fst}(C) \mid \mathsf{snd}(C) \mid \mathsf{case}(C_1, C_2) \mid \tilde\mu x.\, \tau \mid \mathsf{tp}
+$$
+$$
+\begin{prooftree}
+  \AxiomC{$\judgeMem{\Delta}{\alpha}{A}$}
+  \RightLabel{covar}
+  \UnaryInfC{$\judgeCtx{\Gamma}{\alpha}{A}{\Delta}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeVal{\Gamma}{V}{A}{\Delta}$}
+  \AxiomC{$\judgeCtx{\Gamma}{C}{B}{\Delta}$}
+  \RightLabel{app}
+  \BinaryInfC{$\judgeCtx{\Gamma}{V \cdot C}{A \to B}{\Delta}$}
+\end{prooftree}
+$$
+$$
+\begin{prooftree}
+  \AxiomC{$\judgeCtx{\Gamma}{C}{A}{\Delta}$}
+  \RightLabel{fst}
+  \UnaryInfC{$\judgeCtx{\Gamma}{\mathsf{fst}(C)}{A \times B}{\Delta}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeCtx{\Gamma}{C}{B}{\Delta}$}
+  \RightLabel{snd}
+  \UnaryInfC{$\judgeCtx{\Gamma}{\mathsf{snd}(C)}{A \times B}{\Delta}$}
+\end{prooftree}
+$$
+$$
+\begin{prooftree}
+  \AxiomC{$\judgeCtx{\Gamma}{C_1}{A}{\Delta}$}
+  \AxiomC{$\judgeCtx{\Gamma}{C_2}{B}{\Delta}$}
+  \RightLabel{case}
+  \BinaryInfC{$\judgeCtx{\Gamma}{\mathsf{case}(C_1, C_2)}{A + B}{\Delta}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeCmd{\tau}{\Gamma, x{:}A}{\Delta}$}
+  \RightLabel{$\tilde\mu$}
+  \UnaryInfC{$\judgeCtx{\Gamma}{\tilde\mu x.\, \tau}{A}{\Delta}$}
+\end{prooftree}
+$$
+$$
+\begin{prooftree}
+  \AxiomC{}
+  \RightLabel{tp}
+  \UnaryInfC{$\judgeCtx{\Gamma}{\mathsf{tp}}{\bot}{\Delta}$}
+\end{prooftree}
+$$
+:::
+
+::: {#def-system-l-wk}
+**(Weakening).**
+$$
+\begin{prooftree}
+  \AxiomC{}
+  \RightLabel{$\mathsf{wk}_\cdot$}
+  \UnaryInfC{$\judgeWk{\cdot}{\cdot}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeWk{\Gamma}{\Delta}$}
+  \RightLabel{$\mathsf{wk}_{\mathsf{cong}}$}
+  \UnaryInfC{$\judgeWk{\Gamma, x{:}A}{\Delta, x{:}A}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeWk{\Gamma}{\Delta}$}
+  \RightLabel{$\mathsf{wk}_{\mathsf{wk}}$}
+  \UnaryInfC{$\judgeWk{\Gamma, x{:}A}{\Delta}$}
+\end{prooftree}
+$$
+:::
+
+::: {#lem-system-l-wk}
+**(Weakening).**
+Given $\judgeWk{\Gamma}{\Gamma'}$ and $\judgeWk{\Delta}{\Delta'}$, the following rules are admissible:
+$$
+\begin{prooftree}
+  \AxiomC{$\judgeWk{\Gamma}{\Gamma'}$}
+  \AxiomC{$\judgeWk{\Delta}{\Delta'}$}
+  \AxiomC{$\judgeVal{\Gamma'}{V}{A}{\Delta'}$}
+  \RightLabel{wk-val}
+  \TrinaryInfC{$\judgeVal{\Gamma}{V}{A}{\Delta}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeWk{\Gamma}{\Gamma'}$}
+  \AxiomC{$\judgeWk{\Delta}{\Delta'}$}
+  \AxiomC{$\judgeTm{\Gamma'}{M}{A}{\Delta'}$}
+  \RightLabel{wk-tm}
+  \TrinaryInfC{$\judgeTm{\Gamma}{M}{A}{\Delta}$}
+\end{prooftree}
+$$
+$$
+\begin{prooftree}
+  \AxiomC{$\judgeWk{\Gamma}{\Gamma'}$}
+  \AxiomC{$\judgeWk{\Delta}{\Delta'}$}
+  \AxiomC{$\judgeCtx{\Gamma'}{C}{A}{\Delta'}$}
+  \RightLabel{wk-ctx}
+  \TrinaryInfC{$\judgeCtx{\Gamma}{C}{A}{\Delta}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeWk{\Gamma}{\Gamma'}$}
+  \AxiomC{$\judgeWk{\Delta}{\Delta'}$}
+  \AxiomC{$\judgeCmd{\tau}{\Gamma'}{\Delta'}$}
+  \RightLabel{wk-cmd}
+  \TrinaryInfC{$\judgeCmd{\tau}{\Gamma}{\Delta}$}
+\end{prooftree}
+$$
+:::
+
+::: {#def-system-l-sub}
+**(Substitution).**
+$$
+\begin{prooftree}
+  \AxiomC{}
+  \RightLabel{$\Gamma$-$\langle\rangle$}
+  \UnaryInfC{$\judgeSub{\Gamma}{\langle\rangle}{\cdot}{\Delta}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeSub{\Gamma}{\theta}{\Gamma'}{\Delta}$}
+  \AxiomC{$\judgeVal{\Gamma}{V}{A}{\Delta}$}
+  \RightLabel{$\Gamma$-ext}
+  \BinaryInfC{$\judgeSub{\Gamma}{\Subst{\theta}{V/x}}{\Gamma', x{:}A}{\Delta}$}
+\end{prooftree}
+$$
+$$
+\begin{prooftree}
+  \AxiomC{}
+  \RightLabel{$\Gamma$-$\langle\rangle$}
+  \UnaryInfC{$\judgeCoSub{\Gamma}{\langle\rangle}{\cdot}{\Delta}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeCoSub{\Gamma}{\varphi}{\Delta'}{\Delta}$}
+  \AxiomC{$\judgeCtx{\Gamma}{C}{A}{\Delta}$}
+  \RightLabel{$\Gamma$-ext}
+  \BinaryInfC{$\judgeCoSub{\Gamma}{\Subst{\varphi}{C/\alpha}}{\Delta', \alpha{:}A}{\Delta}$}
+\end{prooftree}
+$$
+:::
+
+::: {#lem-system-l-sub}
+**(Substitution).**
+Given $\judgeSub{\Gamma}{\theta}{\Gamma'}{\Delta}$ and $\judgeCoSub{\Gamma}{\varphi}{\Delta'}{\Delta}$, the substitution pair $(\theta, \varphi)$ has admissible substitution rules:
+$$
+\begin{prooftree}
+  \AxiomC{$\judgeSub{\Gamma}{\theta}{\Gamma'}{\Delta}$}
+  \AxiomC{$\judgeCoSub{\Gamma}{\varphi}{\Delta'}{\Delta}$}
+  \AxiomC{$\judgeVal{\Gamma'}{V}{A}{\Delta'}$}
+  \RightLabel{sub-val}
+  \TrinaryInfC{$\judgeVal{\Gamma}{V[\theta;\varphi]}{A}{\Delta}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeSub{\Gamma}{\theta}{\Gamma'}{\Delta}$}
+  \AxiomC{$\judgeCoSub{\Gamma}{\varphi}{\Delta'}{\Delta}$}
+  \AxiomC{$\judgeTm{\Gamma'}{M}{A}{\Delta'}$}
+  \RightLabel{sub-tm}
+  \TrinaryInfC{$\judgeTm{\Gamma}{M[\theta;\varphi]}{A}{\Delta}$}
+\end{prooftree}
+$$
+$$
+\begin{prooftree}
+  \AxiomC{$\judgeSub{\Gamma}{\theta}{\Gamma'}{\Delta}$}
+  \AxiomC{$\judgeCoSub{\Gamma}{\varphi}{\Delta'}{\Delta}$}
+  \AxiomC{$\judgeCtx{\Gamma'}{C}{A}{\Delta'}$}
+  \RightLabel{sub-ctx}
+  \TrinaryInfC{$\judgeCtx{\Gamma}{C[\theta;\varphi]}{A}{\Delta}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeSub{\Gamma}{\theta}{\Gamma'}{\Delta}$}
+  \AxiomC{$\judgeCoSub{\Gamma}{\varphi}{\Delta'}{\Delta}$}
+  \AxiomC{$\judgeCmd{\tau}{\Gamma'}{\Delta'}$}
+  \RightLabel{sub-cmd}
+  \TrinaryInfC{$\judgeCmd{\tau[\theta;\varphi]}{\Gamma}{\Delta}$}
+\end{prooftree}
+$$
+:::
+
+$$
+\begin{aligned}
+\mathsf{let}\ x = V; M &\coloneqq \Cut{\mathsf{ret}(V)}{\tilde\mu x.\, \Cut{M}{\alpha}{B}}{A} \\
+\mathsf{let}\ x = N; M &\coloneqq \mu\alpha.\, \Cut{N}{\tilde\mu x.\, \Cut{M}{\alpha}{B}}{A} \\
+\mathsf{let}\ C\ \mathsf{be}\ \alpha; \tau &\coloneqq \Cut{\mu\alpha.\, \tau}{C}{A}
+\end{aligned}
+$$
+
+::: {#def-system-l-eq}
+**(Equational Theory).**
+Each judgement has an equivalence relation and congruence for every formation rule in [@def-system-l-cmd; @def-system-l-val; @def-system-l-tm; @def-system-l-ctx].
+
+*Eta.*
+$$
+\begin{prooftree}
+  \AxiomC{$\judgeVal{\Gamma}{V}{\Unit}{\Delta}$}
+  \RightLabel{unit-eta}
+  \UnaryInfC{$\eqVal{\Gamma}{V}{\langle\rangle}{\Unit}{\Delta}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeTm{\Gamma}{M}{A}{\Delta}$}
+  \RightLabel{$\mu$-eta}
+  \UnaryInfC{$\eqTm{\Gamma}{M}{\mu\alpha.\, \Cut{M}{\alpha}{A}}{A}{\Delta}$}
+\end{prooftree}
+$$
+$$
+\begin{prooftree}
+  \AxiomC{$\judgeCtx{\Gamma}{C}{A}{\Delta}$}
+  \RightLabel{$\tilde\mu$-eta}
+  \UnaryInfC{$\eqCtx{\Gamma}{C}{\tilde\mu x.\, \Cut{x}{C}{A}}{A}{\Delta}$}
+\end{prooftree}
+$$
+
+*Beta (cut elimination).*
+$$
+\begin{prooftree}
+  \AxiomC{$\judgeCmd{\tau}{\Gamma}{\Delta, \alpha{:}A}$}
+  \AxiomC{$\judgeCtx{\Gamma}{C}{A}{\Delta}$}
+  \RightLabel{$\mu$-beta}
+  \BinaryInfC{$\eqCmd{\Cut{\mu\alpha.\, \tau}{C}{A}}{\tau[C/\alpha]}{\Gamma}{\Delta}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeVal{\Gamma}{V}{A}{\Delta}$}
+  \AxiomC{$\judgeCmd{\tau}{\Gamma, x{:}A}{\Delta}$}
+  \RightLabel{$\tilde\mu$-beta}
+  \BinaryInfC{$\eqCmd{\Cut{\mathsf{ret}(V)}{\tilde\mu x.\, \tau}{A}}{\tau[V/x]}{\Gamma}{\Delta}$}
+\end{prooftree}
+$$
+$$
+\begin{prooftree}
+  \AxiomC{$\judgeTm{\Gamma, x{:}A}{M}{B}{\Delta}$}
+  \AxiomC{$\judgeVal{\Gamma}{V}{A}{\Delta}$}
+  \AxiomC{$\judgeCtx{\Gamma}{C}{B}{\Delta}$}
+  \RightLabel{app-beta}
+  \TrinaryInfC{$\eqCmd{\Cut{\lambda x.\, M}{V \cdot C}{A \to B}}{\Cut{M[V/x]}{C}{B}}{\Gamma}{\Delta}$}
+\end{prooftree}
+$$
+$$
+\begin{prooftree}
+  \AxiomC{$\judgeVal{\Gamma}{V}{A}{\Delta}$}
+  \AxiomC{$\judgeVal{\Gamma}{W}{B}{\Delta}$}
+  \AxiomC{$\judgeCtx{\Gamma}{C}{A}{\Delta}$}
+  \RightLabel{fst-beta}
+  \TrinaryInfC{$\eqCmd{\Cut{(V, W)}{\mathsf{fst}(C)}{A \times B}}{\Cut{V}{C}{A}}{\Gamma}{\Delta}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeVal{\Gamma}{V}{A}{\Delta}$}
+  \AxiomC{$\judgeVal{\Gamma}{W}{B}{\Delta}$}
+  \AxiomC{$\judgeCtx{\Gamma}{C}{B}{\Delta}$}
+  \RightLabel{snd-beta}
+  \TrinaryInfC{$\eqCmd{\Cut{(V, W)}{\mathsf{snd}(C)}{A \times B}}{\Cut{W}{C}{B}}{\Gamma}{\Delta}$}
+\end{prooftree}
+$$
+$$
+\begin{prooftree}
+  \AxiomC{$\judgeVal{\Gamma}{V}{A}{\Delta}$}
+  \AxiomC{$\judgeCtx{\Gamma}{C_1}{A}{\Delta}$}
+  \AxiomC{$\judgeCtx{\Gamma}{C_2}{B}{\Delta}$}
+  \RightLabel{inl-beta}
+  \TrinaryInfC{$\eqCmd{\Cut{\mathsf{inl}(V)}{\mathsf{case}(C_1, C_2)}{A + B}}{\Cut{V}{C_1}{A}}{\Gamma}{\Delta}$}
+\end{prooftree}
+\qquad
+\begin{prooftree}
+  \AxiomC{$\judgeVal{\Gamma}{W}{B}{\Delta}$}
+  \AxiomC{$\judgeCtx{\Gamma}{C_1}{A}{\Delta}$}
+  \AxiomC{$\judgeCtx{\Gamma}{C_2}{B}{\Delta}$}
+  \RightLabel{inr-beta}
+  \TrinaryInfC{$\eqCmd{\Cut{\mathsf{inr}(W)}{\mathsf{case}(C_1, C_2)}{A + B}}{\Cut{W}{C_2}{B}}{\Gamma}{\Delta}$}
+\end{prooftree}
+$$
+:::
+
+We show strong normalisation by reducibility candidates.
+
+::: {#def-system-l-sn-step}
+**(Reduction).**
+We orient the beta-eta equations of @def-system-l-eq left-to-right to define a type-preserving one-step reduction relation $\tau \mapsto \tau'$ on commands.
+:::
+
+::: {#def-system-l-sn}
+**(Strong Normalisation).**
+$$
+\begin{prooftree}
+  \AxiomC{$\forall \tau'.\ \tau \mapsto \tau' \to \SN(\tau')$}
+  \RightLabel{sn}
+  \UnaryInfC{$\SN(\tau)$}
+\end{prooftree}
+$$
+:::
+
+::: {#def-system-l-sn-red}
+**(Reducibility Candidates).**
+By induction on $A$, mutually define $\Red{A}{V}$ for $\judgeVal{\Gamma}{V}{A}{\Delta}$, and $\CoRed{A}{C}$ for $\judgeCtx{\Gamma}{C}{A}{\Delta}$:
+$$
+\begin{aligned}
+\Red{\bot}{V} &\coloneqq \top
+&
+\Red{\Unit}{V} &\coloneqq \top
+\\
+\Red{A \times B}{x} &\coloneqq \top
+&
+\Red{A \times B}{(V, W)} &\coloneqq \Red{A}{V} \times \Red{B}{W}
+\\
+\Red{A + B}{x} &\coloneqq \top
+&
+\Red{A + B}{\mathsf{inl}(V)} &\coloneqq \Red{A}{V}
+\qquad
+\Red{A + B}{\mathsf{inr}(W)} \coloneqq \Red{B}{W}
+\\
+\Red{A \to B}{x} &\coloneqq \top
+\end{aligned}
+$$
+$$
+\Red{A \to B}{\lambda x.\, M} \coloneqq \forall\, \judgeWk{\Gamma'}{\Gamma},\, \judgeWk{\Delta'}{\Delta},\, \judgeVal{\Gamma'}{W}{A}{\Delta'},\, \judgeCtx{\Gamma'}{C}{B}{\Delta'}.\ \Red{A}{W} \to \CoRed{B}{C} \to \SN(\Cut{M[W/x]}{C}{B})
+$$
+$$
+\begin{aligned}
+\CoRed{A}{\alpha} &\coloneqq \top
+&
+\CoRed{\bot}{\mathsf{tp}} &\coloneqq \top
+\\
+\CoRed{A \times B}{\mathsf{fst}(C)} &\coloneqq \CoRed{A}{C}
+&
+\CoRed{A \times B}{\mathsf{snd}(C)} &\coloneqq \CoRed{B}{C}
+\\
+\CoRed{A + B}{\mathsf{case}(C_1, C_2)} &\coloneqq \CoRed{A}{C_1} \times \CoRed{B}{C_2}
+&
+\CoRed{A \to B}{V \cdot C} &\coloneqq \Red{A}{V} \times \CoRed{B}{C}
+\end{aligned}
+$$
+$$
+\CoRed{A}{\tilde\mu x.\, \tau} \coloneqq \forall\, \judgeWk{\Gamma'}{\Gamma},\, \judgeWk{\Delta'}{\Delta},\, \judgeVal{\Gamma'}{V}{A}{\Delta'}.\ \Red{A}{V} \to \SN(\tau[V/x])
+$$
+:::
+
+::: {#lem-system-l-sn-wk}
+**(Reducibility is Stable Under Weakening).**
+Given $\judgeWk{\Gamma}{\Gamma'}$ and $\judgeWk{\Delta}{\Delta'}$: if $\Red{A}{V}$ at $(\Gamma', \Delta')$ then $\Red{A}{V}$ at $(\Gamma, \Delta)$; dually, if $\CoRed{A}{C}$ at $(\Gamma', \Delta')$ then $\CoRed{A}{C}$ at $(\Gamma, \Delta)$.
+:::
+
+::: {#lem-system-l-sn-ortho}
+**(Orthogonality).**
+If $\Red{A}{V}$ and $\CoRed{A}{C}$, then $\SN(\Cut{\mathsf{ret}(V)}{C}{A})$.
+:::
+
+::: {#def-system-l-sn-redsub}
+**(Reducible Substitutions).**
+For $\judgeSub{\Gamma}{\theta}{\Gamma'}{\Delta}$ and $\judgeCoSub{\Gamma}{\varphi}{\Delta'}{\Delta}$:
+$$
+\RedSub{\theta} \coloneqq \forall\, x{:}A \in \Gamma'.\ \Red{A}{\theta(x)}
+\qquad
+\CoRedSub{\varphi} \coloneqq \forall\, \alpha{:}A \in \Delta'.\ \CoRed{A}{\varphi(\alpha)}
+$$
+:::
+
+::: {#lem-system-l-sn-redsub-stable}
+**(Reducible Substitutions are Stable and Extendable).**
+$\RedSub{-}$ and $\CoRedSub{-}$ are stable under weakening; and if $\RedSub{\theta}$, $\Red{A}{V}$, then $\RedSub{\Subst{\theta}{V/x}}$, and dually for $\CoRedSub{-}$ and $\Subst{\varphi}{C/\alpha}$.
+:::
+
+::: {#thm-system-l-sn-fundamental}
+**(Fundamental Lemma).**
+Given $\judgeSub{\Gamma}{\theta}{\Gamma'}{\Delta}$, $\judgeCoSub{\Gamma}{\varphi}{\Delta'}{\Delta}$ with $\RedSub{\theta}$ and $\CoRedSub{\varphi}$:
+
+- if $\judgeVal{\Gamma'}{V}{A}{\Delta'}$, then $\Red{A}{V[\theta;\varphi]}$;
+- if $\judgeTm{\Gamma'}{M}{A}{\Delta'}$, then for every $\CoRed{A}{C}$, $\SN(\Cut{M[\theta;\varphi]}{C}{A})$;
+- if $\judgeCtx{\Gamma'}{C}{A}{\Delta'}$, then $\CoRed{A}{C[\theta;\varphi]}$;
+- if $\judgeCmd{\tau}{\Gamma'}{\Delta'}$, then $\SN(\tau[\theta;\varphi])$.
+:::
+
+::: {#thm-system-l-sn}
+**(Strong Normalisation).**
+For every $\judgeCmd{\tau}{\Gamma}{\Delta}$, $\SN(\tau)$.
+:::
+
+::: {#def-system-l-sn-normal}
+**(Normal Forms).**
+$\mathsf{Normal}(\tau) \coloneqq \nexists \tau'.\ \tau \mapsto \tau'$, and $\tau \twoheadrightarrow \tau'$ is the reflexive-transitive closure of $\mapsto$.
+:::
+
+::: {#thm-system-l-sn-progress}
+**(Progress).**
+For every command $\tau$: either $\mathsf{Normal}(\tau)$, or $\tau \mapsto \tau'$ for some $\tau'$.
+:::
+
+::: {#thm-system-l-sn-eval}
+**(Normalisation).**
+For every $\judgeCmd{\tau}{\Gamma}{\Delta}$, there exists $\tau'$ with $\tau \twoheadrightarrow \tau'$ and $\mathsf{Normal}(\tau')$.
+:::
