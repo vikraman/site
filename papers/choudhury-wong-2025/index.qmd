@@ -7,15 +7,41 @@ authors:
 - name: Wind Wong
   orcid: 0009-0005-8306-7968
   affiliation: Vrije Universiteit Amsterdam, Amsterdam, Netherlands
-date: '2025'
-doi: 10.48550/arXiv.2512.07349
+date: 2026-07-30
+doi: 10.4230/LIPIcs.TYPES.2025.3
+venue:
+  name: TYPES 2025
+  description: 31st International Conference on Types for Proofs and Programs
+proceedings:
+  name: LIPIcs
+  description: Leibniz International Proceedings in Informatics
 categories:
-- preprint
+- conference
+- universal algebra
+- type theory
+- homotopy type theory
+- cubical agda
+- constructive mathematics
+- univalent mathematics
+- sorting
+- combinatorics
+- formalisation
+keywords:
+- universal algebra
+- type theory
+- homotopy type theory
+- cubical agda
+- constructive mathematics
+- univalent mathematics
+- sorting
+- combinatorics
+- formalisation
 citation:
-  doi: 10.48550/arXiv.2512.07349
-  type: article
-  url: https://doi.org/10.48550/arXiv.2512.07349
-  issued: '2025'
+  doi: 10.4230/LIPIcs.TYPES.2025.3
+  type: paper-conference
+  container-title: 31st International Conference on Types for Proofs and Programs (TYPES 2025)
+  url: https://doi.org/10.4230/LIPIcs.TYPES.2025.3
+  issued: '2026'
 links:
   arxiv: '2512.07349'
 abstract: |
