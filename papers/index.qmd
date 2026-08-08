@@ -9,6 +9,7 @@ listing:
     - "title"
     template: ../html/papers.ejs
     categories: true
+    feed: true
     include:
       categories: "{conference}"
   - id: workshops
@@ -18,6 +19,7 @@ listing:
     - "title"
     template: ../html/papers.ejs
     categories: true
+    feed: true
     include:
       categories: "{workshop}"
   - id: theses
@@ -27,6 +29,7 @@ listing:
     - "title"
     template: ../html/papers.ejs
     categories: true
+    feed: true
     include:
       categories: "{thesis}"
   - id: preprints
@@ -36,6 +39,7 @@ listing:
     - "title"
     template: ../html/papers.ejs
     categories: true
+    feed: true
     include:
       categories: "{preprint}"
 ---

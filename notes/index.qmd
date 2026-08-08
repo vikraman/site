@@ -11,4 +11,5 @@ listing:
     - "title"
   type: table
   categories: true
+  feed: true
 ---

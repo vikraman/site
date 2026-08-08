@@ -33,6 +33,9 @@ website:
   reader-mode: true
   page-navigation: true
   back-to-top-navigation: true
+  # source repo
+  repo-url: https://github.com/vikraman/site
+  repo-actions: [source, issue]
   # footer
   page-footer:
     right: "[Site](https://github.com/vikraman/site) built using [Quarto](https://quarto.org)"
