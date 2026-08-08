@@ -46,6 +46,7 @@ listing:
 
 ::: {.hidden}
 load academicons {{< ai doi >}}
+load fontawesome {{< fa file-pdf >}}
 :::
 
 ## Conferences

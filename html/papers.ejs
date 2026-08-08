@@ -70,6 +70,13 @@
         </a>
       </li>
       <% } %>
+      <% if (item.links.pdf) { %>
+      <li class="listing-link">
+        <a href="<%= item.links.pdf %>" class="listing-link-pdf">
+          <span><i class="fa fa-file-pdf fa-fw"></i>&nbsp;PDF</span>
+        </a>
+      </li>
+      <% } %>
       <% } %>
     </ul>
   </li>

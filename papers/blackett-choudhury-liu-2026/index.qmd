@@ -1,0 +1,57 @@
+---
+title: Symmetric List Objects
+authors:
+- name: Fiona Blackett
+  affiliation: University of Strathclyde, Glasgow, UK
+- name: Vikraman Choudhury
+  orcid: 0000-0003-2030-8056
+  affiliation: University of Strathclyde, Glasgow, UK
+- name: Rin Liu
+  affiliation: University of Strathclyde, Glasgow, UK
+date: 2026-07-18
+venue:
+  name: MSFP 2026
+  description: Eleventh Workshop on Mathematically Structured Functional Programming
+categories:
+- workshop
+- list objects
+- free monoids
+- commutative monoids
+- monoidal categories
+- monads
+- category theory
+keywords:
+- list objects
+- free monoids
+- commutative monoids
+- monoidal categories
+- monads
+- category theory
+citation:
+  type: paper-conference
+  container-title: Eleventh Workshop on Mathematically Structured Functional Programming (MSFP 2026)
+  issued: '2026'
+links:
+  hal: 'hal-05703652'
+  pdf: https://msfp-workshop.github.io/msfp2026/submissions/msfp-final14.pdf
+abstract: |
+  Cons-lists are fundamental to functional programming, and are well understood
+  as initial algebras, giving a concrete construction of free monoids. This
+  notion of a list object can be axiomatised more generally in any monoidal
+  category, replacing the cartesian product with a tensor and removing the need
+  for a coproduct by axiomatising the nil and cons maps directly via an iteration
+  mechanism. Strengthening this to parametrised list objects yields a
+  construction of free monoids, and having all parametrised list objects makes
+  the forgetful functor from monoids monadic. In this talk, we introduce the
+  notion of a symmetric list object in a symmetric monoidal category, by imposing
+  an additional axiom identifying lists that differ by a transposition of their
+  two frontmost elements using the symmetry of the underlying category. We show
+  that a list object is symmetric if and only if it is a commutative monoid
+  object, if and only if it is the free commutative monoid on the underlying
+  object; and that having all parametrised symmetric list objects makes the
+  forgetful functor from commutative monoids monadic, with the induced monad
+  strong, and further commutative when the category is cartesian. Symmetric list
+  objects thus give an alternative construction of free commutative monoids in a
+  symmetric monoidal category, relevant to the study of the exponential modality
+  in linear logic.
+---
