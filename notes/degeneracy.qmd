@@ -1,8 +1,6 @@
 ---
 title: Degeneracy theorems
 date: 06-20-2026
-author:
-  - name: Vikraman Choudhury
 filters:
   - imagify
 imagify:

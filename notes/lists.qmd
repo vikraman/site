@@ -2,8 +2,6 @@
 title: List objects
 subtitle: List objects and symmetric list objects
 date: 04-22-2026
-author:
-  - name: Vikraman Choudhury
 filters:
   - imagify
 imagify:

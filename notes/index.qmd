@@ -1,6 +1,9 @@
 ---
 title: "Notes"
 title-block-style: default
+author: ""
+citation: false
+google-scholar: false
 listing:
   contents: "*.qmd"
   sort:
