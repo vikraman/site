@@ -23,7 +23,12 @@ pronouns
 : he/them
 
 links
-: [{{< ai orcid >}}](https://orcid.org/0000-0003-2030-8056) [{{< ai arxiv >}}](https://arxiv.org/a/choudhury_v_1) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=25q0yK8AAAAJ&hl=en) [{{< ai dblp >}}](https://dblp.org/pid/205/2352.html) [{{< fa brands github >}}](https://github.com/vikraman) [{{< ai mathoverflow >}}](https://mathoverflow.net/users/99623/vikraman)
+: [{{< ai orcid >}}](https://orcid.org/0000-0003-2030-8056) &diamond;
+[{{< ai arxiv >}}](https://arxiv.org/a/choudhury_v_1) &diamond;
+[{{< ai google-scholar >}}](https://scholar.google.com/citations?user=25q0yK8AAAAJ&hl=en) &diamond;
+[{{< ai dblp >}}](https://dblp.org/pid/205/2352.html) &diamond;
+[{{< fa brands github >}}](https://github.com/vikraman) &diamond;
+[{{< ai mathoverflow >}}](https://mathoverflow.net/users/99623/vikraman)
 ::::
 
 :::: {.contact-col}
