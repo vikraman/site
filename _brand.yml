@@ -1,15 +1,44 @@
 typography:
   fonts:
-    - source: google
-      family: Merriweather
-      weight: [400, 700]
-    - source: google
-      family: Space Mono
-      weight: 400
-    - source: google
-      family: Gentium Book Plus
-      weight: [400, 700]
-      style: [normal, italic]
-  base: Gentium Book Plus
-  headings: Merriweather
-  monospace: Space Mono
+    - source: file
+      family: EB Garamond
+      files:
+        - path: fonts/eb-garamond/EBGaramond-Regular.woff2
+          weight: 400
+          style: normal
+        - path: fonts/eb-garamond/EBGaramond-Bold.woff2
+          weight: 700
+          style: normal
+        - path: fonts/eb-garamond/EBGaramond-Italic.woff2
+          weight: 400
+          style: italic
+        - path: fonts/eb-garamond/EBGaramond-BoldItalic.woff2
+          weight: 700
+          style: italic
+    - source: file
+      family: IM Fell Great Primer
+      files:
+        - path: fonts/im-fell-great-primer/IMFellGreatPrimer-Regular.woff2
+          weight: 400
+          style: normal
+        - path: fonts/im-fell-great-primer/IMFellGreatPrimer-Italic.woff2
+          weight: 400
+          style: italic
+    - source: file
+      family: Courier Prime
+      files:
+        - path: fonts/courier-prime/CourierPrime-Regular.woff2
+          weight: 400
+          style: normal
+        - path: fonts/courier-prime/CourierPrime-Bold.woff2
+          weight: 700
+          style: normal
+        - path: fonts/courier-prime/CourierPrime-Italic.woff2
+          weight: 400
+          style: italic
+        - path: fonts/courier-prime/CourierPrime-BoldItalic.woff2
+          weight: 700
+          style: italic
+  base: EB Garamond
+  headings: IM Fell Great Primer
+  monospace: Courier Prime

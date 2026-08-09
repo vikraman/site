@@ -1,11 +1,6 @@
 ---
 title: Normalization of sums
 date: 05-15-2026
-filters:
-  - imagify
-imagify:
-  header-includes: |
-    \usepackage{quiver}
 ---
 
 ::: {.hidden}

@@ -66,6 +66,32 @@ ul.talks.list {
     font-family: $footer-font-family;
 }
 
+/* old-style figures + ligatures */
+main {
+    p,
+    blockquote {
+        font-feature-settings:
+            "onum" 1,
+            "dlig" 1;
+        font-variant-numeric: oldstyle-nums;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.quarto-title .title {
+    font-feature-settings:
+        "swsh" 1,
+        "dlig" 1;
+    /* headings font has no bold weight, use italic swash instead */
+    font-style: italic;
+    letter-spacing: 0.01em;
+}
+
 /* justified text */
 main {
     container-type: inline-size;

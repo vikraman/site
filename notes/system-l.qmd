@@ -1,11 +1,6 @@
 ---
 title: System L
 date: 07-21-2026
-filters:
-  - imagify
-imagify:
-  header-includes: |
-    \usepackage{quiver}
 ---
 
 ::: {.hidden}

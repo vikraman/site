@@ -58,6 +58,9 @@ format:
     anchor-sections: true
     smooth-scroll: true
     # math
+    include-in-header:
+      text: |
+        <script>MathJax = { output: { font: 'mathjax-pagella' } };</script>
     html-math-method:
       method: mathjax
       url: https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js

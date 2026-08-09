@@ -2,7 +2,7 @@
 title: "Hi!"
 ---
 
-### [**Vikraman Choudhury**]{.smallcaps}
+### Vikraman Choudhury
 | pronunciation: [/vˈɪkɹəmən t͡ʃˈɔːdhɹi/](https://ipa-reader.com/?text=v%CB%88%C9%AAk%C9%B9%C9%99m%C9%99n%20t%CD%A1%CA%83%CB%88%C9%94%CB%90dh%C9%B9i&voice=Brian)
 | email: [vikraman.choudhury@strath.ac.uk](mailto:vikraman.choudhury@strath.ac.uk)
 | personal email: [me@vikraman.org](mailto:me@vikraman.org)

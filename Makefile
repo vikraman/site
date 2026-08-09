@@ -9,7 +9,7 @@ SOURCES := $(shell find . -type f \
 	! -path "./$(BUILD_DIR)/*" ! -path "./$(QUARTO_DIR)/*" \
 	! -path "./.git/*" ! -path "./.github/*" )
 
-.PHONY: all build clean cont preview info
+.PHONY: all build clean cont preview info fonts
 
 all: build
 
@@ -32,7 +32,7 @@ build: $(BUILD_STAMP)
 # Start preview server in background
 preview:
 	@echo "[INFO] Starting preview..."
-	@./preview.sh &
+	@./scripts/preview.sh &
 
 # Start preview server and then run watchman to trigger rebuilds
 cont: preview
@@ -49,3 +49,9 @@ clean:
 	@echo "[INFO] Cleaning output directories..."
 	@rm -rf $(BUILD_DIR) $(QUARTO_DIR)
 	@echo "[INFO] Clean complete."
+
+# Regenerate optimized font files
+fonts:
+	@echo "[INFO] Regenerating optimized font files..."
+	@uv run scripts/build-fonts.py
+	@echo "[INFO] Font regeneration complete."

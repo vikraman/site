@@ -9,3 +9,15 @@ author:
     affiliation: University of Strathclyde, Glasgow, UK
 citation: true
 google-scholar: true
+filters:
+  - imagify
+imagify:
+  header-includes: |
+    \usepackage{newpxtext}
+    \usepackage{newpxmath}
+    \usepackage{amssymb}
+    \usepackage{quiver}
+    \newcommand{\Nat}{\mathbb{N}}
+    \newcommand{\nil}{\mathsf{nil}}
+    \newcommand{\cons}{\mathsf{cons}}
+    \newcommand{\iter}[2]{\mathsf{it}(#1, #2)}

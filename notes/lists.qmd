@@ -2,14 +2,6 @@
 title: List objects
 subtitle: List objects and symmetric list objects
 date: 04-22-2026
-filters:
-  - imagify
-imagify:
-  header-includes: |
-    \usepackage{quiver}
-    \newcommand{\nil}{\mathsf{nil}}
-    \newcommand{\cons}{\mathsf{cons}}
-    \newcommand{\iter}[2]{\mathsf{it}(#1, #2)}
 ---
 
 ::: {.hidden}

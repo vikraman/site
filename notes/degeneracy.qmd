@@ -1,11 +1,6 @@
 ---
 title: Degeneracy theorems
 date: 06-20-2026
-filters:
-  - imagify
-imagify:
-  header-includes: |
-    \usepackage{quiver}
 ---
 
 ::: {.hidden}

@@ -2,10 +2,8 @@
 title: Sandbox
 subtitle: A sandbox for test notes
 date: 11-09-2025
-filters:
-  - imagify
-imagify:
-  header-includes: \usepackage{quiver}
+citation: false
+google-scholar: false
 ---
 
 # Introduction
@@ -70,6 +68,20 @@ $$
 Obvious.
 :::
 
+# Typography
+
+This paragraph checks ligatures, swashes, and old-style figures. Standard ligatures should join *fi*, *fl*, *ffi*, and *ffl* into single glyphs, and discretionary ligatures may join *Th*, *ct*, *st*, and *fj*. Old-style figures should show varying heights and depths in a run of digits like 1234567890.
+
+*Quixotic zealots waltz through the frozen jungle* — in italic, swash capitals, if the font provides them, should show decorative flourishes on the initial letters *Q*, *Z*, *W*, and *J*.
+
+This paragraph checks the monospace font: inline code like `let x = (n, k) => factorial(n) / (factorial(k) * factorial(n - k));` should stay legible next to prose.
+
+```python
+# comment in italic-ish monospace
+def binomial(n, k):
+    return factorial(n) // (factorial(k) * factorial(n - k))
+```
+
 # Diagrams
 
 This renders diagrams in markdown @fig-diagrams.
@@ -80,6 +92,10 @@ This renders diagrams in markdown @fig-diagrams.
 This is some imagified LaTeX math.
 
 $$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
+
+This tests a note-specific macro from `header-includes`.
+
+$$\Nat \subset \mathbb{Z} \subset \mathbb{Q}$$
 
 A TikZ picture @fig-tikz.
 
