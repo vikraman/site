@@ -15,6 +15,8 @@ $$
 $$
 :::
 
+## List Objects
+
 Let $\cat{C}(1, \otimes)$ be a strict monoidal category, and $A$ be an object of $\cat{C}$.
 
 A list algebra on $A$ is an object $L$ with a pair of maps $(1 \xrightarrow{n} L \xleftarrow{c} A \otimes L)$.
@@ -73,6 +75,8 @@ $(1 \xrightarrow{\nil} L(A) \xleftarrow{\iter{\id}{\cons}} L(A))$ is a monoid st
 ::: {#thm-list-objects-are-free-monoids}
 The list object construction gives $L \dashv U : \mathsf{Mon}(\cat{C}) \to \cat{C}$.
 :::
+
+## Symmetric List Objects
 
 Now, we switch to $\cat{C}$ being symmetric strict monoidal, with symmetry $\beta$.
 

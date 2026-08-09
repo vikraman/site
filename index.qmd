@@ -1,13 +1,35 @@
 ---
 title: "Hi!"
+aliases:
+    - /about/
 ---
 
+::: {.column-margin}
+![](photo.webp){.rounded-circle width="220px"}
+:::
+
 ### Vikraman Choudhury
-| pronunciation: [/vˈɪkɹəmən t͡ʃˈɔːdhɹi/](https://ipa-reader.com/?text=v%CB%88%C9%AAk%C9%B9%C9%99m%C9%99n%20t%CD%A1%CA%83%CB%88%C9%94%CB%90dh%C9%B9i&voice=Brian)
-| email: [vikraman.choudhury@strath.ac.uk](mailto:vikraman.choudhury@strath.ac.uk)
-| personal email: [me@vikraman.org](mailto:me@vikraman.org)
-| pronouns: he/them
-| office: [LT1311c, Livingstone Tower](https://www.strath.ac.uk/maps/livingstonetower/)
+
+::: {.contact-card .d-flex .flex-wrap .gap-5 .rounded-3 .p-3 .my-4}
+:::: {.contact-col}
+pronunciation
+: [/vˈɪkɹəmən t͡ʃˈɔːdhɹi/](https://ipa-reader.com/?text=v%CB%88%C9%AAk%C9%B9%C9%99m%C9%99n%20t%CD%A1%CA%83%CB%88%C9%94%CB%90dh%C9%B9i&voice=Brian)
+
+email
+: [vikraman.choudhury@strath.ac.uk](mailto:vikraman.choudhury@strath.ac.uk)
+: [me@vikraman.org](mailto:me@vikraman.org)
+
+pronouns
+: he/them
+
+links
+: [{{< ai orcid >}}](https://orcid.org/0000-0003-2030-8056) [{{< ai arxiv >}}](https://arxiv.org/a/choudhury_v_1) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=25q0yK8AAAAJ&hl=en) [{{< ai dblp >}}](https://dblp.org/pid/205/2352.html) [{{< fa brands github >}}](https://github.com/vikraman) [{{< ai mathoverflow >}}](https://mathoverflow.net/users/99623/vikraman)
+::::
+
+:::: {.contact-col}
+office
+: [LT1311c, Livingstone Tower](https://www.strath.ac.uk/maps/livingstonetower/)
+
 | [Mathematically Structured Programming Group](https://msp.cis.strath.ac.uk/)
 | [Department of Computer and Information Sciences](https://www.cis.strath.ac.uk/)
 | [University of Strathclyde](https://www.strath.ac.uk/)
@@ -15,6 +37,29 @@ title: "Hi!"
 | Glasgow G1 1XH
 | Scotland
 | United Kingdom
+::::
+:::
+
+### About
+
+I am a Chancellor's Fellow (Lecturer) in Mathematically Structured Programming
+at the University of Strathclyde, Glasgow, UK.
+
+### Research
+
+I study mathematical foundations of computation, through an algebraic lens.
+My research spans category theory, type theory, programming language theory,
+logic, semantics, concurrency, constructive mathematics, and formalisation.
+
+### History
+
+|              |                           |                                 |
+|--------------|---------------------------|---------------------------------|
+| 2025 -- ???  | University of Strathclyde | Chancellor's Fellow             |
+| 2023 -- 2025 | Università di Bologna     | Marie Skłodowska-Curie Fellow   |
+| 2021 -- 2023 | University of Glasgow     | Head of School's RA             |
+| 2019 -- 2021 | University of Cambridge   | PhD student, Paul Purdom Fellow |
+| 2015 -- 2022 | Indiana University        | MS/PhD student                  |
 
 ::: {.callout-note}
 This website is being rewritten, and some things may be missing or incomplete.

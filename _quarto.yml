@@ -16,8 +16,6 @@ website:
   # nav bar
   navbar:
     left:
-      - href: about/index.qmd
-        text: About
       - now/index.qmd
       - papers/index.qmd
       - talks/index.qmd

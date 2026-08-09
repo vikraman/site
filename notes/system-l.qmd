@@ -32,6 +32,8 @@ $$
 
 This is a fine-grained presentation of call-by-value System L.
 
+## Syntax
+
 ::: {#def-system-l-types}
 **(Types).**
 $$
@@ -212,6 +214,8 @@ $$
 $$
 :::
 
+## Weakening & Substitution
+
 ::: {#def-system-l-wk}
 **(Weakening).**
 $$
@@ -345,6 +349,10 @@ $$
 $$
 :::
 
+## Equational Theory
+
+::: {#def-system-l-let}
+**(Let Bindings).**
 $$
 \begin{aligned}
 \mathsf{let}\ x = V; M &\coloneqq \Cut{\mathsf{ret}(V)}{\tilde\mu x.\, \Cut{M}{\alpha}{B}}{A} \\
@@ -352,6 +360,7 @@ $$
 \mathsf{let}\ C\ \mathsf{be}\ \alpha; \tau &\coloneqq \Cut{\mu\alpha.\, \tau}{C}{A}
 \end{aligned}
 $$
+:::
 
 ::: {#def-system-l-eq}
 **(Equational Theory).**
@@ -439,6 +448,8 @@ $$
 \end{prooftree}
 $$
 :::
+
+## Strong Normalisation
 
 We show strong normalisation by reducibility candidates.
 
