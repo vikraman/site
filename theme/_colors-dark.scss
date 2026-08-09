@@ -9,9 +9,16 @@ $danger: $crimson;
 $light: $off-white;
 $dark: $gray;
 
+// callouts
+$callout-color-note: $info;
+$callout-color-tip: $success;
+$callout-color-caution: $warning;
+$callout-color-warning: $warning;
+$callout-color-important: $danger;
+
 // body
 $body-bg: darken($beige, 30%);
-$body-color: $oxblood;
+$body-color: darken($oxblood, 10%);
 
 // links
 $link-color: darken($body-color, 10%);
