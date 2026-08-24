@@ -44,6 +44,7 @@ jobs:
         with:
           packages: scheme-full
           texlive_version: 2025
+          cache: false
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
