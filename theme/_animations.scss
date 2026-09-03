@@ -1,0 +1,308 @@
+@import "base";
+
+/* cde-style backdrops, after the old solaris desktop patterns */
+$cde-ink: darken($bronze, 25%);
+$cde-lit: lighten($body-bg, 7%);
+
+:root {
+    --cde-ink: #{red($cde-ink)}, #{green($cde-ink)}, #{blue($cde-ink)};
+    --cde-lit: #{red($cde-lit)}, #{green($cde-lit)}, #{blue($cde-lit)};
+    --cde-line: rgba(var(--cde-ink), 0.075);
+    --cde-glow: rgba(var(--cde-lit), 0.28);
+    /* fills area not lines, so a lower alpha to match the rest */
+    --cde-fill: rgba(var(--cde-ink), 0.028);
+}
+
+/* baked colour */
+$cde-shadow: "rgba(#{red($cde-ink)},#{green($cde-ink)},#{blue($cde-ink)},0.085)";
+$cde-hilite: "rgba(#{red($cde-lit)},#{green($cde-lit)},#{blue($cde-lit)},0.3)";
+
+/* svg, not gradients: arcs overrun the half-period and stub at the seam */
+@mixin cde-wave {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='64' viewBox='0 0 32 64'%3E%3Cfilter id='s' x='-50%25' y='-10%25' width='200%25' height='120%25'%3E%3CfeGaussianBlur stdDeviation='1.2'/%3E%3C/filter%3E%3Cg fill='none' stroke-width='3' filter='url%28%23s%29'%3E%3Cpath d='M17 -63C5 -52.3 5 -41.7 17 -31C29 -20.3 29 -9.7 17 1C5 11.7 5 22.3 17 33C29 43.7 29 54.3 17 65C5 75.7 5 86.3 17 97C29 107.7 29 118.3 17 129' stroke='#{$cde-hilite}'/%3E%3Cpath d='M16 -64C4 -53.3 4 -42.7 16 -32C28 -21.3 28 -10.7 16 0C4 10.7 4 21.3 16 32C28 42.7 28 53.3 16 64C4 74.7 4 85.3 16 96C28 106.7 28 117.3 16 128' stroke='#{$cde-shadow}'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 32px 64px;
+}
+
+/* soft stops, so the lines diffuse like the wave */
+@mixin cde-weave {
+    background-image:
+        repeating-linear-gradient(
+            calc(45deg + var(--cde-rot, 0deg)),
+            transparent 0 5px,
+            var(--cde-glow) 7px,
+            var(--cde-line) 9px,
+            transparent 11px 18px
+        ),
+        repeating-linear-gradient(
+            calc(-45deg + var(--cde-rot, 0deg)),
+            transparent 0 5px,
+            var(--cde-glow) 7px,
+            var(--cde-line) 9px,
+            transparent 11px 18px
+        );
+    background-size: auto;
+}
+
+@mixin cde-mesh {
+    background-image:
+        repeating-linear-gradient(
+            calc(0deg + var(--cde-rot, 0deg)),
+            transparent 0 5px,
+            var(--cde-glow) 6px,
+            var(--cde-line) 8px,
+            transparent 9px 16px
+        ),
+        repeating-linear-gradient(
+            calc(90deg + var(--cde-rot, 0deg)),
+            transparent 0 5px,
+            var(--cde-glow) 6px,
+            var(--cde-line) 8px,
+            transparent 9px 16px
+        );
+    background-size: auto;
+}
+
+@mixin cde-hatch {
+    background-image: repeating-linear-gradient(
+        calc(60deg + var(--cde-rot, 0deg)),
+        transparent 0 4px,
+        var(--cde-glow) 6px,
+        var(--cde-line) 8px,
+        transparent 10px 15px
+    );
+    background-size: auto;
+}
+
+@mixin cde-dots {
+    background-image: radial-gradient(
+        circle at 50% 50%,
+        var(--cde-line) 0 1.6px,
+        var(--cde-glow) 2.6px,
+        transparent 3.4px
+    );
+    background-size: 15px 15px;
+}
+
+@mixin cde-brick {
+    background-image:
+        repeating-linear-gradient(
+            calc(0deg + var(--cde-rot, 0deg)),
+            transparent 0 12px,
+            var(--cde-glow) 13px,
+            var(--cde-line) 14px,
+            transparent 15px 28px
+        ),
+        repeating-linear-gradient(
+            calc(90deg + var(--cde-rot, 0deg)),
+            transparent 0 26px,
+            var(--cde-glow) 27px,
+            var(--cde-line) 28px,
+            transparent 29px 56px
+        );
+    background-size:
+        56px 28px,
+        56px 56px;
+}
+
+@mixin cde-cord {
+    background-image: repeating-linear-gradient(
+        calc(90deg + var(--cde-rot, 0deg)),
+        transparent 0 3px,
+        var(--cde-glow) 4px,
+        var(--cde-line) 5px,
+        transparent 6px 11px
+    );
+    background-size: auto;
+}
+
+@mixin cde-twill {
+    background-image:
+        repeating-linear-gradient(
+            calc(30deg + var(--cde-rot, 0deg)),
+            transparent 0 6px,
+            var(--cde-glow) 8px,
+            var(--cde-line) 10px,
+            transparent 12px 22px
+        ),
+        repeating-linear-gradient(
+            calc(-60deg + var(--cde-rot, 0deg)),
+            transparent 0 9px,
+            var(--cde-glow) 11px,
+            transparent 13px 26px
+        );
+    background-size: auto;
+}
+
+@mixin cde-check {
+    background-image: conic-gradient(
+        from calc(90deg + var(--cde-rot, 0deg)) at 50% 50%,
+        var(--cde-fill) 0 25%,
+        transparent 0 50%,
+        var(--cde-fill) 0 75%,
+        transparent 0
+    );
+    background-size: 22px 22px;
+}
+
+@mixin cde-argyle {
+    background-image:
+        repeating-linear-gradient(
+            calc(45deg + var(--cde-rot, 0deg)),
+            transparent 0 14px,
+            var(--cde-glow) 16px,
+            var(--cde-line) 18px,
+            transparent 20px 40px
+        ),
+        repeating-linear-gradient(
+            calc(-45deg + var(--cde-rot, 0deg)),
+            transparent 0 14px,
+            var(--cde-glow) 16px,
+            var(--cde-line) 18px,
+            transparent 20px 40px
+        );
+    background-size: auto;
+}
+
+@mixin cde-rain {
+    background-image:
+        repeating-linear-gradient(
+            calc(75deg + var(--cde-rot, 0deg)),
+            transparent 0 3px,
+            var(--cde-line) 4px,
+            transparent 5px 13px
+        ),
+        repeating-linear-gradient(
+            calc(75deg + var(--cde-rot, 0deg)),
+            transparent 0 17px,
+            var(--cde-glow) 19px,
+            transparent 21px 44px
+        );
+    background-size: auto;
+}
+
+/* real cde tile, 32x32; two tone groups, the original is bg + hilite + shadow */
+@mixin cde-squares {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' shape-rendering='crispEdges'><g fill='#{$cde-hilite}'><rect x='27' y='4' width='1' height='1'/><rect x='27' y='5' width='1' height='1'/><rect x='27' y='6' width='1' height='1'/><rect x='27' y='7' width='1' height='1'/><rect x='27' y='8' width='1' height='1'/><rect x='27' y='9' width='1' height='1'/><rect x='27' y='10' width='1' height='1'/><rect x='27' y='11' width='1' height='1'/><rect x='27' y='12' width='1' height='1'/><rect x='27' y='13' width='1' height='1'/><rect x='27' y='14' width='1' height='1'/><rect x='27' y='15' width='1' height='1'/><rect x='27' y='16' width='1' height='1'/><rect x='27' y='17' width='1' height='1'/><rect x='27' y='18' width='1' height='1'/><rect x='27' y='19' width='1' height='1'/><rect x='27' y='20' width='1' height='1'/><rect x='27' y='21' width='1' height='1'/><rect x='27' y='22' width='1' height='1'/><rect x='27' y='23' width='1' height='1'/><rect x='27' y='24' width='1' height='1'/><rect x='27' y='25' width='1' height='1'/><rect x='27' y='26' width='1' height='1'/><rect x='4' y='27' width='24' height='1'/></g><g fill='#{$cde-shadow}'><rect x='4' y='4' width='23' height='1'/><rect x='4' y='5' width='1' height='1'/><rect x='4' y='6' width='1' height='1'/><rect x='4' y='7' width='1' height='1'/><rect x='4' y='8' width='1' height='1'/><rect x='4' y='9' width='1' height='1'/><rect x='4' y='10' width='1' height='1'/><rect x='4' y='11' width='1' height='1'/><rect x='4' y='12' width='1' height='1'/><rect x='4' y='13' width='1' height='1'/><rect x='4' y='14' width='1' height='1'/><rect x='4' y='15' width='1' height='1'/><rect x='4' y='16' width='1' height='1'/><rect x='4' y='17' width='1' height='1'/><rect x='4' y='18' width='1' height='1'/><rect x='4' y='19' width='1' height='1'/><rect x='4' y='20' width='1' height='1'/><rect x='4' y='21' width='1' height='1'/><rect x='4' y='22' width='1' height='1'/><rect x='4' y='23' width='1' height='1'/><rect x='4' y='24' width='1' height='1'/><rect x='4' y='25' width='1' height='1'/><rect x='4' y='26' width='1' height='1'/></g></svg>");
+    background-size: 64px 64px;
+}
+
+/* real cde tile, 20x20; same two tone groups, baked colour, no --cde-rot */
+@mixin cde-greece {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' shape-rendering='crispEdges'><g fill='#{$cde-hilite}'><rect x='1' y='0' width='18' height='1'/><rect x='1' y='1' width='1' height='1'/><rect x='1' y='2' width='1' height='1'/><rect x='1' y='3' width='1' height='1'/><rect x='1' y='4' width='1' height='1'/><rect x='16' y='4' width='1' height='1'/><rect x='1' y='5' width='1' height='1'/><rect x='6' y='5' width='8' height='1'/><rect x='16' y='5' width='1' height='1'/><rect x='1' y='6' width='1' height='1'/><rect x='6' y='6' width='1' height='1'/><rect x='16' y='6' width='1' height='1'/><rect x='1' y='7' width='1' height='1'/><rect x='6' y='7' width='1' height='1'/><rect x='16' y='7' width='1' height='1'/><rect x='1' y='8' width='1' height='1'/><rect x='6' y='8' width='1' height='1'/><rect x='16' y='8' width='1' height='1'/><rect x='1' y='9' width='1' height='1'/><rect x='6' y='9' width='1' height='1'/><rect x='16' y='9' width='1' height='1'/><rect x='1' y='10' width='1' height='1'/><rect x='6' y='10' width='1' height='1'/><rect x='11' y='10' width='6' height='1'/><rect x='1' y='11' width='1' height='1'/><rect x='6' y='11' width='1' height='1'/><rect x='11' y='11' width='1' height='1'/><rect x='1' y='12' width='1' height='1'/><rect x='6' y='12' width='1' height='1'/><rect x='11' y='12' width='1' height='1'/><rect x='1' y='13' width='1' height='1'/><rect x='6' y='13' width='1' height='1'/><rect x='1' y='14' width='1' height='1'/><rect x='6' y='14' width='1' height='1'/><rect x='0' y='15' width='2' height='1'/><rect x='6' y='15' width='1' height='1'/><rect x='10' y='15' width='10' height='1'/><rect x='6' y='16' width='1' height='1'/><rect x='6' y='17' width='1' height='1'/></g><g fill='#{$cde-shadow}'><rect x='19' y='0' width='1' height='1'/><rect x='19' y='1' width='1' height='1'/><rect x='19' y='2' width='1' height='1'/><rect x='4' y='3' width='13' height='1'/><rect x='19' y='3' width='1' height='1'/><rect x='4' y='4' width='1' height='1'/><rect x='19' y='4' width='1' height='1'/><rect x='4' y='5' width='1' height='1'/><rect x='14' y='5' width='1' height='1'/><rect x='19' y='5' width='1' height='1'/><rect x='4' y='6' width='1' height='1'/><rect x='14' y='6' width='1' height='1'/><rect x='19' y='6' width='1' height='1'/><rect x='4' y='7' width='1' height='1'/><rect x='14' y='7' width='1' height='1'/><rect x='19' y='7' width='1' height='1'/><rect x='4' y='8' width='1' height='1'/><rect x='9' y='8' width='6' height='1'/><rect x='19' y='8' width='1' height='1'/><rect x='4' y='9' width='1' height='1'/><rect x='9' y='9' width='1' height='1'/><rect x='19' y='9' width='1' height='1'/><rect x='4' y='10' width='1' height='1'/><rect x='9' y='10' width='1' height='1'/><rect x='19' y='10' width='1' height='1'/><rect x='4' y='11' width='1' height='1'/><rect x='9' y='11' width='1' height='1'/><rect x='19' y='11' width='1' height='1'/><rect x='4' y='12' width='1' height='1'/><rect x='9' y='12' width='1' height='1'/><rect x='19' y='12' width='1' height='1'/><rect x='4' y='13' width='1' height='1'/><rect x='9' y='13' width='1' height='1'/><rect x='11' y='13' width='9' height='1'/><rect x='4' y='14' width='1' height='1'/><rect x='9' y='14' width='1' height='1'/><rect x='4' y='15' width='1' height='1'/><rect x='9' y='15' width='1' height='1'/><rect x='4' y='16' width='1' height='1'/><rect x='4' y='17' width='1' height='1'/><rect x='0' y='18' width='5' height='1'/><rect x='6' y='18' width='14' height='1'/></g></svg>");
+    background-size: 40px 40px;
+}
+
+/* contiguous gradient cousin of squares */
+@mixin cde-panel {
+    background-image:
+        repeating-linear-gradient(
+            calc(0deg + var(--cde-rot, 0deg)),
+            var(--cde-line) 0 1px,
+            transparent 1px 30px,
+            var(--cde-glow) 30px 31px,
+            transparent 31px 32px
+        ),
+        repeating-linear-gradient(
+            calc(90deg + var(--cde-rot, 0deg)),
+            var(--cde-line) 0 1px,
+            transparent 1px 30px,
+            var(--cde-glow) 30px 31px,
+            transparent 31px 32px
+        );
+    background-size: auto;
+}
+
+/* fixed backdrop layer, so content scrolls over it */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    @include cde-wave;
+}
+
+html.cde-2 body::after {
+    @include cde-weave;
+}
+html.cde-3 body::after {
+    @include cde-mesh;
+}
+html.cde-4 body::after {
+    @include cde-hatch;
+}
+html.cde-5 body::after {
+    @include cde-dots;
+}
+html.cde-6 body::after {
+    @include cde-brick;
+}
+html.cde-7 body::after {
+    @include cde-cord;
+}
+html.cde-8 body::after {
+    @include cde-twill;
+}
+html.cde-9 body::after {
+    @include cde-check;
+}
+html.cde-10 body::after {
+    @include cde-argyle;
+}
+html.cde-11 body::after {
+    @include cde-rain;
+}
+html.cde-12 body::after {
+    @include cde-squares;
+}
+html.cde-13 body::after {
+    @include cde-greece;
+}
+html.cde-14 body::after {
+    @include cde-panel;
+}
+
+/* rotated on the gradients */
+html.cde-r1 body::after {
+    --cde-rot: 25deg;
+}
+html.cde-r2 body::after {
+    --cde-rot: 50deg;
+}
+html.cde-r3 body::after {
+    --cde-rot: 75deg;
+}
+
+body {
+    /* keep the decorative layers out of the root stacking context */
+    isolation: isolate;
+}
+
+/* slow warm wash over the paper */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+        radial-gradient(ellipse 70% 55% at 22% 28%, rgba(darken($bronze, 24%), 0.06), transparent 70%),
+        radial-gradient(ellipse 60% 50% at 78% 72%, rgba(darken($bronze, 20%), 0.05), transparent 70%);
+    animation: paper-wash 18s ease-in-out infinite alternate;
+}
+
+@keyframes paper-wash {
+    from {
+        opacity: 0.7;
+    }
+    to {
+        opacity: 0.95;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body::before {
+        animation: none;
+        opacity: 0.8;
+    }
+}

@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - js/*.js
   preview:
     port: 7771
     browser: false
@@ -59,6 +61,7 @@ format:
     include-in-header:
       text: |
         <script>MathJax = { output: { font: 'mathjax-pagella' } };</script>
+        <script src="/js/cde.js"></script>
     html-math-method:
       method: mathjax
       url: https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js
