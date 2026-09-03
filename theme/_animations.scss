@@ -286,23 +286,23 @@ body::before {
     z-index: -1;
     pointer-events: none;
     background-image:
-        radial-gradient(ellipse 70% 55% at 22% 28%, rgba(darken($bronze, 24%), 0.06), transparent 70%),
-        radial-gradient(ellipse 60% 50% at 78% 72%, rgba(darken($bronze, 20%), 0.05), transparent 70%);
+        radial-gradient(ellipse 70% 55% at 22% 28%, rgba(darken($bronze, 24%), 0.10), transparent 70%),
+        radial-gradient(ellipse 60% 50% at 78% 72%, rgba(darken($bronze, 20%), 0.09), transparent 70%);
     animation: paper-wash 18s ease-in-out infinite alternate;
 }
 
 @keyframes paper-wash {
     from {
-        opacity: 0.7;
+        opacity: 0.35;
     }
     to {
-        opacity: 0.95;
+        opacity: 1;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
     body::before {
         animation: none;
-        opacity: 0.8;
+        opacity: 0.7;
     }
 }

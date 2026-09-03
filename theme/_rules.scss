@@ -34,7 +34,7 @@ ul.talks.list {
             display: inline-block;
             text-align: center;
             min-width: 4rem;
-            background-color: darken($body-bg, 10%);
+            background-color: shade(8%);
             border-radius: 0.5rem;
 
             a {
@@ -50,7 +50,7 @@ ul.talks.list {
 
 /* contact card */
 .contact-card {
-    background-color: mix($body-bg, $crimson, 95%);
+    background-color: shade(5%);
 
     .contact-col {
         flex: 1 1 16rem;

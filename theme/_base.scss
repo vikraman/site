@@ -10,6 +10,11 @@ $navbar-font-family: $font-family-sans-serif;
 $toc-font-family: $font-family-sans-serif;
 $footer-font-family: $font-family-sans-serif;
 
+// surfaces mixed toward the page ink
+@function shade($pct) {
+    @return mix($body-color, $body-bg, $pct);
+}
+
 // links
 $link-decoration: underline dotted;
 $link-hover-decoration: underline solid;

@@ -17,12 +17,12 @@ $callout-color-warning: $warning;
 $callout-color-important: $danger;
 
 // body
-$body-bg: mix($cream, $bronze, 60%);
+$body-bg: $cream;
 $body-color: $oxblood;
 
 // links
-$link-color: darken($body-color, 10%);
-$link-hover-bg-color: darken($body-bg, 20%);
+$link-color: mix($crimson, $body-color, 25%);
+$link-hover-bg-color: shade(14%);
 
 // navbar
 $navbar-bg: $primary;
