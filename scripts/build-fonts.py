@@ -113,7 +113,7 @@ def build_family(tmp: Path, unicode_ranges: str, name: str, base_url: str, out_n
     out_dir = FONTS_DIR / out_name
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    fetch(f"{base_url}/{license_file}", out_dir / Path(license_file).name)
+    fetch(f"{base_url}/{license_file}", out_dir / "OFL.txt")
 
     fetched: dict[str, Path] = {}
     for style_name, filename, weight in styles:
