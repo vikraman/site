@@ -1,5 +1,5 @@
 ---
-title: "Lecture 16: TBD"
+title: "Lecture 16: Operational Semantics"
 order: 16
 draft: true
 repo-actions: false

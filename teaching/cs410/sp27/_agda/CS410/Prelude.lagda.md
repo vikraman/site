@@ -1,7 +1,6 @@
 ---
 title: "Prelude"
 order: 0
-draft: true
 repo-actions: false
 other-links:
   - text: Agda source

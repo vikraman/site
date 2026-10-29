@@ -1,5 +1,5 @@
 ---
-title: "Lecture 4: TBD"
+title: "Lecture 4: Natural Transformations and Adjunctions"
 order: 4
 draft: true
 repo-actions: false

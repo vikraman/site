@@ -1,5 +1,5 @@
 ---
-title: "Lecture 6: TBD"
+title: "Lecture 6: Simply-Typed Lambda Calculus"
 order: 6
 draft: true
 repo-actions: false

@@ -1,7 +1,6 @@
 ---
 title: "Exercise 1: solutions"
 order: 102
-draft: true
 repo-actions: false
 other-links:
   - text: Agda source

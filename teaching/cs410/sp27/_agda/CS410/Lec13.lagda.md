@@ -1,5 +1,5 @@
 ---
-title: "Lecture 13: TBD"
+title: "Lecture 13: Semantics of Inductive Types"
 order: 13
 draft: true
 repo-actions: false

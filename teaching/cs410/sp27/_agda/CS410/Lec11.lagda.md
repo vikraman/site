@@ -1,5 +1,5 @@
 ---
-title: "Lecture 11: TBD"
+title: "Lecture 11: Inductive Types"
 order: 11
 draft: true
 repo-actions: false

@@ -1,5 +1,5 @@
 ---
-title: "Lecture 5: TBD"
+title: "Lecture 5: Cartesian Closed Categories"
 order: 5
 draft: true
 repo-actions: false

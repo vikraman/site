@@ -1,5 +1,5 @@
 ---
-title: "Lecture 18: TBD"
+title: "Lecture 18: Machine Semantics"
 order: 18
 draft: true
 repo-actions: false

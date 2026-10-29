@@ -1,5 +1,5 @@
 ---
-title: "Lecture 14: TBD"
+title: "Lecture 14: Effects and Monads"
 order: 14
 draft: true
 repo-actions: false

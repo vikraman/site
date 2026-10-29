@@ -1,102 +1,102 @@
 - date: 2027-01-18
   week: 1
   lecture: 1
-  title: TBD
+  title: Proofs and Programs
   href: lectures/CS410.Lec01.html
 - date: 2027-01-19
   week: 1
   lecture: 2
-  title: TBD
+  title: Types
   href: lectures/CS410.Lec02.html
 - date: 2027-01-25
   week: 2
   lecture: 3
-  title: TBD
+  title: Categories and Functors
   href: lectures/CS410.Lec03.html
 - date: 2027-01-26
   week: 2
   lecture: 4
-  title: TBD
+  title: Natural Transformations and Adjunctions
   href: lectures/CS410.Lec04.html
 - date: 2027-02-01
   week: 3
   lecture: 5
-  title: TBD
+  title: Cartesian Closed Categories
   href: lectures/CS410.Lec05.html
 - date: 2027-02-02
   week: 3
   lecture: 6
-  title: TBD
+  title: Simply-Typed Lambda Calculus
   href: lectures/CS410.Lec06.html
 - date: 2027-02-08
   week: 4
   lecture: 7
-  title: TBD
+  title: Operational Semantics
   href: lectures/CS410.Lec07.html
 - date: 2027-02-09
   week: 4
   lecture: 8
-  title: TBD
+  title: Categorical Semantics
   href: lectures/CS410.Lec08.html
 - date: 2027-02-15
   week: 5
   lecture: 9
-  title: TBD
+  title: Machine Semantics
   href: lectures/CS410.Lec09.html
 - date: 2027-02-16
   week: 5
   lecture: 10
-  title: TBD
+  title: Initiality
   href: lectures/CS410.Lec10.html
 - date: 2027-02-22
   week: 6
   lecture: 11
-  title: TBD
+  title: Inductive Types
   href: lectures/CS410.Lec11.html
 - date: 2027-02-23
   week: 6
   lecture: 12
-  title: TBD
+  title: Initial Algebras
   href: lectures/CS410.Lec12.html
 - date: 2027-03-01
   week: 7
   lecture: 13
-  title: TBD
+  title: Semantics of Inductive Types
   href: lectures/CS410.Lec13.html
 - date: 2027-03-02
   week: 7
   lecture: 14
-  title: TBD
+  title: Effects and Monads
   href: lectures/CS410.Lec14.html
 - date: 2027-03-08
   week: 8
   lecture: 15
-  title: TBD
+  title: Call-by-Push-Value
   href: lectures/CS410.Lec15.html
 - date: 2027-03-09
   week: 8
   lecture: 16
-  title: TBD
+  title: Operational Semantics
   href: lectures/CS410.Lec16.html
 - date: 2027-03-15
   week: 9
   lecture: 17
-  title: TBD
+  title: Categorical Semantics
   href: lectures/CS410.Lec17.html
 - date: 2027-03-16
   week: 9
   lecture: 18
-  title: TBD
+  title: Machine Semantics
   href: lectures/CS410.Lec18.html
 - date: 2027-03-22
   week: 10
   lecture: 19
-  title: TBD
+  title: Initiality
   href: lectures/CS410.Lec19.html
 - date: 2027-03-23
   week: 10
   lecture: 20
-  title: TBD
+  title: Miscellaneous Topics
   href: lectures/CS410.Lec20.html
 - date: 2027-03-29
   week: 11
@@ -104,5 +104,5 @@
 - date: 2027-03-30
   week: 11
   lecture: 21
-  title: TBD
+  title: Miscellaneous Topics
   href: lectures/CS410.Lec21.html

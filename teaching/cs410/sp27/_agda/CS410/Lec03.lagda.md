@@ -1,5 +1,5 @@
 ---
-title: "Lecture 3: TBD"
+title: "Lecture 3: Categories and Functors"
 order: 3
 draft: true
 repo-actions: false
