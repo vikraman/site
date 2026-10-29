@@ -25,20 +25,20 @@ typography:
           weight: 400
           style: italic
     - source: file
-      family: Courier Prime
+      family: Aporetic Serif Mono
       files:
-        - path: fonts/courier-prime/CourierPrime-Regular.woff2
+        - path: fonts/aporetic-serif-mono/AporeticSerifMono-Regular.woff2
           weight: 400
           style: normal
-        - path: fonts/courier-prime/CourierPrime-Bold.woff2
+        - path: fonts/aporetic-serif-mono/AporeticSerifMono-Bold.woff2
           weight: 700
           style: normal
-        - path: fonts/courier-prime/CourierPrime-Italic.woff2
+        - path: fonts/aporetic-serif-mono/AporeticSerifMono-Italic.woff2
           weight: 400
           style: italic
-        - path: fonts/courier-prime/CourierPrime-BoldItalic.woff2
+        - path: fonts/aporetic-serif-mono/AporeticSerifMono-BoldItalic.woff2
           weight: 700
           style: italic
   base: EB Garamond
   headings: IM Fell Great Primer
-  monospace: Courier Prime
+  monospace: Aporetic Serif Mono

@@ -4,3 +4,5 @@
 /_freeze/
 /.luarc.json
 _imagify/
+_build/
+/teaching/**/lectures/

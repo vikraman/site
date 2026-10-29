@@ -1,0 +1,5 @@
+---
+title: "Teaching"
+---
+
+- [CS410 Advanced Functional Programming](cs410/index.qmd), University of Strathclyde

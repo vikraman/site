@@ -1,0 +1,37 @@
+---
+title: "CS410 Advanced Functional Programming"
+subtitle: "University of Strathclyde"
+---
+
+This class gives further skills in functional programming and an appreciation
+of the mathematical structures that underpin general programming concepts and
+techniques.
+
+- Level: 4
+- Credits: 20 (10 ECTS)
+- Semester: 2
+- Prerequisite: CS316 Functional Programming (recommended, not required)
+
+See also:
+
+- [Class catalogue entry](https://www.strath.ac.uk/studywithus/studyabroad/comingtostrathclyde/academicinformation/exchangeclasscatalogue/computerinformationsciences/)
+- [Class description, 2026–27](https://local.cis.strath.ac.uk/wp/extras/syllabus/index.php?level=ug&year=2026&classid=1345)
+
+## Offerings
+
+- [Spring 2027](sp27/index.qmd)
+
+## Previous editions
+
+Materials from earlier editions:
+
+- [2013–14](https://github.com/pigworker/CS410-13): Conor McBride
+- [2014–15](https://github.com/pigworker/CS410-14): Conor McBride
+- [2015–16](https://github.com/pigworker/CS410-15): Conor McBride
+- [2016–17](https://github.com/pigworker/CS410-16): Conor McBride
+- [2017–18](https://github.com/pigworker/CS410-17): Conor McBride
+- [2018–19](https://github.com/pigworker/CS410-18): Conor McBride
+- [2020–21](https://github.com/fredrikNordvallForsberg/CS410-20): Fredrik Nordvall Forsberg
+- [2021–22](https://github.com/fredrikNordvallForsberg/CS410-21): Fredrik Nordvall Forsberg
+- [2022–23](https://github.com/fredrikNordvallForsberg/CS410-22): Fredrik Nordvall Forsberg
+- [2023–24](https://github.com/gallais/CS410-2024): Guillaume Allais

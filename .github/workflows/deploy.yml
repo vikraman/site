@@ -45,6 +45,19 @@ jobs:
           packages: scheme-full
           texlive_version: 2025
 
+      - name: Set up Agda
+        uses: agda/agda-setup-action@v1
+        with:
+          agda-version: "2.9.0-rc2"
+
+      - name: Restore Agda interface cache
+        uses: actions/cache@v6
+        with:
+          path: teaching/**/_agda/_build
+          key: ${{ runner.os }}-agda-v1-${{ hashFiles('teaching/**/*.agda', 'teaching/**/*.lagda.md', 'teaching/**/*.agda-lib') }}
+          restore-keys: |
+            ${{ runner.os }}-agda-v1-
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         env:

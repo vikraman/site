@@ -5,11 +5,18 @@ QUARTO_DIR := .quarto
 
 # all source files
 SOURCES := $(shell find . -type f \
-	\( -name '*.qmd' -o -name '*.yml' -o -name '*.scss' -o -name '*.ejs' \) \
+	\( -name '*.qmd' -o -name '*.yml' -o -name '*.scss' -o -name '*.ejs' \
+	-o -name '*.lagda.md' -o -name '*.agda' \) \
 	! -path "./$(BUILD_DIR)/*" ! -path "./$(QUARTO_DIR)/*" \
 	! -path "./.git/*" ! -path "./.github/*" )
 
-.PHONY: all build clean cont preview info fonts
+# launchd services for macOS
+SERVICES := org.vikraman.site-preview org.vikraman.site-watch
+SERVICE_DIR := contrib/launchd
+LAUNCH_AGENTS := $(HOME)/Library/LaunchAgents
+LAUNCH_DOMAIN := gui/$(shell id -u)
+
+.PHONY: all build clean watch preview info fonts agda install-services uninstall-services
 
 all: build
 
@@ -29,15 +36,39 @@ $(BUILD_STAMP): $(SOURCES) | $(BUILD_DIR)
 
 build: $(BUILD_STAMP)
 
-# Start preview server in background
+# Restart the preview service
 preview:
-	@echo "[INFO] Starting preview..."
-	@./scripts/preview.sh &
+	@echo "[INFO] Restarting preview..."
+	@launchctl kickstart -k $(LAUNCH_DOMAIN)/org.vikraman.site-preview
 
-# Start preview server and then run watchman to trigger rebuilds
-cont: preview
-	@echo "[INFO] Starting watchman to trigger preview on changes..."
-	@watchman-make -p 'html/**/*.ejs' 'theme/**/*.scss' '**/*.yml' -t preview
+# Watch files missed by preview
+watch: agda
+	@echo "[INFO] Watching agda, theme and config..."
+	@watchman-make -s 1 \
+		-p 'teaching/**/_agda/**/*.lagda.md' 'teaching/**/_agda/**/*.agda' 'teaching/**/_agda/*.agda-lib' \
+		-t agda \
+		-p 'theme/*.scss' 'html/*.ejs' '_quarto.yml' '_brand.yml' '*/*.yml' 'teaching/**/*.yml' \
+		-t preview
+
+# Install and (re)load the launchd services
+install-services:
+	@mkdir -p $(LAUNCH_AGENTS)
+	@for s in $(SERVICES); do \
+		echo "[INFO] Installing $$s..."; \
+		sed -e 's#@SITE@#$(CURDIR)#g' -e 's#@HOME@#$(HOME)#g' \
+			$(SERVICE_DIR)/$$s.plist.in > $(LAUNCH_AGENTS)/$$s.plist; \
+		plutil -lint -s $(LAUNCH_AGENTS)/$$s.plist; \
+		launchctl bootout $(LAUNCH_DOMAIN)/$$s 2>/dev/null || true; \
+		launchctl bootstrap $(LAUNCH_DOMAIN) $(LAUNCH_AGENTS)/$$s.plist; \
+	done
+
+# Unload and remove the launchd services
+uninstall-services:
+	@for s in $(SERVICES); do \
+		echo "[INFO] Removing $$s..."; \
+		launchctl bootout $(LAUNCH_DOMAIN)/$$s 2>/dev/null || true; \
+		rm -f $(LAUNCH_AGENTS)/$$s.plist; \
+	done
 
 info:
 	@echo "Build dir: $(BUILD_DIR)"
@@ -49,6 +80,12 @@ clean:
 	@echo "[INFO] Cleaning output directories..."
 	@rm -rf $(BUILD_DIR) $(QUARTO_DIR)
 	@echo "[INFO] Clean complete."
+
+# Typecheck and highlight literate agda
+agda:
+	@echo "[INFO] Typechecking agda..."
+	@./scripts/agda.sh
+	@echo "[INFO] Agda complete."
 
 # Regenerate optimized font files
 fonts:

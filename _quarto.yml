@@ -2,6 +2,11 @@ project:
   type: website
   resources:
     - js/*.js
+    # agda
+    - teaching/**/lectures/*.html
+    - teaching/**/lectures/Agda.css
+    - teaching/**/_agda/**/*.lagda.md
+  pre-render: scripts/agda.sh
   preview:
     port: 7771
     browser: false
@@ -23,7 +28,45 @@ website:
       - talks/index.qmd
       - notes/index.qmd
       - projects/index.qmd
+      - teaching/index.qmd
       - misc/index.qmd
+  # course sidebars
+  sidebar:
+    - id: cs410
+      title: CS410
+      contents:
+        - teaching/cs410/index.qmd
+        - section: Spring 2027
+          contents:
+            - teaching/cs410/sp27/index.qmd
+            - teaching/cs410/sp27/lectures/CS410.Prelude.md
+            - section: Lectures
+              contents:
+                - teaching/cs410/sp27/lectures/CS410.Lec01.md
+                - teaching/cs410/sp27/lectures/CS410.Lec02.md
+                - teaching/cs410/sp27/lectures/CS410.Lec03.md
+                - teaching/cs410/sp27/lectures/CS410.Lec04.md
+                - teaching/cs410/sp27/lectures/CS410.Lec05.md
+                - teaching/cs410/sp27/lectures/CS410.Lec06.md
+                - teaching/cs410/sp27/lectures/CS410.Lec07.md
+                - teaching/cs410/sp27/lectures/CS410.Lec08.md
+                - teaching/cs410/sp27/lectures/CS410.Lec09.md
+                - teaching/cs410/sp27/lectures/CS410.Lec10.md
+                - teaching/cs410/sp27/lectures/CS410.Lec11.md
+                - teaching/cs410/sp27/lectures/CS410.Lec12.md
+                - teaching/cs410/sp27/lectures/CS410.Lec13.md
+                - teaching/cs410/sp27/lectures/CS410.Lec14.md
+                - teaching/cs410/sp27/lectures/CS410.Lec15.md
+                - teaching/cs410/sp27/lectures/CS410.Lec16.md
+                - teaching/cs410/sp27/lectures/CS410.Lec17.md
+                - teaching/cs410/sp27/lectures/CS410.Lec18.md
+                - teaching/cs410/sp27/lectures/CS410.Lec19.md
+                - teaching/cs410/sp27/lectures/CS410.Lec20.md
+                - teaching/cs410/sp27/lectures/CS410.Lec21.md
+            - section: Exercises
+              contents:
+                - teaching/cs410/sp27/lectures/CS410.Ex01.md
+                - teaching/cs410/sp27/lectures/CS410.Sol01.md
   # search bar
   search:
     location: navbar

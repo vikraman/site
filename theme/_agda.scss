@@ -1,0 +1,182 @@
+@import "base";
+
+/* agda highlighting that matches site theme */
+pre.Agda {
+    background-color: shade(5%);
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    font-family: $font-family-monospace;
+    font-size: 0.85em;
+    line-height: 1.4;
+    overflow-x: auto;
+}
+
+.Agda {
+    /* aspects */
+    .Comment {
+        color: $gray;
+        font-style: italic;
+    }
+
+    .Background {
+    }
+
+    .Markup {
+        color: $body-color;
+    }
+
+    .Keyword {
+        color: mix($ochre, $body-color, 55%);
+    }
+
+    .String {
+        color: mix($bronze, $body-color, 55%);
+    }
+
+    .Number {
+        color: mix($bronze, $body-color, 55%);
+    }
+
+    .Symbol {
+        color: $body-color;
+    }
+
+    .PrimitiveType {
+        color: mix($teal, $body-color, 45%);
+    }
+
+    .Pragma {
+        color: $gray;
+    }
+
+    .Operator {
+    }
+
+    .Hole {
+        background-color: mix($teal, $body-bg, 20%);
+    }
+
+    /* name kinds */
+    .Bound {
+        color: $body-color;
+    }
+
+    .Generalizable {
+        color: $body-color;
+    }
+
+    .InductiveConstructor {
+        color: $crimson;
+    }
+
+    .CoinductiveConstructor {
+        color: mix($crimson, $bronze, 50%);
+    }
+
+    .Datatype {
+        color: mix($teal, $body-color, 45%);
+    }
+
+    .Field {
+        color: mix($crimson, $body-color, 60%);
+    }
+
+    .Function {
+        color: mix($teal, $body-color, 75%);
+    }
+
+    .Macro {
+        color: mix($teal, $body-color, 75%);
+    }
+
+    .Module {
+        color: mix($bronze, $body-color, 50%);
+    }
+
+    .Postulate {
+        color: mix($teal, $body-color, 75%);
+    }
+
+    .Primitive {
+        color: mix($teal, $body-color, 75%);
+    }
+
+    .Record {
+        color: mix($teal, $body-color, 45%);
+    }
+
+    // not in agda's css
+    .Argument {
+    }
+
+    /* other aspects */
+    .DottedPattern {
+    }
+
+    .UnsolvedMeta,
+    .UnsolvedConstraint {
+        background-color: mix($bronze, $body-bg, 35%);
+    }
+
+    .TerminationProblem {
+        background-color: mix($crimson, $body-bg, 25%);
+    }
+
+    // superseded by CoverageProblem
+    .IncompletePattern {
+        background-color: mix($ochre, $body-bg, 25%);
+    }
+
+    .Error {
+        color: $crimson;
+        text-decoration: underline wavy;
+    }
+
+    .TypeChecks {
+        background-color: mix($teal, $body-bg, 20%);
+    }
+
+    .Deadcode,
+    .ShadowingInTelescope {
+        background-color: mix($gray, $body-bg, 40%);
+    }
+
+    // not in agda's css, colours from the emacs mode
+    .ErrorWarning {
+        background-color: mix($crimson, $body-bg, 20%);
+        text-decoration: underline;
+    }
+
+    .PositivityProblem {
+        background-color: mix($bronze, $body-bg, 50%);
+    }
+
+    .CoverageProblem,
+    .InstanceProblem {
+        background-color: mix($ochre, $body-bg, 25%);
+    }
+
+    .MissingDefinition {
+        background-color: mix($ochre, $body-bg, 40%);
+    }
+
+    .ConfluenceProblem {
+        background-color: mix($crimson, $body-bg, 15%);
+    }
+
+    .CosmeticProblem,
+    .CatchallClause {
+        background-color: shade(8%);
+    }
+
+    /* standard attributes */
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a[href]:hover,
+    [href].hover-highlight {
+        background-color: $link-hover-bg-color;
+    }
+}

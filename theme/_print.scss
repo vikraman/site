@@ -1,0 +1,36 @@
+/* handouts */
+@media print {
+    #quarto-header,
+    #quarto-margin-sidebar,
+    footer.footer {
+        display: none;
+    }
+
+    body {
+        padding-top: 0 !important;
+    }
+
+    // expand collapsed callouts
+    .callout .collapse:not(.show) {
+        display: block;
+    }
+
+    pre.Agda {
+        white-space: pre-wrap;
+        overflow-x: visible;
+    }
+
+    pre.Agda,
+    .theorem,
+    .lemma,
+    .definition,
+    .proof,
+    .callout {
+        break-inside: avoid;
+    }
+
+    .column-margin,
+    .margin-aside {
+        grid-column: body-content-start / body-content-end;
+    }
+}

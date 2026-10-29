@@ -1,0 +1,75 @@
+---
+title: "CS410 Spring 2027"
+subtitle: "Advanced Functional Programming"
+aliases:
+  - /cs410/
+listing:
+  - id: schedule
+    contents:
+      - schedule.yml
+    sort: "date"
+    date-format: "ddd D MMM"
+    template: ../../../html/schedule.ejs
+---
+
+This is going to be the official course page for CS410 in Spring 2027.
+
+See the official [class description](https://local.cis.strath.ac.uk/wp/extras/syllabus/index.php?level=ug&year=2026&classid=1345)
+for 2026–27.
+
+## Timetable
+
+Teaching runs from 18 January to 4 April 2027 (11 weeks).
+
+| What | When | Where |
+|---|---|---|
+| Lecture | Monday 10:00–11:00 | [GH732](https://www.strath.ac.uk/maps/?building=grahamhillsbuilding) |
+| Lecture | Tuesday 14:00–15:00 | [TG227](https://www.strath.ac.uk/maps/?building=thomasgrahambuilding) |
+| Lab and tutorial | Monday 11:00–12:00 | [LT1201](https://www.strath.ac.uk/maps/?building=livingstonetower) |
+
+## Staff
+
+[Vikraman Choudhury](/), lecturer
+: [vikraman.choudhury@strath.ac.uk](mailto:vikraman.choudhury@strath.ac.uk)\
+Office: [LT1311c, Livingstone Tower](https://www.strath.ac.uk/maps/?building=livingstonetower)\
+Office hours: TBD
+
+## Assessment
+
+- Final exam: 70%
+- Coursework: 30% TBD
+
+## Key dates
+
+- Teaching: 18 January – 4 April 2027
+- Non-teaching days: 26 March (Good Friday), 29 March (Easter Monday)
+- Spring vacation: 5 – 18 April 2027
+- Assessment period: 19 April – 21 May 2027 (excluding 3 May)
+
+See the University's [key dates for 2026–27](https://www.strath.ac.uk/keydates/2026-27/).
+
+## Schedule
+
+Lecture topics are to be confirmed.
+
+::: {#schedule}
+:::
+
+## Reading
+
+Recommended reading: TBD
+
+## Contacts
+
+- CIS Office: LT1101, [cis-office@strath.ac.uk](mailto:cis-office@strath.ac.uk), 0141 548 3189 / 3096
+- IT support: [science-it@strath.ac.uk](mailto:science-it@strath.ac.uk)
+
+## Links
+
+- [MyPlace](https://classes.myplace.strath.ac.uk): announcements and coursework submission
+- [Pegasus](https://pegasus.strath.ac.uk): timetable and personal circumstances
+- [CIS help and FAQ](https://docs.cis.strath.ac.uk): lab machines and accounts
+- [Late submissions and extensions](https://local.cis.strath.ac.uk/wp/late-submissions-and-extension/), and the University's [extensions policy](https://www.strath.ac.uk/media/ps/cs/gmap/academicaffairs/policies/Policy_and_Procedure_on_extensions_to_coursework_submission_-_published.pdf)
+- [Tell Strathclyde](https://www.strath.ac.uk/studywithus/strathlife/tellstrathclyde/): absences and personal circumstances
+- [Use of Gen-AI in learning and assessment](https://www.strath.ac.uk/professionalservices/educationenhancement/qualityassurance/useofgen-aiinlearningassessment/)
+- [Disability & Wellbeing Service](https://www.strath.ac.uk/professionalservices/disabilityandwellbeing/)

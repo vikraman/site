@@ -20,6 +20,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 FONTS_DIR = REPO_ROOT / "fonts"
 
 GITHUB_RAW = "https://raw.githubusercontent.com/google/fonts/main/ofl"
+APORETIC_RAW = "https://raw.githubusercontent.com/protesilaos/aporetic/1.2.0"
 
 # safety-margin blocks kept even if unused right now
 SAFETY_BLOCKS = [
@@ -32,12 +33,28 @@ SAFETY_BLOCKS = [
     (0x20A0, 0x20CF),  # currency symbols
 ]
 
+# symbol blocks kept in the code font, for agda
+CODE_BLOCKS = [
+    (0x2070, 0x209F),  # superscripts and subscripts
+    (0x2100, 0x214F),  # letterlike symbols
+    (0x2190, 0x21FF),  # arrows
+    (0x2200, 0x22FF),  # mathematical operators
+    (0x2300, 0x23FF),  # miscellaneous technical
+    (0x25A0, 0x25FF),  # geometric shapes
+    (0x27C0, 0x27EF),  # miscellaneous mathematical symbols-A
+    (0x27F0, 0x27FF),  # supplemental arrows-A
+    (0x2900, 0x297F),  # supplemental arrows-B
+    (0x2980, 0x29FF),  # miscellaneous mathematical symbols-B
+    (0x2A00, 0x2AFF),  # supplemental mathematical operators
+]
+
 LAYOUT_FEATURES = "*"  # keep all OpenType features
 
 
 def scan_used_codepoints() -> set[int]:
     codepoints: set[int] = set()
-    for path in REPO_ROOT.rglob("*.qmd"):
+    paths = [*REPO_ROOT.rglob("*.qmd"), *REPO_ROOT.rglob("*.lagda.md")]
+    for path in paths:
         if FONTS_DIR in path.parents:
             continue
         text = path.read_text(encoding="utf-8", errors="ignore")
@@ -74,63 +91,69 @@ def instance_variable_font(src: Path, dest: Path, wght: int) -> None:
         "-q", "-o", str(dest), str(src), f"wght={wght}")
 
 
-def subset(src: Path, dest: Path, unicode_ranges: str) -> None:
+def subset(src: Path, dest: Path, unicode_ranges: str,
+           layout_features: str | None = LAYOUT_FEATURES) -> None:
+    # None keeps fonttools' default feature set
+    features = [f"--layout-features={layout_features}"] if layout_features else []
     run(sys.executable, "-m", "fontTools.subset", str(src),
         f"--output-file={dest}",
         "--flavor=woff2",
         f"--unicodes={unicode_ranges}",
-        f"--layout-features={LAYOUT_FEATURES}",
+        *features,
         "--no-hinting",
         "--desubroutinize")
 
 
-def build_family(tmp: Path, unicode_ranges: str, name: str, ofl_dir: str, out_name: str,
-                  styles: list[tuple[str, str, int | None]]) -> None:
+def build_family(tmp: Path, unicode_ranges: str, name: str, base_url: str, out_name: str,
+                  styles: list[tuple[str, str, int | None]],
+                  license_file: str = "OFL.txt",
+                  layout_features: str | None = LAYOUT_FEATURES) -> None:
     # styles: (style_name, filename, weight) -- weight=None means already static
     log.info(f"{name}...")
     out_dir = FONTS_DIR / out_name
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    fetch(f"{GITHUB_RAW}/{ofl_dir}/OFL.txt", out_dir / "OFL.txt")
+    fetch(f"{base_url}/{license_file}", out_dir / Path(license_file).name)
 
     fetched: dict[str, Path] = {}
     for style_name, filename, weight in styles:
         if filename not in fetched:
-            fetched[filename] = tmp / f"{name}-{filename}"
-            fetch(f"{GITHUB_RAW}/{ofl_dir}/{filename}", fetched[filename])
+            fetched[filename] = tmp / f"{name}-{Path(filename).name}"
+            fetch(f"{base_url}/{filename}", fetched[filename])
         src = fetched[filename]
         if weight is not None:
             instanced = tmp / f"{name}-{style_name}-{weight}.ttf"
             instance_variable_font(src, instanced, weight)
             src = instanced
         dest = out_dir / f"{name.replace(' ', '')}-{style_name}.woff2"
-        subset(src, dest, unicode_ranges)
+        subset(src, dest, unicode_ranges, layout_features)
         log.info(f"  {dest}")
 
 
 def main() -> None:
-    log.info("scanning *.qmd for used chars...")
+    log.info("scanning *.qmd and *.lagda.md for used chars...")
     unicode_ranges = build_unicode_ranges(scan_used_codepoints())
+    code_ranges = ",".join([unicode_ranges, *(f"U+{lo:04X}-{hi:04X}" for lo, hi in CODE_BLOCKS)])
 
     with tempfile.TemporaryDirectory() as tmp_str:
         tmp = Path(tmp_str)
-        build_family(tmp, unicode_ranges, "EBGaramond", "ebgaramond", "eb-garamond", [
+        build_family(tmp, unicode_ranges, "EBGaramond", f"{GITHUB_RAW}/ebgaramond", "eb-garamond", [
             ("Regular", "EBGaramond%5Bwght%5D.ttf", 400),
             ("Bold", "EBGaramond%5Bwght%5D.ttf", 700),
             ("Italic", "EBGaramond-Italic%5Bwght%5D.ttf", 400),
             ("BoldItalic", "EBGaramond-Italic%5Bwght%5D.ttf", 700),
         ])
-        build_family(tmp, unicode_ranges, "IMFellGreatPrimer", "imfellgreatprimer",
+        build_family(tmp, unicode_ranges, "IMFellGreatPrimer", f"{GITHUB_RAW}/imfellgreatprimer",
                       "im-fell-great-primer", [
                           ("Regular", "IMFeGPrm28P.ttf", None),
                           ("Italic", "IMFeGPit28P.ttf", None),
                       ])
-        build_family(tmp, unicode_ranges, "CourierPrime", "courierprime", "courier-prime", [
-            ("Regular", "CourierPrime-Regular.ttf", None),
-            ("Bold", "CourierPrime-Bold.ttf", None),
-            ("Italic", "CourierPrime-Italic.ttf", None),
-            ("BoldItalic", "CourierPrime-BoldItalic.ttf", None),
-        ])
+        build_family(tmp, code_ranges, "AporeticSerifMono", APORETIC_RAW, "aporetic-serif-mono", [
+            ("Regular", "aporetic-serif-mono/TTF-Unhinted/aporetic-serif-mono-normalregularupright.ttf", None),
+            ("Bold", "aporetic-serif-mono/TTF-Unhinted/aporetic-serif-mono-normalboldupright.ttf", None),
+            ("Italic", "aporetic-serif-mono/TTF-Unhinted/aporetic-serif-mono-normalregularitalic.ttf", None),
+            ("BoldItalic", "aporetic-serif-mono/TTF-Unhinted/aporetic-serif-mono-normalbolditalic.ttf", None),
+        ], license_file="LICENSE.md", layout_features=None)  # iosevka variants bloat "*"
 
     log.info("done.")
 
