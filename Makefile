@@ -16,7 +16,11 @@ SERVICE_DIR := contrib/launchd
 LAUNCH_AGENTS := $(HOME)/Library/LaunchAgents
 LAUNCH_DOMAIN := gui/$(shell id -u)
 
-.PHONY: all build clean watch preview info fonts agda install-services uninstall-services
+# pages with listings
+LISTING_PAGES := $(shell grep -rl --include='*.qmd' '^listing:' . \
+	--exclude-dir=$(BUILD_DIR) --exclude-dir=$(QUARTO_DIR) --exclude-dir=_freeze)
+
+.PHONY: all build clean watch listings preview info fonts agda install-services uninstall-services
 
 all: build
 
@@ -41,13 +45,19 @@ preview:
 	@echo "[INFO] Restarting preview..."
 	@launchctl kickstart -k $(LAUNCH_DOMAIN)/org.vikraman.site-preview
 
+# Mark listing pages stale
+listings:
+	@touch $(LISTING_PAGES)
+
 # Watch files missed by preview
 watch: agda
-	@echo "[INFO] Watching agda, theme and config..."
+	@echo "[INFO] Watching agda, listings, theme and config..."
 	@watchman-make -s 1 \
 		-p 'teaching/**/_agda/**/*.lagda.md' 'teaching/**/_agda/**/*.agda' 'teaching/**/_agda/*.agda-lib' \
 		-t agda \
-		-p 'theme/*.scss' 'html/*.ejs' '_quarto.yml' '_brand.yml' '*/*.yml' 'teaching/**/*.yml' \
+		-p 'html/*.ejs' '*/*.yml' 'teaching/**/*.yml' \
+		-t listings \
+		-p 'theme/*.scss' '_brand.yml' '_quarto.yml' '**/_metadata.yml' '**/_sidebars.yml' \
 		-t preview
 
 # Install and (re)load the launchd services
