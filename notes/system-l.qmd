@@ -455,7 +455,7 @@ We show strong normalisation by reducibility candidates.
 
 ::: {#def-system-l-sn-step}
 **(Reduction).**
-We orient the beta-eta equations of @def-system-l-eq left-to-right to define a type-preserving one-step reduction relation $\tau \mapsto \tau'$ on commands.
+We orient the beta equations of @def-system-l-eq left-to-right to define a type-preserving one-step reduction relation $\tau \mapsto \tau'$ on commands.
 :::
 
 ::: {#def-system-l-sn}
