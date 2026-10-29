@@ -1,29 +1,6 @@
-```{=html}
-<table class="schedule table">
-  <thead>
-    <tr>
-      <th>Week</th>
-      <th>Date</th>
-      <th>Lecture</th>
-      <th>Topic</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% for (const item of items) { %>
-    <tr <%= metadataAttrs(item) %>>
-      <td><%= item.week %></td>
-      <td><%= item.date %></td>
-      <td><%= item.lecture ?? "" %></td>
-      <!-- link only released lectures -->
-      <td>
-        <% if (item.href && item.released) { %>
-        <a href="<%= item.href %>"><%= item.title %></a>
-        <% } else { %>
-        <%= item.title %>
-        <% } %>
-      </td>
-    </tr>
-    <% } %>
-  </tbody>
-</table>
-```
+<!-- markdown, so links to draft lectures render as plain text -->
+
+| Week | Date | Lecture | Topic |
+|---|---|---|---|
+<% for (const item of items) { %>| <%= item.week %> | <%= item.date %> | <%= item.lecture ?? "" %> | <% if (item.href) { %>[<%= item.title %>](<%= item.href %>)<% } else { %><%= item.title %><% } %> |
+<% } %>

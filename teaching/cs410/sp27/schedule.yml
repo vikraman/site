@@ -2,102 +2,102 @@
   week: 1
   lecture: 1
   title: Proofs and Programs
-  href: lectures/CS410.Lec01.html
+  href: lectures/CS410.Lec01.md
 - date: 2027-01-19
   week: 1
   lecture: 2
   title: Types
-  href: lectures/CS410.Lec02.html
+  href: lectures/CS410.Lec02.md
 - date: 2027-01-25
   week: 2
   lecture: 3
   title: Categories and Functors
-  href: lectures/CS410.Lec03.html
+  href: lectures/CS410.Lec03.md
 - date: 2027-01-26
   week: 2
   lecture: 4
   title: Natural Transformations and Adjunctions
-  href: lectures/CS410.Lec04.html
+  href: lectures/CS410.Lec04.md
 - date: 2027-02-01
   week: 3
   lecture: 5
   title: Cartesian Closed Categories
-  href: lectures/CS410.Lec05.html
+  href: lectures/CS410.Lec05.md
 - date: 2027-02-02
   week: 3
   lecture: 6
   title: Simply-Typed Lambda Calculus
-  href: lectures/CS410.Lec06.html
+  href: lectures/CS410.Lec06.md
 - date: 2027-02-08
   week: 4
   lecture: 7
   title: Operational Semantics
-  href: lectures/CS410.Lec07.html
+  href: lectures/CS410.Lec07.md
 - date: 2027-02-09
   week: 4
   lecture: 8
   title: Categorical Semantics
-  href: lectures/CS410.Lec08.html
+  href: lectures/CS410.Lec08.md
 - date: 2027-02-15
   week: 5
   lecture: 9
   title: Machine Semantics
-  href: lectures/CS410.Lec09.html
+  href: lectures/CS410.Lec09.md
 - date: 2027-02-16
   week: 5
   lecture: 10
   title: Initiality
-  href: lectures/CS410.Lec10.html
+  href: lectures/CS410.Lec10.md
 - date: 2027-02-22
   week: 6
   lecture: 11
   title: Inductive Types
-  href: lectures/CS410.Lec11.html
+  href: lectures/CS410.Lec11.md
 - date: 2027-02-23
   week: 6
   lecture: 12
   title: Initial Algebras
-  href: lectures/CS410.Lec12.html
+  href: lectures/CS410.Lec12.md
 - date: 2027-03-01
   week: 7
   lecture: 13
   title: Semantics of Inductive Types
-  href: lectures/CS410.Lec13.html
+  href: lectures/CS410.Lec13.md
 - date: 2027-03-02
   week: 7
   lecture: 14
   title: Effects and Monads
-  href: lectures/CS410.Lec14.html
+  href: lectures/CS410.Lec14.md
 - date: 2027-03-08
   week: 8
   lecture: 15
   title: Call-by-Push-Value
-  href: lectures/CS410.Lec15.html
+  href: lectures/CS410.Lec15.md
 - date: 2027-03-09
   week: 8
   lecture: 16
   title: Operational Semantics
-  href: lectures/CS410.Lec16.html
+  href: lectures/CS410.Lec16.md
 - date: 2027-03-15
   week: 9
   lecture: 17
   title: Categorical Semantics
-  href: lectures/CS410.Lec17.html
+  href: lectures/CS410.Lec17.md
 - date: 2027-03-16
   week: 9
   lecture: 18
   title: Machine Semantics
-  href: lectures/CS410.Lec18.html
+  href: lectures/CS410.Lec18.md
 - date: 2027-03-22
   week: 10
   lecture: 19
   title: Initiality
-  href: lectures/CS410.Lec19.html
+  href: lectures/CS410.Lec19.md
 - date: 2027-03-23
   week: 10
   lecture: 20
   title: Miscellaneous Topics
-  href: lectures/CS410.Lec20.html
+  href: lectures/CS410.Lec20.md
 - date: 2027-03-29
   week: 11
   title: "No lecture or lab (Easter Monday)"
@@ -105,4 +105,4 @@
   week: 11
   lecture: 21
   title: Miscellaneous Topics
-  href: lectures/CS410.Lec21.html
+  href: lectures/CS410.Lec21.md
