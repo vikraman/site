@@ -81,22 +81,22 @@
 - date: 2027-03-15
   week: 9
   lecture: 17
-  title: Call-by-Push-Value
+  title: TBD
   href: lectures/CS410.Lec17.md
 - date: 2027-03-16
   week: 9
   lecture: 18
-  title: Operational Semantics
+  title: TBD
   href: lectures/CS410.Lec18.md
 - date: 2027-03-22
   week: 10
   lecture: 19
-  title: Categorical Semantics
+  title: TBD
   href: lectures/CS410.Lec19.md
 - date: 2027-03-23
   week: 10
   lecture: 20
-  title: Machine Semantics
+  title: TBD
   href: lectures/CS410.Lec20.md
 - date: 2027-03-29
   week: 11
@@ -104,5 +104,5 @@
 - date: 2027-03-30
   week: 11
   lecture: 21
-  title: Initiality
+  title: TBD
   href: lectures/CS410.Lec21.md

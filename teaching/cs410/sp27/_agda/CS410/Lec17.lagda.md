@@ -1,5 +1,5 @@
 ---
-title: "Lecture 17: Call-by-Push-Value"
+title: "Lecture 17: TBD"
 order: 17
 draft: true
 repo-actions: false

@@ -1,5 +1,5 @@
 ---
-title: "Lecture 19: Categorical Semantics"
+title: "Lecture 19: TBD"
 order: 19
 draft: true
 repo-actions: false

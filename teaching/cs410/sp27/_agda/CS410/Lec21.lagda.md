@@ -1,5 +1,5 @@
 ---
-title: "Lecture 21: Initiality"
+title: "Lecture 21: TBD"
 order: 21
 draft: true
 repo-actions: false
