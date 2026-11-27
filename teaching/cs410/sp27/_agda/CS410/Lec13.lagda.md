@@ -13,4 +13,4 @@ other-links:
 module CS410.Lec13 where
 ```
 
-TBD.
+This lecture is not out yet.

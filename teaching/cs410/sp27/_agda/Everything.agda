@@ -24,4 +24,3 @@ import CS410.Lec19
 import CS410.Lec20
 import CS410.Lec21
 import CS410.Ex01
-import CS410.Sol01

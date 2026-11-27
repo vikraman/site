@@ -1,2 +1,5 @@
 name: cs410-sp27
 include: .
+flags:
+  --prop
+  --rewriting

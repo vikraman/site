@@ -1,4 +1,4 @@
-# one file for all course sidebars, quarto drops sidebars split across files
+# one file for all course sidebars
 website:
   sidebar:
     - id: cs410
@@ -8,4 +8,9 @@ website:
         - section: Spring 2027
           contents:
             - teaching/cs410/sp27/index.qmd
-            - auto: teaching/cs410/sp27/lectures
+            - section: Prelude
+              href: teaching/cs410/sp27/lectures/CS410.Prelude.md
+              contents:
+                - auto: teaching/cs410/sp27/lectures/*.Prelude.*.md
+            - auto: teaching/cs410/sp27/lectures/*.Lec*.md
+            - auto: teaching/cs410/sp27/lectures/*.Ex*.md

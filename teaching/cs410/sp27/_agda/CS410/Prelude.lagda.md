@@ -10,14 +10,46 @@ other-links:
 
 ```agda
 module CS410.Prelude where
+
+open import Agda.Primitive public using (Level; _⊔_; lzero; lsuc)
+```
+
+## Functions
+
+```agda
+open import CS410.Prelude.Function public
+```
+
+## Data
+
+```agda
+open import CS410.Prelude.Data public
+```
+
+## Logic
+
+```agda
+open import CS410.Prelude.Logic public
 ```
 
 ## Equality
 
 ```agda
-open import Agda.Builtin.Equality public
+open import CS410.Prelude.Equality public
+```
 
-cong : {A B : Set} (f : A → B) {x y : A} → x ≡ y → f x ≡ f y
-cong f refl = refl
+## Axioms
+
+```agda
+open import CS410.Prelude.Foundations public
+  using (coe; funext; funext-implicit; happly; propext; subst; subst-prop)
+```
+
+## Quotients
+
+```agda
+open import CS410.Prelude.Quotient public using (_/_; [_])
+
+module Quotient = CS410.Prelude.Quotient hiding (elim-β)
 ```
 
