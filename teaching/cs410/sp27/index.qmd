@@ -34,6 +34,11 @@ Teaching runs from 18 January to 4 April 2027 (11 weeks).
 Office: [LT1311c, Livingstone Tower](https://www.strath.ac.uk/maps/?building=livingstonetower)\
 Office hours: TBD
 
+TBD, tutor
+: TBD
+
+[**CS410 Discord Server**](https://discord.gg/3CsbwPdHQu)
+
 ## Assessment
 
 - Final exam: 70%
@@ -58,6 +63,17 @@ Lecture topics are to be confirmed.
 ## Reading
 
 Recommended reading: TBD
+
+## Agda
+
+The course uses [Agda](https://github.com/agda/agda) 2.9.0.
+
+- [Agda manual](https://agda.readthedocs.io/en/v2.9.0/)
+- [Installation](https://agda.readthedocs.io/en/v2.9.0/getting-started/installation.html)
+- [Emacs mode](https://agda.readthedocs.io/en/v2.9.0/tools/emacs-mode.html): commands and [unicode input](https://agda.readthedocs.io/en/v2.9.0/tools/emacs-mode.html#unicode-input)
+- [VS Code extension](https://marketplace.visualstudio.com/items?itemName=banacorn.agda-mode)
+- [Programming Language Foundations in Agda](https://plfa.github.io/)
+- [Agda Zulip](https://agda.zulipchat.com/)
 
 ## Contacts
 
