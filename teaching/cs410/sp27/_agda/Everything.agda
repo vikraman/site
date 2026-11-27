@@ -2,6 +2,7 @@ module Everything where
 
 -- spring 2027
 import CS410.Prelude
+import CS410.Lec00
 import CS410.Lec01
 import CS410.Lec02
 import CS410.Lec03

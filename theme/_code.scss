@@ -1,0 +1,71 @@
+@import "base";
+
+/* code blocks styled like Agda */
+div.sourceCode {
+    background-color: shade(5%);
+    border: none;
+    padding: 0;
+    border-radius: 0.25rem;
+}
+
+div.sourceCode pre.sourceCode {
+    background-color: transparent;
+    padding: 0.75rem 1rem;
+    font-family: $font-family-monospace;
+    font-size: 0.85em;
+    line-height: 1.4;
+}
+
+div.sourceCode pre.sourceCode code {
+    padding: 0;
+}
+
+// tokens in the agda palette
+div.sourceCode code span {
+    color: $body-color;
+    font-weight: normal;
+    font-style: normal;
+
+    &.kw,
+    &.cf,
+    &.im {
+        color: mix($ochre, $body-color, 55%);
+    }
+
+    &.dt {
+        color: mix($teal, $body-color, 45%);
+    }
+
+    &.fu,
+    &.bu {
+        color: mix($teal, $body-color, 75%);
+    }
+
+    &.st,
+    &.ch,
+    &.ss,
+    &.vs,
+    &.sc,
+    &.dv,
+    &.bn,
+    &.fl {
+        color: mix($bronze, $body-color, 55%);
+    }
+
+    &.co,
+    &.do,
+    &.cv,
+    &.an {
+        color: $gray;
+        font-style: italic;
+    }
+
+    &.pp {
+        color: $gray;
+    }
+
+    &.er,
+    &.al {
+        color: $crimson;
+    }
+}
