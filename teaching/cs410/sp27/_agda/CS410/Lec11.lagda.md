@@ -1,5 +1,5 @@
 ---
-title: "Lecture 11: Inductive Types"
+title: "Lecture 11: Machine Semantics"
 order: 11
 draft: true
 repo-actions: false

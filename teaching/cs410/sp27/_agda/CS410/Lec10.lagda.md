@@ -1,5 +1,5 @@
 ---
-title: "Lecture 10: Initiality"
+title: "Lecture 10: Categorical Semantics"
 order: 10
 draft: true
 repo-actions: false

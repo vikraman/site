@@ -1,5 +1,5 @@
 ---
-title: "Lecture 20: Miscellaneous Topics"
+title: "Lecture 20: Machine Semantics"
 order: 20
 draft: true
 repo-actions: false

@@ -1,5 +1,5 @@
 ---
-title: "Lecture 4: Natural Transformations and Adjunctions"
+title: "Lecture 4: Functors"
 order: 4
 draft: true
 repo-actions: false

@@ -1,5 +1,5 @@
 ---
-title: "Lecture 16: Operational Semantics"
+title: "Lecture 16: Effects and Monads"
 order: 16
 draft: true
 repo-actions: false

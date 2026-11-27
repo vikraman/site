@@ -1,5 +1,5 @@
 ---
-title: "Lecture 7: Operational Semantics"
+title: "Lecture 7: Cartesian Closed Categories"
 order: 7
 draft: true
 repo-actions: false

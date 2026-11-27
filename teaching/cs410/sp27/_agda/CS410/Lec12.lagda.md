@@ -1,5 +1,5 @@
 ---
-title: "Lecture 12: Initial Algebras"
+title: "Lecture 12: Initiality"
 order: 12
 draft: true
 repo-actions: false

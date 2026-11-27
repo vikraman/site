@@ -1,5 +1,5 @@
 ---
-title: "Lecture 9: Machine Semantics"
+title: "Lecture 9: Operational Semantics"
 order: 9
 draft: true
 repo-actions: false

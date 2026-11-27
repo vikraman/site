@@ -1,5 +1,5 @@
 ---
-title: "Lecture 6: Simply-Typed Lambda Calculus"
+title: "Lecture 6: Adjunctions"
 order: 6
 draft: true
 repo-actions: false

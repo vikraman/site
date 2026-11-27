@@ -1,5 +1,5 @@
 ---
-title: "Lecture 8: Categorical Semantics"
+title: "Lecture 8: Simply-Typed Lambda Calculus"
 order: 8
 draft: true
 repo-actions: false

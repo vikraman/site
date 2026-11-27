@@ -1,5 +1,5 @@
 ---
-title: "Lecture 17: Categorical Semantics"
+title: "Lecture 17: Call-by-Push-Value"
 order: 17
 draft: true
 repo-actions: false

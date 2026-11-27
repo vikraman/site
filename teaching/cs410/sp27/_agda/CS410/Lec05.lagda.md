@@ -1,5 +1,5 @@
 ---
-title: "Lecture 5: Cartesian Closed Categories"
+title: "Lecture 5: Natural Transformations"
 order: 5
 draft: true
 repo-actions: false

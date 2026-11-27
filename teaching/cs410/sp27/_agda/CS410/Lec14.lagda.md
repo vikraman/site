@@ -1,5 +1,5 @@
 ---
-title: "Lecture 14: Effects and Monads"
+title: "Lecture 14: Initial Algebras"
 order: 14
 draft: true
 repo-actions: false

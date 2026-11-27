@@ -1,5 +1,5 @@
 ---
-title: "Lecture 15: Call-by-Push-Value"
+title: "Lecture 15: Semantics of Inductive Types"
 order: 15
 draft: true
 repo-actions: false
