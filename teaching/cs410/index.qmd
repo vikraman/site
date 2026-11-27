@@ -25,13 +25,15 @@ See also:
 
 Materials from earlier editions:
 
-- [2013–14](https://github.com/pigworker/CS410-13): Conor McBride
-- [2014–15](https://github.com/pigworker/CS410-14): Conor McBride
-- [2015–16](https://github.com/pigworker/CS410-15): Conor McBride
-- [2016–17](https://github.com/pigworker/CS410-16): Conor McBride
-- [2017–18](https://github.com/pigworker/CS410-17): Conor McBride
-- [2018–19](https://github.com/pigworker/CS410-18): Conor McBride
-- [2020–21](https://github.com/fredrikNordvallForsberg/CS410-20): Fredrik Nordvall Forsberg
-- [2021–22](https://github.com/fredrikNordvallForsberg/CS410-21): Fredrik Nordvall Forsberg
-- [2022–23](https://github.com/fredrikNordvallForsberg/CS410-22): Fredrik Nordvall Forsberg
+- [2025–26](https://github.com/msp-strath/cs410-advanced-functional-programming): Guillaume Allais
+- [2024–25](https://github.com/msp-strath/cs410-advanced-functional-programming): Guillaume Allais
 - [2023–24](https://github.com/gallais/CS410-2024): Guillaume Allais
+- [2022–23](https://github.com/fredrikNordvallForsberg/CS410-22): Fredrik Nordvall Forsberg
+- [2021–22](https://github.com/fredrikNordvallForsberg/CS410-21): Fredrik Nordvall Forsberg
+- [2020–21](https://github.com/fredrikNordvallForsberg/CS410-20): Fredrik Nordvall Forsberg
+- [2018–19](https://github.com/pigworker/CS410-18): Conor McBride
+- [2017–18](https://github.com/pigworker/CS410-17): Conor McBride
+- [2016–17](https://github.com/pigworker/CS410-16): Conor McBride
+- [2015–16](https://github.com/pigworker/CS410-15): Conor McBride
+- [2014–15](https://github.com/pigworker/CS410-14): Conor McBride
+- [2013–14](https://github.com/pigworker/CS410-13): Conor McBride
