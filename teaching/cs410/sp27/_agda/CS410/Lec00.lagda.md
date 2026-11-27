@@ -256,7 +256,7 @@ even exactly when $n$ is even.
 :::
 
 Identifying numbers with the same parity gives the quotient set
-$\mathsf{Parity}$.
+$\mathsf{Bits}$.
 
 ```agda
 infix 4 _~_
@@ -264,8 +264,8 @@ infix 4 _~_
 _~_ : ℕ → ℕ → Prop
 m ~ n = (Even m → Even n) ∧ (Even n → Even m)
 
-Parity : Set
-Parity = ℕ / _~_
+Bits : Set
+Bits = ℕ / _~_
 ```
 
 ::: {#lem-sim-equiv}
@@ -329,22 +329,22 @@ suc-respects : m ~ n → suc m ~ suc n
 suc-respects p = {!!}
 ```
 
-So $\mathsf{Parity}$ is a copy of the booleans, with negation given by the
+So $\mathsf{Bits}$ is a copy of the booleans, with negation given by the
 successor function.
 
 ```agda
-true₂ false₂ : Parity
+true₂ false₂ : Bits
 true₂  = [ 0 ]
 false₂ = [ 1 ]
 
-not₂ : Parity → Parity
+not₂ : Bits → Bits
 not₂ = {!!}
 ```
 
 The quotient map is the function $\mathsf{even}$ from the start of the lecture.
 
 ```agda
-even₂ : ℕ → Parity
+even₂ : ℕ → Bits
 even₂ n = [ n ]
 ```
 
@@ -422,12 +422,12 @@ even-respects {m} {n} (f , g) =
 So $\mathsf{even}$ gives a function out of the quotient.
 
 ```agda
-parity : Parity → Bool
+parity : Bits → Bool
 parity = {!!}
 ```
 
 ::: {#thm-parity-even}
-The composite $\mathbb{N} \to \mathsf{Parity} \to \mathsf{Bool}$ of
+The composite $\mathbb{N} \to \mathsf{Bits} \to \mathsf{Bool}$ of
 $\mathsf{even}_2$ and $\mathsf{parity}$ is $\mathsf{even}$.
 :::
 
